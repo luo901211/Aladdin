@@ -20,6 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
     //启动友盟统计
     [MPUmengHelper UMAnalyticStart];
     
@@ -30,7 +31,6 @@
     [self configureBoardManager];
     
     [self setupHomeViewController];
-
     
     return YES;
 }

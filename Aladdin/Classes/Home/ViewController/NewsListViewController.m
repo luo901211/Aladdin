@@ -10,6 +10,7 @@
 #import "NewsViewModel.h"
 #import "NewsCell.h"
 #import "WQChiBaoZiHeader.h"
+#import "SDCycleScrollView.h"
 
 @interface NewsListViewController ()
 
@@ -31,6 +32,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self initUI];
+    
+    self.tableView.tableFooterView = [UIView new];
     [self.tableView registerNib:[UINib nibWithNibName:@"NewsCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"NewsCell"];
     self.urlString = @"headline/T1348647853363";
     
@@ -45,7 +49,17 @@
     [self.tableView.mj_header beginRefreshing];
 }
 
-
+- (void)initUI {
+    NSString *url = @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1492330959&di=1fb52e3d77abdd4eb2b194edf750a9a5&imgtype=jpg&er=1&src=http%3A%2F%2Fi.gtimg.cn%2Fqqlive%2Fimg%2Fjpgcache%2Ffiles%2Fqqvideo%2Fhori%2Fn%2Fn4bzy3vznfrz4xm_big.jpg";
+    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, Main_Screen_Width, 150) delegate:nil placeholderImage:nil];
+    cycleScrollView.imageURLStringsGroup = @[url, url, url];
+    cycleScrollView.autoScrollTimeInterval = 3;
+    cycleScrollView.clickItemOperationBlock = ^(NSInteger currentIndex) {
+        UIViewController *vc = [[UIViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    };
+    self.tableView.tableHeaderView = cycleScrollView;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -92,7 +106,7 @@
 #pragma mark - Table view data source
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NewsModel *model = self.arrayList[indexPath.row];
+    ALDNewsModel *model = self.arrayList[indexPath.row];
     return [NewsCell heightForRow:model];
 }
 
@@ -102,7 +116,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NewsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NewsCell"];
-    NewsModel *model = self.arrayList[indexPath.row];
+    ALDNewsModel *model = self.arrayList[indexPath.row];
     cell.model = model;
     return cell;
 }

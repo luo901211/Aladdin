@@ -13,9 +13,9 @@
 #define CHINESE_FONT_NAME  @"Heiti SC"
 #define CHINESE_SYSTEM(x) [UIFont fontWithName:CHINESE_FONT_NAME size:x]
 
-//不同屏幕尺寸字体适配（320，568是因为效果图为IPHONE5 如果不是则根据实际情况修改）
-#define kScreenWidthRatio  (Main_Screen_Width / 320.0)
-#define kScreenHeightRatio (Main_Screen_Height / 568.0)
+//不同屏幕尺寸字体适配（375.0, 667.0 是因为效果图为IPHONE6 如果不是则根据实际情况修改）
+#define kScreenWidthRatio  (Main_Screen_Width / 375.0)
+#define kScreenHeightRatio (Main_Screen_Height / 667.0)
 #define AdaptedWidth(x)  ceilf((x) * kScreenWidthRatio)
 #define AdaptedHeight(x) ceilf((x) * kScreenHeightRatio)
 #define AdaptedFontSize(R)     CHINESE_SYSTEM(AdaptedWidth(R))

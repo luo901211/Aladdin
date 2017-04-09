@@ -10,19 +10,10 @@
 
 @interface NewsCell ()
 
-/**
- *  图片
- */
 @property (weak, nonatomic) IBOutlet UIImageView *imgIcon;
-/**
- *  标题
- */
 @property (weak, nonatomic) IBOutlet UILabel *lblTitle;
-
-/**
- *  描述
- */
-@property (weak, nonatomic) IBOutlet UILabel *lblSubtitle;
+@property (weak, nonatomic) IBOutlet UILabel *lblTime;
+@property (weak, nonatomic) IBOutlet UILabel *lblSource;
 
 @end
 
@@ -33,18 +24,18 @@
     // Initialization code
 }
 
-- (void)setModel:(NewsModel *)model
+- (void)setModel:(ALDNewsModel *)model
 {
     _model = model;
     
     [self.imgIcon sd_setImageWithURL:[NSURL URLWithString:self.model.imgsrc] placeholderImage:[UIImage imageNamed:@"302"]];
     self.lblTitle.text = self.model.title;
-    self.lblSubtitle.text = self.model.source;
+    self.lblSource.text = self.model.source;
 }
 
 #pragma mark - /************************* 类方法返回行高 ***************************/
-+ (CGFloat)heightForRow:(NewsModel *)model {
-    return 100;
++ (CGFloat)heightForRow:(ALDNewsModel *)model {
+    return 120;
 }
 
 @end

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NewsModel : NSObject
+@interface ALDNewsModel : NSObject
 @property (nonatomic,copy) NSString *tname;
 /**
  *  新闻发布时间
@@ -93,6 +93,6 @@
 @property (nonatomic,copy) NSString *ads;
 @property (nonatomic,copy) NSString *videosource;
 
-+ (instancetype)newsModelWithDict:(NSDictionary *)dict;
++ (instancetype)modelWithDict:(NSDictionary *)dict;
 
 @end

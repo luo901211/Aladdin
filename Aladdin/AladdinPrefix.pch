@@ -25,6 +25,7 @@
 #import "ApiMacros.h"
 #import "WQMacros.h"
 #import "ThirdMacros.h"
+#import "ThemeMacros.h"
 
 // Const
 #import "NotificationContants.h"
@@ -32,5 +33,6 @@
 // Tool
 #import "MPUmengHelper.h"
 #import "WQHTTPManager.h"
+#import "WQNetworkTools.H"
 
 #endif /* AladdinPrefix_pch */

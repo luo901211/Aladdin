@@ -7,7 +7,10 @@
 //
 
 #import "WQHomeTabBarController.h"
-#import "NewsListViewController.h"
+#import "ALDBaseNavigationController.h"
+#import "NewsMainViewController.h"
+#import "AnswerMainViewController.h"
+#import "DiscoverListViewController.h"
 
 @implementation WQHomeTabBarController
 
@@ -16,7 +19,7 @@
     if (self) {
         [self setupTabBarController];
         
-        self.tabBar.tintColor = RGB(182, 65, 65);
+        self.tabBar.tintColor = GLOBAL_TINT_COLOR;
         
         //显示未读
 //        UINavigationController  *discoverNav =(UINavigationController *)self.viewControllers[1];
@@ -41,20 +44,20 @@
 
 //控制器设置
 - (NSArray *)mpViewControllers {
-    NewsListViewController *firstViewController = [[NewsListViewController alloc] init];
-    UINavigationController *firstNavigationController = [[UINavigationController alloc]
+    NewsMainViewController *firstViewController = [[NewsMainViewController alloc] init];
+    ALDBaseNavigationController *firstNavigationController = [[ALDBaseNavigationController alloc]
                                                    initWithRootViewController:firstViewController];
     
-    UIViewController *secondViewController = [[UIViewController alloc] init];
-    UINavigationController *secondNavigationController = [[UINavigationController alloc]
+    AnswerMainViewController *secondViewController = [[AnswerMainViewController alloc] init];
+    ALDBaseNavigationController *secondNavigationController = [[ALDBaseNavigationController alloc]
                                                     initWithRootViewController:secondViewController];
     
-    UIViewController *thirdViewController = [[UIViewController alloc] init];
-    UINavigationController *thirdNavigationController = [[UINavigationController alloc]
+    DiscoverListViewController *thirdViewController = [[DiscoverListViewController alloc] init];
+    ALDBaseNavigationController *thirdNavigationController = [[ALDBaseNavigationController alloc]
                                                    initWithRootViewController:thirdViewController];
     
     UIViewController *fourthViewController = [[UIViewController alloc] init];
-    UINavigationController *fourthNavigationController = [[UINavigationController alloc]
+    ALDBaseNavigationController *fourthNavigationController = [[ALDBaseNavigationController alloc]
                                                     initWithRootViewController:fourthViewController];
     
     NSArray *viewControllers = @[
@@ -70,23 +73,23 @@
 - (NSArray *)tabBarItemsAttributesForController {
     NSDictionary *firstTabBarItemsAttributes = @{
                                                  CYLTabBarItemTitle : @"新闻",
-                                                 CYLTabBarItemImage : @"home_normal",
-                                                 CYLTabBarItemSelectedImage : @"home_highlight",
+                                                 CYLTabBarItemImage : @"tab_news_n",
+                                                 CYLTabBarItemSelectedImage : @"tab_news_h",
                                                  };
     NSDictionary *secondTabBarItemsAttributes = @{
-                                                  CYLTabBarItemTitle : @"item2",
-                                                  CYLTabBarItemImage : @"mycity_normal",
-                                                  CYLTabBarItemSelectedImage : @"mycity_highlight",
+                                                  CYLTabBarItemTitle : @"问答",
+                                                  CYLTabBarItemImage : @"tab_answer_n",
+                                                  CYLTabBarItemSelectedImage : @"tab_answer_h",
                                                   };
     NSDictionary *thirdTabBarItemsAttributes = @{
-                                                 CYLTabBarItemTitle : @"item3",
-                                                 CYLTabBarItemImage : @"message_normal",
-                                                 CYLTabBarItemSelectedImage : @"message_highlight",
+                                                 CYLTabBarItemTitle : @"发现",
+                                                 CYLTabBarItemImage : @"tab_discover_n",
+                                                 CYLTabBarItemSelectedImage : @"tab_discover_h",
                                                  };
     NSDictionary *fourthTabBarItemsAttributes = @{
-                                                  CYLTabBarItemTitle : @"item4",
-                                                  CYLTabBarItemImage : @"account_normal",
-                                                  CYLTabBarItemSelectedImage : @"account_highlight"
+                                                  CYLTabBarItemTitle : @"服务",
+                                                  CYLTabBarItemImage : @"tab_server_n",
+                                                  CYLTabBarItemSelectedImage : @"tab_server_h"
                                                   };
     NSArray *tabBarItemsAttributes = @[
                                        firstTabBarItemsAttributes,

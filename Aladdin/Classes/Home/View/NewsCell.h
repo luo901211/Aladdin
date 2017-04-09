@@ -7,15 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NewsModel.h"
+#import "ALDNewsModel.h"
 
 @interface NewsCell : UITableViewCell
 
-@property(nonatomic,strong) NewsModel *model;
+@property(nonatomic,strong) ALDNewsModel *model;
 
 /**
  *  类方法返回行高
  */
-+ (CGFloat)heightForRow:(NewsModel *)model;
++ (CGFloat)heightForRow:(ALDNewsModel *)model;
 
 @end

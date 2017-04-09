@@ -26,6 +26,7 @@
 
 AspectPatch(-, BOOL, application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions)
 {
+    NSLog(@"友盟分享");
     //友盟分享及第三方登录初始化
 //    [self initLoadUMSocial];
     

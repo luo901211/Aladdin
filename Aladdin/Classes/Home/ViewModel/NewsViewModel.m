@@ -7,7 +7,7 @@
 //
 
 #import "NewsViewModel.h"
-#import "NewsModel.h"
+#import "ALDNewsModel.h"
 
 @implementation NewsViewModel
 
@@ -26,7 +26,7 @@
         return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
             @strongify(self);
             [self requestForNewsEntityWithUrl:input success:^(NSArray *array) {
-                NSArray *arrayM = [NewsModel objectArrayWithKeyValuesArray:array];
+                NSArray *arrayM = [ALDNewsModel objectArrayWithKeyValuesArray:array];
                 [subscriber sendNext:arrayM];
                 [subscriber sendCompleted];
             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

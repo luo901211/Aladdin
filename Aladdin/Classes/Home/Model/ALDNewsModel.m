@@ -6,13 +6,13 @@
 //  Copyright © 2017年 wenqi. All rights reserved.
 //
 
-#import "NewsModel.h"
+#import "ALDNewsModel.h"
 
-@implementation NewsModel
+@implementation ALDNewsModel
 
-+ (instancetype)newsModelWithDict:(NSDictionary *)dict
++ (instancetype)modelWithDict:(NSDictionary *)dict
 {
-    NewsModel *model = [[self alloc]init];
+    ALDNewsModel *model = [[self alloc]init];
     
     [model setValuesForKeysWithDictionary:dict];
     
