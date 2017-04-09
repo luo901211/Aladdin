@@ -1,0 +1,36 @@
+//
+//  AladdinPrefix.pch
+//  Aladdin
+//
+//  Created by luo on 2017/4/8.
+//  Copyright © 2017年 wenqi. All rights reserved.
+//
+
+#ifndef AladdinPrefix_pch
+#define AladdinPrefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "MBProgressHUD.h"
+#import "MBProgressHUD+MP.h"
+
+#import <MJRefresh/MJRefresh.h>
+#import <UIImageView+WebCache.h>
+#import <MJExtension/MJExtension.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <YYKit/YYKit.h>
+
+// Macros
+#import "ApiMacros.h"
+#import "WQMacros.h"
+#import "ThirdMacros.h"
+
+// Const
+#import "NotificationContants.h"
+
+// Tool
+#import "MPUmengHelper.h"
+#import "WQHTTPManager.h"
+
+#endif /* AladdinPrefix_pch */
