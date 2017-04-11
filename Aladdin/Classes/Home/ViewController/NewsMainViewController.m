@@ -10,6 +10,7 @@
 #import "SGSegmentedControl.h"
 #import "NewsListViewController.h"
 #import "NewsMainViewModel.h"
+#import "ALDNewsTypeModel.h"
 
 @interface NewsMainViewController ()<SGSegmentedControlDefaultDelegate, UIScrollViewDelegate>
 
@@ -53,25 +54,29 @@
 }
 
 - (void)initUI {
-    NSMutableArray *newsTypeList = self.viewModel.newsTypeList;
-    NSMutableArray *titleArr = [NSMutableArray array];
-    for (int i = 0; i < newsTypeList.count; i++) {
-        [titleArr addObject:newsTypeList[i][@"title"]];
-    }
-    
+    NSMutableArray *array = self.viewModel.newsTypeList;
+    NSMutableArray *titles = [NSMutableArray array];
     NSMutableArray *childVC = [NSMutableArray array];
-    for (int i = 0; i < titleArr.count; i++) {
+
+    for (int i = 0; i < array.count; i++) {
+        // titles
+        ALDNewsTypeModel *model = array[i];
+        [titles addObject:model.title];
+        
+        // child view controller
         NewsListViewController *vc = [[NewsListViewController alloc] init];
-        vc.ID = [newsTypeList[i][@"id"] integerValue];
+        vc.viewModel.ID = model.ID;
         [childVC addObject:vc];
         [self addChildViewController:vc];
+
     }
+    
     self.bottomSView = [[SGSegmentedControlBottomView alloc] initWithFrame:CGRectMake(0, 64 + 38, self.view.frame.size.width, self.view.frame.size.height - 64 - 38)];
     _bottomSView.childViewController = childVC;
     _bottomSView.delegate = self;
     [self.view addSubview:_bottomSView];
     
-    self.topSView = [SGSegmentedControlDefault segmentedControlWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 38) delegate:self childVcTitle:titleArr isScaleText:NO];
+    self.topSView = [SGSegmentedControlDefault segmentedControlWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 38) delegate:self childVcTitle:titles isScaleText:NO];
     self.topSView.backgroundColor = [UIColor whiteColor];
     self.topSView.titleColorStateNormal = COLOR_WORD_GRAY_2;
     self.topSView.titleColorStateSelected = GLOBAL_TINT_COLOR;

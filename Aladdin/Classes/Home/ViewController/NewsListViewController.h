@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NewsListViewModel.h"
 
 @interface NewsListViewController : UITableViewController
 
-@property (nonatomic, assign) NSInteger ID;
+@property (nonatomic, strong) NewsListViewModel *viewModel;
 
 @end

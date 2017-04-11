@@ -8,14 +8,11 @@
 
 #import "NewsListViewController.h"
 #import "ALDNewsBannerModel.h"
-#import "NewsListViewModel.h"
 #import "NewsCell.h"
 #import "WQChiBaoZiHeader.h"
 #import "SDCycleScrollView.h"
 
 @interface NewsListViewController ()
-
-@property (nonatomic, strong) NewsListViewModel *viewModel;
 
 @property (nonatomic, strong) SDCycleScrollView *cycleScrollView;
 
@@ -26,7 +23,6 @@
 - (NewsListViewModel *)viewModel {
     if (!_viewModel) {
         _viewModel = [[NewsListViewModel alloc] init];
-        _viewModel.ID = self.ID;
     }
     return _viewModel;
 }
@@ -50,6 +46,7 @@
     
     [self loadBannerData];
 }
+
 - (void)loadBannerData {
     @weakify(self);
     [self.viewModel loadBannerListWithCompleted:^(NSError *error) {
@@ -63,6 +60,7 @@
         
     }];
 }
+
 - (void)initCycleScrollViewWithArray:(NSArray *)array {
     NSMutableArray *images = [NSMutableArray array];
     for (int i = 0; i < array.count; i++) {

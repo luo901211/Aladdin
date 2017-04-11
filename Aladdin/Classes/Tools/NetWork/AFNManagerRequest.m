@@ -55,6 +55,7 @@
             failure(error);
         } else {
             NSLog(@"url: %@",response.URL);
+            NSLog(@"params:%@",params);
             NSLog(@"responseObject: %@",responseObject);
             #pragma mark - 业务代码
             // 统一处理错误

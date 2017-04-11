@@ -35,7 +35,6 @@
     if (self.ID) {
         [params setObject:@(self.ID) forKey:@"type"];
     }
-    NSLog(@"%@",params);
     [AFNManagerRequest getWithPath:NEWS_LIST params:params success:^(NSURLResponse *response, id responseObject) {
         NSArray *arrayM = [ALDNewsModel mj_objectArrayWithKeyValuesArray:responseObject];
         if (pageIndex == 1) {

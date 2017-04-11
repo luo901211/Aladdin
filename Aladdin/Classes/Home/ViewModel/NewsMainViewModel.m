@@ -7,6 +7,7 @@
 //
 
 #import "NewsMainViewModel.h"
+#import "ALDNewsTypeModel.h"
 
 @implementation NewsMainViewModel
 
@@ -24,7 +25,8 @@
     
     [AFNManagerRequest getWithPath:NEWS_TYPE params:nil success:^(NSURLResponse *response, id responseObject) {
         @strongify(self)
-        self.newsTypeList = responseObject;
+        NSArray *arrayM = [ALDNewsTypeModel mj_objectArrayWithKeyValuesArray:responseObject];
+        self.newsTypeList = [arrayM mutableCopy];
         complete(nil);
     } failure:^(NSError *error) {
         complete(error);

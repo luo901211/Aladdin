@@ -469,6 +469,7 @@
 		A4C32E741E9A374E00D53E1A /* Answer */ = {
 			isa = PBXGroup;
 			children = (
+				A4C32E751E9A374E00D53E1A /* Model */,
 				A4C32E761E9A374E00D53E1A /* View */,
 				A4C32E771E9A374E00D53E1A /* ViewController */,
 				A4C32E781E9A374E00D53E1A /* ViewModel */,
@@ -482,8 +483,7 @@
 				A4C32E8E1E9A37E300D53E1A /* AnswerModel.h */,
 				A4C32E8F1E9A37E300D53E1A /* AnswerModel.m */,
 			);
-			name = Model;
-			path = ../Answer/Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		A4C32E761E9A374E00D53E1A /* View */ = {
@@ -676,7 +676,6 @@
 				A4D682F41E97786800FBA51C /* Model */,
 				A4D682F51E97786800FBA51C /* View */,
 				A4D682F61E97786800FBA51C /* ViewController */,
-				A4C32E751E9A374E00D53E1A /* Model */,
 				A4D682F71E97786800FBA51C /* ViewModel */,
 			);
 			path = Home;
