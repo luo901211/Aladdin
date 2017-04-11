@@ -9,15 +9,25 @@
 #import "NewsMainViewController.h"
 #import "SGSegmentedControl.h"
 #import "NewsListViewController.h"
+#import "NewsMainViewModel.h"
 
 @interface NewsMainViewController ()<SGSegmentedControlDefaultDelegate, UIScrollViewDelegate>
 
 @property (nonatomic, strong) SGSegmentedControlDefault *topSView;
 @property (nonatomic, strong) SGSegmentedControlBottomView *bottomSView;
 
+@property (nonatomic, strong) NewsMainViewModel *viewModel;
+
 @end
 
 @implementation NewsMainViewController
+
+- (NewsMainViewModel *)viewModel {
+    if (!_viewModel) {
+        _viewModel = [[NewsMainViewModel alloc] init];
+    }
+    return _viewModel;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,15 +37,32 @@
     
     self.navigationItem.title = @"阿拉灯";
     
-    [self initUI];
+    [self loadNewsType];
+}
+
+- (void)loadNewsType {
+    @weakify(self);
+    [self.viewModel loadNewsTypeWithCompleted:^(NSError *error) {
+        @strongify(self)
+        if (!error) {
+            [self initUI];
+        }else{
+            NSLog(@"%@",error.userInfo);
+        }
+    }];
 }
 
 - (void)initUI {
+    NSMutableArray *newsTypeList = self.viewModel.newsTypeList;
+    NSMutableArray *titleArr = [NSMutableArray array];
+    for (int i = 0; i < newsTypeList.count; i++) {
+        [titleArr addObject:newsTypeList[i][@"title"]];
+    }
     
-    NSArray *titleArr = @[@"精选", @"电视剧", @"电影", @"综艺", @"NBA", @"新闻", @"娱乐", @"音乐", @"网络电影"];
     NSMutableArray *childVC = [NSMutableArray array];
     for (int i = 0; i < titleArr.count; i++) {
         NewsListViewController *vc = [[NewsListViewController alloc] init];
+        vc.ID = [newsTypeList[i][@"id"] integerValue];
         [childVC addObject:vc];
         [self addChildViewController:vc];
     }

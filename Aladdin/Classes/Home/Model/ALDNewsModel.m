@@ -10,13 +10,4 @@
 
 @implementation ALDNewsModel
 
-+ (instancetype)modelWithDict:(NSDictionary *)dict
-{
-    ALDNewsModel *model = [[self alloc]init];
-    
-    [model setValuesForKeysWithDictionary:dict];
-    
-    return model;
-}
-
 @end

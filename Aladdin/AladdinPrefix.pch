@@ -16,7 +16,7 @@
 #import "MBProgressHUD+MP.h"
 
 #import <MJRefresh/MJRefresh.h>
-#import <UIImageView+WebCache.h>
+#import "UIImageView+WebCache.h"
 #import <MJExtension/MJExtension.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <YYKit/YYKit.h>
@@ -29,10 +29,10 @@
 
 // Const
 #import "NotificationContants.h"
+#import "ALDEnumerateHeader.h"
 
 // Tool
 #import "MPUmengHelper.h"
-#import "WQHTTPManager.h"
-#import "WQNetworkTools.H"
+#import "AFNManagerRequest.h"
 
 #endif /* AladdinPrefix_pch */

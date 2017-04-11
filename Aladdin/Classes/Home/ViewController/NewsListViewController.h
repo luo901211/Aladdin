@@ -9,11 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface NewsListViewController : UITableViewController
-/**
- *  url端口
- */
-@property(nonatomic,copy) NSString *urlString;
 
-@property (nonatomic,assign) NSInteger index;
+@property (nonatomic, assign) NSInteger ID;
 
 @end

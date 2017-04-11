@@ -7,24 +7,26 @@
 //
 
 #import "NewsListViewController.h"
-#import "NewsViewModel.h"
+#import "ALDNewsBannerModel.h"
+#import "NewsListViewModel.h"
 #import "NewsCell.h"
 #import "WQChiBaoZiHeader.h"
 #import "SDCycleScrollView.h"
 
 @interface NewsListViewController ()
 
-@property(nonatomic,strong) NSMutableArray *arrayList;
+@property (nonatomic, strong) NewsListViewModel *viewModel;
 
-@property (nonatomic, strong) NewsViewModel *viewModel;
+@property (nonatomic, strong) SDCycleScrollView *cycleScrollView;
 
 @end
 
 @implementation NewsListViewController
 
-- (NewsViewModel *)viewModel {
+- (NewsListViewModel *)viewModel {
     if (!_viewModel) {
-        _viewModel = [[NewsViewModel alloc] init];
+        _viewModel = [[NewsListViewModel alloc] init];
+        _viewModel.ID = self.ID;
     }
     return _viewModel;
 }
@@ -32,27 +34,43 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self initUI];
-    
     self.tableView.tableFooterView = [UIView new];
     [self.tableView registerNib:[UINib nibWithNibName:@"NewsCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"NewsCell"];
-    self.urlString = @"headline/T1348647853363";
     
     __weak NewsListViewController *weakSelf = self;
     self.tableView.mj_header = [WQChiBaoZiHeader headerWithRefreshingBlock:^{
-        [weakSelf loadData];
+        [weakSelf loadDataWithType:WQFetchDataTypeRefresh];
     }];
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-        [weakSelf loadMoreData];
+        [weakSelf loadDataWithType:WQFetchDataTypeLoadMore];
     }];
+    self.tableView.mj_footer.automaticallyHidden = YES;
     
     [self.tableView.mj_header beginRefreshing];
+    
+    [self loadBannerData];
 }
-
-- (void)initUI {
-    NSString *url = @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1492330959&di=1fb52e3d77abdd4eb2b194edf750a9a5&imgtype=jpg&er=1&src=http%3A%2F%2Fi.gtimg.cn%2Fqqlive%2Fimg%2Fjpgcache%2Ffiles%2Fqqvideo%2Fhori%2Fn%2Fn4bzy3vznfrz4xm_big.jpg";
+- (void)loadBannerData {
+    @weakify(self);
+    [self.viewModel loadBannerListWithCompleted:^(NSError *error) {
+        @strongify(self);
+        if (error) {
+            NSLog(@"error: %@",error);
+            return;
+        }
+        
+        [self initCycleScrollViewWithArray:self.viewModel.bannerList];
+        
+    }];
+}
+- (void)initCycleScrollViewWithArray:(NSArray *)array {
+    NSMutableArray *images = [NSMutableArray array];
+    for (int i = 0; i < array.count; i++) {
+        ALDNewsBannerModel *model = array[i];
+        [images addObject:model.picUrl];
+    }
     SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, Main_Screen_Width, 150) delegate:nil placeholderImage:nil];
-    cycleScrollView.imageURLStringsGroup = @[url, url, url];
+    cycleScrollView.imageURLStringsGroup = images;
     cycleScrollView.autoScrollTimeInterval = 3;
     cycleScrollView.clickItemOperationBlock = ^(NSInteger currentIndex) {
         UIViewController *vc = [[UIViewController alloc] init];
@@ -67,56 +85,59 @@
 }
 
 #pragma mark - /************************* 刷新数据 ***************************/
-// ------下拉刷新
-- (void)loadData
-{
-    // http://c.m.163.com//nc/article/headline/T1348647853363/0-30.html
-    NSString *allUrlstring = [NSString stringWithFormat:@"/nc/article/%@/0-20.html",self.urlString];
-    [self loadDataForType:1 withURL:allUrlstring];
-}
 
-// ------上拉加载
-- (void)loadMoreData
+- (void)loadDataWithType:(WQFetchDataType)type
 {
-    //    NSString *allUrlstring = [NSString stringWithFormat:@"/nc/article/%@/%ld-20.html",self.urlString,self.arrayList.count];
-    NSString *allUrlstring = [NSString stringWithFormat:@"/nc/article/%@/%ld-20.html",self.urlString,(long)(self.arrayList.count - self.arrayList.count%10)];
-    [self loadDataForType:2 withURL:allUrlstring];
-}
-
-// ------公共方法
-- (void)loadDataForType:(int)type withURL:(NSString *)allUrlstring
-{
-    @weakify(self)
-    [[self.viewModel.fetchNewsModelCommand execute:allUrlstring]subscribeNext:^(NSArray *arrayM) {
+    @weakify(self);
+    
+    NSInteger pageIndex = 1;
+    if (type == WQFetchDataTypeLoadMore) {
+        pageIndex = (NSInteger)self.viewModel.newsList.count / API_PAGE_SIZE + 1;
+    }
+    
+    [self.viewModel loadNewsListWithPageIndex:pageIndex success:^(BOOL noMoreData) {
         @strongify(self)
-        if (type == 1) {
-            self.arrayList = [arrayM mutableCopy];
-            [self.tableView.mj_header endRefreshing];
-            [self.tableView reloadData];
-        }else if(type == 2){
-            [self.arrayList addObjectsFromArray:arrayM];
-            [self.tableView.mj_footer endRefreshing];
-            [self.tableView reloadData];
+        
+        if (noMoreData) {
+            [self.tableView.mj_footer endRefreshingWithNoMoreData];
         }
-    } error:^(NSError *error) {
+        
+        if (type == WQFetchDataTypeRefresh) {
+            
+            [self.tableView.mj_header endRefreshing];
+            
+        }else if(type == WQFetchDataTypeLoadMore && !noMoreData){
+            
+            [self.tableView.mj_footer endRefreshing];
+            
+        }
+        [self.tableView reloadData];
+    } failure:^(NSError *error) {
+        if (type == WQFetchDataTypeRefresh) {
+            [self.tableView.mj_header endRefreshing];
+        }else if(type == WQFetchDataTypeLoadMore){
+            [self.tableView.mj_footer endRefreshing];
+        }
         NSLog(@"%@",error.userInfo);
     }];
+
+
 }
 
 #pragma mark - Table view data source
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ALDNewsModel *model = self.arrayList[indexPath.row];
+    ALDNewsModel *model = self.viewModel.newsList[indexPath.row];
     return [NewsCell heightForRow:model];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.arrayList.count;
+    return self.viewModel.newsList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NewsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NewsCell"];
-    ALDNewsModel *model = self.arrayList[indexPath.row];
+    ALDNewsModel *model = self.viewModel.newsList[indexPath.row];
     cell.model = model;
     return cell;
 }

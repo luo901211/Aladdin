@@ -37,17 +37,23 @@
 - (void)loadData {
     
     @weakify(self);
-    [[[WQNetworkTools sharedNetworkTools]GET:@"/video/type" parameters:nil success:^(NSURLSessionDataTask *task, NSDictionary* responseObject) {
+    
+    [AFNManagerRequest getWithPath:@"/video/type" params:nil success:^(NSURLResponse *response, id responseObject) {
+        
         @strongify(self);
-        NSLog(@"responseObject: %@",responseObject);
+        
         if ([responseObject[@"code"] integerValue] == 1) {
             NSArray *temArray = responseObject[@"res"];
             self.arrayList = [temArray mutableCopy];
             [self initUI];
         }
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+
+    } failure:^(NSError *error) {
+        
         NSLog(@"%@",error);
-    }] resume];
+
+    }];
+        
 }
 
 - (void)initUI {

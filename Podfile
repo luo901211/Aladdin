@@ -11,10 +11,10 @@ target 'Aladdin' do
   # use_frameworks!
 
   # Pods for Aladdin
-  pod 'ReactiveCocoa'
-  pod 'AFNetworking'
-  pod 'MJExtension'
-  pod 'MJRefresh'
+  pod 'ReactiveCocoa', '2.5'
+  pod 'AFNetworking', '~> 3.0'
+  pod 'MJExtension', '~> 3.0'
+  pod 'MJRefresh', '~>3.0'
   pod 'SDWebImage'
   pod 'FDFullscreenPopGesture'
   pod 'UITableView+FDTemplateLayoutCell'

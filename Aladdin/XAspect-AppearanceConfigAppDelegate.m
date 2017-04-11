@@ -2,7 +2,7 @@
 //  XAspect-AppearenceConfigAppDelegate
 //  Aladdin 设置统一样式
 //
-//  Created by luowenqi on 16/6/22.
+//  Created by luowenqi on 17/4/10.
 //  Copyright © 2016年 luowenqi. All rights reserved.
 //
 

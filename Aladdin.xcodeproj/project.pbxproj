@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9757076926F101F14B95A9B7 /* libPods-Aladdin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C053C7FD5174C35BD1AC7F25 /* libPods-Aladdin.a */; };
+		0D041C178F6ACBB64E74C5A3 /* libPods-Aladdin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E962B31D6986262B603D83 /* libPods-Aladdin.a */; };
+		A4A029491E9B2F9D0008F281 /* MJExtensionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A029481E9B2F9D0008F281 /* MJExtensionConfig.m */; };
+		A4A0294C1E9B341C0008F281 /* AFNManagerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A0294B1E9B341C0008F281 /* AFNManagerRequest.m */; };
+		A4A0294F1E9B68C20008F281 /* NewsMainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A0294E1E9B68C20008F281 /* NewsMainViewModel.m */; };
+		A4AE16FC1E9C8423007965EE /* ALDNewsTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AE16FB1E9C8423007965EE /* ALDNewsTypeModel.m */; };
+		A4AE16FF1E9C842F007965EE /* ALDNewsBannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AE16FE1E9C842F007965EE /* ALDNewsBannerModel.m */; };
 		A4C32AEB1E98A7B800D53E1A /* MPFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32ACE1E98A7B800D53E1A /* MPFileManager.m */; };
 		A4C32AEC1E98A7B800D53E1A /* GCDGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32AD21E98A7B800D53E1A /* GCDGroup.m */; };
 		A4C32AED1E98A7B800D53E1A /* GCDQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32AD41E98A7B800D53E1A /* GCDQueue.m */; };
@@ -32,11 +37,9 @@
 		A4C32E361E98AEB500D53E1A /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32E331E98AEB500D53E1A /* JRSwizzle.m */; };
 		A4C32E371E98AEB500D53E1A /* SYSafeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32E351E98AEB500D53E1A /* SYSafeCategory.m */; };
 		A4C32E391E98B0A700D53E1A /* XAspect-UmengShareAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32E381E98B0A700D53E1A /* XAspect-UmengShareAppDelegate.m */; };
-		A4C32E3F1E98B32600D53E1A /* WQHTTPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32E3E1E98B32600D53E1A /* WQHTTPManager.m */; };
-		A4C32E421E98B39D00D53E1A /* WQNetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32E411E98B39D00D53E1A /* WQNetworkTools.m */; };
 		A4C32E451E98C0C600D53E1A /* ALDNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32E441E98C0C600D53E1A /* ALDNewsModel.m */; };
 		A4C32E481E98C0F500D53E1A /* NewsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32E471E98C0F500D53E1A /* NewsListViewController.m */; };
-		A4C32E4B1E98CAD500D53E1A /* NewsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32E4A1E98CAD500D53E1A /* NewsViewModel.m */; };
+		A4C32E4B1E98CAD500D53E1A /* NewsListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32E4A1E98CAD500D53E1A /* NewsListViewModel.m */; };
 		A4C32E501E98EBD800D53E1A /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32E4F1E98EBD800D53E1A /* NewsCell.m */; };
 		A4C32E521E99F2F600D53E1A /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4C32E511E99F2F600D53E1A /* NewsCell.xib */; };
 		A4C32E581E9A16F400D53E1A /* NewsMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32E571E9A16F400D53E1A /* NewsMainViewController.m */; };
@@ -76,6 +79,18 @@
 
 /* Begin PBXFileReference section */
 		305FF1261A706E58B8894552 /* Pods-Aladdin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aladdin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aladdin/Pods-Aladdin.debug.xcconfig"; sourceTree = "<group>"; };
+		91E962B31D6986262B603D83 /* libPods-Aladdin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Aladdin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4A029471E9B2F9D0008F281 /* MJExtensionConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConfig.h; sourceTree = "<group>"; };
+		A4A029481E9B2F9D0008F281 /* MJExtensionConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionConfig.m; sourceTree = "<group>"; };
+		A4A0294A1E9B341C0008F281 /* AFNManagerRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNManagerRequest.h; sourceTree = "<group>"; };
+		A4A0294B1E9B341C0008F281 /* AFNManagerRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNManagerRequest.m; sourceTree = "<group>"; };
+		A4A0294D1E9B68C20008F281 /* NewsMainViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsMainViewModel.h; sourceTree = "<group>"; };
+		A4A0294E1E9B68C20008F281 /* NewsMainViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsMainViewModel.m; sourceTree = "<group>"; };
+		A4A029501E9B8BAC0008F281 /* ALDEnumerateHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALDEnumerateHeader.h; sourceTree = "<group>"; };
+		A4AE16FA1E9C8423007965EE /* ALDNewsTypeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDNewsTypeModel.h; sourceTree = "<group>"; };
+		A4AE16FB1E9C8423007965EE /* ALDNewsTypeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDNewsTypeModel.m; sourceTree = "<group>"; };
+		A4AE16FD1E9C842F007965EE /* ALDNewsBannerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDNewsBannerModel.h; sourceTree = "<group>"; };
+		A4AE16FE1E9C842F007965EE /* ALDNewsBannerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDNewsBannerModel.m; sourceTree = "<group>"; };
 		A4C32ACD1E98A7B800D53E1A /* MPFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPFileManager.h; sourceTree = "<group>"; };
 		A4C32ACE1E98A7B800D53E1A /* MPFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPFileManager.m; sourceTree = "<group>"; };
 		A4C32AD01E98A7B800D53E1A /* GCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCD.h; sourceTree = "<group>"; };
@@ -129,16 +144,12 @@
 		A4C32E341E98AEB500D53E1A /* SYSafeCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYSafeCategory.h; sourceTree = "<group>"; };
 		A4C32E351E98AEB500D53E1A /* SYSafeCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYSafeCategory.m; sourceTree = "<group>"; };
 		A4C32E381E98B0A700D53E1A /* XAspect-UmengShareAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XAspect-UmengShareAppDelegate.m"; sourceTree = "<group>"; };
-		A4C32E3D1E98B32600D53E1A /* WQHTTPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQHTTPManager.h; sourceTree = "<group>"; };
-		A4C32E3E1E98B32600D53E1A /* WQHTTPManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQHTTPManager.m; sourceTree = "<group>"; };
-		A4C32E401E98B39D00D53E1A /* WQNetworkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQNetworkTools.h; sourceTree = "<group>"; };
-		A4C32E411E98B39D00D53E1A /* WQNetworkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQNetworkTools.m; sourceTree = "<group>"; };
 		A4C32E431E98C0C600D53E1A /* ALDNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDNewsModel.h; sourceTree = "<group>"; };
 		A4C32E441E98C0C600D53E1A /* ALDNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDNewsModel.m; sourceTree = "<group>"; };
 		A4C32E461E98C0F500D53E1A /* NewsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListViewController.h; sourceTree = "<group>"; };
 		A4C32E471E98C0F500D53E1A /* NewsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListViewController.m; sourceTree = "<group>"; };
-		A4C32E491E98CAD500D53E1A /* NewsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewModel.h; sourceTree = "<group>"; };
-		A4C32E4A1E98CAD500D53E1A /* NewsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewModel.m; sourceTree = "<group>"; };
+		A4C32E491E98CAD500D53E1A /* NewsListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListViewModel.h; sourceTree = "<group>"; };
+		A4C32E4A1E98CAD500D53E1A /* NewsListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListViewModel.m; sourceTree = "<group>"; };
 		A4C32E4E1E98EBD800D53E1A /* NewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCell.h; sourceTree = "<group>"; };
 		A4C32E4F1E98EBD800D53E1A /* NewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCell.m; sourceTree = "<group>"; };
 		A4C32E511E99F2F600D53E1A /* NewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
@@ -205,7 +216,6 @@
 		A4D682E51E976CEB00FBA51C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4D682E71E976CEB00FBA51C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2F0BD5579963808346C1999 /* Pods-Aladdin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aladdin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aladdin/Pods-Aladdin.release.xcconfig"; sourceTree = "<group>"; };
-		C053C7FD5174C35BD1AC7F25 /* libPods-Aladdin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Aladdin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,7 +223,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9757076926F101F14B95A9B7 /* libPods-Aladdin.a in Frameworks */,
+				0D041C178F6ACBB64E74C5A3 /* libPods-Aladdin.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,9 +233,18 @@
 		5B3F9F31E8038F3202AF4A1B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C053C7FD5174C35BD1AC7F25 /* libPods-Aladdin.a */,
+				91E962B31D6986262B603D83 /* libPods-Aladdin.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A4A029461E9B2F880008F281 /* ModelHelper */ = {
+			isa = PBXGroup;
+			children = (
+				A4A029471E9B2F9D0008F281 /* MJExtensionConfig.h */,
+				A4A029481E9B2F9D0008F281 /* MJExtensionConfig.m */,
+			);
+			path = ModelHelper;
 			sourceTree = "<group>";
 		};
 		A4C32ACC1E98A7B800D53E1A /* FileManager */ = {
@@ -343,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				A4C32D1D1E98AB3200D53E1A /* NotificationContants.h */,
+				A4A029501E9B8BAC0008F281 /* ALDEnumerateHeader.h */,
 			);
 			path = Const;
 			sourceTree = "<group>";
@@ -417,10 +437,8 @@
 		A4C32E3C1E98B2C200D53E1A /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
-				A4C32E3D1E98B32600D53E1A /* WQHTTPManager.h */,
-				A4C32E3E1E98B32600D53E1A /* WQHTTPManager.m */,
-				A4C32E401E98B39D00D53E1A /* WQNetworkTools.h */,
-				A4C32E411E98B39D00D53E1A /* WQNetworkTools.m */,
+				A4A0294A1E9B341C0008F281 /* AFNManagerRequest.h */,
+				A4A0294B1E9B341C0008F281 /* AFNManagerRequest.m */,
 			);
 			path = NetWork;
 			sourceTree = "<group>";
@@ -669,6 +687,10 @@
 			children = (
 				A4C32E431E98C0C600D53E1A /* ALDNewsModel.h */,
 				A4C32E441E98C0C600D53E1A /* ALDNewsModel.m */,
+				A4AE16FA1E9C8423007965EE /* ALDNewsTypeModel.h */,
+				A4AE16FB1E9C8423007965EE /* ALDNewsTypeModel.m */,
+				A4AE16FD1E9C842F007965EE /* ALDNewsBannerModel.h */,
+				A4AE16FE1E9C842F007965EE /* ALDNewsBannerModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -697,8 +719,10 @@
 		A4D682F71E97786800FBA51C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				A4C32E491E98CAD500D53E1A /* NewsViewModel.h */,
-				A4C32E4A1E98CAD500D53E1A /* NewsViewModel.m */,
+				A4C32E491E98CAD500D53E1A /* NewsListViewModel.h */,
+				A4C32E4A1E98CAD500D53E1A /* NewsListViewModel.m */,
+				A4A0294D1E9B68C20008F281 /* NewsMainViewModel.h */,
+				A4A0294E1E9B68C20008F281 /* NewsMainViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -706,6 +730,7 @@
 		A4D682F81E97786800FBA51C /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				A4A029461E9B2F880008F281 /* ModelHelper */,
 				A4C32E3C1E98B2C200D53E1A /* NetWork */,
 				A4C32AE31E98A7B800D53E1A /* OtherHelper */,
 				A4C32ACC1E98A7B800D53E1A /* FileManager */,
@@ -875,7 +900,7 @@
 				A4C32AEB1E98A7B800D53E1A /* MPFileManager.m in Sources */,
 				A4C32E261E98AD0F00D53E1A /* UIImage+OuterCircle.m in Sources */,
 				A4C32AEF1E98A7B800D53E1A /* GCDTimer.m in Sources */,
-				A4C32E3F1E98B32600D53E1A /* WQHTTPManager.m in Sources */,
+				A4A029491E9B2F9D0008F281 /* MJExtensionConfig.m in Sources */,
 				A4C32EB41E9A6A5600D53E1A /* TeachingVideoCollectionViewCell.m in Sources */,
 				A4C32E851E9A37A400D53E1A /* AnswerMainViewController.m in Sources */,
 				A4C32AF41E98A7B800D53E1A /* cameraHelper.m in Sources */,
@@ -896,18 +921,21 @@
 				A4C32E711E9A1BF400D53E1A /* UIView+SGExtension.m in Sources */,
 				A4C32E6C1E9A1BF400D53E1A /* SGImageButton_Vertical.m in Sources */,
 				A4C32AF11E98A7B800D53E1A /* introductoryPagesView.m in Sources */,
+				A4A0294F1E9B68C20008F281 /* NewsMainViewModel.m in Sources */,
 				A4C32E391E98B0A700D53E1A /* XAspect-UmengShareAppDelegate.m in Sources */,
 				A4C32E6D1E9A1BF400D53E1A /* SGNavigationItemTitleView.m in Sources */,
-				A4C32E421E98B39D00D53E1A /* WQNetworkTools.m in Sources */,
 				A4C32AED1E98A7B800D53E1A /* GCDQueue.m in Sources */,
+				A4A0294C1E9B341C0008F281 /* AFNManagerRequest.m in Sources */,
 				A4C32E931E9A37FB00D53E1A /* AnswerViewModel.m in Sources */,
 				A4C32E881E9A37BA00D53E1A /* AnswerListViewController.m in Sources */,
-				A4C32E4B1E98CAD500D53E1A /* NewsViewModel.m in Sources */,
+				A4C32E4B1E98CAD500D53E1A /* NewsListViewModel.m in Sources */,
 				A4C32E291E98AD0F00D53E1A /* UIView+Extension.m in Sources */,
 				A4C32EAD1E9A65E000D53E1A /* TeachingVideoCollectionVC.m in Sources */,
+				A4AE16FF1E9C842F007965EE /* ALDNewsBannerModel.m in Sources */,
 				A4C32AEC1E98A7B800D53E1A /* GCDGroup.m in Sources */,
 				A4C32E6E1E9A1BF400D53E1A /* SGSegmentedControlBottomView.m in Sources */,
 				A4C32E251E98AD0F00D53E1A /* NSString+Additions.m in Sources */,
+				A4AE16FC1E9C8423007965EE /* ALDNewsTypeModel.m in Sources */,
 				A4C32E271E98AD0F00D53E1A /* UITextField+Extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
