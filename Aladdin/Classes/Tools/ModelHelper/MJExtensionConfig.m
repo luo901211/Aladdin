@@ -22,11 +22,6 @@
         return @{ @"ID" : @"id" };
     }];
     
-#pragma mark MJDog的所有驼峰属性转成下划线key去字典中取值
-    [NSObject mj_setupReplacedKeyFromPropertyName121:^id(NSString *propertyName) {
-        return [propertyName mj_camelFromUnderline];
-
-    }];
 
     // 相当于在MJDog.m中实现了+(NSDictionary *)mj_replacedKeyFromPropertyName121:方法
     

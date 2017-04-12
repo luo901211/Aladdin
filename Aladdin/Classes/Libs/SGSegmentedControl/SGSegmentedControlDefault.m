@@ -137,6 +137,20 @@
         [self addSubview:_title_btn];
     }
     
+    // 当按钮总长度小于屏幕宽度，做宽度修正
+    if (self.storageAlltitleBtn_mArr.count) {
+        UIButton *button = self.storageAlltitleBtn_mArr.lastObject;
+        CGRect frame = button.frame;
+        if (frame.origin.x + frame.size.width < self.bounds.size.width) {
+            CGFloat space = (self.bounds.size.width - (frame.origin.x + frame.size.width)) / self.storageAlltitleBtn_mArr.count;
+            for (int i = 0; i < self.storageAlltitleBtn_mArr.count; i++) {
+                UIButton *b = self.storageAlltitleBtn_mArr[i];
+                CGRect bFrame = b.frame;
+                b.frame = CGRectMake(bFrame.origin.x + i * space, bFrame.origin.y, bFrame.size.width + space, bFrame.size.height);
+            }
+        }
+    }
+    
     // 计算scrollView的宽度
     CGFloat scrollViewWidth = CGRectGetMaxX(self.subviews.lastObject.frame);
     self.contentSize = CGSizeMake(scrollViewWidth, self.frame.size.height);
@@ -233,7 +247,8 @@
         
         // 改变指示器位置
         [UIView animateWithDuration:SG_indicatorAnimationTime animations:^{
-            self.indicatorView.SG_width = button.SG_width - 2 * SG_btnMargin;
+            self.indicatorView.SG_width = button.titleLabel.width;
+//            self.indicatorView.SG_width = button.SG_width - 2 * SG_btnMargin;
             self.indicatorView.SG_centerX = button.SG_centerX;
         }];
     }

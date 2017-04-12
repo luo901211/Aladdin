@@ -28,10 +28,10 @@
 {
     _model = model;
     
-    [self.imgIcon sd_setImageWithURL:[NSURL URLWithString:self.model.picUrl] placeholderImage:[UIImage imageNamed:@"302"]];
+    [self.imgIcon sd_setImageWithURL:[NSURL URLWithString:self.model.pic_url] placeholderImage:[UIImage imageNamed:@"302"]];
     self.lblTitle.text = model.title;
     self.lblSource.text = model.source;
-    self.lblTime.text = model.addDate;
+    self.lblTime.text = model.add_date;
 }
 
 #pragma mark - /************************* 类方法返回行高 ***************************/

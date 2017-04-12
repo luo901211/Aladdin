@@ -12,6 +12,6 @@
 
 @property (nonatomic, assign) NSInteger ID;
 
-@property (nonatomic, copy) NSString *picUrl;
+@property (nonatomic, copy) NSString *pic_url;
 
 @end

@@ -25,8 +25,8 @@
 
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *source;
-@property (nonatomic, copy) NSString *picUrl;
-@property (nonatomic, copy) NSString *addDate;
-@property (nonatomic, copy) NSString *addTime;
+@property (nonatomic, copy) NSString *pic_url;
+@property (nonatomic, copy) NSString *add_date;
+@property (nonatomic, copy) NSString *add_time;
 
 @end

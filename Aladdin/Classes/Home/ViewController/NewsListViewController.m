@@ -65,9 +65,10 @@
     NSMutableArray *images = [NSMutableArray array];
     for (int i = 0; i < array.count; i++) {
         ALDNewsBannerModel *model = array[i];
-        [images addObject:model.picUrl];
+        [images addObject:model.pic_url];
     }
-    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, Main_Screen_Width, 150) delegate:nil placeholderImage:nil];
+    
+    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, Main_Screen_Width, 150 * kScreenWidthRatio) delegate:nil placeholderImage:nil];
     cycleScrollView.imageURLStringsGroup = images;
     cycleScrollView.autoScrollTimeInterval = 3;
     cycleScrollView.clickItemOperationBlock = ^(NSInteger currentIndex) {
