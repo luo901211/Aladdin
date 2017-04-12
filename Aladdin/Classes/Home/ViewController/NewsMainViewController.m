@@ -39,6 +39,7 @@
     self.navigationItem.title = @"阿拉灯";
     
     [self loadNewsType];
+    
 }
 
 - (void)loadNewsType {

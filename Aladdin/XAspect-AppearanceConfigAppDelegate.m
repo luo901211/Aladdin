@@ -29,7 +29,11 @@ AspectPatch(-, BOOL, application:(UIApplication *)application didFinishLaunching
 @classPatchField(UIViewController)
 AspectPatch(-, void, viewDidLoad)
 {
-    self.view.backgroundColor = [UIColor whiteColor];
+    
+    if (self.class == [UIViewController class] && self.class == [UITableViewController class]) {
+        self.view.backgroundColor = [UIColor whiteColor];
+    }
+    
     return XAMessageForward(viewDidLoad);
 }
 

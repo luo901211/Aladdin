@@ -16,7 +16,6 @@ target 'Aladdin' do
   pod 'MJExtension', '~> 3.0'
   pod 'MJRefresh', '~>3.0'
   pod 'SDWebImage'
-  pod 'FDFullscreenPopGesture'
   pod 'UITableView+FDTemplateLayoutCell'
   pod 'IQKeyboardManager'
   pod 'MBProgressHUD'

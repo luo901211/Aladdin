@@ -38,15 +38,12 @@
     
     @weakify(self);
     
-    [AFNManagerRequest getWithPath:@"/video/type" params:nil success:^(NSURLResponse *response, id responseObject) {
+    [AFNManagerRequest getWithPath:@"/video/type" params:nil success:^(NSURLResponse *response, NSArray *responseObject) {
         
         @strongify(self);
         
-        if ([responseObject[@"code"] integerValue] == 1) {
-            NSArray *temArray = responseObject[@"res"];
-            self.arrayList = [temArray mutableCopy];
-            [self initUI];
-        }
+        self.arrayList = [responseObject mutableCopy];
+        [self initUI];
 
     } failure:^(NSError *error) {
         

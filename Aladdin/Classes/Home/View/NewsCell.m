@@ -27,8 +27,7 @@
 - (void)setModel:(ALDNewsModel *)model
 {
     _model = model;
-    
-    [self.imgIcon sd_setImageWithURL:[NSURL URLWithString:self.model.pic_url] placeholderImage:[UIImage imageNamed:@"302"]];
+    [self.imgIcon sd_setImageWithURL:[NSURL URLWithString:model.pic_url] placeholderImage:nil];
     self.lblTitle.text = model.title;
     self.lblSource.text = model.source;
     self.lblTime.text = model.add_date;

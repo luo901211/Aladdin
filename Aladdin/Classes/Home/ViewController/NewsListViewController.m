@@ -11,6 +11,7 @@
 #import "NewsCell.h"
 #import "WQChiBaoZiHeader.h"
 #import "SDCycleScrollView.h"
+#import "NewsDetailViewController.h"
 
 @interface NewsListViewController ()
 
@@ -72,7 +73,7 @@
     cycleScrollView.imageURLStringsGroup = images;
     cycleScrollView.autoScrollTimeInterval = 3;
     cycleScrollView.clickItemOperationBlock = ^(NSInteger currentIndex) {
-        UIViewController *vc = [[UIViewController alloc] init];
+        NewsDetailViewController *vc = [[NewsDetailViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     };
     self.tableView.tableHeaderView = cycleScrollView;
@@ -139,6 +140,13 @@
     ALDNewsModel *model = self.viewModel.newsList[indexPath.row];
     cell.model = model;
     return cell;
+}
+
+#pragma mark - Table view delegate
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NewsDetailViewController *vc = [[NewsDetailViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

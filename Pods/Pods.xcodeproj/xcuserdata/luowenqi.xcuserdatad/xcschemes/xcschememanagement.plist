@@ -14,11 +14,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>FDFullscreenPopGesture.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>IQKeyboardManager.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -82,22 +77,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>18203A4D4A402E298476C87D380A7149</key>
+		<key>343772179DB2CD4049006768543D442F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>26BB7756581505D1C908AE503337AF82</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>2C71DE0FB8A6E5BB6EAF9FB037D799CC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>68B895C635292AF5106EF1A8894408DB</key>
+		<key>6CEF96F8961760A85FE553BD97D58E39</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -107,17 +92,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>77D0A2A7DE5AB971B06F5D16A5DFDB90</key>
+		<key>7B9055AD2484C1B4A9350AE8D43AE4C3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>97EFE83D23585594176E0D9357C4D1EB</key>
+		<key>928353533005A4198EBDA5B700D37B64</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9E82E718065E19095BC07B07274063DB</key>
+		<key>928EB0941C0E67B91D68ABF718B94783</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -127,12 +112,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C9843170B0E1DD2432BAE4D7A1ADC9C0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CACD2A5B3BD25D222146830D3EDF78E6</key>
+		<key>CB2BB2F9EDC58EB64CE0FC0C1247EF6A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -143,6 +123,16 @@
 			<true/>
 		</dict>
 		<key>D0D0C9D20C43FA94D4C88FBFE2601B8E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D78A2F9B05482CF0D51AE7B8D2BB495C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DF2CBC106D1D12A9838A2A984FBEC8D9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
