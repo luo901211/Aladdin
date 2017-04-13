@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		0D041C178F6ACBB64E74C5A3 /* libPods-Aladdin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E962B31D6986262B603D83 /* libPods-Aladdin.a */; };
 		A43C93511E9E2342008B877D /* UIView+BlockGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = A43C93501E9E2342008B877D /* UIView+BlockGesture.m */; };
+		A43F9DCF1E9F2CBC00AA831E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A43F9DCD1E9F2CBC00AA831E /* LoginViewController.m */; };
+		A43F9DD01E9F2CBC00AA831E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43F9DCE1E9F2CBC00AA831E /* LoginViewController.xib */; };
+		A43F9DD41E9F2CD400AA831E /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A43F9DD21E9F2CD400AA831E /* RegisterViewController.m */; };
+		A43F9DD51E9F2CD400AA831E /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43F9DD31E9F2CD400AA831E /* RegisterViewController.xib */; };
 		A4A029491E9B2F9D0008F281 /* MJExtensionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A029481E9B2F9D0008F281 /* MJExtensionConfig.m */; };
 		A4A0294C1E9B341C0008F281 /* AFNManagerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A0294B1E9B341C0008F281 /* AFNManagerRequest.m */; };
 		A4A0294F1E9B68C20008F281 /* NewsMainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A0294E1E9B68C20008F281 /* NewsMainViewModel.m */; };
@@ -92,6 +96,12 @@
 		91E962B31D6986262B603D83 /* libPods-Aladdin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Aladdin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A43C934F1E9E2342008B877D /* UIView+BlockGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BlockGesture.h"; sourceTree = "<group>"; };
 		A43C93501E9E2342008B877D /* UIView+BlockGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BlockGesture.m"; sourceTree = "<group>"; };
+		A43F9DCC1E9F2CBC00AA831E /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		A43F9DCD1E9F2CBC00AA831E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		A43F9DCE1E9F2CBC00AA831E /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		A43F9DD11E9F2CD400AA831E /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		A43F9DD21E9F2CD400AA831E /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		A43F9DD31E9F2CD400AA831E /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		A4A029471E9B2F9D0008F281 /* MJExtensionConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConfig.h; sourceTree = "<group>"; };
 		A4A029481E9B2F9D0008F281 /* MJExtensionConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionConfig.m; sourceTree = "<group>"; };
 		A4A0294A1E9B341C0008F281 /* AFNManagerRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNManagerRequest.h; sourceTree = "<group>"; };
@@ -264,6 +274,51 @@
 				91E962B31D6986262B603D83 /* libPods-Aladdin.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A43F9DC71E9F2C9B00AA831E /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				A43F9DC81E9F2C9B00AA831E /* Model */,
+				A43F9DC91E9F2C9B00AA831E /* View */,
+				A43F9DCA1E9F2C9B00AA831E /* ViewController */,
+				A43F9DCB1E9F2C9B00AA831E /* ViewModel */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		A43F9DC81E9F2C9B00AA831E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A43F9DC91E9F2C9B00AA831E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A43F9DCA1E9F2C9B00AA831E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A43F9DCC1E9F2CBC00AA831E /* LoginViewController.h */,
+				A43F9DCD1E9F2CBC00AA831E /* LoginViewController.m */,
+				A43F9DCE1E9F2CBC00AA831E /* LoginViewController.xib */,
+				A43F9DD11E9F2CD400AA831E /* RegisterViewController.h */,
+				A43F9DD21E9F2CD400AA831E /* RegisterViewController.m */,
+				A43F9DD31E9F2CD400AA831E /* RegisterViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A43F9DCB1E9F2C9B00AA831E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		A4A029461E9B2F880008F281 /* ModelHelper */ = {
@@ -697,6 +752,7 @@
 		A4D682ED1E97786800FBA51C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A43F9DC71E9F2C9B00AA831E /* Account */,
 				A4C32E2D1E98AE6900D53E1A /* TabBar */,
 				A4D682F81E97786800FBA51C /* Tools */,
 				A4C32AF81E98AB3200D53E1A /* Common */,
@@ -860,6 +916,7 @@
 			files = (
 				A4AE170A1E9E0C23007965EE /* NewsDetailBottomView.xib in Resources */,
 				A4D682E61E976CEB00FBA51C /* LaunchScreen.storyboard in Resources */,
+				A43F9DD01E9F2CBC00AA831E /* LoginViewController.xib in Resources */,
 				A4C32E8D1E9A37D100D53E1A /* AnswerCell.xib in Resources */,
 				A4C7C4DB1E9F194A003A36E0 /* WQInputView.xib in Resources */,
 				A4C32EA41E9A5F8B00D53E1A /* DiscoverCell.xib in Resources */,
@@ -868,6 +925,7 @@
 				A4C32EB51E9A6A5600D53E1A /* TeachingVideoCollectionViewCell.xib in Resources */,
 				A4C32E521E99F2F600D53E1A /* NewsCell.xib in Resources */,
 				A4D682E11E976CEB00FBA51C /* Main.storyboard in Resources */,
+				A43F9DD51E9F2CD400AA831E /* RegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -950,6 +1008,7 @@
 				A4C32EA31E9A5F8B00D53E1A /* DiscoverCell.m in Sources */,
 				A4C32E9C1E9A564200D53E1A /* ALDBaseViewController.m in Sources */,
 				A4C32AEB1E98A7B800D53E1A /* MPFileManager.m in Sources */,
+				A43F9DCF1E9F2CBC00AA831E /* LoginViewController.m in Sources */,
 				A4C32E261E98AD0F00D53E1A /* UIImage+OuterCircle.m in Sources */,
 				A4C32AEF1E98A7B800D53E1A /* GCDTimer.m in Sources */,
 				A4A029491E9B2F9D0008F281 /* MJExtensionConfig.m in Sources */,
@@ -959,6 +1018,7 @@
 				A4C32EB81E9A6FB000D53E1A /* TeachingVideoContainerVC.m in Sources */,
 				A43C93511E9E2342008B877D /* UIView+BlockGesture.m in Sources */,
 				A4C32AF21E98A7B800D53E1A /* CLLocation+MPLocation.m in Sources */,
+				A43F9DD41E9F2CD400AA831E /* RegisterViewController.m in Sources */,
 				A4C32E241E98AD0F00D53E1A /* MBProgressHUD+MP.m in Sources */,
 				A4C32E991E9A562D00D53E1A /* ALDBaseNavigationController.m in Sources */,
 				A4C32E171E98AB3300D53E1A /* Reachability.m in Sources */,

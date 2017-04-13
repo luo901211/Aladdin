@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B4s-16-rFX" userLabel="Banner">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="238"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_banner" translatesAutoresizingMaskIntoConstraints="NO" id="04s-gc-7ia">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="238"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XuU-JT-qtW">
+                            <rect key="frame" x="0.0" y="194" width="180" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="B5H-nJ-CA9"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="账号登录"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KM-yO-q6m">
+                            <rect key="frame" x="195" y="194" width="180" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="H9o-rO-O4q"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="验证码登录"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="5KM-yO-q6m" firstAttribute="leading" secondItem="XuU-JT-qtW" secondAttribute="trailing" constant="15" id="1kz-k7-b3T"/>
+                        <constraint firstAttribute="trailing" secondItem="5KM-yO-q6m" secondAttribute="trailing" id="4I0-zU-29E"/>
+                        <constraint firstItem="04s-gc-7ia" firstAttribute="leading" secondItem="B4s-16-rFX" secondAttribute="leading" id="5qA-DT-MlP"/>
+                        <constraint firstAttribute="bottom" secondItem="04s-gc-7ia" secondAttribute="bottom" id="6tF-ZI-U3O"/>
+                        <constraint firstAttribute="bottom" secondItem="XuU-JT-qtW" secondAttribute="bottom" id="UBq-bU-pMV"/>
+                        <constraint firstAttribute="width" secondItem="B4s-16-rFX" secondAttribute="height" multiplier="375:238" id="jwn-7J-jnq"/>
+                        <constraint firstItem="5KM-yO-q6m" firstAttribute="width" secondItem="XuU-JT-qtW" secondAttribute="width" id="quJ-8T-O0Q"/>
+                        <constraint firstItem="04s-gc-7ia" firstAttribute="top" secondItem="B4s-16-rFX" secondAttribute="top" id="tdk-4s-eVb"/>
+                        <constraint firstAttribute="trailing" secondItem="04s-gc-7ia" secondAttribute="trailing" id="v7c-kw-ids"/>
+                        <constraint firstItem="XuU-JT-qtW" firstAttribute="leading" secondItem="B4s-16-rFX" secondAttribute="leading" id="xH8-Rm-lID"/>
+                        <constraint firstAttribute="bottom" secondItem="5KM-yO-q6m" secondAttribute="bottom" id="xvC-4B-WpW"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="B4s-16-rFX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Mfg-kJ-XSY"/>
+                <constraint firstItem="B4s-16-rFX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Y9K-um-6mR"/>
+                <constraint firstAttribute="trailing" secondItem="B4s-16-rFX" secondAttribute="trailing" id="aAe-4F-lHb"/>
+            </constraints>
+            <point key="canvasLocation" x="35.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="login_banner" width="375" height="237"/>
+    </resources>
+</document>

@@ -10,6 +10,7 @@
 #import "SYSafeCategory.h"
 #import "IQKeyboardManager.h"
 #import "WQHomeTabBarController.h"
+#import "LoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -30,7 +31,8 @@
     //键盘统一收回处理
     [self configureBoardManager];
     
-    [self setupHomeViewController];
+//    [self setupHomeViewController];
+    [self setupLoginViewController];
     
     return YES;
 }
@@ -77,10 +79,10 @@
 //登录页面
 -(void)setupLoginViewController
 {
-    //    LogInViewController *logInVc = [[LogInViewController alloc]init];
-    //    self.window.rootViewController = logInVc;
-    //    self.window.backgroundColor = [UIColor whiteColor];
-    //    [self.window makeKeyAndVisible];
+    LoginViewController *logInVc = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:[NSBundle mainBundle]];
+    self.window.rootViewController = logInVc;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
 }
 
 //首页
