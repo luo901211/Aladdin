@@ -9,6 +9,7 @@
 #import "NewsDetailViewController.h"
 #import <WebKit/WebKit.h>
 #import "NewsDetailBottomView.h"
+#import "WQInputView.h"
 
 @interface NewsDetailViewController ()<WKNavigationDelegate, WKUIDelegate>
 
@@ -34,6 +35,13 @@
         _bottomView.frame = CGRectMake(0, self.view.height - 49, self.view.width, 49);
         _bottomView.commentBlock = ^(){
             NSLog(@"评论");
+            __block WQInputView *popInputView = [[NSBundle mainBundle] loadNibNamed:@"WQInputView" owner:nil options:nil][0];
+            [popInputView showWithTitle:@"写评论" cancelHandler:^(id obj) {
+                NSLog(@"取消评论");
+            } sendHandler:^(id obj) {
+                NSLog(@"发送评论");
+                [popInputView hide];
+            }];
         };
         _bottomView.shareBlock = ^(){
             NSLog(@"分享");

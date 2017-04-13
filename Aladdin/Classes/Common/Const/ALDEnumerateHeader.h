@@ -14,4 +14,6 @@ typedef NS_ENUM(NSInteger, WQFetchDataType) {
     WQFetchDataTypeLoadMore // 上拉加载更多
 };
 
+typedef void(^VoidBlock)(id obj);
+
 #endif /* ALDEnumerateHeader_h */
