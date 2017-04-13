@@ -12,6 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
             <connections>
+                <outlet property="codeLoginBtn" destination="5KM-yO-q6m" id="9IT-SI-iEp"/>
+                <outlet property="passwordLoginBtn" destination="XuU-JT-qtW" id="Obi-4V-BBq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -33,6 +35,9 @@
                             </constraints>
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <state key="normal" title="账号登录"/>
+                            <connections>
+                                <action selector="didPressedOnLoginTypeButton:" destination="-1" eventType="touchUpInside" id="QQ0-FI-kR2"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KM-yO-q6m">
                             <rect key="frame" x="195" y="194" width="180" height="44"/>
@@ -41,6 +46,9 @@
                             </constraints>
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <state key="normal" title="验证码登录"/>
+                            <connections>
+                                <action selector="didPressedOnLoginTypeButton:" destination="-1" eventType="touchUpInside" id="fJX-Jv-U0x"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

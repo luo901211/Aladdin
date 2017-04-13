@@ -80,7 +80,8 @@
 -(void)setupLoginViewController
 {
     LoginViewController *logInVc = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:[NSBundle mainBundle]];
-    self.window.rootViewController = logInVc;
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:logInVc];
+    self.window.rootViewController = nav;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 }

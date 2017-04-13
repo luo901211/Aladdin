@@ -13,6 +13,12 @@
 		A43F9DD01E9F2CBC00AA831E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43F9DCE1E9F2CBC00AA831E /* LoginViewController.xib */; };
 		A43F9DD41E9F2CD400AA831E /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A43F9DD21E9F2CD400AA831E /* RegisterViewController.m */; };
 		A43F9DD51E9F2CD400AA831E /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43F9DD31E9F2CD400AA831E /* RegisterViewController.xib */; };
+		A43F9DDE1E9F6DCE00AA831E /* FindPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A43F9DDC1E9F6DCE00AA831E /* FindPwdViewController.m */; };
+		A43F9DDF1E9F6DCE00AA831E /* FindPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43F9DDD1E9F6DCE00AA831E /* FindPwdViewController.xib */; };
+		A43F9DE31E9F6DDF00AA831E /* ChangePwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A43F9DE11E9F6DDF00AA831E /* ChangePwdViewController.m */; };
+		A43F9DE41E9F6DDF00AA831E /* ChangePwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43F9DE21E9F6DDF00AA831E /* ChangePwdViewController.xib */; };
+		A43F9DE71E9FAB1600AA831E /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A43F9DE61E9FAB1600AA831E /* LoginViewModel.m */; };
+		A43F9DEA1E9FB1B300AA831E /* RegisterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A43F9DE91E9FB1B300AA831E /* RegisterViewModel.m */; };
 		A4A029491E9B2F9D0008F281 /* MJExtensionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A029481E9B2F9D0008F281 /* MJExtensionConfig.m */; };
 		A4A0294C1E9B341C0008F281 /* AFNManagerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A0294B1E9B341C0008F281 /* AFNManagerRequest.m */; };
 		A4A0294F1E9B68C20008F281 /* NewsMainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A0294E1E9B68C20008F281 /* NewsMainViewModel.m */; };
@@ -102,6 +108,16 @@
 		A43F9DD11E9F2CD400AA831E /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		A43F9DD21E9F2CD400AA831E /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		A43F9DD31E9F2CD400AA831E /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		A43F9DDB1E9F6DCE00AA831E /* FindPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindPwdViewController.h; sourceTree = "<group>"; };
+		A43F9DDC1E9F6DCE00AA831E /* FindPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPwdViewController.m; sourceTree = "<group>"; };
+		A43F9DDD1E9F6DCE00AA831E /* FindPwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindPwdViewController.xib; sourceTree = "<group>"; };
+		A43F9DE01E9F6DDF00AA831E /* ChangePwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePwdViewController.h; sourceTree = "<group>"; };
+		A43F9DE11E9F6DDF00AA831E /* ChangePwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePwdViewController.m; sourceTree = "<group>"; };
+		A43F9DE21E9F6DDF00AA831E /* ChangePwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangePwdViewController.xib; sourceTree = "<group>"; };
+		A43F9DE51E9FAB1600AA831E /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
+		A43F9DE61E9FAB1600AA831E /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
+		A43F9DE81E9FB1B300AA831E /* RegisterViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewModel.h; sourceTree = "<group>"; };
+		A43F9DE91E9FB1B300AA831E /* RegisterViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewModel.m; sourceTree = "<group>"; };
 		A4A029471E9B2F9D0008F281 /* MJExtensionConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConfig.h; sourceTree = "<group>"; };
 		A4A029481E9B2F9D0008F281 /* MJExtensionConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionConfig.m; sourceTree = "<group>"; };
 		A4A0294A1E9B341C0008F281 /* AFNManagerRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNManagerRequest.h; sourceTree = "<group>"; };
@@ -310,6 +326,12 @@
 				A43F9DD11E9F2CD400AA831E /* RegisterViewController.h */,
 				A43F9DD21E9F2CD400AA831E /* RegisterViewController.m */,
 				A43F9DD31E9F2CD400AA831E /* RegisterViewController.xib */,
+				A43F9DDB1E9F6DCE00AA831E /* FindPwdViewController.h */,
+				A43F9DDC1E9F6DCE00AA831E /* FindPwdViewController.m */,
+				A43F9DDD1E9F6DCE00AA831E /* FindPwdViewController.xib */,
+				A43F9DE01E9F6DDF00AA831E /* ChangePwdViewController.h */,
+				A43F9DE11E9F6DDF00AA831E /* ChangePwdViewController.m */,
+				A43F9DE21E9F6DDF00AA831E /* ChangePwdViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -317,6 +339,10 @@
 		A43F9DCB1E9F2C9B00AA831E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A43F9DE51E9FAB1600AA831E /* LoginViewModel.h */,
+				A43F9DE61E9FAB1600AA831E /* LoginViewModel.m */,
+				A43F9DE81E9FB1B300AA831E /* RegisterViewModel.h */,
+				A43F9DE91E9FB1B300AA831E /* RegisterViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -914,6 +940,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A43F9DE41E9F6DDF00AA831E /* ChangePwdViewController.xib in Resources */,
 				A4AE170A1E9E0C23007965EE /* NewsDetailBottomView.xib in Resources */,
 				A4D682E61E976CEB00FBA51C /* LaunchScreen.storyboard in Resources */,
 				A43F9DD01E9F2CBC00AA831E /* LoginViewController.xib in Resources */,
@@ -926,6 +953,7 @@
 				A4C32E521E99F2F600D53E1A /* NewsCell.xib in Resources */,
 				A4D682E11E976CEB00FBA51C /* Main.storyboard in Resources */,
 				A43F9DD51E9F2CD400AA831E /* RegisterViewController.xib in Resources */,
+				A43F9DDF1E9F6DCE00AA831E /* FindPwdViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -992,6 +1020,7 @@
 				A4D682DE1E976CEB00FBA51C /* ViewController.m in Sources */,
 				A4C32E281E98AD0F00D53E1A /* UIView+Empty.m in Sources */,
 				A4C7C4DE1E9F19E0003A36E0 /* WQPopWindow.m in Sources */,
+				A43F9DE71E9FAB1600AA831E /* LoginViewModel.m in Sources */,
 				A4C7C4D91E9F194A003A36E0 /* WQChiBaoZiHeader.m in Sources */,
 				A4C32AF01E98A7B800D53E1A /* introductoryPagesHelper.m in Sources */,
 				A4C32E361E98AEB500D53E1A /* JRSwizzle.m in Sources */,
@@ -1017,6 +1046,7 @@
 				A4C32AF41E98A7B800D53E1A /* cameraHelper.m in Sources */,
 				A4C32EB81E9A6FB000D53E1A /* TeachingVideoContainerVC.m in Sources */,
 				A43C93511E9E2342008B877D /* UIView+BlockGesture.m in Sources */,
+				A43F9DDE1E9F6DCE00AA831E /* FindPwdViewController.m in Sources */,
 				A4C32AF21E98A7B800D53E1A /* CLLocation+MPLocation.m in Sources */,
 				A43F9DD41E9F2CD400AA831E /* RegisterViewController.m in Sources */,
 				A4C32E241E98AD0F00D53E1A /* MBProgressHUD+MP.m in Sources */,
@@ -1030,10 +1060,12 @@
 				A4C7C4E11E9F1DF3003A36E0 /* WQPlaceholderTextView.m in Sources */,
 				A4D682D81E976CEB00FBA51C /* main.m in Sources */,
 				A4C32E8C1E9A37D100D53E1A /* AnswerCell.m in Sources */,
+				A43F9DEA1E9FB1B300AA831E /* RegisterViewModel.m in Sources */,
 				A4C32E581E9A16F400D53E1A /* NewsMainViewController.m in Sources */,
 				A4C32E6F1E9A1BF400D53E1A /* SGSegmentedControlDefault.m in Sources */,
 				A4C32E711E9A1BF400D53E1A /* UIView+SGExtension.m in Sources */,
 				A4C32E6C1E9A1BF400D53E1A /* SGImageButton_Vertical.m in Sources */,
+				A43F9DE31E9F6DDF00AA831E /* ChangePwdViewController.m in Sources */,
 				A4C32AF11E98A7B800D53E1A /* introductoryPagesView.m in Sources */,
 				A4A0294F1E9B68C20008F281 /* NewsMainViewModel.m in Sources */,
 				A4C32E391E98B0A700D53E1A /* XAspect-UmengShareAppDelegate.m in Sources */,

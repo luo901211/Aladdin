@@ -43,4 +43,63 @@
 #define NEWS_COMMENT_SUBMIT @"/news/comment"
 
 
+
+
+
+
+
+
+/***账号模块***/
+
+/*
+ * 用户-发送短信验证码
+ * mobile：必填，手机号
+ */
+#define API_SENDCODE @"/user/sendcode"
+
+
+/*
+ * 用户-注册
+ * mobile：必填，手机号
+ * code：必填，验证码
+ * password：必填，密码
+ */
+#define API_REGISTER @"/user/register"
+
+/*
+ * 用户-手机号+密码登录
+ * mobile：必填，手机号
+ * password：必填，密码
+ */
+#define API_LOGIN_PASSWORD @"/user/login"
+
+/*
+ * 用户-手机号+验证码登录
+ * mobile：必填，手机号
+ * code：必填，验证码
+ */
+#define API_LOGIN_CODE @"/user/codeLogin"
+
+/*
+ * 用户-修改密码
+ * token：必传，用户标识
+ * old：必传，旧密码
+ * new：必传，新密码
+ * confirm：必传，确认密码
+ */
+#define API_CHANGE_PASSWORD @"/user/editPassword"
+
+/*
+ * 用户-找回密码
+ * mobile：必填，手机号
+ * code：必填，验证码
+ * new：必填，新密码
+ */
+#define API_FIND_PASSWORD @"/user/findPassword"
+
+/***个人中心模块***/
+
+
+
+
 #endif /* ApiMacros_h */
