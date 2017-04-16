@@ -134,9 +134,9 @@
     NSString *phone = self.phoneTextField.text;
     
     [self.viewModel getCodeWithPhone:phone success:^(id obj) {
-        NSLog(@"获取验证码成功： %@", obj);
+        [MBProgressHUD showAutoMessage:@"验证码已发送"];
     } failure:^(id obj) {
-        NSLog(@"获取验证码失败： %@", obj);
+        [MBProgressHUD showAutoMessage:obj];
     }];
 }
 
@@ -146,9 +146,8 @@
     NSString *password = self.pwdTextField.text;
     
     [self.viewModel registerWithPhone:phone password:password code:code success:^(id obj) {
-        NSLog(@"注册成功： %@", obj);
     } failure:^(id obj) {
-        NSLog(@"注册失败： %@", obj);
+        [MBProgressHUD showAutoMessage:obj];
     }];
 }
 

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0D041C178F6ACBB64E74C5A3 /* libPods-Aladdin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E962B31D6986262B603D83 /* libPods-Aladdin.a */; };
+		A408912C1EA323C70071D22D /* MBProgressHUD+Network.m in Sources */ = {isa = PBXBuildFile; fileRef = A408912B1EA323C70071D22D /* MBProgressHUD+Network.m */; };
+		A408912F1EA3297A0071D22D /* NSString+Verify.m in Sources */ = {isa = PBXBuildFile; fileRef = A408912E1EA3297A0071D22D /* NSString+Verify.m */; };
 		A43C93511E9E2342008B877D /* UIView+BlockGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = A43C93501E9E2342008B877D /* UIView+BlockGesture.m */; };
 		A43F9DCF1E9F2CBC00AA831E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A43F9DCD1E9F2CBC00AA831E /* LoginViewController.m */; };
 		A43F9DD01E9F2CBC00AA831E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43F9DCE1E9F2CBC00AA831E /* LoginViewController.xib */; };
@@ -100,6 +102,10 @@
 /* Begin PBXFileReference section */
 		305FF1261A706E58B8894552 /* Pods-Aladdin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aladdin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aladdin/Pods-Aladdin.debug.xcconfig"; sourceTree = "<group>"; };
 		91E962B31D6986262B603D83 /* libPods-Aladdin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Aladdin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A408912A1EA323C70071D22D /* MBProgressHUD+Network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Network.h"; sourceTree = "<group>"; };
+		A408912B1EA323C70071D22D /* MBProgressHUD+Network.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Network.m"; sourceTree = "<group>"; };
+		A408912D1EA3297A0071D22D /* NSString+Verify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Verify.h"; sourceTree = "<group>"; };
+		A408912E1EA3297A0071D22D /* NSString+Verify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Verify.m"; sourceTree = "<group>"; };
 		A43C934F1E9E2342008B877D /* UIView+BlockGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BlockGesture.h"; sourceTree = "<group>"; };
 		A43C93501E9E2342008B877D /* UIView+BlockGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BlockGesture.m"; sourceTree = "<group>"; };
 		A43F9DCC1E9F2CBC00AA831E /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -467,6 +473,8 @@
 				A4C32E951E9A540E00D53E1A /* UINavigationBar+Awesome.m */,
 				A4AE170B1E9E1383007965EE /* UIView+CustomBorder.h */,
 				A4AE170C1E9E1383007965EE /* UIView+CustomBorder.m */,
+				A408912D1EA3297A0071D22D /* NSString+Verify.h */,
+				A408912E1EA3297A0071D22D /* NSString+Verify.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -535,6 +543,8 @@
 			children = (
 				A4A0294A1E9B341C0008F281 /* AFNManagerRequest.h */,
 				A4A0294B1E9B341C0008F281 /* AFNManagerRequest.m */,
+				A408912A1EA323C70071D22D /* MBProgressHUD+Network.h */,
+				A408912B1EA323C70071D22D /* MBProgressHUD+Network.m */,
 			);
 			path = NetWork;
 			sourceTree = "<group>";
@@ -1050,6 +1060,7 @@
 				A4C32AF21E98A7B800D53E1A /* CLLocation+MPLocation.m in Sources */,
 				A43F9DD41E9F2CD400AA831E /* RegisterViewController.m in Sources */,
 				A4C32E241E98AD0F00D53E1A /* MBProgressHUD+MP.m in Sources */,
+				A408912F1EA3297A0071D22D /* NSString+Verify.m in Sources */,
 				A4C32E991E9A562D00D53E1A /* ALDBaseNavigationController.m in Sources */,
 				A4C32E171E98AB3300D53E1A /* Reachability.m in Sources */,
 				A4C32E9F1E9A5F7100D53E1A /* DiscoverListViewController.m in Sources */,
@@ -1077,6 +1088,7 @@
 				A4C32E4B1E98CAD500D53E1A /* NewsListViewModel.m in Sources */,
 				A4C32E291E98AD0F00D53E1A /* UIView+Extension.m in Sources */,
 				A4C32EAD1E9A65E000D53E1A /* TeachingVideoCollectionVC.m in Sources */,
+				A408912C1EA323C70071D22D /* MBProgressHUD+Network.m in Sources */,
 				A4AE17081E9E0C11007965EE /* NewsDetailBottomView.m in Sources */,
 				A4AE16FF1E9C842F007965EE /* ALDNewsBannerModel.m in Sources */,
 				A4C32AEC1E98A7B800D53E1A /* GCDGroup.m in Sources */,

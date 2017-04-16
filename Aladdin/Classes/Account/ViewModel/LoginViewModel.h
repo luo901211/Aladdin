@@ -10,6 +10,10 @@
 
 @interface LoginViewModel : NSObject
 
+- (void)getCodeWithPhone:(NSString *)phone
+                 success:(VoidBlock)success
+                 failure:(VoidBlock)failure;
+
 - (void)loginWithPhone:(NSString *)phone
               password:(NSString *)password
                success:(VoidBlock)success
@@ -19,9 +23,5 @@
                   code:(NSString *)code
                success:(VoidBlock)success
                failure:(VoidBlock)failure;
-
-- (void)getCodeWithPhone:(NSString *)phone
-                 success:(VoidBlock)success
-                 failure:(VoidBlock)failure;
 
 @end

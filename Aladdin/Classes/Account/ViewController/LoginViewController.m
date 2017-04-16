@@ -116,6 +116,7 @@
         getCodeBtn.layer.borderColor = HEXCOLOR(0x76879f).CGColor;
         getCodeBtn.layer.borderWidth = 1;
         getCodeBtn.layer.cornerRadius = 11;
+        [getCodeBtn addTarget:self action:@selector(didPressedOnGetCodeButton:) forControlEvents:(UIControlEventTouchUpInside)];
         [_codeTextField addSubview:getCodeBtn];
     }
     return _codeTextField;
@@ -175,6 +176,17 @@
 
 #pragma mark - Function
 
+- (void)didPressedOnGetCodeButton:(UIButton *)button {
+    
+    NSString *phone = self.phoneTextField.text;
+    
+    [self.viewModel getCodeWithPhone:phone success:^(id obj) {
+        [MBProgressHUD showAutoMessage:@"验证码已发送"];
+    } failure:^(id obj) {
+        [MBProgressHUD showAutoMessage:obj];
+    }];
+}
+
 - (void)didPressedOnLoginButton:(UIButton *)button {
     
     NSString *phone = self.phoneTextField.text;
@@ -186,7 +198,7 @@
     };
     
     VoidBlock failure = ^(id obj){
-        NSLog(@"登录失败");
+        [MBProgressHUD showAutoMessage:obj];
     };
     
     if (self.loginTypePassword) {

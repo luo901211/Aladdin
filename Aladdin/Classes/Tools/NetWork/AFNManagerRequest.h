@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MBProgressHUD+Network.h"
 
 #pragma mark 网络请求类型
 enum HTTPMETHOD{
@@ -40,6 +41,11 @@ typedef void (^HttpUploadProgressBlock)(CGFloat progress);
                               success:(HttpSuccessBlock)success
                               failure:(HttpFailureBlock)failure;
 
++ (NSURLSessionDataTask *)getWithPath:(NSString *)path
+                               params:(NSDictionary *)params
+                              hudType:(NetworkRequestGraceTimeType)hudType
+                              success:(HttpSuccessBlock)success
+                              failure:(HttpFailureBlock)failure;
 /**
  *  post网络请求
  *
@@ -51,6 +57,12 @@ typedef void (^HttpUploadProgressBlock)(CGFloat progress);
 
 + (NSURLSessionDataTask *)postWithPath:(NSString *)path
                                 params:(NSDictionary *)params
+                               success:(HttpSuccessBlock)success
+                               failure:(HttpFailureBlock)failure;
+
++ (NSURLSessionDataTask *)postWithPath:(NSString *)path
+                                params:(NSDictionary *)params
+                               hudType:(NetworkRequestGraceTimeType)hudType
                                success:(HttpSuccessBlock)success
                                failure:(HttpFailureBlock)failure;
 

@@ -40,39 +40,53 @@
 
 + (NSURLSessionDataTask *)getWithPath:(NSString *)path
                                params:(NSDictionary *)params
+                              hudType:(NetworkRequestGraceTimeType)hudType
                               success:(HttpSuccessBlock)success
                               failure:(HttpFailureBlock)failure {
-
     NSString *URLString = [BASE_URL stringByAppendingPathComponent:path];
-
+    
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
     
     NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"GET" URLString:URLString parameters:params error:nil];
     
+    // 网络指示器
+    MBProgressHUD *hud = [MBProgressHUD hudWithNetworkType:hudType];
+    
     NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+        
+        // 任务结束，隐藏网络指示器
+        [hud hideAnimated:YES];
+        
         if (error) {
             failure(error);
         } else {
             NSLog(@"url: %@",response.URL);
             NSLog(@"params:%@",params);
             NSLog(@"responseObject: %@",responseObject);
-            #pragma mark - 业务代码
+#pragma mark - 业务代码
             // 统一处理错误
             NSInteger code = [responseObject[@"code"] integerValue];
             if (code == 1) {
                 success(response, responseObject[@"res"]);
             }else{
                 
-                NSError *error = [NSError errorWithDomain:response.URL.host code:code userInfo:responseObject];
-                
+                NSDictionary *userInfo = [NSDictionary dictionaryWithObjectsAndKeys:responseObject[@"msg"], NSLocalizedDescriptionKey,nil];
+                NSError *error = [[NSError alloc] initWithDomain:response.URL.host code:code userInfo:userInfo];
                 failure(error);
             }
-
+            
         }
     }];
     [dataTask resume];
     return dataTask;
+}
+
++ (NSURLSessionDataTask *)getWithPath:(NSString *)path
+                               params:(NSDictionary *)params
+                              success:(HttpSuccessBlock)success
+                              failure:(HttpFailureBlock)failure {
+    return [AFNManagerRequest getWithPath:path params:params hudType:(NetworkRequestGraceTimeTypeNone) success:success failure:failure];
 }
 
 /**
@@ -83,9 +97,9 @@
  *  @param success 请求成功 返回NSDictionary或NSArray
  *  @param failure 请求失败 返回NSError
  */
-
 + (NSURLSessionDataTask *)postWithPath:(NSString *)path
                                 params:(NSDictionary *)params
+                               hudType:(NetworkRequestGraceTimeType)hudType
                                success:(HttpSuccessBlock)success
                                failure:(HttpFailureBlock)failure {
     
@@ -96,7 +110,14 @@
     
     NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"POST" URLString:URLString parameters:params error:nil];
     
+    // 网络指示器
+    MBProgressHUD *hud = [MBProgressHUD hudWithNetworkType:hudType];
+    
     NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+        
+        // 任务结束，隐藏网络指示器
+        [hud hideAnimated:YES];
+        
         if (error) {
             failure(error);
         } else {
@@ -108,7 +129,8 @@
                 success(response, responseObject[@"res"]);
             }else{
                 
-                NSError *error = [NSError errorWithDomain:response.URL.host code:code userInfo:responseObject];
+                NSDictionary *userInfo = [NSDictionary dictionaryWithObjectsAndKeys:responseObject[@"msg"], NSLocalizedDescriptionKey,nil];
+                NSError *error = [[NSError alloc] initWithDomain:response.URL.host code:code userInfo:userInfo];
                 failure(error);
             }
             
@@ -116,7 +138,15 @@
     }];
     [dataTask resume];
     return dataTask;
+    
+}
 
++ (NSURLSessionDataTask *)postWithPath:(NSString *)path
+                                params:(NSDictionary *)params
+                               success:(HttpSuccessBlock)success
+                               failure:(HttpFailureBlock)failure {
+    
+    return [AFNManagerRequest postWithPath:path params:params hudType:(NetworkRequestGraceTimeTypeNone) success:success failure:failure];
 }
 
 /**
