@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'CB2BB2F9EDC58EB64CE0FC0C1247EF6A'
+               BlueprintIdentifier = 'AACC0004591635DB9C9C016C2F70CA49'
                BlueprintName = 'Pods-Aladdin'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-Aladdin.a'>

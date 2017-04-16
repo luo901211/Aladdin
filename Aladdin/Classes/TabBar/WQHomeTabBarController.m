@@ -11,6 +11,7 @@
 #import "NewsMainViewController.h"
 #import "AnswerMainViewController.h"
 #import "DiscoverListViewController.h"
+#import "ServerListViewController.h"
 
 @implementation WQHomeTabBarController
 
@@ -56,7 +57,7 @@
     ALDBaseNavigationController *thirdNavigationController = [[ALDBaseNavigationController alloc]
                                                    initWithRootViewController:thirdViewController];
     
-    UIViewController *fourthViewController = [[UIViewController alloc] init];
+    ServerListViewController *fourthViewController = [[ServerListViewController alloc] init];
     ALDBaseNavigationController *fourthNavigationController = [[ALDBaseNavigationController alloc]
                                                     initWithRootViewController:fourthViewController];
     

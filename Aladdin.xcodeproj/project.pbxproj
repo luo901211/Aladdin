@@ -12,6 +12,28 @@
 		A408912F1EA3297A0071D22D /* NSString+Verify.m in Sources */ = {isa = PBXBuildFile; fileRef = A408912E1EA3297A0071D22D /* NSString+Verify.m */; };
 		A40891361EA35F050071D22D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891351EA35F050071D22D /* User.m */; };
 		A40891391EA367C30071D22D /* User+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891381EA367C30071D22D /* User+Helper.m */; };
+		A408913D1EA396E40071D22D /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A408913B1EA396E40071D22D /* UserInfoViewController.m */; };
+		A408913E1EA396E40071D22D /* UserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A408913C1EA396E40071D22D /* UserInfoViewController.xib */; };
+		A40891421EA397540071D22D /* MessageTypeListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891401EA397540071D22D /* MessageTypeListVC.m */; };
+		A40891431EA397540071D22D /* MessageTypeListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A40891411EA397540071D22D /* MessageTypeListVC.xib */; };
+		A40891461EA397A30071D22D /* MessageTypeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891451EA397A30071D22D /* MessageTypeViewModel.m */; };
+		A40891491EA398800071D22D /* ALDMessageTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891481EA398800071D22D /* ALDMessageTypeModel.m */; };
+		A408914D1EA399560071D22D /* MessageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A408914B1EA399560071D22D /* MessageListViewController.m */; };
+		A408914E1EA399560071D22D /* MessageListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A408914C1EA399560071D22D /* MessageListViewController.xib */; };
+		A40891511EA3996F0071D22D /* MessageListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891501EA3996F0071D22D /* MessageListViewModel.m */; };
+		A40891541EA399AD0071D22D /* ALDMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891531EA399AD0071D22D /* ALDMessageModel.m */; };
+		A40891581EA39D650071D22D /* MessageTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891561EA39D650071D22D /* MessageTypeCell.m */; };
+		A40891591EA39D650071D22D /* MessageTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A40891571EA39D650071D22D /* MessageTypeCell.xib */; };
+		A408915D1EA39D770071D22D /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A408915B1EA39D770071D22D /* MessageCell.m */; };
+		A408915E1EA39D770071D22D /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A408915C1EA39D770071D22D /* MessageCell.xib */; };
+		A40891621EA3AF110071D22D /* ServerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891601EA3AF110071D22D /* ServerListViewController.m */; };
+		A40891631EA3AF110071D22D /* ServerListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A40891611EA3AF110071D22D /* ServerListViewController.xib */; };
+		A40891661EA3AF280071D22D /* ALDServerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891651EA3AF280071D22D /* ALDServerModel.m */; };
+		A408916A1EA3AF420071D22D /* ServerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891681EA3AF420071D22D /* ServerCell.m */; };
+		A408916B1EA3AF420071D22D /* ServerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A40891691EA3AF420071D22D /* ServerCell.xib */; };
+		A408916F1EA3B04F0071D22D /* ServerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A408916D1EA3B04F0071D22D /* ServerDetailViewController.m */; };
+		A40891701EA3B04F0071D22D /* ServerDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A408916E1EA3B04F0071D22D /* ServerDetailViewController.xib */; };
+		A40891731EA3B0F70071D22D /* ServerListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891721EA3B0F70071D22D /* ServerListViewModel.m */; };
 		A43C93511E9E2342008B877D /* UIView+BlockGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = A43C93501E9E2342008B877D /* UIView+BlockGesture.m */; };
 		A43F9DCF1E9F2CBC00AA831E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A43F9DCD1E9F2CBC00AA831E /* LoginViewController.m */; };
 		A43F9DD01E9F2CBC00AA831E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43F9DCE1E9F2CBC00AA831E /* LoginViewController.xib */; };
@@ -112,6 +134,42 @@
 		A40891351EA35F050071D22D /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		A40891371EA367C30071D22D /* User+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+Helper.h"; sourceTree = "<group>"; };
 		A40891381EA367C30071D22D /* User+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+Helper.m"; sourceTree = "<group>"; };
+		A408913A1EA396E40071D22D /* UserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoViewController.h; sourceTree = "<group>"; };
+		A408913B1EA396E40071D22D /* UserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoViewController.m; sourceTree = "<group>"; };
+		A408913C1EA396E40071D22D /* UserInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoViewController.xib; sourceTree = "<group>"; };
+		A408913F1EA397540071D22D /* MessageTypeListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTypeListVC.h; sourceTree = "<group>"; };
+		A40891401EA397540071D22D /* MessageTypeListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTypeListVC.m; sourceTree = "<group>"; };
+		A40891411EA397540071D22D /* MessageTypeListVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageTypeListVC.xib; sourceTree = "<group>"; };
+		A40891441EA397A30071D22D /* MessageTypeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTypeViewModel.h; sourceTree = "<group>"; };
+		A40891451EA397A30071D22D /* MessageTypeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTypeViewModel.m; sourceTree = "<group>"; };
+		A40891471EA398800071D22D /* ALDMessageTypeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDMessageTypeModel.h; sourceTree = "<group>"; };
+		A40891481EA398800071D22D /* ALDMessageTypeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDMessageTypeModel.m; sourceTree = "<group>"; };
+		A408914A1EA399560071D22D /* MessageListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageListViewController.h; sourceTree = "<group>"; };
+		A408914B1EA399560071D22D /* MessageListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageListViewController.m; sourceTree = "<group>"; };
+		A408914C1EA399560071D22D /* MessageListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageListViewController.xib; sourceTree = "<group>"; };
+		A408914F1EA3996F0071D22D /* MessageListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageListViewModel.h; sourceTree = "<group>"; };
+		A40891501EA3996F0071D22D /* MessageListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageListViewModel.m; sourceTree = "<group>"; };
+		A40891521EA399AD0071D22D /* ALDMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDMessageModel.h; sourceTree = "<group>"; };
+		A40891531EA399AD0071D22D /* ALDMessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDMessageModel.m; sourceTree = "<group>"; };
+		A40891551EA39D650071D22D /* MessageTypeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTypeCell.h; sourceTree = "<group>"; };
+		A40891561EA39D650071D22D /* MessageTypeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTypeCell.m; sourceTree = "<group>"; };
+		A40891571EA39D650071D22D /* MessageTypeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageTypeCell.xib; sourceTree = "<group>"; };
+		A408915A1EA39D770071D22D /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
+		A408915B1EA39D770071D22D /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
+		A408915C1EA39D770071D22D /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		A408915F1EA3AF110071D22D /* ServerListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServerListViewController.h; path = Aladdin/Classes/Server/ViewController/ServerListViewController.h; sourceTree = SOURCE_ROOT; };
+		A40891601EA3AF110071D22D /* ServerListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServerListViewController.m; path = Aladdin/Classes/Server/ViewController/ServerListViewController.m; sourceTree = SOURCE_ROOT; };
+		A40891611EA3AF110071D22D /* ServerListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ServerListViewController.xib; path = Aladdin/Classes/Server/ViewController/ServerListViewController.xib; sourceTree = SOURCE_ROOT; };
+		A40891641EA3AF280071D22D /* ALDServerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDServerModel.h; sourceTree = "<group>"; };
+		A40891651EA3AF280071D22D /* ALDServerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDServerModel.m; sourceTree = "<group>"; };
+		A40891671EA3AF420071D22D /* ServerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerCell.h; sourceTree = "<group>"; };
+		A40891681EA3AF420071D22D /* ServerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerCell.m; sourceTree = "<group>"; };
+		A40891691EA3AF420071D22D /* ServerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServerCell.xib; sourceTree = "<group>"; };
+		A408916C1EA3B04F0071D22D /* ServerDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerDetailViewController.h; sourceTree = "<group>"; };
+		A408916D1EA3B04F0071D22D /* ServerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerDetailViewController.m; sourceTree = "<group>"; };
+		A408916E1EA3B04F0071D22D /* ServerDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServerDetailViewController.xib; sourceTree = "<group>"; };
+		A40891711EA3B0F70071D22D /* ServerListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerListViewModel.h; sourceTree = "<group>"; };
+		A40891721EA3B0F70071D22D /* ServerListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerListViewModel.m; sourceTree = "<group>"; };
 		A43C934F1E9E2342008B877D /* UIView+BlockGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BlockGesture.h"; sourceTree = "<group>"; };
 		A43C93501E9E2342008B877D /* UIView+BlockGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BlockGesture.m"; sourceTree = "<group>"; };
 		A43F9DCC1E9F2CBC00AA831E /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -329,6 +387,10 @@
 		A43F9DC81E9F2C9B00AA831E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A40891471EA398800071D22D /* ALDMessageTypeModel.h */,
+				A40891481EA398800071D22D /* ALDMessageTypeModel.m */,
+				A40891521EA399AD0071D22D /* ALDMessageModel.h */,
+				A40891531EA399AD0071D22D /* ALDMessageModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -336,6 +398,12 @@
 		A43F9DC91E9F2C9B00AA831E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A40891551EA39D650071D22D /* MessageTypeCell.h */,
+				A40891561EA39D650071D22D /* MessageTypeCell.m */,
+				A40891571EA39D650071D22D /* MessageTypeCell.xib */,
+				A408915A1EA39D770071D22D /* MessageCell.h */,
+				A408915B1EA39D770071D22D /* MessageCell.m */,
+				A408915C1EA39D770071D22D /* MessageCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -355,6 +423,15 @@
 				A43F9DE01E9F6DDF00AA831E /* ChangePwdViewController.h */,
 				A43F9DE11E9F6DDF00AA831E /* ChangePwdViewController.m */,
 				A43F9DE21E9F6DDF00AA831E /* ChangePwdViewController.xib */,
+				A408913A1EA396E40071D22D /* UserInfoViewController.h */,
+				A408913B1EA396E40071D22D /* UserInfoViewController.m */,
+				A408913C1EA396E40071D22D /* UserInfoViewController.xib */,
+				A408913F1EA397540071D22D /* MessageTypeListVC.h */,
+				A40891401EA397540071D22D /* MessageTypeListVC.m */,
+				A40891411EA397540071D22D /* MessageTypeListVC.xib */,
+				A408914A1EA399560071D22D /* MessageListViewController.h */,
+				A408914B1EA399560071D22D /* MessageListViewController.m */,
+				A408914C1EA399560071D22D /* MessageListViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -366,6 +443,10 @@
 				A43F9DE61E9FAB1600AA831E /* LoginViewModel.m */,
 				A43F9DE81E9FB1B300AA831E /* RegisterViewModel.h */,
 				A43F9DE91E9FB1B300AA831E /* RegisterViewModel.m */,
+				A40891441EA397A30071D22D /* MessageTypeViewModel.h */,
+				A40891451EA397A30071D22D /* MessageTypeViewModel.m */,
+				A408914F1EA3996F0071D22D /* MessageListViewModel.h */,
+				A40891501EA3996F0071D22D /* MessageListViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -706,6 +787,8 @@
 		A4C32E7F1E9A374E00D53E1A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A40891641EA3AF280071D22D /* ALDServerModel.h */,
+				A40891651EA3AF280071D22D /* ALDServerModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -713,6 +796,9 @@
 		A4C32E801E9A374E00D53E1A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A40891671EA3AF420071D22D /* ServerCell.h */,
+				A40891681EA3AF420071D22D /* ServerCell.m */,
+				A40891691EA3AF420071D22D /* ServerCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -720,6 +806,12 @@
 		A4C32E811E9A374E00D53E1A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A408915F1EA3AF110071D22D /* ServerListViewController.h */,
+				A40891601EA3AF110071D22D /* ServerListViewController.m */,
+				A40891611EA3AF110071D22D /* ServerListViewController.xib */,
+				A408916C1EA3B04F0071D22D /* ServerDetailViewController.h */,
+				A408916D1EA3B04F0071D22D /* ServerDetailViewController.m */,
+				A408916E1EA3B04F0071D22D /* ServerDetailViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -727,6 +819,8 @@
 		A4C32E821E9A374E00D53E1A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A40891711EA3B0F70071D22D /* ServerListViewModel.h */,
+				A40891721EA3B0F70071D22D /* ServerListViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -970,16 +1064,24 @@
 			files = (
 				A43F9DE41E9F6DDF00AA831E /* ChangePwdViewController.xib in Resources */,
 				A4AE170A1E9E0C23007965EE /* NewsDetailBottomView.xib in Resources */,
+				A40891431EA397540071D22D /* MessageTypeListVC.xib in Resources */,
+				A40891631EA3AF110071D22D /* ServerListViewController.xib in Resources */,
 				A4D682E61E976CEB00FBA51C /* LaunchScreen.storyboard in Resources */,
+				A408914E1EA399560071D22D /* MessageListViewController.xib in Resources */,
 				A43F9DD01E9F2CBC00AA831E /* LoginViewController.xib in Resources */,
 				A4C32E8D1E9A37D100D53E1A /* AnswerCell.xib in Resources */,
+				A40891701EA3B04F0071D22D /* ServerDetailViewController.xib in Resources */,
+				A408915E1EA39D770071D22D /* MessageCell.xib in Resources */,
 				A4C7C4DB1E9F194A003A36E0 /* WQInputView.xib in Resources */,
 				A4C32EA41E9A5F8B00D53E1A /* DiscoverCell.xib in Resources */,
 				A4C32E731E9A343900D53E1A /* Login.xcassets in Resources */,
+				A408916B1EA3AF420071D22D /* ServerCell.xib in Resources */,
 				A4D682E31E976CEB00FBA51C /* Assets.xcassets in Resources */,
+				A40891591EA39D650071D22D /* MessageTypeCell.xib in Resources */,
 				A4C32EB51E9A6A5600D53E1A /* TeachingVideoCollectionViewCell.xib in Resources */,
 				A4C32E521E99F2F600D53E1A /* NewsCell.xib in Resources */,
 				A4D682E11E976CEB00FBA51C /* Main.storyboard in Resources */,
+				A408913E1EA396E40071D22D /* UserInfoViewController.xib in Resources */,
 				A43F9DD51E9F2CD400AA831E /* RegisterViewController.xib in Resources */,
 				A43F9DDF1E9F6DCE00AA831E /* FindPwdViewController.xib in Resources */,
 			);
@@ -1040,15 +1142,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A40891661EA3AF280071D22D /* ALDServerModel.m in Sources */,
 				A4C32EBA1E9A7FB000D53E1A /* XAspect-AppearanceConfigAppDelegate.m in Sources */,
+				A40891581EA39D650071D22D /* MessageTypeCell.m in Sources */,
 				A4C32AF51E98A7B800D53E1A /* dateTimeHelper.m in Sources */,
+				A408914D1EA399560071D22D /* MessageListViewController.m in Sources */,
 				A4C32AEE1E98A7B800D53E1A /* GCDSemaphore.m in Sources */,
 				A4C32AF61E98A7B800D53E1A /* MPUmengHelper.m in Sources */,
 				A4AE17051E9E0AD4007965EE /* NewsDetailViewModel.m in Sources */,
+				A408913D1EA396E40071D22D /* UserInfoViewController.m in Sources */,
 				A4D682DE1E976CEB00FBA51C /* ViewController.m in Sources */,
 				A4C32E281E98AD0F00D53E1A /* UIView+Empty.m in Sources */,
 				A4C7C4DE1E9F19E0003A36E0 /* WQPopWindow.m in Sources */,
 				A43F9DE71E9FAB1600AA831E /* LoginViewModel.m in Sources */,
+				A40891621EA3AF110071D22D /* ServerListViewController.m in Sources */,
+				A40891541EA399AD0071D22D /* ALDMessageModel.m in Sources */,
 				A4C7C4D91E9F194A003A36E0 /* WQChiBaoZiHeader.m in Sources */,
 				A4C32AF01E98A7B800D53E1A /* introductoryPagesHelper.m in Sources */,
 				A4C32E361E98AEB500D53E1A /* JRSwizzle.m in Sources */,
@@ -1078,6 +1186,7 @@
 				A43F9DDE1E9F6DCE00AA831E /* FindPwdViewController.m in Sources */,
 				A4C32AF21E98A7B800D53E1A /* CLLocation+MPLocation.m in Sources */,
 				A43F9DD41E9F2CD400AA831E /* RegisterViewController.m in Sources */,
+				A40891731EA3B0F70071D22D /* ServerListViewModel.m in Sources */,
 				A4C32E241E98AD0F00D53E1A /* MBProgressHUD+MP.m in Sources */,
 				A408912F1EA3297A0071D22D /* NSString+Verify.m in Sources */,
 				A4C32E991E9A562D00D53E1A /* ALDBaseNavigationController.m in Sources */,
@@ -1091,14 +1200,17 @@
 				A4D682D81E976CEB00FBA51C /* main.m in Sources */,
 				A4C32E8C1E9A37D100D53E1A /* AnswerCell.m in Sources */,
 				A43F9DEA1E9FB1B300AA831E /* RegisterViewModel.m in Sources */,
+				A40891461EA397A30071D22D /* MessageTypeViewModel.m in Sources */,
 				A4C32E581E9A16F400D53E1A /* NewsMainViewController.m in Sources */,
 				A4C32E6F1E9A1BF400D53E1A /* SGSegmentedControlDefault.m in Sources */,
 				A4C32E711E9A1BF400D53E1A /* UIView+SGExtension.m in Sources */,
 				A4C32E6C1E9A1BF400D53E1A /* SGImageButton_Vertical.m in Sources */,
 				A43F9DE31E9F6DDF00AA831E /* ChangePwdViewController.m in Sources */,
 				A4C32AF11E98A7B800D53E1A /* introductoryPagesView.m in Sources */,
+				A408916A1EA3AF420071D22D /* ServerCell.m in Sources */,
 				A4A0294F1E9B68C20008F281 /* NewsMainViewModel.m in Sources */,
 				A4C32E391E98B0A700D53E1A /* XAspect-UmengShareAppDelegate.m in Sources */,
+				A40891421EA397540071D22D /* MessageTypeListVC.m in Sources */,
 				A4C32E6D1E9A1BF400D53E1A /* SGNavigationItemTitleView.m in Sources */,
 				A4C32AED1E98A7B800D53E1A /* GCDQueue.m in Sources */,
 				A4A0294C1E9B341C0008F281 /* AFNManagerRequest.m in Sources */,
@@ -1109,13 +1221,17 @@
 				A4C32EAD1E9A65E000D53E1A /* TeachingVideoCollectionVC.m in Sources */,
 				A408912C1EA323C70071D22D /* MBProgressHUD+Network.m in Sources */,
 				A4AE17081E9E0C11007965EE /* NewsDetailBottomView.m in Sources */,
+				A408916F1EA3B04F0071D22D /* ServerDetailViewController.m in Sources */,
 				A4AE16FF1E9C842F007965EE /* ALDNewsBannerModel.m in Sources */,
 				A4C32AEC1E98A7B800D53E1A /* GCDGroup.m in Sources */,
 				A4C32E6E1E9A1BF400D53E1A /* SGSegmentedControlBottomView.m in Sources */,
 				A4C32E251E98AD0F00D53E1A /* NSString+Additions.m in Sources */,
 				A40891361EA35F050071D22D /* User.m in Sources */,
+				A40891491EA398800071D22D /* ALDMessageTypeModel.m in Sources */,
 				A4C7C4DA1E9F194A003A36E0 /* WQInputView.m in Sources */,
 				A4AE16FC1E9C8423007965EE /* ALDNewsTypeModel.m in Sources */,
+				A408915D1EA39D770071D22D /* MessageCell.m in Sources */,
+				A40891511EA3996F0071D22D /* MessageListViewModel.m in Sources */,
 				A4C32E271E98AD0F00D53E1A /* UITextField+Extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

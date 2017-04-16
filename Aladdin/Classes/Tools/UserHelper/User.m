@@ -9,6 +9,14 @@
 #import "User.h"
 
 @implementation User
+
+-(NSString *)token {
+    if (!_token) {
+        _token = @"";
+    }
+    return _token;
+}
+
 + (User *)sharedInstance {
     static User *user = nil;
     static dispatch_once_t onceToken;

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChangePwdViewController : UIViewController
+@interface ChangePwdViewController : UITableViewController
 
 @end

@@ -150,4 +150,20 @@
 #define API_USER_COLLECT_LIST  @"/user/collectList"
 
 
+/***公司服务模块***/
+
+/*
+ * 平台服务-公司列表
+ * page_num：非必填，第几页，默认1
+ * page_size：非必填，每页条数，默认20
+ */
+#define API_SERVER_LIST @"/company/index"
+
+/*
+ * 平台服务-公司详情
+ * id：必传，平台服务公司id
+ */
+#define API_SERVER_DETAIL @"/company/detail"
+
+
 #endif /* ApiMacros_h */

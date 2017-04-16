@@ -26,5 +26,6 @@ target 'Aladdin' do
   pod 'UMengAnalytics-NO-IDFA'#友盟统计无IDFA版SDK
   pod 'UMengSocial', '~> 4.3'  #友盟社会化分享及第三方登录
   pod 'SDCycleScrollView','~> 1.64'#轮播图
+  pod 'XLForm'
   
 end
