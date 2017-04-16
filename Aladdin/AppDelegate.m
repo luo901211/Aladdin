@@ -31,9 +31,11 @@
     //键盘统一收回处理
     [self configureBoardManager];
     
-//    [self setupHomeViewController];
-    [self setupLoginViewController];
-    
+    [self setupHomeViewController];
+
+    if (![User sharedInstance].isLogin) {
+        [self presentLoginViewController];
+    }
     return YES;
 }
 
@@ -77,13 +79,10 @@
 
 #pragma mark 自定义跳转不同的页面
 //登录页面
--(void)setupLoginViewController
-{
+- (void)presentLoginViewController {
     LoginViewController *logInVc = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:[NSBundle mainBundle]];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:logInVc];
-    self.window.rootViewController = nav;
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    [self.window.rootViewController presentViewController:nav animated:YES completion:nil];
 }
 
 //首页

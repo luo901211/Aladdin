@@ -34,5 +34,6 @@
 // Tool
 #import "MPUmengHelper.h"
 #import "AFNManagerRequest.h"
+#import "User.h"
 
 #endif /* AladdinPrefix_pch */

@@ -44,6 +44,9 @@
 
 @implementation LoginViewController
 
+- (void)dismiss {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 #pragma mark - 生命周期
 - (void)viewDidLoad {
@@ -56,6 +59,9 @@
 }
 
 - (void)initUI {
+    
+    UIBarButtonItem *dismissBarItem = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:(UIBarButtonItemStylePlain) target:self action:@selector(dismiss)];
+    self.navigationItem.leftBarButtonItem = dismissBarItem;
     
     [self.view addSubview:self.phoneTextField];
     [self.view addSubview:self.pwdTextField];

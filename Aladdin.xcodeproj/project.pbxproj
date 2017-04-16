@@ -10,6 +10,7 @@
 		0D041C178F6ACBB64E74C5A3 /* libPods-Aladdin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E962B31D6986262B603D83 /* libPods-Aladdin.a */; };
 		A408912C1EA323C70071D22D /* MBProgressHUD+Network.m in Sources */ = {isa = PBXBuildFile; fileRef = A408912B1EA323C70071D22D /* MBProgressHUD+Network.m */; };
 		A408912F1EA3297A0071D22D /* NSString+Verify.m in Sources */ = {isa = PBXBuildFile; fileRef = A408912E1EA3297A0071D22D /* NSString+Verify.m */; };
+		A40891361EA35F050071D22D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891351EA35F050071D22D /* User.m */; };
 		A43C93511E9E2342008B877D /* UIView+BlockGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = A43C93501E9E2342008B877D /* UIView+BlockGesture.m */; };
 		A43F9DCF1E9F2CBC00AA831E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A43F9DCD1E9F2CBC00AA831E /* LoginViewController.m */; };
 		A43F9DD01E9F2CBC00AA831E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43F9DCE1E9F2CBC00AA831E /* LoginViewController.xib */; };
@@ -106,6 +107,8 @@
 		A408912B1EA323C70071D22D /* MBProgressHUD+Network.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Network.m"; sourceTree = "<group>"; };
 		A408912D1EA3297A0071D22D /* NSString+Verify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Verify.h"; sourceTree = "<group>"; };
 		A408912E1EA3297A0071D22D /* NSString+Verify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Verify.m"; sourceTree = "<group>"; };
+		A40891341EA35F050071D22D /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		A40891351EA35F050071D22D /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		A43C934F1E9E2342008B877D /* UIView+BlockGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BlockGesture.h"; sourceTree = "<group>"; };
 		A43C93501E9E2342008B877D /* UIView+BlockGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BlockGesture.m"; sourceTree = "<group>"; };
 		A43F9DCC1E9F2CBC00AA831E /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -296,6 +299,15 @@
 				91E962B31D6986262B603D83 /* libPods-Aladdin.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A40891331EA35EF30071D22D /* UserHelper */ = {
+			isa = PBXGroup;
+			children = (
+				A40891341EA35F050071D22D /* User.h */,
+				A40891351EA35F050071D22D /* User.m */,
+			);
+			path = UserHelper;
 			sourceTree = "<group>";
 		};
 		A43F9DC71E9F2C9B00AA831E /* Account */ = {
@@ -867,6 +879,7 @@
 		A4D682F81E97786800FBA51C /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				A40891331EA35EF30071D22D /* UserHelper */,
 				A4A029461E9B2F880008F281 /* ModelHelper */,
 				A4C32E3C1E98B2C200D53E1A /* NetWork */,
 				A4C32AE31E98A7B800D53E1A /* OtherHelper */,
@@ -1094,6 +1107,7 @@
 				A4C32AEC1E98A7B800D53E1A /* GCDGroup.m in Sources */,
 				A4C32E6E1E9A1BF400D53E1A /* SGSegmentedControlBottomView.m in Sources */,
 				A4C32E251E98AD0F00D53E1A /* NSString+Additions.m in Sources */,
+				A40891361EA35F050071D22D /* User.m in Sources */,
 				A4C7C4DA1E9F194A003A36E0 /* WQInputView.m in Sources */,
 				A4AE16FC1E9C8423007965EE /* ALDNewsTypeModel.m in Sources */,
 				A4C32E271E98AD0F00D53E1A /* UITextField+Extension.m in Sources */,
