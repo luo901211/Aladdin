@@ -29,7 +29,8 @@
 }
 
 - (void)save {
-    NSArray *properties = @[ @"token" ];
+    
+    NSArray *properties = @[ @"token", @"mobile", @"real_name", @"address", @"company", @"position", @"pic_url" ];
     NSMutableDictionary *data = [NSMutableDictionary dictionary];
     for (NSString *key in properties) {
         if ([self valueForKey:key]) {

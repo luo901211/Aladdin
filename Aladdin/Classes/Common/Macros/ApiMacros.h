@@ -98,8 +98,56 @@
 #define API_FIND_PASSWORD @"/user/findPassword"
 
 /***个人中心模块***/
+/*
+ * 用户-查询用户信息
+ * token：必传，用户标识
+ */
+#define API_USER_INFO @"/user/info"
 
+/*
+ * 用户-保存用户信息
+ * token：必传，用户标识
+ * real_name：必传
+ * address：必传
+ * company：必传
+ * position：必传
+ * pic ： 必传，name=pic, 使用file方式上传图像
+ */
+#define API_USER_SAVEINFO @"/user/saveInfo"
 
+/*
+ * 用户-消息分类
+ * token：必传，用户标识
+ */
+#define API_USER_MSGTYPE @"/user/msgtype"
+
+/*
+ * 用户-消息列表
+ * token：必传，用户标识
+ * type：必传，分类标识（上个接口中的type值）
+ */
+#define API_USER_MSGLIST @"/user/msglist"
+
+/*
+ * 用户-投诉建议列表
+ * token：必传，用户标识
+ * type：必传，分类标识（上个接口中的type值）
+ */
+#define API_USER_OPINION  @"/user/opinion"
+
+/*
+ * 用户-添加收藏	
+ * token：必传，用户标识
+ * type：必传，收藏内容分类标识
+ * id：必传，收藏内容id
+ */
+#define API_USER_COLLECT  @"/user/collect"
+
+/*
+ * 用户-收藏列表
+ * token：必传，用户标识
+ */
+#define API_USER_COLLECT_LIST  @"/user/collectList"
 
 
 #endif /* ApiMacros_h */

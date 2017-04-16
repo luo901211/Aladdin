@@ -11,6 +11,7 @@
 		A408912C1EA323C70071D22D /* MBProgressHUD+Network.m in Sources */ = {isa = PBXBuildFile; fileRef = A408912B1EA323C70071D22D /* MBProgressHUD+Network.m */; };
 		A408912F1EA3297A0071D22D /* NSString+Verify.m in Sources */ = {isa = PBXBuildFile; fileRef = A408912E1EA3297A0071D22D /* NSString+Verify.m */; };
 		A40891361EA35F050071D22D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891351EA35F050071D22D /* User.m */; };
+		A40891391EA367C30071D22D /* User+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891381EA367C30071D22D /* User+Helper.m */; };
 		A43C93511E9E2342008B877D /* UIView+BlockGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = A43C93501E9E2342008B877D /* UIView+BlockGesture.m */; };
 		A43F9DCF1E9F2CBC00AA831E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A43F9DCD1E9F2CBC00AA831E /* LoginViewController.m */; };
 		A43F9DD01E9F2CBC00AA831E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43F9DCE1E9F2CBC00AA831E /* LoginViewController.xib */; };
@@ -109,6 +110,8 @@
 		A408912E1EA3297A0071D22D /* NSString+Verify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Verify.m"; sourceTree = "<group>"; };
 		A40891341EA35F050071D22D /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		A40891351EA35F050071D22D /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		A40891371EA367C30071D22D /* User+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+Helper.h"; sourceTree = "<group>"; };
+		A40891381EA367C30071D22D /* User+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+Helper.m"; sourceTree = "<group>"; };
 		A43C934F1E9E2342008B877D /* UIView+BlockGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BlockGesture.h"; sourceTree = "<group>"; };
 		A43C93501E9E2342008B877D /* UIView+BlockGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BlockGesture.m"; sourceTree = "<group>"; };
 		A43F9DCC1E9F2CBC00AA831E /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -306,6 +309,8 @@
 			children = (
 				A40891341EA35F050071D22D /* User.h */,
 				A40891351EA35F050071D22D /* User.m */,
+				A40891371EA367C30071D22D /* User+Helper.h */,
+				A40891381EA367C30071D22D /* User+Helper.m */,
 			);
 			path = UserHelper;
 			sourceTree = "<group>";
@@ -1047,6 +1052,7 @@
 				A4C7C4D91E9F194A003A36E0 /* WQChiBaoZiHeader.m in Sources */,
 				A4C32AF01E98A7B800D53E1A /* introductoryPagesHelper.m in Sources */,
 				A4C32E361E98AEB500D53E1A /* JRSwizzle.m in Sources */,
+				A40891391EA367C30071D22D /* User+Helper.m in Sources */,
 				A4C32E451E98C0C600D53E1A /* ALDNewsModel.m in Sources */,
 				A4C32E371E98AEB500D53E1A /* SYSafeCategory.m in Sources */,
 				A4C32E481E98C0F500D53E1A /* NewsListViewController.m in Sources */,

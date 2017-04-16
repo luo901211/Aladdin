@@ -11,6 +11,7 @@
 #import "FindPwdViewController.h"
 #import "UINavigationBar+Awesome.h"
 #import "LoginViewModel.h"
+#import "User+Helper.h"
 
 #define kBannerHeight (238.0 * kScreenWidthRatio)
 #define kTop (238.0 * kScreenWidthRatio) + 35
@@ -201,6 +202,9 @@
     
     VoidBlock success = ^(id obj){
         NSLog(@"登录成功");
+        [User sharedInstance].token = @"72487d9452bd9491516bc81c2d20c23e";
+        [[User sharedInstance] save];
+        [[User sharedInstance] getUserinfo];
     };
     
     VoidBlock failure = ^(id obj){

@@ -88,7 +88,7 @@
 
 - (void)postLoginWithUrl:(NSString *)url params:(NSDictionary *)params success:(VoidBlock)success failure:(VoidBlock)failure {
     
-    [AFNManagerRequest postWithPath:url params:params hudType:NetworkRequestGraceTimeTypeNormal success:^(NSURLResponse *response, id responseObject) {
+    [AFNManagerRequest postWithPath:url params:params hudType:NetworkRequestGraceTimeTypeNormal success:^(NSURLResponse *response, id responseObject) {        
         if (success) {
             success(responseObject);
         }

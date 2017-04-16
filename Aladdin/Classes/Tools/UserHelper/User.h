@@ -16,8 +16,16 @@
 
 @property (nonatomic, copy) NSString *token;
 
+@property (nonatomic, copy) NSString *mobile;
+@property (nonatomic, copy) NSString *real_name;
+@property (nonatomic, copy) NSString *address;
+@property (nonatomic, copy) NSString *company;
+@property (nonatomic, copy) NSString *position;
+@property (nonatomic, copy) NSString *pic_url;
+
 @property (nonatomic, readonly, getter = isLogin) BOOL login;
 
 + (User *)sharedInstance;
-
+- (void)save;
+- (void)logout;
 @end
