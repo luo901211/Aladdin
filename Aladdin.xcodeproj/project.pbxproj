@@ -13,13 +13,10 @@
 		A40891361EA35F050071D22D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891351EA35F050071D22D /* User.m */; };
 		A40891391EA367C30071D22D /* User+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891381EA367C30071D22D /* User+Helper.m */; };
 		A408913D1EA396E40071D22D /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A408913B1EA396E40071D22D /* UserInfoViewController.m */; };
-		A408913E1EA396E40071D22D /* UserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A408913C1EA396E40071D22D /* UserInfoViewController.xib */; };
 		A40891421EA397540071D22D /* MessageTypeListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891401EA397540071D22D /* MessageTypeListVC.m */; };
-		A40891431EA397540071D22D /* MessageTypeListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A40891411EA397540071D22D /* MessageTypeListVC.xib */; };
 		A40891461EA397A30071D22D /* MessageTypeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891451EA397A30071D22D /* MessageTypeViewModel.m */; };
 		A40891491EA398800071D22D /* ALDMessageTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891481EA398800071D22D /* ALDMessageTypeModel.m */; };
 		A408914D1EA399560071D22D /* MessageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A408914B1EA399560071D22D /* MessageListViewController.m */; };
-		A408914E1EA399560071D22D /* MessageListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A408914C1EA399560071D22D /* MessageListViewController.xib */; };
 		A40891511EA3996F0071D22D /* MessageListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891501EA3996F0071D22D /* MessageListViewModel.m */; };
 		A40891541EA399AD0071D22D /* ALDMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891531EA399AD0071D22D /* ALDMessageModel.m */; };
 		A40891581EA39D650071D22D /* MessageTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891561EA39D650071D22D /* MessageTypeCell.m */; };
@@ -34,15 +31,16 @@
 		A408916F1EA3B04F0071D22D /* ServerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A408916D1EA3B04F0071D22D /* ServerDetailViewController.m */; };
 		A40891701EA3B04F0071D22D /* ServerDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A408916E1EA3B04F0071D22D /* ServerDetailViewController.xib */; };
 		A40891731EA3B0F70071D22D /* ServerListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891721EA3B0F70071D22D /* ServerListViewModel.m */; };
+		A40891761EA4610B0071D22D /* UserFeatureView.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891751EA4610B0071D22D /* UserFeatureView.m */; };
+		A408917A1EA462360071D22D /* User.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A40891791EA462360071D22D /* User.xcassets */; };
+		A408917D1EA479EC0071D22D /* UserCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A408917C1EA479EC0071D22D /* UserCenterViewController.m */; };
 		A43C93511E9E2342008B877D /* UIView+BlockGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = A43C93501E9E2342008B877D /* UIView+BlockGesture.m */; };
 		A43F9DCF1E9F2CBC00AA831E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A43F9DCD1E9F2CBC00AA831E /* LoginViewController.m */; };
 		A43F9DD01E9F2CBC00AA831E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43F9DCE1E9F2CBC00AA831E /* LoginViewController.xib */; };
 		A43F9DD41E9F2CD400AA831E /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A43F9DD21E9F2CD400AA831E /* RegisterViewController.m */; };
 		A43F9DD51E9F2CD400AA831E /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43F9DD31E9F2CD400AA831E /* RegisterViewController.xib */; };
 		A43F9DDE1E9F6DCE00AA831E /* FindPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A43F9DDC1E9F6DCE00AA831E /* FindPwdViewController.m */; };
-		A43F9DDF1E9F6DCE00AA831E /* FindPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43F9DDD1E9F6DCE00AA831E /* FindPwdViewController.xib */; };
 		A43F9DE31E9F6DDF00AA831E /* ChangePwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A43F9DE11E9F6DDF00AA831E /* ChangePwdViewController.m */; };
-		A43F9DE41E9F6DDF00AA831E /* ChangePwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43F9DE21E9F6DDF00AA831E /* ChangePwdViewController.xib */; };
 		A43F9DE71E9FAB1600AA831E /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A43F9DE61E9FAB1600AA831E /* LoginViewModel.m */; };
 		A43F9DEA1E9FB1B300AA831E /* RegisterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A43F9DE91E9FB1B300AA831E /* RegisterViewModel.m */; };
 		A4A029491E9B2F9D0008F281 /* MJExtensionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A029481E9B2F9D0008F281 /* MJExtensionConfig.m */; };
@@ -136,17 +134,14 @@
 		A40891381EA367C30071D22D /* User+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+Helper.m"; sourceTree = "<group>"; };
 		A408913A1EA396E40071D22D /* UserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoViewController.h; sourceTree = "<group>"; };
 		A408913B1EA396E40071D22D /* UserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoViewController.m; sourceTree = "<group>"; };
-		A408913C1EA396E40071D22D /* UserInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoViewController.xib; sourceTree = "<group>"; };
 		A408913F1EA397540071D22D /* MessageTypeListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTypeListVC.h; sourceTree = "<group>"; };
 		A40891401EA397540071D22D /* MessageTypeListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTypeListVC.m; sourceTree = "<group>"; };
-		A40891411EA397540071D22D /* MessageTypeListVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageTypeListVC.xib; sourceTree = "<group>"; };
 		A40891441EA397A30071D22D /* MessageTypeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTypeViewModel.h; sourceTree = "<group>"; };
 		A40891451EA397A30071D22D /* MessageTypeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTypeViewModel.m; sourceTree = "<group>"; };
 		A40891471EA398800071D22D /* ALDMessageTypeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDMessageTypeModel.h; sourceTree = "<group>"; };
 		A40891481EA398800071D22D /* ALDMessageTypeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDMessageTypeModel.m; sourceTree = "<group>"; };
 		A408914A1EA399560071D22D /* MessageListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageListViewController.h; sourceTree = "<group>"; };
 		A408914B1EA399560071D22D /* MessageListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageListViewController.m; sourceTree = "<group>"; };
-		A408914C1EA399560071D22D /* MessageListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageListViewController.xib; sourceTree = "<group>"; };
 		A408914F1EA3996F0071D22D /* MessageListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageListViewModel.h; sourceTree = "<group>"; };
 		A40891501EA3996F0071D22D /* MessageListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageListViewModel.m; sourceTree = "<group>"; };
 		A40891521EA399AD0071D22D /* ALDMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDMessageModel.h; sourceTree = "<group>"; };
@@ -170,6 +165,11 @@
 		A408916E1EA3B04F0071D22D /* ServerDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServerDetailViewController.xib; sourceTree = "<group>"; };
 		A40891711EA3B0F70071D22D /* ServerListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerListViewModel.h; sourceTree = "<group>"; };
 		A40891721EA3B0F70071D22D /* ServerListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerListViewModel.m; sourceTree = "<group>"; };
+		A40891741EA4610B0071D22D /* UserFeatureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserFeatureView.h; sourceTree = "<group>"; };
+		A40891751EA4610B0071D22D /* UserFeatureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserFeatureView.m; sourceTree = "<group>"; };
+		A40891791EA462360071D22D /* User.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = User.xcassets; sourceTree = "<group>"; };
+		A408917B1EA479EC0071D22D /* UserCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCenterViewController.h; sourceTree = "<group>"; };
+		A408917C1EA479EC0071D22D /* UserCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCenterViewController.m; sourceTree = "<group>"; };
 		A43C934F1E9E2342008B877D /* UIView+BlockGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BlockGesture.h"; sourceTree = "<group>"; };
 		A43C93501E9E2342008B877D /* UIView+BlockGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BlockGesture.m"; sourceTree = "<group>"; };
 		A43F9DCC1E9F2CBC00AA831E /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -180,10 +180,8 @@
 		A43F9DD31E9F2CD400AA831E /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		A43F9DDB1E9F6DCE00AA831E /* FindPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindPwdViewController.h; sourceTree = "<group>"; };
 		A43F9DDC1E9F6DCE00AA831E /* FindPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPwdViewController.m; sourceTree = "<group>"; };
-		A43F9DDD1E9F6DCE00AA831E /* FindPwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindPwdViewController.xib; sourceTree = "<group>"; };
 		A43F9DE01E9F6DDF00AA831E /* ChangePwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePwdViewController.h; sourceTree = "<group>"; };
 		A43F9DE11E9F6DDF00AA831E /* ChangePwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePwdViewController.m; sourceTree = "<group>"; };
-		A43F9DE21E9F6DDF00AA831E /* ChangePwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangePwdViewController.xib; sourceTree = "<group>"; };
 		A43F9DE51E9FAB1600AA831E /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
 		A43F9DE61E9FAB1600AA831E /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
 		A43F9DE81E9FB1B300AA831E /* RegisterViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewModel.h; sourceTree = "<group>"; };
@@ -404,6 +402,8 @@
 				A408915A1EA39D770071D22D /* MessageCell.h */,
 				A408915B1EA39D770071D22D /* MessageCell.m */,
 				A408915C1EA39D770071D22D /* MessageCell.xib */,
+				A40891741EA4610B0071D22D /* UserFeatureView.h */,
+				A40891751EA4610B0071D22D /* UserFeatureView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -419,19 +419,16 @@
 				A43F9DD31E9F2CD400AA831E /* RegisterViewController.xib */,
 				A43F9DDB1E9F6DCE00AA831E /* FindPwdViewController.h */,
 				A43F9DDC1E9F6DCE00AA831E /* FindPwdViewController.m */,
-				A43F9DDD1E9F6DCE00AA831E /* FindPwdViewController.xib */,
 				A43F9DE01E9F6DDF00AA831E /* ChangePwdViewController.h */,
 				A43F9DE11E9F6DDF00AA831E /* ChangePwdViewController.m */,
-				A43F9DE21E9F6DDF00AA831E /* ChangePwdViewController.xib */,
 				A408913A1EA396E40071D22D /* UserInfoViewController.h */,
 				A408913B1EA396E40071D22D /* UserInfoViewController.m */,
-				A408913C1EA396E40071D22D /* UserInfoViewController.xib */,
+				A408917B1EA479EC0071D22D /* UserCenterViewController.h */,
+				A408917C1EA479EC0071D22D /* UserCenterViewController.m */,
 				A408913F1EA397540071D22D /* MessageTypeListVC.h */,
 				A40891401EA397540071D22D /* MessageTypeListVC.m */,
-				A40891411EA397540071D22D /* MessageTypeListVC.xib */,
 				A408914A1EA399560071D22D /* MessageListViewController.h */,
 				A408914B1EA399560071D22D /* MessageListViewController.m */,
-				A408914C1EA399560071D22D /* MessageListViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -881,6 +878,7 @@
 				A4D682DF1E976CEB00FBA51C /* Main.storyboard */,
 				A4D682E21E976CEB00FBA51C /* Assets.xcassets */,
 				A4C32E721E9A343900D53E1A /* Login.xcassets */,
+				A40891791EA462360071D22D /* User.xcassets */,
 				A4D682E41E976CEB00FBA51C /* LaunchScreen.storyboard */,
 				A4D682E71E976CEB00FBA51C /* Info.plist */,
 				A4D682D61E976CEB00FBA51C /* Supporting Files */,
@@ -1062,12 +1060,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A43F9DE41E9F6DDF00AA831E /* ChangePwdViewController.xib in Resources */,
 				A4AE170A1E9E0C23007965EE /* NewsDetailBottomView.xib in Resources */,
-				A40891431EA397540071D22D /* MessageTypeListVC.xib in Resources */,
 				A40891631EA3AF110071D22D /* ServerListViewController.xib in Resources */,
 				A4D682E61E976CEB00FBA51C /* LaunchScreen.storyboard in Resources */,
-				A408914E1EA399560071D22D /* MessageListViewController.xib in Resources */,
 				A43F9DD01E9F2CBC00AA831E /* LoginViewController.xib in Resources */,
 				A4C32E8D1E9A37D100D53E1A /* AnswerCell.xib in Resources */,
 				A40891701EA3B04F0071D22D /* ServerDetailViewController.xib in Resources */,
@@ -1078,12 +1073,11 @@
 				A408916B1EA3AF420071D22D /* ServerCell.xib in Resources */,
 				A4D682E31E976CEB00FBA51C /* Assets.xcassets in Resources */,
 				A40891591EA39D650071D22D /* MessageTypeCell.xib in Resources */,
+				A408917A1EA462360071D22D /* User.xcassets in Resources */,
 				A4C32EB51E9A6A5600D53E1A /* TeachingVideoCollectionViewCell.xib in Resources */,
 				A4C32E521E99F2F600D53E1A /* NewsCell.xib in Resources */,
 				A4D682E11E976CEB00FBA51C /* Main.storyboard in Resources */,
-				A408913E1EA396E40071D22D /* UserInfoViewController.xib in Resources */,
 				A43F9DD51E9F2CD400AA831E /* RegisterViewController.xib in Resources */,
-				A43F9DDF1E9F6DCE00AA831E /* FindPwdViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1160,6 +1154,7 @@
 				A4C7C4D91E9F194A003A36E0 /* WQChiBaoZiHeader.m in Sources */,
 				A4C32AF01E98A7B800D53E1A /* introductoryPagesHelper.m in Sources */,
 				A4C32E361E98AEB500D53E1A /* JRSwizzle.m in Sources */,
+				A408917D1EA479EC0071D22D /* UserCenterViewController.m in Sources */,
 				A40891391EA367C30071D22D /* User+Helper.m in Sources */,
 				A4C32E451E98C0C600D53E1A /* ALDNewsModel.m in Sources */,
 				A4C32E371E98AEB500D53E1A /* SYSafeCategory.m in Sources */,
@@ -1204,6 +1199,7 @@
 				A4C32E581E9A16F400D53E1A /* NewsMainViewController.m in Sources */,
 				A4C32E6F1E9A1BF400D53E1A /* SGSegmentedControlDefault.m in Sources */,
 				A4C32E711E9A1BF400D53E1A /* UIView+SGExtension.m in Sources */,
+				A40891761EA4610B0071D22D /* UserFeatureView.m in Sources */,
 				A4C32E6C1E9A1BF400D53E1A /* SGImageButton_Vertical.m in Sources */,
 				A43F9DE31E9F6DDF00AA831E /* ChangePwdViewController.m in Sources */,
 				A4C32AF11E98A7B800D53E1A /* introductoryPagesView.m in Sources */,

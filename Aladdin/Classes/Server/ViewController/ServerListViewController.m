@@ -12,10 +12,16 @@
 #import "ServerCell.h"
 #import "ServerDetailViewController.h"
 
+#import "UserFeatureView.h"
+#import "WQPopWindow.h"
+#import "UserCenterViewController.h"
+
 @interface ServerListViewController ()
 
 
 @property (nonatomic, strong) ServerListViewModel *viewModel;
+
+@property (nonatomic, strong) UserFeatureView *userFeatureView;
 
 @end
 
@@ -28,10 +34,34 @@
     return _viewModel;
 }
 
+- (UserFeatureView *)userFeatureView {
+    if (!_userFeatureView) {
+        NSArray *array = @[
+                           @{ @"title": @"个人中心", @"image": @"user_mine_item" },
+                           @{ @"title": @"会员信息", @"image": @"user_message_item" },
+                           @{ @"title": @"我的收藏", @"image": @"user_collect_item" },
+                           @{ @"title": @"我的问答", @"image": @"user_question_item" },
+                           @{ @"title": @"系统消息", @"image": @"user_system_msg_item" },
+                           @{ @"title": @"意见反馈", @"image": @"user_feedback_item" }
+                           ];
+        _userFeatureView = [[UserFeatureView alloc] initWithItems:array];
+        _userFeatureView.top = 64+20;
+        _userFeatureView.right = Main_Screen_Width - 20;
+        
+        _userFeatureView.tapBlock = ^(NSInteger index){
+            [[WQPopWindow sharedWindow] hide];
+        };
+    }
+    return _userFeatureView;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.navigationItem.title = @"阿拉丁平台服务";
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"user_mine_item"] style:(UIBarButtonItemStylePlain) target:self action:@selector(showUserFeatureView)];
+    
     
     self.tableView.tableFooterView = [UIView new];
     [self.tableView registerNib:[UINib nibWithNibName:@"ServerCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"ServerCell"];
@@ -49,6 +79,13 @@
     
 }
 
+- (void)showUserFeatureView {
+    NSLog(@"用户中心功能");
+
+    
+    [[WQPopWindow sharedWindow] addSubview:self.userFeatureView];
+    [[WQPopWindow sharedWindow] show];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

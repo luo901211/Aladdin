@@ -36,7 +36,7 @@
     
     [self setupHomeViewController];
 
-//    [self presentLoginViewController];
+    [self presentLoginViewController];
 
 //    if (![User sharedInstance].isLogin) {
 //        [self presentLoginViewController];
@@ -85,8 +85,8 @@
 #pragma mark 自定义跳转不同的页面
 //登录页面
 - (void)presentLoginViewController {
-//    LoginViewController *logInVc = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:[NSBundle mainBundle]];
-    MessageTypeListVC *logInVc = [[MessageTypeListVC alloc] initWithNibName:@"MessageTypeListVC" bundle:[NSBundle mainBundle]];
+    LoginViewController *logInVc = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:[NSBundle mainBundle]];
+//    MessageTypeListVC *logInVc = [[MessageTypeListVC alloc] initWithNibName:@"MessageTypeListVC" bundle:[NSBundle mainBundle]];
 
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:logInVc];
     [self.window.rootViewController presentViewController:nav animated:YES completion:nil];
