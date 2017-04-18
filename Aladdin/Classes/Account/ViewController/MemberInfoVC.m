@@ -1,22 +1,23 @@
 //
-//  FindPwdViewController.m
+//  MemberInfoVC.m
 //  Aladdin
 //
-//  Created by luo on 2017/4/13.
+//  Created by luo on 2017/4/18.
 //  Copyright © 2017年 wenqi. All rights reserved.
 //
 
-#import "FindPwdViewController.h"
+#import "MemberInfoVC.h"
 
-@interface FindPwdViewController ()
+@interface MemberInfoVC ()
 
 @end
 
-@implementation FindPwdViewController
+@implementation MemberInfoVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    // Do any additional setup after loading the view.
+    self.navigationItem.title = @"会员信息";
 }
 
 - (void)didReceiveMemoryWarning {

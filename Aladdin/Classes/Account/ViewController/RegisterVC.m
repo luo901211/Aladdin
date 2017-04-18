@@ -6,7 +6,7 @@
 //  Copyright © 2017年 wenqi. All rights reserved.
 //
 
-#import "RegisterViewController.h"
+#import "RegisterVC.h"
 #import "RegisterViewModel.h"
 
 #define kTop (238.0 * kScreenWidthRatio)
@@ -14,7 +14,7 @@
 #define kItemWidth 261.0
 #define kItemHeight 44.0
 
-@interface RegisterViewController ()
+@interface RegisterVC ()
 
 @property (strong, nonatomic) UITextField *phoneTextField;
 @property (strong, nonatomic) UITextField *codeTextField;
@@ -24,7 +24,7 @@
 
 @end
 
-@implementation RegisterViewController
+@implementation RegisterVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];

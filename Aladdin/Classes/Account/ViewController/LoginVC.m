@@ -6,9 +6,9 @@
 //  Copyright © 2017年 wenqi. All rights reserved.
 //
 
-#import "LoginViewController.h"
-#import "RegisterViewController.h"
-#import "FindPwdViewController.h"
+#import "LoginVC.h"
+#import "RegisterVC.h"
+#import "FindPasswordVC.h"
 #import "UINavigationBar+Awesome.h"
 #import "LoginViewModel.h"
 #import "User+Helper.h"
@@ -22,9 +22,7 @@
 #define kMiniBtnWidth 80
 #define kMiniBtnHeight 40
 
-@interface LoginViewController ()
-
-//@property (assign, nonatomic) NSInteger
+@interface LoginVC ()
 
 @property (strong, nonatomic) UITextField *phoneTextField;
 @property (strong, nonatomic) UITextField *codeTextField;
@@ -34,8 +32,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *passwordLoginBtn;
 @property (weak, nonatomic) IBOutlet UIButton *codeLoginBtn;
 
-
-
 @property (strong, nonatomic) UIView *inputContainerView;
 @property (strong, nonatomic) UIView *loginContainerView;
 
@@ -43,7 +39,7 @@
 
 @end
 
-@implementation LoginViewController
+@implementation LoginVC
 
 - (void)dismiss {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -237,12 +233,12 @@
 }
 
 - (void)didPressedOnFindPwdButton:(UIButton *)button {
-    FindPwdViewController *vc = [[FindPwdViewController alloc] initWithNibName:@"FindPwdViewController" bundle:[NSBundle mainBundle]];
+    FindPasswordVC *vc = [[FindPasswordVC alloc] initWithNibName:@"FindPasswordVC" bundle:[NSBundle mainBundle]];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didPressedOnRegisterButton:(UIButton *)button {
-    RegisterViewController *vc = [[RegisterViewController alloc] initWithNibName:@"RegisterViewController" bundle:[NSBundle mainBundle]];
+    RegisterVC *vc = [[RegisterVC alloc] initWithNibName:@"RegisterVC" bundle:[NSBundle mainBundle]];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

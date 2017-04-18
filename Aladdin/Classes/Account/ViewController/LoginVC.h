@@ -1,5 +1,5 @@
 //
-//  FindPwdViewController.h
+//  LoginViewController.h
 //  Aladdin
 //
 //  Created by luo on 2017/4/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FindPwdViewController : UIViewController
+@interface LoginVC : UIViewController
 
 @end

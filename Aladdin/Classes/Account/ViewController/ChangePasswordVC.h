@@ -1,5 +1,5 @@
 //
-//  RegisterViewController.h
+//  ChangePwdViewController.h
 //  Aladdin
 //
 //  Created by luo on 2017/4/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RegisterViewController : UIViewController
+@interface ChangePasswordVC : UITableViewController
 
 @end

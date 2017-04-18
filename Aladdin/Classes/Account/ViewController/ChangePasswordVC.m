@@ -6,13 +6,13 @@
 //  Copyright © 2017年 wenqi. All rights reserved.
 //
 
-#import "ChangePwdViewController.h"
+#import "ChangePasswordVC.h"
 
-@interface ChangePwdViewController ()
+@interface ChangePasswordVC ()
 
 @end
 
-@implementation ChangePwdViewController
+@implementation ChangePasswordVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];

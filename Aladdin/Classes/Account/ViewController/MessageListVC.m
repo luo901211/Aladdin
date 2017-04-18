@@ -6,17 +6,17 @@
 //  Copyright © 2017年 wenqi. All rights reserved.
 //
 
-#import "MessageListViewController.h"
+#import "MessageListVC.h"
 #import "MessageListViewModel.h"
 #import "MessageCell.h"
 
-@interface MessageListViewController ()
+@interface MessageListVC ()
 
 @property (nonatomic, strong) MessageListViewModel *viewModel;
 
 @end
 
-@implementation MessageListViewController
+@implementation MessageListVC
 
 - (MessageListViewModel *)viewModel {
     if (!_viewModel) {
@@ -33,7 +33,7 @@
     self.tableView.tableFooterView = [UIView new];
     [self.tableView registerNib:[UINib nibWithNibName:@"MessageCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"MessageCell"];
     
-    __weak MessageListViewController *weakSelf = self;
+    __weak MessageListVC *weakSelf = self;
     self.tableView.mj_header = [WQChiBaoZiHeader headerWithRefreshingBlock:^{
         [weakSelf loadDataWithType:WQFetchDataTypeRefresh];
     }];

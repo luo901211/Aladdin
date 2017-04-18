@@ -10,7 +10,7 @@
 #import "SYSafeCategory.h"
 #import "IQKeyboardManager.h"
 #import "WQHomeTabBarController.h"
-#import "LoginViewController.h"
+#import "LoginVC.h"
 
 //TEST
 #import "MessageTypeListVC.h"
@@ -85,7 +85,7 @@
 #pragma mark 自定义跳转不同的页面
 //登录页面
 - (void)presentLoginViewController {
-    LoginViewController *logInVc = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:[NSBundle mainBundle]];
+    LoginVC *logInVc = [[LoginVC alloc] initWithNibName:@"LoginVC" bundle:[NSBundle mainBundle]];
 //    MessageTypeListVC *logInVc = [[MessageTypeListVC alloc] initWithNibName:@"MessageTypeListVC" bundle:[NSBundle mainBundle]];
 
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:logInVc];

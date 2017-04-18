@@ -1,22 +1,23 @@
 //
-//  UserCenterViewController.m
+//  FeedbackVC.m
 //  Aladdin
 //
-//  Created by luo on 2017/4/17.
+//  Created by luo on 2017/4/18.
 //  Copyright © 2017年 wenqi. All rights reserved.
 //
 
-#import "UserCenterViewController.h"
+#import "FeedbackVC.h"
 
-@interface UserCenterViewController ()
+@interface FeedbackVC ()
 
 @end
 
-@implementation UserCenterViewController
+@implementation FeedbackVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.navigationItem.title = @"意见反馈";
 }
 
 - (void)didReceiveMemoryWarning {

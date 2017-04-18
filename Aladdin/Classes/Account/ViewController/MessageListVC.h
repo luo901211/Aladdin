@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MessageListViewController : UITableViewController
+@interface MessageListVC : UITableViewController
 
 @property (nonatomic, assign) NSInteger type;
 

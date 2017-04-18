@@ -9,7 +9,9 @@
 #ifndef ApiMacros_h
 #define ApiMacros_h
 
-#define SERVER_HOST  @"http://api.phpdog.me"
+//#define SERVER_HOST  @"http://api.phpdog.me"
+#define SERVER_HOST  @"http://api.aladingtax.com"
+
 #define API_PAGE_SIZE 20
 
 /**********资讯***********/

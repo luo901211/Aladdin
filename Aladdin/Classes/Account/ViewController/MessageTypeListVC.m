@@ -10,7 +10,7 @@
 #import "MessageTypeViewModel.h"
 #import "ALDMessageTypeModel.h"
 #import "MessageTypeCell.h"
-#import "MessageListViewController.h"
+#import "MessageListVC.h"
 
 @interface MessageTypeListVC ()
 
@@ -92,7 +92,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 //    ALDMessageTypeModel *model = self.viewModel.messageTypeList[indexPath.row];
-    MessageListViewController *vc = [[MessageListViewController alloc] init];
+    MessageListVC *vc = [[MessageListVC alloc] init];
 //    vc.type = model.type;
     vc.type = 1;
     [self.navigationController pushViewController:vc animated:YES];

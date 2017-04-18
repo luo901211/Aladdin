@@ -7,10 +7,15 @@
 //
 
 #import "UserFeatureView.h"
-
+#import "UserCenterVC.h"
+#import "MemberInfoVC.h"
+#import "CollectListVC.h"
+#import "QuestionListVC.h"
+#import "SystemMessageListVC.h"
+#import "FeedbackVC.h"
 @interface UserFeatureView ()
 
-
+@property (strong, nonatomic) NSArray *items;
 
 @end
 static CGFloat buttonWidth = 164;
@@ -27,6 +32,7 @@ static CGFloat buttonWidth = 164;
 - (instancetype)initWithItems:(NSArray *)items {
     self = [super initWithFrame:CGRectMake(0, 0, buttonWidth, 320)];
     if (self) {
+        self.items = items;
         self.backgroundColor = [UIColor whiteColor];
         for (int i = 0; i < items.count; i++) {
             NSDictionary *item = items[i];
@@ -55,9 +61,51 @@ static CGFloat buttonWidth = 164;
 }
 
 - (void)didPressedOnButton:(UIButton *)button {
-    if (self.tapBlock) {
-        self.tapBlock((button.tag-100));
+//    if (self.tapBlock) {
+//        self.tapBlock((button.tag-100));
+//    }
+    
+    NSInteger index = button.tag - 100;
+    UIViewController *vc;
+    switch (index) {
+        case 0:
+        {
+            vc = [[UserCenterVC alloc] init];
+        }
+            break;
+        case 1:
+        {
+            vc = [[MemberInfoVC alloc] init];
+        }
+            break;
+        case 2:
+        {
+            vc = [[CollectListVC alloc] init];
+        }
+            break;
+        case 3:
+        {
+            vc = [[QuestionListVC alloc] init];
+        }
+            break;
+        case 4:
+        {
+            vc = [[SystemMessageListVC alloc] init];
+        }
+            break;
+        case 5:
+        {
+            vc = [[FeedbackVC alloc] init];
+        }
+            break;
+        default:
+            break;
     }
+    
+    UITabBarController *tabBarController = (UITabBarController *)[UIApplication sharedApplication].delegate.window.rootViewController;
+    
+    UINavigationController *navigationController = tabBarController.viewControllers[tabBarController.selectedIndex];
+    [navigationController pushViewController:vc animated:YES];
 }
 
 

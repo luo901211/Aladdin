@@ -14,7 +14,12 @@
 
 #import "UserFeatureView.h"
 #import "WQPopWindow.h"
-#import "UserCenterViewController.h"
+#import "UserCenterVC.h"
+#import "MemberInfoVC.h"
+#import "CollectListVC.h"
+#import "QuestionListVC.h"
+#import "SystemMessageListVC.h"
+#import "FeedbackVC.h"
 
 @interface ServerListViewController ()
 
@@ -48,7 +53,52 @@
         _userFeatureView.top = 64+20;
         _userFeatureView.right = Main_Screen_Width - 20;
         
+        @weakify(self);
+        
         _userFeatureView.tapBlock = ^(NSInteger index){
+            NSLog(@"index: %ld",(long)index);
+            @strongify(self);
+            
+            UIViewController *vc;
+            switch (index) {
+                case 0:
+                {
+                    vc = [[UserCenterVC alloc] init];
+
+                }
+                    break;
+                case 1:
+                {
+                    vc = [[MemberInfoVC alloc] init];
+                }
+                    break;
+                case 2:
+                {
+                    vc = [[CollectListVC alloc] init];
+                }
+                    break;
+                case 3:
+                {
+                    vc = [[QuestionListVC alloc] init];
+                }
+                    break;
+                case 4:
+                {
+                    vc = [[SystemMessageListVC alloc] init];
+                }
+                    break;
+                case 5:
+                {
+                    vc = [[FeedbackVC alloc] init];
+                }
+                    break;
+                default:
+                    break;
+            }
+            
+            
+            [self.navigationController pushViewController:vc animated:YES];
+            
             [[WQPopWindow sharedWindow] hide];
         };
     }
