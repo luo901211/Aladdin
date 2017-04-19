@@ -14,12 +14,6 @@
 
 #import "UserFeatureView.h"
 #import "WQPopWindow.h"
-#import "UserCenterVC.h"
-#import "MemberInfoVC.h"
-#import "CollectListVC.h"
-#import "QuestionListVC.h"
-#import "SystemMessageListVC.h"
-#import "FeedbackVC.h"
 
 @interface ServerListViewController ()
 
@@ -43,64 +37,14 @@
     if (!_userFeatureView) {
         NSArray *array = @[
                            @{ @"title": @"个人中心", @"image": @"user_mine_item" },
-                           @{ @"title": @"会员信息", @"image": @"user_message_item" },
                            @{ @"title": @"我的收藏", @"image": @"user_collect_item" },
                            @{ @"title": @"我的问答", @"image": @"user_question_item" },
-                           @{ @"title": @"系统消息", @"image": @"user_system_msg_item" },
+                           @{ @"title": @"消息", @"image": @"user_system_msg_item" },
                            @{ @"title": @"意见反馈", @"image": @"user_feedback_item" }
                            ];
         _userFeatureView = [[UserFeatureView alloc] initWithItems:array];
         _userFeatureView.top = 64+20;
         _userFeatureView.right = Main_Screen_Width - 20;
-        
-        @weakify(self);
-        
-        _userFeatureView.tapBlock = ^(NSInteger index){
-            NSLog(@"index: %ld",(long)index);
-            @strongify(self);
-            
-            UIViewController *vc;
-            switch (index) {
-                case 0:
-                {
-                    vc = [[UserCenterVC alloc] init];
-
-                }
-                    break;
-                case 1:
-                {
-                    vc = [[MemberInfoVC alloc] init];
-                }
-                    break;
-                case 2:
-                {
-                    vc = [[CollectListVC alloc] init];
-                }
-                    break;
-                case 3:
-                {
-                    vc = [[QuestionListVC alloc] init];
-                }
-                    break;
-                case 4:
-                {
-                    vc = [[SystemMessageListVC alloc] init];
-                }
-                    break;
-                case 5:
-                {
-                    vc = [[FeedbackVC alloc] init];
-                }
-                    break;
-                default:
-                    break;
-            }
-            
-            
-            [self.navigationController pushViewController:vc animated:YES];
-            
-            [[WQPopWindow sharedWindow] hide];
-        };
     }
     return _userFeatureView;
 }
@@ -129,10 +73,7 @@
     
 }
 
-- (void)showUserFeatureView {
-    NSLog(@"用户中心功能");
-
-    
+- (void)showUserFeatureView {    
     [[WQPopWindow sharedWindow] addSubview:self.userFeatureView];
     [[WQPopWindow sharedWindow] show];
 }

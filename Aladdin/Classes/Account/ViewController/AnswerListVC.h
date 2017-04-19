@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface QuestionListVC : UITableViewController
+@interface AnswerListVC : UITableViewController
+
+@property (nonatomic, assign) NSInteger type;
 
 @end

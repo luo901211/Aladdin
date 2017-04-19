@@ -17,7 +17,9 @@ AspectPatch(-, BOOL, application:(UIApplication *)application didFinishLaunching
 {
     [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-    
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
+                                                         forBarMetrics:UIBarMetricsDefault];
+
     return XAMessageForward(application:application didFinishLaunchingWithOptions:launchOptions);
 }
 

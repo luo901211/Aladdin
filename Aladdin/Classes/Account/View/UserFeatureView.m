@@ -10,8 +10,8 @@
 #import "UserCenterVC.h"
 #import "MemberInfoVC.h"
 #import "CollectListVC.h"
-#import "QuestionListVC.h"
-#import "SystemMessageListVC.h"
+#import "AnswerListVC.h"
+#import "MessageTypeListVC.h"
 #import "FeedbackVC.h"
 #import "WQPopWindow.h"
 
@@ -77,25 +77,20 @@ static CGFloat buttonWidth = 164;
             break;
         case 1:
         {
-            vc = [[MemberInfoVC alloc] init];
+            vc = [[CollectListVC alloc] init];
         }
             break;
         case 2:
         {
-            vc = [[CollectListVC alloc] init];
+            vc = [[AnswerListVC alloc] init];
         }
             break;
         case 3:
         {
-            vc = [[QuestionListVC alloc] init];
+            vc = [[MessageTypeListVC alloc] init];
         }
             break;
         case 4:
-        {
-            vc = [[SystemMessageListVC alloc] init];
-        }
-            break;
-        case 5:
         {
             vc = [[FeedbackVC alloc] init];
         }

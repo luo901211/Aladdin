@@ -42,10 +42,17 @@
 		A43F9DE31E9F6DDF00AA831E /* ChangePasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A43F9DE11E9F6DDF00AA831E /* ChangePasswordVC.m */; };
 		A43F9DE71E9FAB1600AA831E /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A43F9DE61E9FAB1600AA831E /* LoginViewModel.m */; };
 		A43F9DEA1E9FB1B300AA831E /* RegisterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A43F9DE91E9FB1B300AA831E /* RegisterViewModel.m */; };
+		A45378881EA7620300020C5D /* CollectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A45378861EA7620300020C5D /* CollectCell.m */; };
+		A45378891EA7620300020C5D /* CollectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A45378871EA7620300020C5D /* CollectCell.xib */; };
+		A453788C1EA7687800020C5D /* CollectListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A453788B1EA7687800020C5D /* CollectListViewModel.m */; };
+		A453788F1EA7688B00020C5D /* AnswerListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A453788E1EA7688B00020C5D /* AnswerListViewModel.m */; };
+		A45378921EA768D800020C5D /* CommentListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A45378911EA768D800020C5D /* CommentListViewModel.m */; };
+		A45378951EA768F000020C5D /* FeedbackViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A45378941EA768F000020C5D /* FeedbackViewModel.m */; };
+		A45378981EA76E7E00020C5D /* CommentListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A45378971EA76E7E00020C5D /* CommentListVC.m */; };
 		A499A9591EA5EC4C00B45425 /* SystemMessageListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A499A9581EA5EC4C00B45425 /* SystemMessageListVC.m */; };
 		A499A95C1EA60E8900B45425 /* MemberInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A499A95B1EA60E8900B45425 /* MemberInfoVC.m */; };
 		A499A95F1EA60EB700B45425 /* CollectListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A499A95E1EA60EB700B45425 /* CollectListVC.m */; };
-		A499A9621EA616CE00B45425 /* QuestionListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A499A9611EA616CE00B45425 /* QuestionListVC.m */; };
+		A499A9621EA616CE00B45425 /* AnswerListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A499A9611EA616CE00B45425 /* AnswerListVC.m */; };
 		A499A9651EA616F300B45425 /* FeedbackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A499A9641EA616F300B45425 /* FeedbackVC.m */; };
 		A499A9851EA622A800B45425 /* ALDNewsBannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A499A9691EA622A800B45425 /* ALDNewsBannerModel.m */; };
 		A499A9861EA622A800B45425 /* ALDNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A499A96B1EA622A800B45425 /* ALDNewsModel.m */; };
@@ -61,6 +68,7 @@
 		A499A9901EA622A800B45425 /* NewsListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A499A9801EA622A800B45425 /* NewsListViewModel.m */; };
 		A499A9911EA622A800B45425 /* NewsMainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A499A9821EA622A800B45425 /* NewsMainViewModel.m */; };
 		A499A9A21EA7127300B45425 /* UserInfoListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A499A9A01EA7127300B45425 /* UserInfoListVC.m */; };
+		A499A9A61EA75EA000B45425 /* ALDCollectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A499A9A51EA75EA000B45425 /* ALDCollectModel.m */; };
 		A4A029491E9B2F9D0008F281 /* MJExtensionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A029481E9B2F9D0008F281 /* MJExtensionConfig.m */; };
 		A4A0294C1E9B341C0008F281 /* AFNManagerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A0294B1E9B341C0008F281 /* AFNManagerRequest.m */; };
 		A4AE170D1E9E1383007965EE /* UIView+CustomBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AE170C1E9E1383007965EE /* UIView+CustomBorder.m */; };
@@ -189,14 +197,27 @@
 		A43F9DE61E9FAB1600AA831E /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
 		A43F9DE81E9FB1B300AA831E /* RegisterViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewModel.h; sourceTree = "<group>"; };
 		A43F9DE91E9FB1B300AA831E /* RegisterViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewModel.m; sourceTree = "<group>"; };
+		A45378851EA7620300020C5D /* CollectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectCell.h; sourceTree = "<group>"; };
+		A45378861EA7620300020C5D /* CollectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectCell.m; sourceTree = "<group>"; };
+		A45378871EA7620300020C5D /* CollectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectCell.xib; sourceTree = "<group>"; };
+		A453788A1EA7687800020C5D /* CollectListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectListViewModel.h; sourceTree = "<group>"; };
+		A453788B1EA7687800020C5D /* CollectListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectListViewModel.m; sourceTree = "<group>"; };
+		A453788D1EA7688B00020C5D /* AnswerListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerListViewModel.h; sourceTree = "<group>"; };
+		A453788E1EA7688B00020C5D /* AnswerListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerListViewModel.m; sourceTree = "<group>"; };
+		A45378901EA768D800020C5D /* CommentListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentListViewModel.h; sourceTree = "<group>"; };
+		A45378911EA768D800020C5D /* CommentListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentListViewModel.m; sourceTree = "<group>"; };
+		A45378931EA768F000020C5D /* FeedbackViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackViewModel.h; sourceTree = "<group>"; };
+		A45378941EA768F000020C5D /* FeedbackViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewModel.m; sourceTree = "<group>"; };
+		A45378961EA76E7E00020C5D /* CommentListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentListVC.h; sourceTree = "<group>"; };
+		A45378971EA76E7E00020C5D /* CommentListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentListVC.m; sourceTree = "<group>"; };
 		A499A9571EA5EC4C00B45425 /* SystemMessageListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemMessageListVC.h; sourceTree = "<group>"; };
 		A499A9581EA5EC4C00B45425 /* SystemMessageListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemMessageListVC.m; sourceTree = "<group>"; };
 		A499A95A1EA60E8900B45425 /* MemberInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberInfoVC.h; sourceTree = "<group>"; };
 		A499A95B1EA60E8900B45425 /* MemberInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberInfoVC.m; sourceTree = "<group>"; };
 		A499A95D1EA60EB700B45425 /* CollectListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectListVC.h; sourceTree = "<group>"; };
 		A499A95E1EA60EB700B45425 /* CollectListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectListVC.m; sourceTree = "<group>"; };
-		A499A9601EA616CE00B45425 /* QuestionListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionListVC.h; sourceTree = "<group>"; };
-		A499A9611EA616CE00B45425 /* QuestionListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionListVC.m; sourceTree = "<group>"; };
+		A499A9601EA616CE00B45425 /* AnswerListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerListVC.h; sourceTree = "<group>"; };
+		A499A9611EA616CE00B45425 /* AnswerListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerListVC.m; sourceTree = "<group>"; };
 		A499A9631EA616F300B45425 /* FeedbackVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackVC.h; sourceTree = "<group>"; };
 		A499A9641EA616F300B45425 /* FeedbackVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackVC.m; sourceTree = "<group>"; };
 		A499A9681EA622A800B45425 /* ALDNewsBannerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDNewsBannerModel.h; sourceTree = "<group>"; };
@@ -225,6 +246,8 @@
 		A499A9821EA622A800B45425 /* NewsMainViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsMainViewModel.m; sourceTree = "<group>"; };
 		A499A99F1EA7127300B45425 /* UserInfoListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoListVC.h; sourceTree = "<group>"; };
 		A499A9A01EA7127300B45425 /* UserInfoListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoListVC.m; sourceTree = "<group>"; };
+		A499A9A41EA75EA000B45425 /* ALDCollectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDCollectModel.h; sourceTree = "<group>"; };
+		A499A9A51EA75EA000B45425 /* ALDCollectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDCollectModel.m; sourceTree = "<group>"; };
 		A4A029471E9B2F9D0008F281 /* MJExtensionConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConfig.h; sourceTree = "<group>"; };
 		A4A029481E9B2F9D0008F281 /* MJExtensionConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionConfig.m; sourceTree = "<group>"; };
 		A4A0294A1E9B341C0008F281 /* AFNManagerRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNManagerRequest.h; sourceTree = "<group>"; };
@@ -404,6 +427,8 @@
 				A40891481EA398800071D22D /* ALDMessageTypeModel.m */,
 				A40891521EA399AD0071D22D /* ALDMessageModel.h */,
 				A40891531EA399AD0071D22D /* ALDMessageModel.m */,
+				A499A9A41EA75EA000B45425 /* ALDCollectModel.h */,
+				A499A9A51EA75EA000B45425 /* ALDCollectModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -419,6 +444,9 @@
 				A408915C1EA39D770071D22D /* MessageCell.xib */,
 				A40891741EA4610B0071D22D /* UserFeatureView.h */,
 				A40891751EA4610B0071D22D /* UserFeatureView.m */,
+				A45378851EA7620300020C5D /* CollectCell.h */,
+				A45378861EA7620300020C5D /* CollectCell.m */,
+				A45378871EA7620300020C5D /* CollectCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -444,14 +472,16 @@
 				A40891401EA397540071D22D /* MessageTypeListVC.m */,
 				A408914A1EA399560071D22D /* MessageListVC.h */,
 				A408914B1EA399560071D22D /* MessageListVC.m */,
-				A499A9571EA5EC4C00B45425 /* SystemMessageListVC.h */,
-				A499A9581EA5EC4C00B45425 /* SystemMessageListVC.m */,
 				A499A95A1EA60E8900B45425 /* MemberInfoVC.h */,
 				A499A95B1EA60E8900B45425 /* MemberInfoVC.m */,
 				A499A95D1EA60EB700B45425 /* CollectListVC.h */,
 				A499A95E1EA60EB700B45425 /* CollectListVC.m */,
-				A499A9601EA616CE00B45425 /* QuestionListVC.h */,
-				A499A9611EA616CE00B45425 /* QuestionListVC.m */,
+				A499A9571EA5EC4C00B45425 /* SystemMessageListVC.h */,
+				A499A9581EA5EC4C00B45425 /* SystemMessageListVC.m */,
+				A499A9601EA616CE00B45425 /* AnswerListVC.h */,
+				A499A9611EA616CE00B45425 /* AnswerListVC.m */,
+				A45378961EA76E7E00020C5D /* CommentListVC.h */,
+				A45378971EA76E7E00020C5D /* CommentListVC.m */,
 				A499A9631EA616F300B45425 /* FeedbackVC.h */,
 				A499A9641EA616F300B45425 /* FeedbackVC.m */,
 			);
@@ -469,6 +499,14 @@
 				A40891451EA397A30071D22D /* MessageTypeViewModel.m */,
 				A408914F1EA3996F0071D22D /* MessageListViewModel.h */,
 				A40891501EA3996F0071D22D /* MessageListViewModel.m */,
+				A453788A1EA7687800020C5D /* CollectListViewModel.h */,
+				A453788B1EA7687800020C5D /* CollectListViewModel.m */,
+				A453788D1EA7688B00020C5D /* AnswerListViewModel.h */,
+				A453788E1EA7688B00020C5D /* AnswerListViewModel.m */,
+				A45378901EA768D800020C5D /* CommentListViewModel.h */,
+				A45378911EA768D800020C5D /* CommentListViewModel.m */,
+				A45378931EA768F000020C5D /* FeedbackViewModel.h */,
+				A45378941EA768F000020C5D /* FeedbackViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1098,6 +1136,7 @@
 				A408916B1EA3AF420071D22D /* ServerCell.xib in Resources */,
 				A4D682E31E976CEB00FBA51C /* Assets.xcassets in Resources */,
 				A499A9891EA622A800B45425 /* NewsCell.xib in Resources */,
+				A45378891EA7620300020C5D /* CollectCell.xib in Resources */,
 				A40891591EA39D650071D22D /* MessageTypeCell.xib in Resources */,
 				A408917A1EA462360071D22D /* User.xcassets in Resources */,
 				A4C32EB51E9A6A5600D53E1A /* TeachingVideoCollectionViewCell.xib in Resources */,
@@ -1176,6 +1215,7 @@
 				A4C7C4DE1E9F19E0003A36E0 /* WQPopWindow.m in Sources */,
 				A43F9DE71E9FAB1600AA831E /* LoginViewModel.m in Sources */,
 				A40891621EA3AF110071D22D /* ServerListViewController.m in Sources */,
+				A45378951EA768F000020C5D /* FeedbackViewModel.m in Sources */,
 				A40891541EA399AD0071D22D /* ALDMessageModel.m in Sources */,
 				A4C7C4D91E9F194A003A36E0 /* WQChiBaoZiHeader.m in Sources */,
 				A4C32AF01E98A7B800D53E1A /* introductoryPagesHelper.m in Sources */,
@@ -1197,6 +1237,7 @@
 				A43F9DCF1E9F2CBC00AA831E /* LoginVC.m in Sources */,
 				A4C32E261E98AD0F00D53E1A /* UIImage+OuterCircle.m in Sources */,
 				A4C32AEF1E98A7B800D53E1A /* GCDTimer.m in Sources */,
+				A453788C1EA7687800020C5D /* CollectListViewModel.m in Sources */,
 				A4A029491E9B2F9D0008F281 /* MJExtensionConfig.m in Sources */,
 				A4C32EB41E9A6A5600D53E1A /* TeachingVideoCollectionViewCell.m in Sources */,
 				A499A98A1EA622A800B45425 /* NewsDetailBottomView.m in Sources */,
@@ -1215,12 +1256,15 @@
 				A4C32E991E9A562D00D53E1A /* ALDBaseNavigationController.m in Sources */,
 				A4C32E171E98AB3300D53E1A /* Reachability.m in Sources */,
 				A4C32E9F1E9A5F7100D53E1A /* DiscoverListViewController.m in Sources */,
+				A45378881EA7620300020C5D /* CollectCell.m in Sources */,
 				A4C32EA71E9A614D00D53E1A /* DiscoverModel.m in Sources */,
 				A4C32E901E9A37E300D53E1A /* AnswerModel.m in Sources */,
 				A4C32E301E98AE6900D53E1A /* WQHomeTabBarController.m in Sources */,
+				A45378981EA76E7E00020C5D /* CommentListVC.m in Sources */,
 				A4C7C4E11E9F1DF3003A36E0 /* WQPlaceholderTextView.m in Sources */,
 				A4D682D81E976CEB00FBA51C /* main.m in Sources */,
 				A4C32E8C1E9A37D100D53E1A /* AnswerCell.m in Sources */,
+				A453788F1EA7688B00020C5D /* AnswerListViewModel.m in Sources */,
 				A43F9DEA1E9FB1B300AA831E /* RegisterViewModel.m in Sources */,
 				A40891461EA397A30071D22D /* MessageTypeViewModel.m in Sources */,
 				A4C32E6F1E9A1BF400D53E1A /* SGSegmentedControlDefault.m in Sources */,
@@ -1228,6 +1272,7 @@
 				A40891761EA4610B0071D22D /* UserFeatureView.m in Sources */,
 				A499A98D1EA622A800B45425 /* NewsListViewController.m in Sources */,
 				A4C32E6C1E9A1BF400D53E1A /* SGImageButton_Vertical.m in Sources */,
+				A45378921EA768D800020C5D /* CommentListViewModel.m in Sources */,
 				A43F9DE31E9F6DDF00AA831E /* ChangePasswordVC.m in Sources */,
 				A4C32AF11E98A7B800D53E1A /* introductoryPagesView.m in Sources */,
 				A408916A1EA3AF420071D22D /* ServerCell.m in Sources */,
@@ -1237,6 +1282,7 @@
 				A499A98C1EA622A800B45425 /* NewsDetailViewController.m in Sources */,
 				A4C32E6D1E9A1BF400D53E1A /* SGNavigationItemTitleView.m in Sources */,
 				A499A9851EA622A800B45425 /* ALDNewsBannerModel.m in Sources */,
+				A499A9A61EA75EA000B45425 /* ALDCollectModel.m in Sources */,
 				A4C32AED1E98A7B800D53E1A /* GCDQueue.m in Sources */,
 				A4A0294C1E9B341C0008F281 /* AFNManagerRequest.m in Sources */,
 				A499A98F1EA622A800B45425 /* NewsDetailViewModel.m in Sources */,
@@ -1257,7 +1303,7 @@
 				A408915D1EA39D770071D22D /* MessageCell.m in Sources */,
 				A40891511EA3996F0071D22D /* MessageListViewModel.m in Sources */,
 				A4C32E271E98AD0F00D53E1A /* UITextField+Extension.m in Sources */,
-				A499A9621EA616CE00B45425 /* QuestionListVC.m in Sources */,
+				A499A9621EA616CE00B45425 /* AnswerListVC.m in Sources */,
 				A499A98E1EA622A800B45425 /* NewsMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

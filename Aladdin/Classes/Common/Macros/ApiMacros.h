@@ -143,7 +143,7 @@
  * type：必传，收藏内容分类标识
  * id：必传，收藏内容id
  */
-#define API_USER_COLLECT  @"/user/collect"
+#define API_USER_COLLECT_ADD  @"/user/collect"
 
 /*
  * 用户-收藏列表

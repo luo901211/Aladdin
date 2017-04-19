@@ -1,18 +1,18 @@
 //
-//  QuestionListVC.m
+//  CommentListVC.m
 //  Aladdin
 //
-//  Created by luo on 2017/4/18.
+//  Created by luo on 2017/4/19.
 //  Copyright © 2017年 wenqi. All rights reserved.
 //
 
-#import "QuestionListVC.h"
+#import "CommentListVC.h"
 
-@interface QuestionListVC ()
+@interface CommentListVC ()
 
 @end
 
-@implementation QuestionListVC
+@implementation CommentListVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,8 +22,6 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.navigationItem.title = @"我的问答";
-    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning {

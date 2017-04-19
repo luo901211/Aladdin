@@ -12,9 +12,6 @@
 
 @property (nonatomic, strong) NSMutableArray *serverList;
 
-/**
- *  获取资讯列表模型
- */
 - (void)loadServerListWithPageIndex:(NSInteger)pageIndex success:(void (^)(BOOL noMoreData))success failure:(void (^)(NSError *error))failure;
 
 @end
