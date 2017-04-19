@@ -61,9 +61,6 @@
         if (error) {
             failure(error);
         } else {
-            NSLog(@"url: %@",response.URL);
-            NSLog(@"params:%@",params);
-            NSLog(@"responseObject: %@",responseObject);
 #pragma mark - 业务代码
             // 统一处理错误
             NSInteger code = [responseObject[@"code"] integerValue];
@@ -122,9 +119,6 @@
             failure(error);
         } else {
 #pragma mark - 业务代码
-            NSLog(@"url: %@",response.URL);
-            NSLog(@"params:%@",params);
-            NSLog(@"responseObject: %@",responseObject);
             // 统一处理错误
             NSInteger code = [responseObject[@"code"] integerValue];
             if (code == 1) {

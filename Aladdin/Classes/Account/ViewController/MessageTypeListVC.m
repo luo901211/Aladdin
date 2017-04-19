@@ -31,6 +31,7 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"消息";
+    self.view.backgroundColor = [UIColor whiteColor];
     
     self.tableView.tableFooterView = [UIView new];
     [self.tableView registerNib:[UINib nibWithNibName:@"MessageCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"MessageCell"];

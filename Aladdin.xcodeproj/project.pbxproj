@@ -12,7 +12,6 @@
 		A408912F1EA3297A0071D22D /* NSString+Verify.m in Sources */ = {isa = PBXBuildFile; fileRef = A408912E1EA3297A0071D22D /* NSString+Verify.m */; };
 		A40891361EA35F050071D22D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891351EA35F050071D22D /* User.m */; };
 		A40891391EA367C30071D22D /* User+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891381EA367C30071D22D /* User+Helper.m */; };
-		A408913D1EA396E40071D22D /* UserInfoListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A408913B1EA396E40071D22D /* UserInfoListVC.m */; };
 		A40891421EA397540071D22D /* MessageTypeListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891401EA397540071D22D /* MessageTypeListVC.m */; };
 		A40891461EA397A30071D22D /* MessageTypeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891451EA397A30071D22D /* MessageTypeViewModel.m */; };
 		A40891491EA398800071D22D /* ALDMessageTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891481EA398800071D22D /* ALDMessageTypeModel.m */; };
@@ -61,6 +60,7 @@
 		A499A98F1EA622A800B45425 /* NewsDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A499A97E1EA622A800B45425 /* NewsDetailViewModel.m */; };
 		A499A9901EA622A800B45425 /* NewsListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A499A9801EA622A800B45425 /* NewsListViewModel.m */; };
 		A499A9911EA622A800B45425 /* NewsMainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A499A9821EA622A800B45425 /* NewsMainViewModel.m */; };
+		A499A9A21EA7127300B45425 /* UserInfoListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A499A9A01EA7127300B45425 /* UserInfoListVC.m */; };
 		A4A029491E9B2F9D0008F281 /* MJExtensionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A029481E9B2F9D0008F281 /* MJExtensionConfig.m */; };
 		A4A0294C1E9B341C0008F281 /* AFNManagerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A0294B1E9B341C0008F281 /* AFNManagerRequest.m */; };
 		A4AE170D1E9E1383007965EE /* UIView+CustomBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = A4AE170C1E9E1383007965EE /* UIView+CustomBorder.m */; };
@@ -137,8 +137,6 @@
 		A40891351EA35F050071D22D /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		A40891371EA367C30071D22D /* User+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+Helper.h"; sourceTree = "<group>"; };
 		A40891381EA367C30071D22D /* User+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+Helper.m"; sourceTree = "<group>"; };
-		A408913A1EA396E40071D22D /* UserInfoListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoListVC.h; sourceTree = "<group>"; };
-		A408913B1EA396E40071D22D /* UserInfoListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoListVC.m; sourceTree = "<group>"; };
 		A408913F1EA397540071D22D /* MessageTypeListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTypeListVC.h; sourceTree = "<group>"; };
 		A40891401EA397540071D22D /* MessageTypeListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTypeListVC.m; sourceTree = "<group>"; };
 		A40891441EA397A30071D22D /* MessageTypeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTypeViewModel.h; sourceTree = "<group>"; };
@@ -225,6 +223,8 @@
 		A499A9801EA622A800B45425 /* NewsListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListViewModel.m; sourceTree = "<group>"; };
 		A499A9811EA622A800B45425 /* NewsMainViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsMainViewModel.h; sourceTree = "<group>"; };
 		A499A9821EA622A800B45425 /* NewsMainViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsMainViewModel.m; sourceTree = "<group>"; };
+		A499A99F1EA7127300B45425 /* UserInfoListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoListVC.h; sourceTree = "<group>"; };
+		A499A9A01EA7127300B45425 /* UserInfoListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoListVC.m; sourceTree = "<group>"; };
 		A4A029471E9B2F9D0008F281 /* MJExtensionConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConfig.h; sourceTree = "<group>"; };
 		A4A029481E9B2F9D0008F281 /* MJExtensionConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionConfig.m; sourceTree = "<group>"; };
 		A4A0294A1E9B341C0008F281 /* AFNManagerRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNManagerRequest.h; sourceTree = "<group>"; };
@@ -434,12 +434,12 @@
 				A43F9DD31E9F2CD400AA831E /* RegisterVC.xib */,
 				A43F9DDB1E9F6DCE00AA831E /* FindPasswordVC.h */,
 				A43F9DDC1E9F6DCE00AA831E /* FindPasswordVC.m */,
-				A43F9DE01E9F6DDF00AA831E /* ChangePasswordVC.h */,
-				A43F9DE11E9F6DDF00AA831E /* ChangePasswordVC.m */,
-				A408913A1EA396E40071D22D /* UserInfoListVC.h */,
-				A408913B1EA396E40071D22D /* UserInfoListVC.m */,
 				A408917B1EA479EC0071D22D /* UserCenterVC.h */,
 				A408917C1EA479EC0071D22D /* UserCenterVC.m */,
+				A499A99F1EA7127300B45425 /* UserInfoListVC.h */,
+				A499A9A01EA7127300B45425 /* UserInfoListVC.m */,
+				A43F9DE01E9F6DDF00AA831E /* ChangePasswordVC.h */,
+				A43F9DE11E9F6DDF00AA831E /* ChangePasswordVC.m */,
 				A408913F1EA397540071D22D /* MessageTypeListVC.h */,
 				A40891401EA397540071D22D /* MessageTypeListVC.m */,
 				A408914A1EA399560071D22D /* MessageListVC.h */,
@@ -1168,7 +1168,7 @@
 				A408914D1EA399560071D22D /* MessageListVC.m in Sources */,
 				A4C32AEE1E98A7B800D53E1A /* GCDSemaphore.m in Sources */,
 				A4C32AF61E98A7B800D53E1A /* MPUmengHelper.m in Sources */,
-				A408913D1EA396E40071D22D /* UserInfoListVC.m in Sources */,
+				A499A9A21EA7127300B45425 /* UserInfoListVC.m in Sources */,
 				A4D682DE1E976CEB00FBA51C /* ViewController.m in Sources */,
 				A4C32E281E98AD0F00D53E1A /* UIView+Empty.m in Sources */,
 				A499A9881EA622A800B45425 /* NewsCell.m in Sources */,

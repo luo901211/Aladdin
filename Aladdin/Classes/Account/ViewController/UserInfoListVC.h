@@ -1,8 +1,8 @@
 //
-//  UserInfoViewController.h
+//  UserInfoListVC.h
 //  Aladdin
 //
-//  Created by luo on 2017/4/16.
+//  Created by luo on 2017/4/19.
 //  Copyright © 2017年 wenqi. All rights reserved.
 //
 

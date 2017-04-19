@@ -13,6 +13,8 @@
 #import "QuestionListVC.h"
 #import "SystemMessageListVC.h"
 #import "FeedbackVC.h"
+#import "WQPopWindow.h"
+
 @interface UserFeatureView ()
 
 @property (strong, nonatomic) NSArray *items;
@@ -101,9 +103,9 @@ static CGFloat buttonWidth = 164;
         default:
             break;
     }
-    
+
+    [[WQPopWindow sharedWindow] hide];
     UITabBarController *tabBarController = (UITabBarController *)[UIApplication sharedApplication].delegate.window.rootViewController;
-    
     UINavigationController *navigationController = tabBarController.viewControllers[tabBarController.selectedIndex];
     [navigationController pushViewController:vc animated:YES];
 }

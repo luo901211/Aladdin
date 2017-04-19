@@ -35,8 +35,8 @@
 - (void)initUI {
     
     
-    UserInfoListVC *userInfoListVC = [[UserInfoListVC alloc] init];
-    ChangePasswordVC *changePasswordVC = [[ChangePasswordVC alloc] init];
+    UserInfoListVC *userInfoListVC = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"UserInfoListVC"];
+    ChangePasswordVC *changePasswordVC = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"ChangePasswordVC"];
     [self addChildViewController:userInfoListVC];
     [self addChildViewController:changePasswordVC];
     

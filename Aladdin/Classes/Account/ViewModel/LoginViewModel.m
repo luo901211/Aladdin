@@ -8,6 +8,8 @@
 
 #import "LoginViewModel.h"
 #import "NSString+Verify.h"
+#import "ApiMacros.h"
+#import <AFURLSessionManager.h>
 
 @implementation LoginViewModel
 
@@ -88,15 +90,56 @@
 
 - (void)postLoginWithUrl:(NSString *)url params:(NSDictionary *)params success:(VoidBlock)success failure:(VoidBlock)failure {
     
-    [AFNManagerRequest postWithPath:url params:params hudType:NetworkRequestGraceTimeTypeNormal success:^(NSURLResponse *response, id responseObject) {        
-        if (success) {
-            success(responseObject);
-        }
-    } failure:^(NSError *error) {
-        if (failure) {
-            failure(error.localizedDescription);
+    
+    NSString *URLString = [SERVER_HOST stringByAppendingPathComponent:url];
+    
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    
+    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"POST" URLString:URLString parameters:params error:nil];
+    
+    // 网络指示器
+    MBProgressHUD *hud = [MBProgressHUD hudWithNetworkType:NetworkRequestGraceTimeTypeNormal];
+    
+    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+        
+        // 任务结束，隐藏网络指示器
+        [hud hideAnimated:YES];
+        
+        if (error) {
+            if (failure) {
+                failure(responseObject[@"msg"]);
+            }
+        } else {
+
+            // 统一处理错误
+            NSInteger code = [responseObject[@"code"] integerValue];
+            if (code == 1) {
+                if (success) {
+                    NSDictionary *res = @{ @"token": responseObject[@"msg"] };
+                    success(res);
+                }
+            } else {
+                if (failure) {
+                    failure(responseObject[@"msg"]);
+                }
+            }
+            
         }
     }];
+    [dataTask resume];
+    
+    
+    
+//    [AFNManagerRequest postWithPath:url params:params hudType:NetworkRequestGraceTimeTypeNormal success:^(NSURLResponse *response, id responseObject) {        
+//        if (success) {
+//            success(responseObject);
+//        }
+//    } failure:^(NSError *error) {
+//        if (failure) {
+//            failure(error.localizedDescription);
+//        }
+//    }];
 }
 
 

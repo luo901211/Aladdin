@@ -196,11 +196,14 @@
     NSString *password = self.pwdTextField.text;
     NSString *code = self.codeTextField.text;
     
+    @weakify(self);
+    
     VoidBlock success = ^(id obj){
-        NSLog(@"登录成功");
-        [User sharedInstance].token = @"72487d9452bd9491516bc81c2d20c23e";
+        @strongify(self);
+        [User sharedInstance].token = obj[@"token"];
         [[User sharedInstance] save];
         [[User sharedInstance] getUserinfo];
+        [self dismissViewControllerAnimated:YES completion:nil];
     };
     
     VoidBlock failure = ^(id obj){
