@@ -37,9 +37,16 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     self.navigationItem.title = @"阿拉灯";
-    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:(UIBarButtonSystemItemSearch) target:self action:nil];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"user_mine_item"] style:(UIBarButtonItemStylePlain) target:self action:@selector(showUserFeatureView)];
+
     [self loadNewsType];
     
+}
+
+- (void)showSearchVC {
+}
+- (void)showUserFeatureView {
 }
 
 - (void)loadNewsType {
