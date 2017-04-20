@@ -8,6 +8,8 @@
 
 #import "TeachingVideoContainerVC.h"
 #import "SGSegmentedControl.h"
+#import "TeachingVideoCollectionVC.h"
+#import "FeedbackVC.h"
 
 @interface TeachingVideoContainerVC ()<SGSegmentedControlDefaultDelegate, UIScrollViewDelegate>
 
@@ -30,6 +32,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationItem.title = @"教学视频";
     
     [self loadData];
 }
@@ -62,11 +66,22 @@
     }
     
     NSMutableArray *childVC = [NSMutableArray array];
+    // layout 
+
+    
     for (int i = 0; i < titleArr.count; i++) {
-        UIViewController *vc = [[UIViewController alloc] init];
+        UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+        flowLayout.minimumInteritemSpacing = 10;
+        flowLayout.minimumLineSpacing = 10;
+        flowLayout.itemSize = CGSizeMake(80, 80);
+        flowLayout.sectionInset = UIEdgeInsetsMake(15, 15, 15, 15);
+
+        FeedbackVC *vc = [[FeedbackVC alloc] init];
+//        TeachingVideoCollectionVC *vc = [[TeachingVideoCollectionVC alloc] initWithCollectionViewLayout:flowLayout];
         [childVC addObject:vc];
         [self addChildViewController:vc];
     }
+    
     self.bottomSView = [[SGSegmentedControlBottomView alloc] initWithFrame:CGRectMake(0, 64 + 38, self.view.frame.size.width, self.view.frame.size.height - 64 - 38)];
     _bottomSView.childViewController = childVC;
     _bottomSView.delegate = self;
