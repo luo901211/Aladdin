@@ -2,12 +2,12 @@
 //  QuestionListViewModel.m
 //  Aladdin
 //
-//  Created by luo on 2017/4/19.
+//  Created by luo on 2017/4/20.
 //  Copyright © 2017年 wenqi. All rights reserved.
 //
 
-#import "AnswerListViewModel.h"
+#import "QuestionListViewModel.h"
 
-@implementation AnswerListViewModel
+@implementation QuestionListViewModel
 
 @end

@@ -1,18 +1,18 @@
 //
-//  CommentListVC.m
+//  QuestionListVC.m
 //  Aladdin
 //
-//  Created by luo on 2017/4/19.
+//  Created by luo on 2017/4/20.
 //  Copyright © 2017年 wenqi. All rights reserved.
 //
 
-#import "CommentListVC.h"
+#import "QuestionListVC.h"
 
-@interface CommentListVC ()
+@interface QuestionListVC ()
 
 @end
 
-@implementation CommentListVC
+@implementation QuestionListVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];

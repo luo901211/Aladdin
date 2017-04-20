@@ -8,6 +8,13 @@
 
 #import "MessageTypeCell.h"
 
+@interface MessageTypeCell ()
+@property (weak, nonatomic) IBOutlet UIImageView *imageV;
+@property (weak, nonatomic) IBOutlet UILabel *typeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *msgLabel;
+
+@end
+
 @implementation MessageTypeCell
 
 + (CGFloat)heightForRow:(ALDMessageTypeModel *)model {
@@ -23,6 +30,14 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)setModel:(ALDMessageTypeModel *)model {
+    _model = model;
+    
+    self.imageV.image = [UIImage imageNamed:[NSString stringWithFormat:@"message_item_%ld", (long)model.type]];
+    self.typeLabel.text = model.type_name;
+    self.msgLabel.text = model.msg;
 }
 
 @end

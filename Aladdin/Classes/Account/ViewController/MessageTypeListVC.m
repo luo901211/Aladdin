@@ -11,9 +11,6 @@
 #import "ALDMessageTypeModel.h"
 #import "MessageTypeCell.h"
 #import "MessageListVC.h"
-#import "SystemMessageListVC.h"
-#import "AnswerListVC.h"
-#import "CommentListVC.h"
 
 @interface MessageTypeListVC ()
 
@@ -75,20 +72,18 @@
 #pragma mark - Table view data source
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    ALDMessageTypeModel *model = self.viewModel.messageTypeList[indexPath.row];
-//    return [MessageTypeCell heightForRow:model];
-    return 92;
+    ALDMessageTypeModel *model = self.viewModel.messageTypeList[indexPath.row];
+    return [MessageTypeCell heightForRow:model];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    return self.viewModel.messageTypeList.count;
-    return 3;
+    return self.viewModel.messageTypeList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MessageTypeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MessageTypeCell"];
-//    ALDMessageTypeModel *model = self.viewModel.messageTypeList[indexPath.row];
-//    cell.model = model;
+    ALDMessageTypeModel *model = self.viewModel.messageTypeList[indexPath.row];
+    cell.model = model;
     return cell;
 }
 
@@ -96,35 +91,10 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    //    ALDMessageTypeModel *model = self.viewModel.messageTypeList[indexPath.row];
-    //    vc.type = model.type;
-
-    switch (indexPath.row) {
-        case 0:
-        {
-            SystemMessageListVC *vc = [[SystemMessageListVC alloc] init];
-            vc.type = 1;
-            [self.navigationController pushViewController:vc animated:YES];
-
-        }
-            break;
-        case 1:
-        {
-            CommentListVC *vc = [[CommentListVC alloc] init];
-            vc.type = 1;
-            [self.navigationController pushViewController:vc animated:YES];
-        }
-            break;
-        case 2:
-        {
-            AnswerListVC *vc = [[AnswerListVC alloc] init];
-            vc.type = 1;
-            [self.navigationController pushViewController:vc animated:YES];
-        }
-            break;
-        default:
-            break;
-    }
+    MessageListVC *vc = [[MessageListVC alloc] init];
+    ALDMessageTypeModel *model = self.viewModel.messageTypeList[indexPath.row];
+    vc.type = model.type;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 

@@ -10,6 +10,13 @@
 
 @implementation MessageTypeViewModel
 
+- (NSArray *)messageTypeList {
+    if (!_messageTypeList) {
+        _messageTypeList = [NSMutableArray array];
+    }
+    return _messageTypeList;
+}
+
 - (void)getMessageTypeWithSuccess:(VoidBlock)success
                           failure:(VoidBlock)failure {
     
