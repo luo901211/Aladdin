@@ -13,4 +13,6 @@
 
 @property (nonatomic, strong) DiscoverModel *model;
 
++ (CGFloat)heightForRow:(DiscoverModel *)model;
+
 @end

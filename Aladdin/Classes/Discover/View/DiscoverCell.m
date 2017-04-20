@@ -10,6 +10,7 @@
 
 @interface DiscoverCell()
 @property (weak, nonatomic) IBOutlet UIImageView *imageV;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end
 
@@ -20,6 +21,7 @@
     // Initialization code
     self.imageV.layer.cornerRadius = 2;
     self.imageV.layer.masksToBounds = YES;
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -31,7 +33,11 @@
 - (void)setModel:(DiscoverModel *)model {
     _model = model;
     
-    [self.imageV sd_setImageWithURL:[NSURL URLWithString:self.model.imageUrl] placeholderImage:nil];
+    [self.imageV setImage:[UIImage imageNamed:self.model.imageUrl]];
+    self.titleLabel.text = model.title;
 }
 
++ (CGFloat)heightForRow:(DiscoverModel *)model {
+    return 136 * kScreenWidthRatio;
+}
 @end

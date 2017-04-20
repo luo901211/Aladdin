@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,18 +15,18 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Sfn-TS-AEv" id="Ijm-46-6uR">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="119"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p0b-FB-zzo">
-                        <rect key="frame" x="12" y="15" width="120" height="90"/>
+                        <rect key="frame" x="15" y="15" width="120" height="90"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="120" id="Fig-Ci-DpA"/>
                             <constraint firstAttribute="height" constant="90" id="Ylc-Iq-D2X"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wva-HJ-uD4">
-                        <rect key="frame" x="140" y="15" width="223" height="19.5"/>
+                        <rect key="frame" x="150" y="15" width="210" height="19.5"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="esr-jl-o5i"/>
                         </constraints>
@@ -35,7 +35,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="src" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFi-lx-sot">
-                        <rect key="frame" x="140" y="65.5" width="220" height="20"/>
+                        <rect key="frame" x="150" y="65.5" width="210" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="PUY-Bf-BzZ"/>
                         </constraints>
@@ -44,7 +44,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNw-Ir-bfI">
-                        <rect key="frame" x="140" y="89.5" width="223" height="15"/>
+                        <rect key="frame" x="150" y="89.5" width="210" height="15"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="15" id="Adj-RF-cJc"/>
                         </constraints>
@@ -55,16 +55,16 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="wva-HJ-uD4" firstAttribute="top" secondItem="Ijm-46-6uR" secondAttribute="top" constant="15" id="93M-M8-lO3"/>
-                    <constraint firstItem="OFi-lx-sot" firstAttribute="leading" secondItem="p0b-FB-zzo" secondAttribute="trailing" constant="8" id="Atn-7P-dIM"/>
-                    <constraint firstItem="wva-HJ-uD4" firstAttribute="leading" secondItem="p0b-FB-zzo" secondAttribute="trailing" constant="8" id="CpD-EE-6FA"/>
+                    <constraint firstItem="OFi-lx-sot" firstAttribute="leading" secondItem="p0b-FB-zzo" secondAttribute="trailing" constant="15" id="Atn-7P-dIM"/>
+                    <constraint firstItem="wva-HJ-uD4" firstAttribute="leading" secondItem="p0b-FB-zzo" secondAttribute="trailing" constant="15" id="CpD-EE-6FA"/>
                     <constraint firstItem="p0b-FB-zzo" firstAttribute="top" secondItem="Ijm-46-6uR" secondAttribute="top" constant="15" id="F0o-rz-mr2"/>
                     <constraint firstAttribute="trailing" secondItem="OFi-lx-sot" secondAttribute="trailing" constant="15" id="K61-Gf-vyA"/>
                     <constraint firstAttribute="bottom" secondItem="FNw-Ir-bfI" secondAttribute="bottom" constant="15" id="MHQ-4S-KzR"/>
-                    <constraint firstItem="p0b-FB-zzo" firstAttribute="leading" secondItem="Ijm-46-6uR" secondAttribute="leading" constant="12" id="dPk-aN-lbg"/>
-                    <constraint firstAttribute="trailing" secondItem="wva-HJ-uD4" secondAttribute="trailing" constant="12" id="gZD-wq-8Me"/>
+                    <constraint firstItem="p0b-FB-zzo" firstAttribute="leading" secondItem="Ijm-46-6uR" secondAttribute="leading" constant="15" id="dPk-aN-lbg"/>
+                    <constraint firstAttribute="trailing" secondItem="wva-HJ-uD4" secondAttribute="trailing" constant="15" id="gZD-wq-8Me"/>
                     <constraint firstItem="FNw-Ir-bfI" firstAttribute="top" secondItem="OFi-lx-sot" secondAttribute="bottom" constant="4" id="iZA-Jg-6hh"/>
-                    <constraint firstAttribute="trailing" secondItem="FNw-Ir-bfI" secondAttribute="trailing" constant="12" id="ofL-kR-tgu"/>
-                    <constraint firstItem="FNw-Ir-bfI" firstAttribute="leading" secondItem="p0b-FB-zzo" secondAttribute="trailing" constant="8" id="ujV-Qx-0gJ"/>
+                    <constraint firstAttribute="trailing" secondItem="FNw-Ir-bfI" secondAttribute="trailing" constant="15" id="ofL-kR-tgu"/>
+                    <constraint firstItem="FNw-Ir-bfI" firstAttribute="leading" secondItem="p0b-FB-zzo" secondAttribute="trailing" constant="15" id="ujV-Qx-0gJ"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

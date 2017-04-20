@@ -11,6 +11,7 @@
 @interface DiscoverModel : NSObject
 
 @property (nonatomic, copy) NSString *imageUrl;
+@property (nonatomic, copy) NSString *title;
 
 + (instancetype)modelWithDict:(NSDictionary *)dict;
 
