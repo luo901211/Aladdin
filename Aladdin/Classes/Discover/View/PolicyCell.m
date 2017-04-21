@@ -1,30 +1,26 @@
 //
-//  MessageCell.m
+//  PolicyCell.m
 //  Aladdin
 //
-//  Created by luo on 2017/4/16.
+//  Created by luo on 2017/4/21.
 //  Copyright © 2017年 wenqi. All rights reserved.
 //
 
-#import "MessageCell.h"
+#import "PolicyCell.h"
 
-@interface MessageCell ()
-@property (weak, nonatomic) IBOutlet UIImageView *imageV;
+@interface PolicyCell()
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
+@property (weak, nonatomic) IBOutlet UILabel *numberLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 
 @end
 
-@implementation MessageCell
-
-+ (CGFloat)heightForRow:(ALDMessageModel *)model {
-    return 76;
-}
+@implementation PolicyCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    
     self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
@@ -34,13 +30,15 @@
     // Configure the view for the selected state
 }
 
-- (void)setModel:(ALDMessageModel *)model {
++ (CGFloat)heightForRow:(ALDPolicyModel *)model {
+    return 90;
+}
+
+- (void)setModel:(ALDPolicyModel *)model {
     _model = model;
-    
-    [self.imageV sd_setImageWithURL:[NSURL URLWithString:model.pic_url]];
     self.titleLabel.text = model.title;
-    self.contentLabel.text = model.content;
-    self.timeLabel.text = model.add_time;
+    self.numberLabel.text = [NSString stringWithFormat:@"法律编号: %@",model.number];
+    self.timeLabel.text = [NSString stringWithFormat:@"颁布时间: %@",model.publish_time];
 }
 
 @end

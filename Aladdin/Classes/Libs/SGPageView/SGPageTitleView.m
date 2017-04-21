@@ -184,14 +184,14 @@
 /// 添加指示器
 - (void)setupIndicatorView {
     // 包装的底部分割线（可要可不要）
-    UIView *bgView = [[UIView alloc] init];
-    CGFloat bgViewX = 0;
-    CGFloat bgViewY = self.SG_height - 0.5;
-    CGFloat bgViewW = self.SG_width;
-    CGFloat bgViewH = 0.5;
-    bgView.frame = CGRectMake(bgViewX, bgViewY, bgViewW, bgViewH);
-    bgView.backgroundColor = [UIColor lightGrayColor];
-    [self addSubview:bgView];
+//    UIView *bgView = [[UIView alloc] init];
+//    CGFloat bgViewX = 0;
+//    CGFloat bgViewY = self.SG_height - 0.5;
+//    CGFloat bgViewW = self.SG_width;
+//    CGFloat bgViewH = 0.5;
+//    bgView.frame = CGRectMake(bgViewX, bgViewY, bgViewW, bgViewH);
+//    bgView.backgroundColor = [UIColor lightGrayColor];
+//    [self addSubview:bgView];
     
     // 获取第一个按钮
     UIButton *firstBtn = self.btnMArr.firstObject;

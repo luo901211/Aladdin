@@ -10,7 +10,7 @@
 #import "DiscoverCell.h"
 #import "DiscoverModel.h"
 #import "TeachingVideoContainerVC.h"
-
+#import "PolicyContainerVC.h"
 @interface DiscoverListViewController ()
 
 @property (nonatomic, strong) NSMutableArray *arrayList;
@@ -70,8 +70,24 @@
 #pragma mark - Table view delegate
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    TeachingVideoContainerVC *vc = [[TeachingVideoContainerVC alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    switch (indexPath.row) {
+        case 0:
+        {
+            TeachingVideoContainerVC *vc = [[TeachingVideoContainerVC alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 3:
+        {
+            PolicyContainerVC *vc = [[PolicyContainerVC alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
 }
 
 @end

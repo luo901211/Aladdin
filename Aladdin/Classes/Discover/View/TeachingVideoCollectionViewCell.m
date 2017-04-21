@@ -21,6 +21,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.imageV.layer.masksToBounds = YES;
+    
 }
 - (void)setModel:(ALDVideoModel *)model {
     _model = model;

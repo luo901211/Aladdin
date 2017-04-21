@@ -133,6 +133,15 @@
 		A4DF60041EA9D4120084963F /* TeachingVideoDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4DF60021EA9D4120084963F /* TeachingVideoDetailVC.xib */; };
 		A4DF60071EA9D42F0084963F /* VideoDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DF60061EA9D42F0084963F /* VideoDetailViewModel.m */; };
 		A4DF600A1EA9D43F0084963F /* ALDVideoDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DF60091EA9D43F0084963F /* ALDVideoDetailModel.m */; };
+		A4DF600F1EA9FA810084963F /* PolicyListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DF600E1EA9FA810084963F /* PolicyListVC.m */; };
+		A4DF60121EA9FAC00084963F /* PolicyContainerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DF60111EA9FAC00084963F /* PolicyContainerVC.m */; };
+		A4DF60151EA9FAD80084963F /* PolicyDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DF60141EA9FAD80084963F /* PolicyDetailVC.m */; };
+		A4DF60181EA9FAF10084963F /* PolicyListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DF60171EA9FAF10084963F /* PolicyListViewModel.m */; };
+		A4DF601B1EA9FB030084963F /* PolicyDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DF601A1EA9FB030084963F /* PolicyDetailViewModel.m */; };
+		A4DF601E1EA9FC8D0084963F /* ALDPolicyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DF601D1EA9FC8D0084963F /* ALDPolicyModel.m */; };
+		A4DF60211EA9FC9C0084963F /* ALDPolicyDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DF60201EA9FC9C0084963F /* ALDPolicyDetailModel.m */; };
+		A4DF60251EA9FDDA0084963F /* PolicyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DF60231EA9FDDA0084963F /* PolicyCell.m */; };
+		A4DF60261EA9FDDA0084963F /* PolicyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4DF60241EA9FDDA0084963F /* PolicyCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -380,6 +389,23 @@
 		A4DF60061EA9D42F0084963F /* VideoDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDetailViewModel.m; sourceTree = "<group>"; };
 		A4DF60081EA9D43F0084963F /* ALDVideoDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDVideoDetailModel.h; sourceTree = "<group>"; };
 		A4DF60091EA9D43F0084963F /* ALDVideoDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDVideoDetailModel.m; sourceTree = "<group>"; };
+		A4DF600D1EA9FA810084963F /* PolicyListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolicyListVC.h; sourceTree = "<group>"; };
+		A4DF600E1EA9FA810084963F /* PolicyListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolicyListVC.m; sourceTree = "<group>"; };
+		A4DF60101EA9FAC00084963F /* PolicyContainerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolicyContainerVC.h; sourceTree = "<group>"; };
+		A4DF60111EA9FAC00084963F /* PolicyContainerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolicyContainerVC.m; sourceTree = "<group>"; };
+		A4DF60131EA9FAD80084963F /* PolicyDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolicyDetailVC.h; sourceTree = "<group>"; };
+		A4DF60141EA9FAD80084963F /* PolicyDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolicyDetailVC.m; sourceTree = "<group>"; };
+		A4DF60161EA9FAF10084963F /* PolicyListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolicyListViewModel.h; sourceTree = "<group>"; };
+		A4DF60171EA9FAF10084963F /* PolicyListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolicyListViewModel.m; sourceTree = "<group>"; };
+		A4DF60191EA9FB030084963F /* PolicyDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolicyDetailViewModel.h; sourceTree = "<group>"; };
+		A4DF601A1EA9FB030084963F /* PolicyDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolicyDetailViewModel.m; sourceTree = "<group>"; };
+		A4DF601C1EA9FC8D0084963F /* ALDPolicyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDPolicyModel.h; sourceTree = "<group>"; };
+		A4DF601D1EA9FC8D0084963F /* ALDPolicyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDPolicyModel.m; sourceTree = "<group>"; };
+		A4DF601F1EA9FC9C0084963F /* ALDPolicyDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDPolicyDetailModel.h; sourceTree = "<group>"; };
+		A4DF60201EA9FC9C0084963F /* ALDPolicyDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDPolicyDetailModel.m; sourceTree = "<group>"; };
+		A4DF60221EA9FDDA0084963F /* PolicyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolicyCell.h; sourceTree = "<group>"; };
+		A4DF60231EA9FDDA0084963F /* PolicyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolicyCell.m; sourceTree = "<group>"; };
+		A4DF60241EA9FDDA0084963F /* PolicyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PolicyCell.xib; sourceTree = "<group>"; };
 		B2F0BD5579963808346C1999 /* Pods-Aladdin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aladdin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aladdin/Pods-Aladdin.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -830,6 +856,10 @@
 				A4DF5FFB1EA9B68B0084963F /* ALDVideoModel.m */,
 				A4DF60081EA9D43F0084963F /* ALDVideoDetailModel.h */,
 				A4DF60091EA9D43F0084963F /* ALDVideoDetailModel.m */,
+				A4DF601C1EA9FC8D0084963F /* ALDPolicyModel.h */,
+				A4DF601D1EA9FC8D0084963F /* ALDPolicyModel.m */,
+				A4DF601F1EA9FC9C0084963F /* ALDPolicyDetailModel.h */,
+				A4DF60201EA9FC9C0084963F /* ALDPolicyDetailModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -843,6 +873,9 @@
 				A4C32EB11E9A6A5600D53E1A /* TeachingVideoCollectionViewCell.h */,
 				A4C32EB21E9A6A5600D53E1A /* TeachingVideoCollectionViewCell.m */,
 				A4C32EB31E9A6A5600D53E1A /* TeachingVideoCollectionViewCell.xib */,
+				A4DF60221EA9FDDA0084963F /* PolicyCell.h */,
+				A4DF60231EA9FDDA0084963F /* PolicyCell.m */,
+				A4DF60241EA9FDDA0084963F /* PolicyCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -859,6 +892,12 @@
 				A4DF60001EA9D4120084963F /* TeachingVideoDetailVC.h */,
 				A4DF60011EA9D4120084963F /* TeachingVideoDetailVC.m */,
 				A4DF60021EA9D4120084963F /* TeachingVideoDetailVC.xib */,
+				A4DF60101EA9FAC00084963F /* PolicyContainerVC.h */,
+				A4DF60111EA9FAC00084963F /* PolicyContainerVC.m */,
+				A4DF600D1EA9FA810084963F /* PolicyListVC.h */,
+				A4DF600E1EA9FA810084963F /* PolicyListVC.m */,
+				A4DF60131EA9FAD80084963F /* PolicyDetailVC.h */,
+				A4DF60141EA9FAD80084963F /* PolicyDetailVC.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -870,6 +909,10 @@
 				A4DF5FFE1EA9B6A90084963F /* VideoListViewModel.m */,
 				A4DF60051EA9D42F0084963F /* VideoDetailViewModel.h */,
 				A4DF60061EA9D42F0084963F /* VideoDetailViewModel.m */,
+				A4DF60161EA9FAF10084963F /* PolicyListViewModel.h */,
+				A4DF60171EA9FAF10084963F /* PolicyListViewModel.m */,
+				A4DF60191EA9FB030084963F /* PolicyDetailViewModel.h */,
+				A4DF601A1EA9FB030084963F /* PolicyDetailViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1119,6 +1162,7 @@
 				A4C32EB51E9A6A5600D53E1A /* TeachingVideoCollectionViewCell.xib in Resources */,
 				A4D682E11E976CEB00FBA51C /* Main.storyboard in Resources */,
 				A43F9DD51E9F2CD400AA831E /* RegisterVC.xib in Resources */,
+				A4DF60261EA9FDDA0084963F /* PolicyCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1202,10 +1246,12 @@
 				A408917D1EA479EC0071D22D /* UserCenterVC.m in Sources */,
 				A40891391EA367C30071D22D /* User+Helper.m in Sources */,
 				A4C32E371E98AEB500D53E1A /* SYSafeCategory.m in Sources */,
+				A4DF600F1EA9FA810084963F /* PolicyListVC.m in Sources */,
 				A453789B1EA850A100020C5D /* QuestionListVC.m in Sources */,
 				A4C32E701E9A1BF400D53E1A /* SGSegmentedControlStatic.m in Sources */,
 				A4C32E961E9A540E00D53E1A /* UINavigationBar+Awesome.m in Sources */,
 				A4AE170D1E9E1383007965EE /* UIView+CustomBorder.m in Sources */,
+				A4DF60211EA9FC9C0084963F /* ALDPolicyDetailModel.m in Sources */,
 				A45378AB1EA9A10A00020C5D /* SGPageContentView.m in Sources */,
 				A4C32E6B1E9A1BF400D53E1A /* SGImageButton_Horizontal.m in Sources */,
 				A4C32AF31E98A7B800D53E1A /* MPLocationManager.m in Sources */,
@@ -1218,6 +1264,7 @@
 				A43F9DCF1E9F2CBC00AA831E /* LoginVC.m in Sources */,
 				A4C32E261E98AD0F00D53E1A /* UIImage+OuterCircle.m in Sources */,
 				A4C32AEF1E98A7B800D53E1A /* GCDTimer.m in Sources */,
+				A4DF60121EA9FAC00084963F /* PolicyContainerVC.m in Sources */,
 				A4DF60031EA9D4120084963F /* TeachingVideoDetailVC.m in Sources */,
 				A453788C1EA7687800020C5D /* CollectListViewModel.m in Sources */,
 				A4A029491E9B2F9D0008F281 /* MJExtensionConfig.m in Sources */,
@@ -1245,11 +1292,15 @@
 				A453789E1EA8512D00020C5D /* QuestionListViewModel.m in Sources */,
 				A4DF600A1EA9D43F0084963F /* ALDVideoDetailModel.m in Sources */,
 				A4D682D81E976CEB00FBA51C /* main.m in Sources */,
+				A4DF60251EA9FDDA0084963F /* PolicyCell.m in Sources */,
 				A43F9DEA1E9FB1B300AA831E /* RegisterViewModel.m in Sources */,
 				A40891461EA397A30071D22D /* MessageTypeViewModel.m in Sources */,
 				A4C32E6F1E9A1BF400D53E1A /* SGSegmentedControlDefault.m in Sources */,
+				A4DF60151EA9FAD80084963F /* PolicyDetailVC.m in Sources */,
 				A4C32E711E9A1BF400D53E1A /* UIView+SGExtension.m in Sources */,
 				A40891761EA4610B0071D22D /* UserFeatureView.m in Sources */,
+				A4DF60181EA9FAF10084963F /* PolicyListViewModel.m in Sources */,
+				A4DF601E1EA9FC8D0084963F /* ALDPolicyModel.m in Sources */,
 				A499A98D1EA622A800B45425 /* NewsListViewController.m in Sources */,
 				A45378AD1EA9A10A00020C5D /* UIView+SGFrame.m in Sources */,
 				A4C32E6C1E9A1BF400D53E1A /* SGImageButton_Vertical.m in Sources */,
@@ -1273,6 +1324,7 @@
 				A408912C1EA323C70071D22D /* MBProgressHUD+Network.m in Sources */,
 				A408916F1EA3B04F0071D22D /* ServerDetailViewController.m in Sources */,
 				A4C32AEC1E98A7B800D53E1A /* GCDGroup.m in Sources */,
+				A4DF601B1EA9FB030084963F /* PolicyDetailViewModel.m in Sources */,
 				A4C32E6E1E9A1BF400D53E1A /* SGSegmentedControlBottomView.m in Sources */,
 				A4C32E251E98AD0F00D53E1A /* NSString+Additions.m in Sources */,
 				A40891361EA35F050071D22D /* User.m in Sources */,

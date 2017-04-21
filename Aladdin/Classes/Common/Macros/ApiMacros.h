@@ -69,6 +69,26 @@
  */
 #define API_DISCOVER_VIDEO_DETAIL @"/video/detail"
 
+/*
+ * 政策法规-分类
+ */
+#define API_DISCOVER_POLICY_TYPE @"/policy/type"
+
+/*
+ * 政策法规-列表
+ * type：非必填，分类id，默认全部类型
+ * search：非必填，搜索内容
+ * page_num：非必填，第几页，默认1
+ * page_size：非必填，每页条数，默认20
+ */
+#define API_DISCOVER_POLICY_LIST @"/policy/index"
+
+/*
+ * 政策法规-详情
+ * id：必填，视频id
+ */
+#define API_DISCOVER_POLICY_DETAIL @"/policy/detail"
+
 
 /************************************************************************************************/
 /***账号模块***/
