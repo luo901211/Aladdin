@@ -56,8 +56,8 @@
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"user_mine_item"] style:(UIBarButtonItemStylePlain) target:self action:@selector(showUserFeatureView)];
     
-    
     self.tableView.tableFooterView = [UIView new];
+    
     [self.tableView registerNib:[UINib nibWithNibName:@"ServerCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"ServerCell"];
     
     __weak ServerListViewController *weakSelf = self;

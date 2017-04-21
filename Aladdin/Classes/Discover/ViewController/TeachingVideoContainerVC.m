@@ -40,7 +40,7 @@
     
     @weakify(self);
     
-    [AFNManagerRequest getWithPath:@"/video/type" params:nil success:^(NSURLResponse *response, NSArray *responseObject) {
+    [AFNManagerRequest getWithPath:API_DISCOVER_VIDEO_TYPE params:nil success:^(NSURLResponse *response, NSArray *responseObject) {
         
         @strongify(self);
         

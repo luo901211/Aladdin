@@ -70,6 +70,12 @@
                 <constraint firstItem="ADc-wG-ofW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="rJk-uf-EET"/>
             </constraints>
             <size key="customSize" width="256" height="241"/>
+            <connections>
+                <outlet property="collectCountLabel" destination="rGv-Po-hgp" id="lMT-ma-QHB"/>
+                <outlet property="imageV" destination="89a-4V-2Ao" id="88K-Ot-nd6"/>
+                <outlet property="scanCountLabel" destination="h6m-gb-Xnb" id="HSa-Q9-8PU"/>
+                <outlet property="titleLabel" destination="ADc-wG-ofW" id="23f-9d-uoA"/>
+            </connections>
             <point key="canvasLocation" x="13" y="77.5"/>
         </collectionViewCell>
     </objects>

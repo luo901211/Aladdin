@@ -21,7 +21,7 @@
 - (void)loadDataListWithPageIndex:(NSInteger)pageIndex success:(void (^)(BOOL noMoreData))success failure:(void (^)(NSError *error))failure {
     
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:@{ @"page_num": @(pageIndex)}];
-    [AFNManagerRequest getWithPath:API_SERVER_LIST params:params success:^(NSURLResponse *response, id responseObject) {
+    [AFNManagerRequest getWithPath:API_DISCOVER_VIDEO_LIST params:params success:^(NSURLResponse *response, id responseObject) {
         NSArray *arrayM = [ALDVideoModel mj_objectArrayWithKeyValuesArray:responseObject];
         if (pageIndex == 1) {
             [self.list removeAllObjects];

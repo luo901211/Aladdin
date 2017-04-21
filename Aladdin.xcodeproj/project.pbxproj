@@ -129,6 +129,10 @@
 		A4D682E61E976CEB00FBA51C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D682E41E976CEB00FBA51C /* LaunchScreen.storyboard */; };
 		A4DF5FFC1EA9B68B0084963F /* ALDVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DF5FFB1EA9B68B0084963F /* ALDVideoModel.m */; };
 		A4DF5FFF1EA9B6A90084963F /* VideoListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DF5FFE1EA9B6A90084963F /* VideoListViewModel.m */; };
+		A4DF60031EA9D4120084963F /* TeachingVideoDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DF60011EA9D4120084963F /* TeachingVideoDetailVC.m */; };
+		A4DF60041EA9D4120084963F /* TeachingVideoDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4DF60021EA9D4120084963F /* TeachingVideoDetailVC.xib */; };
+		A4DF60071EA9D42F0084963F /* VideoDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DF60061EA9D42F0084963F /* VideoDetailViewModel.m */; };
+		A4DF600A1EA9D43F0084963F /* ALDVideoDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DF60091EA9D43F0084963F /* ALDVideoDetailModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -369,6 +373,13 @@
 		A4DF5FFB1EA9B68B0084963F /* ALDVideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDVideoModel.m; sourceTree = "<group>"; };
 		A4DF5FFD1EA9B6A90084963F /* VideoListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoListViewModel.h; sourceTree = "<group>"; };
 		A4DF5FFE1EA9B6A90084963F /* VideoListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoListViewModel.m; sourceTree = "<group>"; };
+		A4DF60001EA9D4120084963F /* TeachingVideoDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeachingVideoDetailVC.h; sourceTree = "<group>"; };
+		A4DF60011EA9D4120084963F /* TeachingVideoDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeachingVideoDetailVC.m; sourceTree = "<group>"; };
+		A4DF60021EA9D4120084963F /* TeachingVideoDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeachingVideoDetailVC.xib; sourceTree = "<group>"; };
+		A4DF60051EA9D42F0084963F /* VideoDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDetailViewModel.h; sourceTree = "<group>"; };
+		A4DF60061EA9D42F0084963F /* VideoDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDetailViewModel.m; sourceTree = "<group>"; };
+		A4DF60081EA9D43F0084963F /* ALDVideoDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDVideoDetailModel.h; sourceTree = "<group>"; };
+		A4DF60091EA9D43F0084963F /* ALDVideoDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDVideoDetailModel.m; sourceTree = "<group>"; };
 		B2F0BD5579963808346C1999 /* Pods-Aladdin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aladdin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aladdin/Pods-Aladdin.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -817,6 +828,8 @@
 				A4C32EA61E9A614D00D53E1A /* DiscoverModel.m */,
 				A4DF5FFA1EA9B68B0084963F /* ALDVideoModel.h */,
 				A4DF5FFB1EA9B68B0084963F /* ALDVideoModel.m */,
+				A4DF60081EA9D43F0084963F /* ALDVideoDetailModel.h */,
+				A4DF60091EA9D43F0084963F /* ALDVideoDetailModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -843,6 +856,9 @@
 				A4C32EB71E9A6FB000D53E1A /* TeachingVideoContainerVC.m */,
 				A4C32EAB1E9A65E000D53E1A /* TeachingVideoCollectionVC.h */,
 				A4C32EAC1E9A65E000D53E1A /* TeachingVideoCollectionVC.m */,
+				A4DF60001EA9D4120084963F /* TeachingVideoDetailVC.h */,
+				A4DF60011EA9D4120084963F /* TeachingVideoDetailVC.m */,
+				A4DF60021EA9D4120084963F /* TeachingVideoDetailVC.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -852,6 +868,8 @@
 			children = (
 				A4DF5FFD1EA9B6A90084963F /* VideoListViewModel.h */,
 				A4DF5FFE1EA9B6A90084963F /* VideoListViewModel.m */,
+				A4DF60051EA9D42F0084963F /* VideoDetailViewModel.h */,
+				A4DF60061EA9D42F0084963F /* VideoDetailViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1090,6 +1108,7 @@
 				A4C7C4DB1E9F194A003A36E0 /* WQInputView.xib in Resources */,
 				A4C32EA41E9A5F8B00D53E1A /* DiscoverCell.xib in Resources */,
 				A4C32E731E9A343900D53E1A /* Login.xcassets in Resources */,
+				A4DF60041EA9D4120084963F /* TeachingVideoDetailVC.xib in Resources */,
 				A499A98B1EA622A800B45425 /* NewsDetailBottomView.xib in Resources */,
 				A408916B1EA3AF420071D22D /* ServerCell.xib in Resources */,
 				A4D682E31E976CEB00FBA51C /* Assets.xcassets in Resources */,
@@ -1160,6 +1179,7 @@
 			files = (
 				A40891661EA3AF280071D22D /* ALDServerModel.m in Sources */,
 				A4C32EBA1E9A7FB000D53E1A /* XAspect-AppearanceConfigAppDelegate.m in Sources */,
+				A4DF60071EA9D42F0084963F /* VideoDetailViewModel.m in Sources */,
 				A40891581EA39D650071D22D /* MessageTypeCell.m in Sources */,
 				A4C32AF51E98A7B800D53E1A /* dateTimeHelper.m in Sources */,
 				A408914D1EA399560071D22D /* MessageListVC.m in Sources */,
@@ -1198,6 +1218,7 @@
 				A43F9DCF1E9F2CBC00AA831E /* LoginVC.m in Sources */,
 				A4C32E261E98AD0F00D53E1A /* UIImage+OuterCircle.m in Sources */,
 				A4C32AEF1E98A7B800D53E1A /* GCDTimer.m in Sources */,
+				A4DF60031EA9D4120084963F /* TeachingVideoDetailVC.m in Sources */,
 				A453788C1EA7687800020C5D /* CollectListViewModel.m in Sources */,
 				A4A029491E9B2F9D0008F281 /* MJExtensionConfig.m in Sources */,
 				A4C32EB41E9A6A5600D53E1A /* TeachingVideoCollectionViewCell.m in Sources */,
@@ -1222,6 +1243,7 @@
 				A4C32E301E98AE6900D53E1A /* WQHomeTabBarController.m in Sources */,
 				A4C7C4E11E9F1DF3003A36E0 /* WQPlaceholderTextView.m in Sources */,
 				A453789E1EA8512D00020C5D /* QuestionListViewModel.m in Sources */,
+				A4DF600A1EA9D43F0084963F /* ALDVideoDetailModel.m in Sources */,
 				A4D682D81E976CEB00FBA51C /* main.m in Sources */,
 				A43F9DEA1E9FB1B300AA831E /* RegisterViewModel.m in Sources */,
 				A40891461EA397A30071D22D /* MessageTypeViewModel.m in Sources */,

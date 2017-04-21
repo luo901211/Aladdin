@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ALDVideoModel.h"
 
 @interface TeachingVideoCollectionViewCell : UICollectionViewCell
+
+@property (nonatomic, strong) ALDVideoModel *model;
 
 @end
