@@ -7,14 +7,24 @@
 //
 
 #import "TeachingVideoCollectionVC.h"
-
+#import "TeachingVideoCollectionViewCell.h"
 @interface TeachingVideoCollectionVC ()
 
 @end
 
 @implementation TeachingVideoCollectionVC
 
-static NSString * const reuseIdentifier = @"Cell";
+static NSString * const reuseIdentifier = @"TeachingVideoCollectionViewCell";
+
+- (instancetype)init {
+    // layout
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    flowLayout.minimumInteritemSpacing = 0;
+    flowLayout.minimumLineSpacing = 0;
+    flowLayout.itemSize = CGSizeMake(Main_Screen_Width / 2, 165 * kScreenWidthRatio);
+    
+    return [super initWithCollectionViewLayout:flowLayout];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,7 +32,7 @@ static NSString * const reuseIdentifier = @"Cell";
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    [self.collectionView registerNib:[UINib nibWithNibName:@"TeachingVideoCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:reuseIdentifier];
     // Do any additional setup after loading the view.
     self.collectionView.backgroundColor = [UIColor whiteColor];
 }
@@ -40,8 +50,7 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor grayColor];
+    TeachingVideoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     // Configure the cell
     
     return cell;

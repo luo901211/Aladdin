@@ -1,32 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TeachingVideoCollectionViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="202" height="228"/>
+            <rect key="frame" x="0.0" y="0.0" width="187.5" height="165"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="202" height="228"/>
+                <rect key="frame" x="0.0" y="0.0" width="187.5" height="165"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="89a-4V-2Ao">
-                        <rect key="frame" x="15" y="15" width="166" height="96"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="89a-4V-2Ao">
+                        <rect key="frame" x="15" y="15" width="159.5" height="92.5"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="89a-4V-2Ao" secondAttribute="height" multiplier="332:192" id="SYr-Hw-odX"/>
+                        </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="市场分析法" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADc-wG-ofW">
+                        <rect key="frame" x="15" y="117.5" width="159.5" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="xoI-yX-JbM"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收藏：10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGv-Po-hgp">
+                        <rect key="frame" x="15" y="140.5" width="80" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="aWi-Ce-jqH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1186浏览" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6m-gb-Xnb">
+                        <rect key="frame" x="95" y="140.5" width="79.5" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="mxV-EH-HMG"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
-            <size key="customSize" width="202" height="228"/>
-            <point key="canvasLocation" x="-14" y="71"/>
+            <constraints>
+                <constraint firstItem="ADc-wG-ofW" firstAttribute="top" secondItem="89a-4V-2Ao" secondAttribute="bottom" constant="10" id="1zp-CR-VbM"/>
+                <constraint firstItem="h6m-gb-Xnb" firstAttribute="top" secondItem="ADc-wG-ofW" secondAttribute="bottom" constant="3" id="Gfi-5u-urT"/>
+                <constraint firstItem="89a-4V-2Ao" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="Pda-Fv-tve"/>
+                <constraint firstItem="h6m-gb-Xnb" firstAttribute="leading" secondItem="rGv-Po-hgp" secondAttribute="trailing" id="TRq-zb-IAO"/>
+                <constraint firstItem="rGv-Po-hgp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="WMP-Tg-pc4"/>
+                <constraint firstAttribute="trailing" secondItem="89a-4V-2Ao" secondAttribute="trailing" constant="13" id="Xsd-tc-J1B"/>
+                <constraint firstItem="rGv-Po-hgp" firstAttribute="top" secondItem="ADc-wG-ofW" secondAttribute="bottom" constant="3" id="Zmi-lg-hOK"/>
+                <constraint firstItem="h6m-gb-Xnb" firstAttribute="width" secondItem="rGv-Po-hgp" secondAttribute="width" id="d22-eL-sbj"/>
+                <constraint firstAttribute="trailing" secondItem="ADc-wG-ofW" secondAttribute="trailing" constant="13" id="f1l-Ue-bzF"/>
+                <constraint firstItem="89a-4V-2Ao" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="kKb-YT-Zlk"/>
+                <constraint firstAttribute="trailing" secondItem="h6m-gb-Xnb" secondAttribute="trailing" constant="13" id="o0i-xD-jct"/>
+                <constraint firstItem="ADc-wG-ofW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="rJk-uf-EET"/>
+            </constraints>
+            <size key="customSize" width="256" height="241"/>
+            <point key="canvasLocation" x="13" y="77.5"/>
         </collectionViewCell>
     </objects>
 </document>

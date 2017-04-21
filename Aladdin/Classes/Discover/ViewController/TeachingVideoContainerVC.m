@@ -64,15 +64,9 @@
     }
     
     NSMutableArray *childVC = [NSMutableArray array];
-    // layout 
-    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    flowLayout.minimumInteritemSpacing = 10;
-    flowLayout.minimumLineSpacing = 10;
-    flowLayout.itemSize = CGSizeMake(80, 80);
-    flowLayout.sectionInset = UIEdgeInsetsMake(15, 15, 15, 15);
     
     for (int i = 0; i < titleArr.count; i++) {
-        TeachingVideoCollectionVC *vc = [[TeachingVideoCollectionVC alloc] initWithCollectionViewLayout:flowLayout];
+        TeachingVideoCollectionVC *vc = [[TeachingVideoCollectionVC alloc] init];
         [childVC addObject:vc];
         [self addChildViewController:vc];
     }
