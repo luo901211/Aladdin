@@ -7,16 +7,13 @@
 //
 
 #import "TeachingVideoContainerVC.h"
-#import "SGSegmentedControl.h"
+#import "SGPageView.h"
 #import "TeachingVideoCollectionVC.h"
-#import "FeedbackVC.h"
 
-@interface TeachingVideoContainerVC ()<SGSegmentedControlDefaultDelegate, UIScrollViewDelegate>
-
+@interface TeachingVideoContainerVC ()<SGPageTitleViewDelegate, SGPageContentViewDelegare>
+@property (nonatomic, strong) SGPageTitleView *pageTitleView;
+@property (nonatomic, strong) SGPageContentView *pageContentView;
 @property (strong, nonatomic) NSMutableArray *arrayList;
-
-@property (nonatomic, strong) SGSegmentedControlDefault *topSView;
-@property (nonatomic, strong) SGSegmentedControlBottomView *bottomSView;
 
 @end
 
@@ -33,6 +30,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    self.automaticallyAdjustsScrollViewInsets = NO;
     self.navigationItem.title = @"教学视频";
     
     [self loadData];
@@ -67,54 +65,43 @@
     
     NSMutableArray *childVC = [NSMutableArray array];
     // layout 
-
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    flowLayout.minimumInteritemSpacing = 10;
+    flowLayout.minimumLineSpacing = 10;
+    flowLayout.itemSize = CGSizeMake(80, 80);
+    flowLayout.sectionInset = UIEdgeInsetsMake(15, 15, 15, 15);
     
     for (int i = 0; i < titleArr.count; i++) {
-        UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-        flowLayout.minimumInteritemSpacing = 10;
-        flowLayout.minimumLineSpacing = 10;
-        flowLayout.itemSize = CGSizeMake(80, 80);
-        flowLayout.sectionInset = UIEdgeInsetsMake(15, 15, 15, 15);
-
-        FeedbackVC *vc = [[FeedbackVC alloc] init];
-//        TeachingVideoCollectionVC *vc = [[TeachingVideoCollectionVC alloc] initWithCollectionViewLayout:flowLayout];
+        TeachingVideoCollectionVC *vc = [[TeachingVideoCollectionVC alloc] initWithCollectionViewLayout:flowLayout];
         [childVC addObject:vc];
         [self addChildViewController:vc];
     }
     
-    self.bottomSView = [[SGSegmentedControlBottomView alloc] initWithFrame:CGRectMake(0, 64 + 38, self.view.frame.size.width, self.view.frame.size.height - 64 - 38)];
-    _bottomSView.childViewController = childVC;
-    _bottomSView.delegate = self;
-    [self.view addSubview:_bottomSView];
+    /// pageContentView
+    CGFloat contentViewHeight = self.view.frame.size.height - 108;
+    self.pageContentView = [[SGPageContentView alloc] initWithFrame:CGRectMake(0, 108, self.view.frame.size.width, contentViewHeight) parentVC:self childVCs:childVC];
+    _pageContentView.delegatePageContentView = self;
+    [self.view addSubview:_pageContentView];
     
-    self.topSView = [SGSegmentedControlDefault segmentedControlWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 38) delegate:self childVcTitle:titleArr isScaleText:NO];
-    self.topSView.backgroundColor = [UIColor whiteColor];
-    self.topSView.titleColorStateNormal = COLOR_WORD_GRAY_2;
-    self.topSView.titleColorStateSelected = GLOBAL_TINT_COLOR;
-    self.topSView.indicatorColor = GLOBAL_TINT_COLOR;
-    [self.view addSubview:_topSView];
+    /// pageTitleView
+    self.pageTitleView = [SGPageTitleView pageTitleViewWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 44) delegate:self titleNames:titleArr];
+    [self.view addSubview:_pageTitleView];
+    _pageTitleView.selectedIndex = 0;
+    _pageTitleView.titleColorStateNormal = COLOR_WORD_GRAY_2;
+    _pageTitleView.titleColorStateSelected = GLOBAL_TINT_COLOR;
+    _pageTitleView.indicatorColor = GLOBAL_TINT_COLOR;
+    _pageTitleView.indicatorStyle = SGIndicatorTypeEqual;
 
 }
 
+#pragma mark - SGPageContentViewDelegare
 
-- (void)SGSegmentedControlDefault:(SGSegmentedControlDefault *)segmentedControlDefault didSelectTitleAtIndex:(NSInteger)index {
-    // 计算滚动的位置
-    CGFloat offsetX = index * self.view.frame.size.width;
-    self.bottomSView.contentOffset = CGPointMake(offsetX, 0);
-    [self.bottomSView showChildVCViewWithIndex:index outsideVC:self];
+- (void)SGPageTitleView:(SGPageTitleView *)SGPageTitleView selectedIndex:(NSInteger)selectedIndex {
+    [self.pageContentView setPageCententViewCurrentIndex:selectedIndex];
 }
 
-#pragma mark - UIScrollViewDelegate
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-    
-    // 计算滚动到哪一页
-    NSInteger index = scrollView.contentOffset.x / scrollView.frame.size.width;
-    
-    // 1.添加子控制器view
-    [self.bottomSView showChildVCViewWithIndex:index outsideVC:self];
-    
-    // 2.把对应的标题选中
-    [self.topSView changeThePositionOfTheSelectedBtnWithScrollView:scrollView];
+- (void)SGPageContentView:(SGPageContentView *)SGPageContentView progress:(CGFloat)progress originalIndex:(NSInteger)originalIndex targetIndex:(NSInteger)targetIndex {
+    [self.pageTitleView setPageTitleViewWithProgress:progress originalIndex:originalIndex targetIndex:targetIndex];
 }
 
 

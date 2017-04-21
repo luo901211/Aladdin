@@ -48,6 +48,10 @@
 		A45378951EA768F000020C5D /* FeedbackViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A45378941EA768F000020C5D /* FeedbackViewModel.m */; };
 		A453789B1EA850A100020C5D /* QuestionListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A453789A1EA850A100020C5D /* QuestionListVC.m */; };
 		A453789E1EA8512D00020C5D /* QuestionListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A453789D1EA8512D00020C5D /* QuestionListViewModel.m */; };
+		A45378AA1EA9A10A00020C5D /* SGHelperTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A45378A11EA9A10A00020C5D /* SGHelperTool.m */; };
+		A45378AB1EA9A10A00020C5D /* SGPageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = A45378A31EA9A10A00020C5D /* SGPageContentView.m */; };
+		A45378AC1EA9A10A00020C5D /* SGPageTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A45378A51EA9A10A00020C5D /* SGPageTitleView.m */; };
+		A45378AD1EA9A10A00020C5D /* UIView+SGFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = A45378A91EA9A10A00020C5D /* UIView+SGFrame.m */; };
 		A499A95C1EA60E8900B45425 /* MemberInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A499A95B1EA60E8900B45425 /* MemberInfoVC.m */; };
 		A499A95F1EA60EB700B45425 /* CollectListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A499A95E1EA60EB700B45425 /* CollectListVC.m */; };
 		A499A9651EA616F300B45425 /* FeedbackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A499A9641EA616F300B45425 /* FeedbackVC.m */; };
@@ -100,12 +104,6 @@
 		A4C32E701E9A1BF400D53E1A /* SGSegmentedControlStatic.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32E681E9A1BF400D53E1A /* SGSegmentedControlStatic.m */; };
 		A4C32E711E9A1BF400D53E1A /* UIView+SGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32E6A1E9A1BF400D53E1A /* UIView+SGExtension.m */; };
 		A4C32E731E9A343900D53E1A /* Login.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4C32E721E9A343900D53E1A /* Login.xcassets */; };
-		A4C32E851E9A37A400D53E1A /* AnswerMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32E841E9A37A400D53E1A /* AnswerMainViewController.m */; };
-		A4C32E881E9A37BA00D53E1A /* AnswerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32E871E9A37BA00D53E1A /* AnswerListViewController.m */; };
-		A4C32E8C1E9A37D100D53E1A /* AnswerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32E8A1E9A37D100D53E1A /* AnswerCell.m */; };
-		A4C32E8D1E9A37D100D53E1A /* AnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4C32E8B1E9A37D100D53E1A /* AnswerCell.xib */; };
-		A4C32E901E9A37E300D53E1A /* AnswerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32E8F1E9A37E300D53E1A /* AnswerModel.m */; };
-		A4C32E931E9A37FB00D53E1A /* AnswerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32E921E9A37FB00D53E1A /* AnswerViewModel.m */; };
 		A4C32E961E9A540E00D53E1A /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32E951E9A540E00D53E1A /* UINavigationBar+Awesome.m */; };
 		A4C32E991E9A562D00D53E1A /* ALDBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32E981E9A562D00D53E1A /* ALDBaseNavigationController.m */; };
 		A4C32E9C1E9A564200D53E1A /* ALDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32E9B1E9A564200D53E1A /* ALDBaseViewController.m */; };
@@ -205,6 +203,16 @@
 		A453789A1EA850A100020C5D /* QuestionListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionListVC.m; sourceTree = "<group>"; };
 		A453789C1EA8512D00020C5D /* QuestionListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionListViewModel.h; sourceTree = "<group>"; };
 		A453789D1EA8512D00020C5D /* QuestionListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionListViewModel.m; sourceTree = "<group>"; };
+		A45378A01EA9A10A00020C5D /* SGHelperTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHelperTool.h; sourceTree = "<group>"; };
+		A45378A11EA9A10A00020C5D /* SGHelperTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHelperTool.m; sourceTree = "<group>"; };
+		A45378A21EA9A10A00020C5D /* SGPageContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPageContentView.h; sourceTree = "<group>"; };
+		A45378A31EA9A10A00020C5D /* SGPageContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPageContentView.m; sourceTree = "<group>"; };
+		A45378A41EA9A10A00020C5D /* SGPageTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPageTitleView.h; sourceTree = "<group>"; };
+		A45378A51EA9A10A00020C5D /* SGPageTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPageTitleView.m; sourceTree = "<group>"; };
+		A45378A61EA9A10A00020C5D /* SGPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPageView.h; sourceTree = "<group>"; };
+		A45378A71EA9A10A00020C5D /* SGPageViewHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPageViewHelper.h; sourceTree = "<group>"; };
+		A45378A81EA9A10A00020C5D /* UIView+SGFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SGFrame.h"; sourceTree = "<group>"; };
+		A45378A91EA9A10A00020C5D /* UIView+SGFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SGFrame.m"; sourceTree = "<group>"; };
 		A499A95A1EA60E8900B45425 /* MemberInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberInfoVC.h; sourceTree = "<group>"; };
 		A499A95B1EA60E8900B45425 /* MemberInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberInfoVC.m; sourceTree = "<group>"; };
 		A499A95D1EA60EB700B45425 /* CollectListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectListVC.h; sourceTree = "<group>"; };
@@ -315,17 +323,6 @@
 		A4C32E691E9A1BF400D53E1A /* UIView+SGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SGExtension.h"; sourceTree = "<group>"; };
 		A4C32E6A1E9A1BF400D53E1A /* UIView+SGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SGExtension.m"; sourceTree = "<group>"; };
 		A4C32E721E9A343900D53E1A /* Login.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Login.xcassets; sourceTree = "<group>"; };
-		A4C32E831E9A37A400D53E1A /* AnswerMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerMainViewController.h; sourceTree = "<group>"; };
-		A4C32E841E9A37A400D53E1A /* AnswerMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerMainViewController.m; sourceTree = "<group>"; };
-		A4C32E861E9A37BA00D53E1A /* AnswerListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerListViewController.h; sourceTree = "<group>"; };
-		A4C32E871E9A37BA00D53E1A /* AnswerListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerListViewController.m; sourceTree = "<group>"; };
-		A4C32E891E9A37D100D53E1A /* AnswerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerCell.h; sourceTree = "<group>"; };
-		A4C32E8A1E9A37D100D53E1A /* AnswerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerCell.m; sourceTree = "<group>"; };
-		A4C32E8B1E9A37D100D53E1A /* AnswerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnswerCell.xib; sourceTree = "<group>"; };
-		A4C32E8E1E9A37E300D53E1A /* AnswerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerModel.h; sourceTree = "<group>"; };
-		A4C32E8F1E9A37E300D53E1A /* AnswerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerModel.m; sourceTree = "<group>"; };
-		A4C32E911E9A37FB00D53E1A /* AnswerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerViewModel.h; sourceTree = "<group>"; };
-		A4C32E921E9A37FB00D53E1A /* AnswerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerViewModel.m; sourceTree = "<group>"; };
 		A4C32E941E9A540E00D53E1A /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
 		A4C32E951E9A540E00D53E1A /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
 		A4C32E971E9A562D00D53E1A /* ALDBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDBaseNavigationController.h; sourceTree = "<group>"; };
@@ -494,6 +491,23 @@
 				A453789D1EA8512D00020C5D /* QuestionListViewModel.m */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A453789F1EA9A10A00020C5D /* SGPageView */ = {
+			isa = PBXGroup;
+			children = (
+				A45378A01EA9A10A00020C5D /* SGHelperTool.h */,
+				A45378A11EA9A10A00020C5D /* SGHelperTool.m */,
+				A45378A21EA9A10A00020C5D /* SGPageContentView.h */,
+				A45378A31EA9A10A00020C5D /* SGPageContentView.m */,
+				A45378A41EA9A10A00020C5D /* SGPageTitleView.h */,
+				A45378A51EA9A10A00020C5D /* SGPageTitleView.m */,
+				A45378A61EA9A10A00020C5D /* SGPageView.h */,
+				A45378A71EA9A10A00020C5D /* SGPageViewHelper.h */,
+				A45378A81EA9A10A00020C5D /* UIView+SGFrame.h */,
+				A45378A91EA9A10A00020C5D /* UIView+SGFrame.m */,
+			);
+			path = SGPageView;
 			sourceTree = "<group>";
 		};
 		A499A9661EA622A800B45425 /* Home */ = {
@@ -708,6 +722,7 @@
 		A4C32D261E98AB3200D53E1A /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				A453789F1EA9A10A00020C5D /* SGPageView */,
 				A4C32E5A1E9A1BF400D53E1A /* SGSegmentedControl */,
 				A4C32E311E98AEB500D53E1A /* SySafeCategory */,
 				A4C32D271E98AB3200D53E1A /* Reachability */,
@@ -776,56 +791,6 @@
 				A4C32E6A1E9A1BF400D53E1A /* UIView+SGExtension.m */,
 			);
 			path = SGSegmentedControl;
-			sourceTree = "<group>";
-		};
-		A4C32E741E9A374E00D53E1A /* Answer */ = {
-			isa = PBXGroup;
-			children = (
-				A4C32E751E9A374E00D53E1A /* Model */,
-				A4C32E761E9A374E00D53E1A /* View */,
-				A4C32E771E9A374E00D53E1A /* ViewController */,
-				A4C32E781E9A374E00D53E1A /* ViewModel */,
-			);
-			path = Answer;
-			sourceTree = "<group>";
-		};
-		A4C32E751E9A374E00D53E1A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				A4C32E8E1E9A37E300D53E1A /* AnswerModel.h */,
-				A4C32E8F1E9A37E300D53E1A /* AnswerModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		A4C32E761E9A374E00D53E1A /* View */ = {
-			isa = PBXGroup;
-			children = (
-				A4C32E891E9A37D100D53E1A /* AnswerCell.h */,
-				A4C32E8A1E9A37D100D53E1A /* AnswerCell.m */,
-				A4C32E8B1E9A37D100D53E1A /* AnswerCell.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		A4C32E771E9A374E00D53E1A /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				A4C32E831E9A37A400D53E1A /* AnswerMainViewController.h */,
-				A4C32E841E9A37A400D53E1A /* AnswerMainViewController.m */,
-				A4C32E861E9A37BA00D53E1A /* AnswerListViewController.h */,
-				A4C32E871E9A37BA00D53E1A /* AnswerListViewController.m */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		A4C32E781E9A374E00D53E1A /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				A4C32E911E9A37FB00D53E1A /* AnswerViewModel.h */,
-				A4C32E921E9A37FB00D53E1A /* AnswerViewModel.m */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		A4C32E791E9A374E00D53E1A /* Discover */ = {
@@ -1014,7 +979,6 @@
 				A4D682F81E97786800FBA51C /* Tools */,
 				A4C32AF81E98AB3200D53E1A /* Common */,
 				A4C32D261E98AB3200D53E1A /* Libs */,
-				A4C32E741E9A374E00D53E1A /* Answer */,
 				A4C32E791E9A374E00D53E1A /* Discover */,
 				A4C32E7E1E9A374E00D53E1A /* Server */,
 			);
@@ -1111,7 +1075,6 @@
 				A40891631EA3AF110071D22D /* ServerListViewController.xib in Resources */,
 				A4D682E61E976CEB00FBA51C /* LaunchScreen.storyboard in Resources */,
 				A43F9DD01E9F2CBC00AA831E /* LoginVC.xib in Resources */,
-				A4C32E8D1E9A37D100D53E1A /* AnswerCell.xib in Resources */,
 				A40891701EA3B04F0071D22D /* ServerDetailViewController.xib in Resources */,
 				A408915E1EA39D770071D22D /* MessageCell.xib in Resources */,
 				A4C7C4DB1E9F194A003A36E0 /* WQInputView.xib in Resources */,
@@ -1212,6 +1175,7 @@
 				A4C32E701E9A1BF400D53E1A /* SGSegmentedControlStatic.m in Sources */,
 				A4C32E961E9A540E00D53E1A /* UINavigationBar+Awesome.m in Sources */,
 				A4AE170D1E9E1383007965EE /* UIView+CustomBorder.m in Sources */,
+				A45378AB1EA9A10A00020C5D /* SGPageContentView.m in Sources */,
 				A4C32E6B1E9A1BF400D53E1A /* SGImageButton_Horizontal.m in Sources */,
 				A4C32AF31E98A7B800D53E1A /* MPLocationManager.m in Sources */,
 				A4D682DB1E976CEB00FBA51C /* AppDelegate.m in Sources */,
@@ -1227,7 +1191,6 @@
 				A4A029491E9B2F9D0008F281 /* MJExtensionConfig.m in Sources */,
 				A4C32EB41E9A6A5600D53E1A /* TeachingVideoCollectionViewCell.m in Sources */,
 				A499A98A1EA622A800B45425 /* NewsDetailBottomView.m in Sources */,
-				A4C32E851E9A37A400D53E1A /* AnswerMainViewController.m in Sources */,
 				A4C32AF41E98A7B800D53E1A /* cameraHelper.m in Sources */,
 				A4C32EB81E9A6FB000D53E1A /* TeachingVideoContainerVC.m in Sources */,
 				A499A9901EA622A800B45425 /* NewsListViewModel.m in Sources */,
@@ -1244,18 +1207,17 @@
 				A4C32E9F1E9A5F7100D53E1A /* DiscoverListViewController.m in Sources */,
 				A45378881EA7620300020C5D /* CollectCell.m in Sources */,
 				A4C32EA71E9A614D00D53E1A /* DiscoverModel.m in Sources */,
-				A4C32E901E9A37E300D53E1A /* AnswerModel.m in Sources */,
 				A4C32E301E98AE6900D53E1A /* WQHomeTabBarController.m in Sources */,
 				A4C7C4E11E9F1DF3003A36E0 /* WQPlaceholderTextView.m in Sources */,
 				A453789E1EA8512D00020C5D /* QuestionListViewModel.m in Sources */,
 				A4D682D81E976CEB00FBA51C /* main.m in Sources */,
-				A4C32E8C1E9A37D100D53E1A /* AnswerCell.m in Sources */,
 				A43F9DEA1E9FB1B300AA831E /* RegisterViewModel.m in Sources */,
 				A40891461EA397A30071D22D /* MessageTypeViewModel.m in Sources */,
 				A4C32E6F1E9A1BF400D53E1A /* SGSegmentedControlDefault.m in Sources */,
 				A4C32E711E9A1BF400D53E1A /* UIView+SGExtension.m in Sources */,
 				A40891761EA4610B0071D22D /* UserFeatureView.m in Sources */,
 				A499A98D1EA622A800B45425 /* NewsListViewController.m in Sources */,
+				A45378AD1EA9A10A00020C5D /* UIView+SGFrame.m in Sources */,
 				A4C32E6C1E9A1BF400D53E1A /* SGImageButton_Vertical.m in Sources */,
 				A43F9DE31E9F6DDF00AA831E /* ChangePasswordVC.m in Sources */,
 				A4C32AF11E98A7B800D53E1A /* introductoryPagesView.m in Sources */,
@@ -1270,8 +1232,7 @@
 				A4C32AED1E98A7B800D53E1A /* GCDQueue.m in Sources */,
 				A4A0294C1E9B341C0008F281 /* AFNManagerRequest.m in Sources */,
 				A499A98F1EA622A800B45425 /* NewsDetailViewModel.m in Sources */,
-				A4C32E931E9A37FB00D53E1A /* AnswerViewModel.m in Sources */,
-				A4C32E881E9A37BA00D53E1A /* AnswerListViewController.m in Sources */,
+				A45378AA1EA9A10A00020C5D /* SGHelperTool.m in Sources */,
 				A499A9871EA622A800B45425 /* ALDNewsTypeModel.m in Sources */,
 				A4C32E291E98AD0F00D53E1A /* UIView+Extension.m in Sources */,
 				A4C32EAD1E9A65E000D53E1A /* TeachingVideoCollectionVC.m in Sources */,
@@ -1282,6 +1243,7 @@
 				A4C32E251E98AD0F00D53E1A /* NSString+Additions.m in Sources */,
 				A40891361EA35F050071D22D /* User.m in Sources */,
 				A40891491EA398800071D22D /* ALDMessageTypeModel.m in Sources */,
+				A45378AC1EA9A10A00020C5D /* SGPageTitleView.m in Sources */,
 				A4C7C4DA1E9F194A003A36E0 /* WQInputView.m in Sources */,
 				A408915D1EA39D770071D22D /* MessageCell.m in Sources */,
 				A40891511EA3996F0071D22D /* MessageListViewModel.m in Sources */,
