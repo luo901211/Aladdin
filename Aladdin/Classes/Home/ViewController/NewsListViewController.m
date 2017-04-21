@@ -93,10 +93,10 @@
     
     NSInteger pageIndex = 1;
     if (type == WQFetchDataTypeLoadMore) {
-        pageIndex = (NSInteger)self.viewModel.newsList.count / API_PAGE_SIZE + 1;
+        pageIndex = (NSInteger)self.viewModel.list.count / API_PAGE_SIZE + 1;
     }
     
-    [self.viewModel loadNewsListWithPageIndex:pageIndex success:^(BOOL noMoreData) {
+    [self.viewModel loadDataListWithPageIndex:pageIndex success:^(BOOL noMoreData) {
         @strongify(self)
         
         if (noMoreData) {
@@ -128,17 +128,17 @@
 #pragma mark - Table view data source
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ALDNewsModel *model = self.viewModel.newsList[indexPath.row];
+    ALDNewsModel *model = self.viewModel.list[indexPath.row];
     return [NewsCell heightForRow:model];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.viewModel.newsList.count;
+    return self.viewModel.list.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NewsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NewsCell"];
-    ALDNewsModel *model = self.viewModel.newsList[indexPath.row];
+    ALDNewsModel *model = self.viewModel.list[indexPath.row];
     cell.model = model;
     return cell;
 }

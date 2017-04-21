@@ -1,15 +1,15 @@
 //
-//  CollectListViewModel.m
+//  VideoListViewModel.m
 //  Aladdin
 //
-//  Created by luo on 2017/4/19.
+//  Created by luo on 2017/4/21.
 //  Copyright © 2017年 wenqi. All rights reserved.
 //
 
-#import "CollectListViewModel.h"
-#import "ALDCollectModel.h"
+#import "VideoListViewModel.h"
+#import "ALDVideoModel.h"
 
-@implementation CollectListViewModel
+@implementation VideoListViewModel
 
 - (NSMutableArray *)list {
     if (!_list) {
@@ -21,10 +21,8 @@
 - (void)loadDataListWithPageIndex:(NSInteger)pageIndex success:(void (^)(BOOL noMoreData))success failure:(void (^)(NSError *error))failure {
     
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:@{ @"page_num": @(pageIndex)}];
-    [params setObject:[User sharedInstance].token forKey:@"token"];
-    
-    [AFNManagerRequest getWithPath:API_USER_COLLECT_LIST params:params success:^(NSURLResponse *response, id responseObject) {
-        NSArray *arrayM = [ALDCollectModel mj_objectArrayWithKeyValuesArray:responseObject];
+    [AFNManagerRequest getWithPath:API_SERVER_LIST params:params success:^(NSURLResponse *response, id responseObject) {
+        NSArray *arrayM = [ALDVideoModel mj_objectArrayWithKeyValuesArray:responseObject];
         if (pageIndex == 1) {
             [self.list removeAllObjects];
         }
@@ -36,7 +34,4 @@
     }];
     
 }
-
-
-
 @end

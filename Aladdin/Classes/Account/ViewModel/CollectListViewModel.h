@@ -10,8 +10,8 @@
 
 @interface CollectListViewModel : NSObject
 
-@property (nonatomic, strong) NSMutableArray *collectList;
+@property (nonatomic, strong) NSMutableArray *list;
 
-- (void)loadCollectListWithPageIndex:(NSInteger)pageIndex success:(void (^)(BOOL noMoreData))success failure:(void (^)(NSError *error))failure;
+- (void)loadDataListWithPageIndex:(NSInteger)pageIndex success:(void (^)(BOOL noMoreData))success failure:(void (^)(NSError *error))failure;
 
 @end

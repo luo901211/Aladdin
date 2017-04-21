@@ -54,17 +54,15 @@
 {
     @weakify(self);
     
-    [self.viewModel getMessageListWithType:self.type Success:^(id obj) {
-        
+    [self.viewModel loadDataListWithPageIndex:1 type:self.type success:^(BOOL noMoreData) {
         @strongify(self);
         [self.tableView.mj_header endRefreshing];
         [self.tableView reloadData];
-        
-    } failure:^(id obj) {
+    } failure:^(NSError *error) {
         [self.tableView.mj_header endRefreshing];
-        NSLog(@"error: %@",obj);
-
+        NSLog(@"error: %@",error);
     }];
+    
 }
 
 #pragma mark - Table view data source

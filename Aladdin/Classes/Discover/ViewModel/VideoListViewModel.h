@@ -1,14 +1,14 @@
 //
-//  ServerListViewModel.h
+//  VideoListViewModel.h
 //  Aladdin
 //
-//  Created by luo on 2017/4/16.
+//  Created by luo on 2017/4/21.
 //  Copyright © 2017年 wenqi. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface ServerListViewModel : NSObject
+@interface VideoListViewModel : NSObject
 
 @property (nonatomic, strong) NSMutableArray *list;
 

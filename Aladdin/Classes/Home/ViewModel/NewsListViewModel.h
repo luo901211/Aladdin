@@ -14,12 +14,10 @@
 
 @property (nonatomic, strong) NSMutableArray *bannerList;
 
-@property (nonatomic, strong) NSMutableArray *newsList;
+@property (nonatomic, strong) NSMutableArray *list;
 
-/**
- *  获取资讯列表模型
- */
-- (void)loadNewsListWithPageIndex:(NSInteger)pageIndex success:(void (^)(BOOL noMoreData))success failure:(void (^)(NSError *error))failure;
+
+- (void)loadDataListWithPageIndex:(NSInteger)pageIndex success:(void (^)(BOOL noMoreData))success failure:(void (^)(NSError *error))failure;
 
 /**
  *  获取轮播图模型

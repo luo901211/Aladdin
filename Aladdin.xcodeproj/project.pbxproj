@@ -127,6 +127,8 @@
 		A4D682E11E976CEB00FBA51C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D682DF1E976CEB00FBA51C /* Main.storyboard */; };
 		A4D682E31E976CEB00FBA51C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4D682E21E976CEB00FBA51C /* Assets.xcassets */; };
 		A4D682E61E976CEB00FBA51C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D682E41E976CEB00FBA51C /* LaunchScreen.storyboard */; };
+		A4DF5FFC1EA9B68B0084963F /* ALDVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DF5FFB1EA9B68B0084963F /* ALDVideoModel.m */; };
+		A4DF5FFF1EA9B6A90084963F /* VideoListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DF5FFE1EA9B6A90084963F /* VideoListViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -363,6 +365,10 @@
 		A4D682E21E976CEB00FBA51C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4D682E51E976CEB00FBA51C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4D682E71E976CEB00FBA51C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4DF5FFA1EA9B68B0084963F /* ALDVideoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDVideoModel.h; sourceTree = "<group>"; };
+		A4DF5FFB1EA9B68B0084963F /* ALDVideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDVideoModel.m; sourceTree = "<group>"; };
+		A4DF5FFD1EA9B6A90084963F /* VideoListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoListViewModel.h; sourceTree = "<group>"; };
+		A4DF5FFE1EA9B6A90084963F /* VideoListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoListViewModel.m; sourceTree = "<group>"; };
 		B2F0BD5579963808346C1999 /* Pods-Aladdin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aladdin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aladdin/Pods-Aladdin.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -809,6 +815,8 @@
 			children = (
 				A4C32EA51E9A614D00D53E1A /* DiscoverModel.h */,
 				A4C32EA61E9A614D00D53E1A /* DiscoverModel.m */,
+				A4DF5FFA1EA9B68B0084963F /* ALDVideoModel.h */,
+				A4DF5FFB1EA9B68B0084963F /* ALDVideoModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -842,6 +850,8 @@
 		A4C32E7D1E9A374E00D53E1A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A4DF5FFD1EA9B6A90084963F /* VideoListViewModel.h */,
+				A4DF5FFE1EA9B6A90084963F /* VideoListViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1156,6 +1166,7 @@
 				A4C32AEE1E98A7B800D53E1A /* GCDSemaphore.m in Sources */,
 				A4C32AF61E98A7B800D53E1A /* MPUmengHelper.m in Sources */,
 				A499A9A21EA7127300B45425 /* UserInfoListVC.m in Sources */,
+				A4DF5FFF1EA9B6A90084963F /* VideoListViewModel.m in Sources */,
 				A4D682DE1E976CEB00FBA51C /* ViewController.m in Sources */,
 				A4C32E281E98AD0F00D53E1A /* UIView+Empty.m in Sources */,
 				A499A9881EA622A800B45425 /* NewsCell.m in Sources */,
@@ -1199,6 +1210,7 @@
 				A4C32AF21E98A7B800D53E1A /* CLLocation+MPLocation.m in Sources */,
 				A43F9DD41E9F2CD400AA831E /* RegisterVC.m in Sources */,
 				A40891731EA3B0F70071D22D /* ServerListViewModel.m in Sources */,
+				A4DF5FFC1EA9B68B0084963F /* ALDVideoModel.m in Sources */,
 				A4C32E241E98AD0F00D53E1A /* MBProgressHUD+MP.m in Sources */,
 				A408912F1EA3297A0071D22D /* NSString+Verify.m in Sources */,
 				A499A9861EA622A800B45425 /* ALDNewsModel.m in Sources */,

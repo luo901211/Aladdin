@@ -12,11 +12,11 @@
 
 @implementation NewsListViewModel
 
-- (NSMutableArray *)newsList {
-    if (!_newsList) {
-        _newsList = [NSMutableArray array];
+- (NSMutableArray *)list {
+    if (!_list) {
+        _list = [NSMutableArray array];
     }
-    return _newsList;
+    return _list;
 }
 
 - (NSMutableArray *)bannerList {
@@ -29,7 +29,7 @@
 /**
  *  获取资讯列表模型
  */
-- (void)loadNewsListWithPageIndex:(NSInteger)pageIndex success:(void (^)(BOOL noMoreData))success failure:(void (^)(NSError *error))failure {
+- (void)loadDataListWithPageIndex:(NSInteger)pageIndex success:(void (^)(BOOL noMoreData))success failure:(void (^)(NSError *error))failure {
     
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:@{ @"page_num": @(pageIndex)}];
     if (self.ID) {
@@ -38,9 +38,9 @@
     [AFNManagerRequest getWithPath:NEWS_LIST params:params success:^(NSURLResponse *response, id responseObject) {
         NSArray *arrayM = [ALDNewsModel mj_objectArrayWithKeyValuesArray:responseObject];
         if (pageIndex == 1) {
-            [self.newsList removeAllObjects];
+            [self.list removeAllObjects];
         }
-        [self.newsList addObjectsFromArray:arrayM];
+        [self.list addObjectsFromArray:arrayM];
         BOOL noMoreData = arrayM.count < API_PAGE_SIZE;
         success(noMoreData);
     } failure:^(NSError *error) {

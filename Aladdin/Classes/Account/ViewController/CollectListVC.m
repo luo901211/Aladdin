@@ -66,10 +66,10 @@
     
     NSInteger pageIndex = 1;
     if (type == WQFetchDataTypeLoadMore) {
-        pageIndex = (NSInteger)self.viewModel.collectList.count / API_PAGE_SIZE + 1;
+        pageIndex = (NSInteger)self.viewModel.list.count / API_PAGE_SIZE + 1;
     }
     
-    [self.viewModel loadCollectListWithPageIndex:pageIndex success:^(BOOL noMoreData) {
+    [self.viewModel loadDataListWithPageIndex:pageIndex success:^(BOOL noMoreData) {
         @strongify(self)
         
         if (noMoreData) {

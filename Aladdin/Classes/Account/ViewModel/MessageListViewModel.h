@@ -11,9 +11,8 @@
 
 @interface MessageListViewModel : NSObject
 
-@property (nonatomic, strong) NSArray *messageList;
+@property (nonatomic, strong) NSMutableArray *list;
 
-- (void)getMessageListWithType:(NSInteger)type
-                       Success:(VoidBlock)success
-                       failure:(VoidBlock)failure;
+- (void)loadDataListWithPageIndex:(NSInteger)pageIndex type:(NSInteger)type success:(void (^)(BOOL noMoreData))success failure:(void (^)(NSError *error))failure;
+
 @end

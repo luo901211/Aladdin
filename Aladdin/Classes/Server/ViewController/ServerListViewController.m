@@ -91,10 +91,10 @@
     
     NSInteger pageIndex = 1;
     if (type == WQFetchDataTypeLoadMore) {
-        pageIndex = (NSInteger)self.viewModel.serverList.count / API_PAGE_SIZE + 1;
+        pageIndex = (NSInteger)self.viewModel.list.count / API_PAGE_SIZE + 1;
     }
     
-    [self.viewModel loadServerListWithPageIndex:pageIndex success:^(BOOL noMoreData) {
+    [self.viewModel loadDataListWithPageIndex:pageIndex success:^(BOOL noMoreData) {
         @strongify(self)
         
         if (noMoreData) {
@@ -126,17 +126,17 @@
 #pragma mark - Table view data source
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ALDServerModel *model = self.viewModel.serverList[indexPath.row];
+    ALDServerModel *model = self.viewModel.list[indexPath.row];
     return [ServerCell heightForRow:model];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.viewModel.serverList.count;
+    return self.viewModel.list.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ServerCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ServerCell"];
-    ALDServerModel *model = self.viewModel.serverList[indexPath.row];
+    ALDServerModel *model = self.viewModel.list[indexPath.row];
     cell.model = model;
     return cell;
 }
