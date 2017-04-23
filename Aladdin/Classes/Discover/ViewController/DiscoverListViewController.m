@@ -12,6 +12,7 @@
 #import "TeachingVideoContainerVC.h"
 #import "FinanceListVC.h"
 #import "PolicyContainerVC.h"
+#import "ExpertContainerVC.h"
 @interface DiscoverListViewController ()
 
 @property (nonatomic, strong) NSMutableArray *arrayList;
@@ -75,6 +76,12 @@
         case 0:
         {
             TeachingVideoContainerVC *vc = [[TeachingVideoContainerVC alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 1:
+        {
+            ExpertContainerVC *vc = [[ExpertContainerVC alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;

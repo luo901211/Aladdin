@@ -89,6 +89,7 @@
  */
 #define API_DISCOVER_POLICY_DETAIL @"/policy/detail"
 
+
 /*
  * 财务秘籍-列表
  * page_num：非必填，第几页，默认1
@@ -106,6 +107,46 @@
  * id：必传，章节id（上个接口返回的id）
  */
 #define API_DISCOVER_FINANCE_DETAIL @"/esoterica/detail"
+
+
+/*
+ * 大咖-列表
+ * level：必填  1优秀回答者，2知名专家
+ * page_num：非必填，第几页，默认1
+ * page_size：非必填，每页条数，默认20
+ */
+#define API_DISCOVER_EXPERT_LIST @"/expert/index"
+/*
+ * 大咖-详情
+ * id：必传，大咖用户id	
+ */
+#define API_DISCOVER_EXPERT_DETAIL @"/expert/detail"
+
+/*
+ * 大咖-专家观点列表
+ * id：必传，专家用户id
+ * page_num：非必填，第几页，默认1
+ * page_size：非必填，每页条数，默认20
+ */
+#define API_DISCOVER_EXPERT_NEWS_LIST @"/expert/news"
+
+/*
+ * 大咖-专家解答列表
+ * id：必传，专家用户id
+ * page_num：非必填，第几页，默认1
+ * page_size：非必填，每页条数，默认20
+ */
+#define API_DISCOVER_EXPERT_ANSWER_LIST @"/expert/answer"
+
+/*
+ * 大咖-专家发表观点
+ * token：必传，用户标识
+ * title：必传，标题
+ * desc：选填  描述
+ * detail：必传，内容
+ * pic：选填，封面图name=pic
+ */
+#define API_DISCOVER_EXPERT_NEWS_ADD @"/expert/addNews"
 
 
 /************************************************************************************************/

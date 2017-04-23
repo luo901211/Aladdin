@@ -40,6 +40,12 @@
 		A422999D1EACA61200F62707 /* FinanceListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A422999C1EACA61200F62707 /* FinanceListViewModel.m */; };
 		A42299A01EACA62800F62707 /* FinanceChapterListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A422999F1EACA62800F62707 /* FinanceChapterListViewModel.m */; };
 		A42299A31EACA63900F62707 /* FinanceDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A42299A21EACA63900F62707 /* FinanceDetailViewModel.m */; };
+		A42299A61EACAC7A00F62707 /* ExpertContainerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A42299A51EACAC7A00F62707 /* ExpertContainerVC.m */; };
+		A42299A91EACAC9000F62707 /* ExpertListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A42299A81EACAC9000F62707 /* ExpertListVC.m */; };
+		A42299AD1EACAE3100F62707 /* ExpertCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A42299AB1EACAE3100F62707 /* ExpertCell.m */; };
+		A42299AE1EACAE3100F62707 /* ExpertCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A42299AC1EACAE3100F62707 /* ExpertCell.xib */; };
+		A42299B11EACAE5300F62707 /* ALDExpertModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A42299B01EACAE5300F62707 /* ALDExpertModel.m */; };
+		A42299B41EACAEC100F62707 /* ExpertListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A42299B31EACAEC100F62707 /* ExpertListViewModel.m */; };
 		A43C93511E9E2342008B877D /* UIView+BlockGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = A43C93501E9E2342008B877D /* UIView+BlockGesture.m */; };
 		A43F9DCF1E9F2CBC00AA831E /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A43F9DCD1E9F2CBC00AA831E /* LoginVC.m */; };
 		A43F9DD01E9F2CBC00AA831E /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43F9DCE1E9F2CBC00AA831E /* LoginVC.xib */; };
@@ -215,6 +221,17 @@
 		A422999F1EACA62800F62707 /* FinanceChapterListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinanceChapterListViewModel.m; sourceTree = "<group>"; };
 		A42299A11EACA63900F62707 /* FinanceDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinanceDetailViewModel.h; sourceTree = "<group>"; };
 		A42299A21EACA63900F62707 /* FinanceDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinanceDetailViewModel.m; sourceTree = "<group>"; };
+		A42299A41EACAC7A00F62707 /* ExpertContainerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpertContainerVC.h; sourceTree = "<group>"; };
+		A42299A51EACAC7A00F62707 /* ExpertContainerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpertContainerVC.m; sourceTree = "<group>"; };
+		A42299A71EACAC9000F62707 /* ExpertListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpertListVC.h; sourceTree = "<group>"; };
+		A42299A81EACAC9000F62707 /* ExpertListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpertListVC.m; sourceTree = "<group>"; };
+		A42299AA1EACAE3100F62707 /* ExpertCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpertCell.h; sourceTree = "<group>"; };
+		A42299AB1EACAE3100F62707 /* ExpertCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpertCell.m; sourceTree = "<group>"; };
+		A42299AC1EACAE3100F62707 /* ExpertCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpertCell.xib; sourceTree = "<group>"; };
+		A42299AF1EACAE5300F62707 /* ALDExpertModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDExpertModel.h; sourceTree = "<group>"; };
+		A42299B01EACAE5300F62707 /* ALDExpertModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDExpertModel.m; sourceTree = "<group>"; };
+		A42299B21EACAEC100F62707 /* ExpertListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpertListViewModel.h; sourceTree = "<group>"; };
+		A42299B31EACAEC100F62707 /* ExpertListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpertListViewModel.m; sourceTree = "<group>"; };
 		A43C934F1E9E2342008B877D /* UIView+BlockGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BlockGesture.h"; sourceTree = "<group>"; };
 		A43C93501E9E2342008B877D /* UIView+BlockGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BlockGesture.m"; sourceTree = "<group>"; };
 		A43F9DCC1E9F2CBC00AA831E /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
@@ -898,6 +915,8 @@
 				A42299911EACA59200F62707 /* ALDFinanceChapterModel.m */,
 				A42299931EACA5A000F62707 /* ALDFinanceDetailModel.h */,
 				A42299941EACA5A000F62707 /* ALDFinanceDetailModel.m */,
+				A42299AF1EACAE5300F62707 /* ALDExpertModel.h */,
+				A42299B01EACAE5300F62707 /* ALDExpertModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -917,6 +936,9 @@
 				A42299961EACA5BE00F62707 /* FinanceCell.h */,
 				A42299971EACA5BE00F62707 /* FinanceCell.m */,
 				A42299981EACA5BE00F62707 /* FinanceCell.xib */,
+				A42299AA1EACAE3100F62707 /* ExpertCell.h */,
+				A42299AB1EACAE3100F62707 /* ExpertCell.m */,
+				A42299AC1EACAE3100F62707 /* ExpertCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -945,6 +967,10 @@
 				A4BF61411EACA469003F876F /* FinanceChapterListVC.m */,
 				A4BF61431EACA484003F876F /* FinanceDetailVC.h */,
 				A4BF61441EACA484003F876F /* FinanceDetailVC.m */,
+				A42299A41EACAC7A00F62707 /* ExpertContainerVC.h */,
+				A42299A51EACAC7A00F62707 /* ExpertContainerVC.m */,
+				A42299A71EACAC9000F62707 /* ExpertListVC.h */,
+				A42299A81EACAC9000F62707 /* ExpertListVC.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -966,6 +992,8 @@
 				A422999F1EACA62800F62707 /* FinanceChapterListViewModel.m */,
 				A42299A11EACA63900F62707 /* FinanceDetailViewModel.h */,
 				A42299A21EACA63900F62707 /* FinanceDetailViewModel.m */,
+				A42299B21EACAEC100F62707 /* ExpertListViewModel.h */,
+				A42299B31EACAEC100F62707 /* ExpertListViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1213,6 +1241,7 @@
 				A40891591EA39D650071D22D /* MessageTypeCell.xib in Resources */,
 				A408917A1EA462360071D22D /* User.xcassets in Resources */,
 				A422999A1EACA5BE00F62707 /* FinanceCell.xib in Resources */,
+				A42299AE1EACAE3100F62707 /* ExpertCell.xib in Resources */,
 				A4C32EB51E9A6A5600D53E1A /* TeachingVideoCollectionViewCell.xib in Resources */,
 				A4D682E11E976CEB00FBA51C /* Main.storyboard in Resources */,
 				A43F9DD51E9F2CD400AA831E /* RegisterVC.xib in Resources */,
@@ -1275,6 +1304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A42299A61EACAC7A00F62707 /* ExpertContainerVC.m in Sources */,
 				A40891661EA3AF280071D22D /* ALDServerModel.m in Sources */,
 				A4C32EBA1E9A7FB000D53E1A /* XAspect-AppearanceConfigAppDelegate.m in Sources */,
 				A42299A01EACA62800F62707 /* FinanceChapterListViewModel.m in Sources */,
@@ -1283,6 +1313,7 @@
 				A4C32AF51E98A7B800D53E1A /* dateTimeHelper.m in Sources */,
 				A408914D1EA399560071D22D /* MessageListVC.m in Sources */,
 				A4C32AEE1E98A7B800D53E1A /* GCDSemaphore.m in Sources */,
+				A42299AD1EACAE3100F62707 /* ExpertCell.m in Sources */,
 				A4C32AF61E98A7B800D53E1A /* MPUmengHelper.m in Sources */,
 				A499A9A21EA7127300B45425 /* UserInfoListVC.m in Sources */,
 				A4DF5FFF1EA9B6A90084963F /* VideoListViewModel.m in Sources */,
@@ -1352,6 +1383,7 @@
 				A4DF600A1EA9D43F0084963F /* ALDVideoDetailModel.m in Sources */,
 				A4D682D81E976CEB00FBA51C /* main.m in Sources */,
 				A4DF60251EA9FDDA0084963F /* PolicyCell.m in Sources */,
+				A42299A91EACAC9000F62707 /* ExpertListVC.m in Sources */,
 				A43F9DEA1E9FB1B300AA831E /* RegisterViewModel.m in Sources */,
 				A4BF61481EACA50E003F876F /* ALDFinanceModel.m in Sources */,
 				A40891461EA397A30071D22D /* MessageTypeViewModel.m in Sources */,
@@ -1373,6 +1405,7 @@
 				A40891421EA397540071D22D /* MessageTypeListVC.m in Sources */,
 				A499A98C1EA622A800B45425 /* NewsDetailViewController.m in Sources */,
 				A4C32E6D1E9A1BF400D53E1A /* SGNavigationItemTitleView.m in Sources */,
+				A42299B11EACAE5300F62707 /* ALDExpertModel.m in Sources */,
 				A499A9851EA622A800B45425 /* ALDNewsBannerModel.m in Sources */,
 				A499A9A61EA75EA000B45425 /* ALDCollectModel.m in Sources */,
 				A4C32AED1E98A7B800D53E1A /* GCDQueue.m in Sources */,
@@ -1390,6 +1423,7 @@
 				A4DF601B1EA9FB030084963F /* PolicyDetailViewModel.m in Sources */,
 				A4C32E6E1E9A1BF400D53E1A /* SGSegmentedControlBottomView.m in Sources */,
 				A4C32E251E98AD0F00D53E1A /* NSString+Additions.m in Sources */,
+				A42299B41EACAEC100F62707 /* ExpertListViewModel.m in Sources */,
 				A40891361EA35F050071D22D /* User.m in Sources */,
 				A40891491EA398800071D22D /* ALDMessageTypeModel.m in Sources */,
 				A45378AC1EA9A10A00020C5D /* SGPageTitleView.m in Sources */,
