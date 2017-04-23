@@ -89,6 +89,24 @@
  */
 #define API_DISCOVER_POLICY_DETAIL @"/policy/detail"
 
+/*
+ * 财务秘籍-列表
+ * page_num：非必填，第几页，默认1
+ * page_size：非必填，每页条数，默认20
+ */
+#define API_DISCOVER_FINANCE_LIST @"/esoterica/index"
+/*
+ * 财务秘籍-章节
+ * id：必传，秘籍id（上个接口返回的id）
+ */
+#define API_DISCOVER_FINANCE_CHAPTER @"/esoterica/chapter"
+/*
+ * 政策法规-详情
+ * token：必传，用户标识
+ * id：必传，章节id（上个接口返回的id）
+ */
+#define API_DISCOVER_FINANCE_DETAIL @"/esoterica/detail"
+
 
 /************************************************************************************************/
 /***账号模块***/

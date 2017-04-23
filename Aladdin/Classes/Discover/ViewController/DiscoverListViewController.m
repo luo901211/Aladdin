@@ -10,6 +10,7 @@
 #import "DiscoverCell.h"
 #import "DiscoverModel.h"
 #import "TeachingVideoContainerVC.h"
+#import "FinanceListVC.h"
 #import "PolicyContainerVC.h"
 @interface DiscoverListViewController ()
 
@@ -74,6 +75,12 @@
         case 0:
         {
             TeachingVideoContainerVC *vc = [[TeachingVideoContainerVC alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 2:
+        {
+            FinanceListVC *vc = [[FinanceListVC alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
