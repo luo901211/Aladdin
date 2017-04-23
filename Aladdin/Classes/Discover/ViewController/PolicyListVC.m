@@ -65,7 +65,7 @@
         pageIndex = (NSInteger)self.viewModel.list.count / API_PAGE_SIZE + 1;
     }
     
-    [self.viewModel loadDataListWithPageIndex:pageIndex success:^(BOOL noMoreData) {
+    [self.viewModel loadDataListWithID:self.ID pageIndex:pageIndex success:^(BOOL noMoreData) {
         @strongify(self)
         
         if (noMoreData) {

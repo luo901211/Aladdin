@@ -67,6 +67,7 @@
     
     for (int i = 0; i < titleArr.count; i++) {
         PolicyListVC *vc = [[PolicyListVC alloc] init];
+        vc.ID = [self.arrayList[i][@"id"] integerValue];
         [childVC addObject:vc];
         [self addChildViewController:vc];
     }
