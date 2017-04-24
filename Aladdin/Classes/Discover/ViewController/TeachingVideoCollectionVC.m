@@ -27,7 +27,7 @@ static NSString * const reuseIdentifier = @"TeachingVideoCollectionViewCell";
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.minimumInteritemSpacing = 0;
     flowLayout.minimumLineSpacing = 0;
-    flowLayout.itemSize = CGSizeMake(Main_Screen_Width / 2, 165 * kScreenWidthRatio);
+    flowLayout.itemSize = CGSizeMake(Main_Screen_Width / 2, 178 * kScreenWidthRatio);
     flowLayout.headerReferenceSize = CGSizeMake(Main_Screen_Width, 10);
 
     return [super initWithCollectionViewLayout:flowLayout];

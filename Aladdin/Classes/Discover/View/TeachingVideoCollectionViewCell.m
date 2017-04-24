@@ -29,7 +29,7 @@
     [self.imageV sd_setImageWithURL:[NSURL URLWithString:model.pic_url]];
     self.titleLabel.text = model.title;
 //    self.collectCountLabel.text = [NSString stringWithFormat:@"收藏： %@",model.view_num];
-    self.scanCountLabel.text = [NSString stringWithFormat:@"%@ 浏览",model.view_num];
+    self.scanCountLabel.text = [NSString stringWithFormat:@"浏览%@",model.view_num];
 }
 
 @end
