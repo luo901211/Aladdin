@@ -30,6 +30,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.navigationItem.title = @"教学视频";
     
@@ -72,13 +73,13 @@
     }
     
     /// pageContentView
-    CGFloat contentViewHeight = self.view.frame.size.height - 108;
-    self.pageContentView = [[SGPageContentView alloc] initWithFrame:CGRectMake(0, 108, self.view.frame.size.width, contentViewHeight) parentVC:self childVCs:childVC];
+    CGFloat contentViewHeight = self.view.frame.size.height - 116;
+    self.pageContentView = [[SGPageContentView alloc] initWithFrame:CGRectMake(0, 116, self.view.frame.size.width, contentViewHeight) parentVC:self childVCs:childVC];
     _pageContentView.delegatePageContentView = self;
     [self.view addSubview:_pageContentView];
     
     /// pageTitleView
-    self.pageTitleView = [SGPageTitleView pageTitleViewWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 44) delegate:self titleNames:titleArr];
+    self.pageTitleView = [SGPageTitleView pageTitleViewWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 52) delegate:self titleNames:titleArr];
     [self.view addSubview:_pageTitleView];
     _pageTitleView.selectedIndex = 0;
     _pageTitleView.titleColorStateNormal = COLOR_WORD_GRAY_2;

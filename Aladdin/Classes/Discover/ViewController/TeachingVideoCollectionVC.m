@@ -28,7 +28,8 @@ static NSString * const reuseIdentifier = @"TeachingVideoCollectionViewCell";
     flowLayout.minimumInteritemSpacing = 0;
     flowLayout.minimumLineSpacing = 0;
     flowLayout.itemSize = CGSizeMake(Main_Screen_Width / 2, 165 * kScreenWidthRatio);
-    
+    flowLayout.headerReferenceSize = CGSizeMake(Main_Screen_Width, 10);
+
     return [super initWithCollectionViewLayout:flowLayout];
 }
 
@@ -46,6 +47,9 @@ static NSString * const reuseIdentifier = @"TeachingVideoCollectionViewCell";
     
     // Register cell classes
     [self.collectionView registerNib:[UINib nibWithNibName:@"TeachingVideoCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:reuseIdentifier];
+    [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView"];
+
+
     // Do any additional setup after loading the view.
     self.collectionView.backgroundColor = [UIColor whiteColor];
     
@@ -105,7 +109,18 @@ static NSString * const reuseIdentifier = @"TeachingVideoCollectionViewCell";
 }
 
 #pragma mark <UICollectionViewDataSource>
+// 设置headerView和footerView的
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionReusableView *reusableView = nil;
+    if (kind == UICollectionElementKindSectionHeader) {
+        UICollectionReusableView *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
+        reusableView = header;
+    }
+    reusableView.backgroundColor = HEXCOLOR(0xf6f6f6);
 
+    return reusableView;
+}
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.viewModel.list.count;
 }
