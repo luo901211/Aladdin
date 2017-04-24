@@ -28,18 +28,15 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="房地产税务总监工作手册" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYM-wV-LFQ">
-                        <rect key="frame" x="150" y="18" width="162" height="20"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="20" id="Az8-0r-nJi"/>
-                        </constraints>
+                        <rect key="frame" x="150" y="15" width="162" height="20"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="个人之间置换房产," textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69a-Jg-0ck">
-                        <rect key="frame" x="150" y="46" width="162" height="17"/>
+                        <rect key="frame" x="150" y="50" width="162" height="17"/>
                         <constraints>
-                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="wFK-k7-X7m"/>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="55" id="wFK-k7-X7m"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -50,11 +47,11 @@
                     <constraint firstItem="Tnw-mu-WS1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="1wr-lk-L0n"/>
                     <constraint firstItem="fYM-wV-LFQ" firstAttribute="leading" secondItem="Tnw-mu-WS1" secondAttribute="trailing" constant="15" id="3zF-h3-x8d"/>
                     <constraint firstAttribute="trailing" secondItem="69a-Jg-0ck" secondAttribute="trailing" constant="8" id="Rdv-oh-rCS"/>
-                    <constraint firstItem="69a-Jg-0ck" firstAttribute="top" secondItem="fYM-wV-LFQ" secondAttribute="bottom" constant="8" id="VRa-pi-fDO"/>
+                    <constraint firstItem="69a-Jg-0ck" firstAttribute="top" secondItem="fYM-wV-LFQ" secondAttribute="bottom" constant="15" id="VRa-pi-fDO"/>
+                    <constraint firstItem="fYM-wV-LFQ" firstAttribute="top" secondItem="Tnw-mu-WS1" secondAttribute="top" id="eo0-XZ-vxX"/>
                     <constraint firstItem="Tnw-mu-WS1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="lBj-pg-bb0"/>
                     <constraint firstItem="fYM-wV-LFQ" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="qvR-hK-GT8"/>
                     <constraint firstItem="69a-Jg-0ck" firstAttribute="leading" secondItem="Tnw-mu-WS1" secondAttribute="trailing" constant="15" id="t8G-Bc-8gE"/>
-                    <constraint firstItem="fYM-wV-LFQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="xrv-dE-uXK"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

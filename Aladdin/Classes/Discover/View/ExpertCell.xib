@@ -27,25 +27,19 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="宋庆国" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmH-r6-gtz">
-                        <rect key="frame" x="79" y="12" width="229" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="21" id="lfa-hu-V4f"/>
-                        </constraints>
+                        <rect key="frame" x="79" y="16" width="229" height="19.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="吴柯宏会计事务所" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ps-AG-dBn">
-                        <rect key="frame" x="79" y="41" width="106.5" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="21" id="dIz-2D-eW1"/>
-                        </constraints>
+                        <rect key="frame" x="79" y="43.5" width="106.5" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="注册会计师" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unM-18-09s">
-                        <rect key="frame" x="193.5" y="41" width="67" height="21"/>
+                        <rect key="frame" x="193.5" y="43.5" width="67" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -55,7 +49,7 @@
                     <constraint firstItem="cZf-AZ-woa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="5WL-V2-deE"/>
                     <constraint firstItem="unM-18-09s" firstAttribute="bottom" secondItem="0Ps-AG-dBn" secondAttribute="bottom" id="DHK-TU-3os"/>
                     <constraint firstItem="0Ps-AG-dBn" firstAttribute="top" secondItem="tmH-r6-gtz" secondAttribute="bottom" constant="8" id="DwF-5F-GeM"/>
-                    <constraint firstItem="tmH-r6-gtz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="Hzd-ve-O7z"/>
+                    <constraint firstItem="tmH-r6-gtz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Hzd-ve-O7z"/>
                     <constraint firstItem="tmH-r6-gtz" firstAttribute="leading" secondItem="cZf-AZ-woa" secondAttribute="trailing" constant="12" id="JLc-0g-zkX"/>
                     <constraint firstAttribute="trailing" secondItem="tmH-r6-gtz" secondAttribute="trailing" constant="12" id="W49-WR-VL4"/>
                     <constraint firstItem="unM-18-09s" firstAttribute="top" secondItem="0Ps-AG-dBn" secondAttribute="top" id="enC-T4-q9u"/>
