@@ -9,16 +9,23 @@
 #import "TeachingVideoDetailVC.h"
 #import "VideoDetailViewModel.h"
 #import "ALDVideoDetailModel.h"
+#import <WebKit/WebKit.h>
+#import "TeachingVideoDetailBottomView.h"
 
 @interface TeachingVideoDetailVC ()
 
 @property (strong, nonatomic) VideoDetailViewModel *viewModel;
 @property (strong, nonatomic) ALDVideoDetailModel *model;
 
+@property (strong, nonatomic) WKWebView *webView;
+@property (strong, nonatomic) UIScrollView *scrollView;
+@property (strong, nonatomic) TeachingVideoDetailBottomView *bottomView;
+
 @end
 
 @implementation TeachingVideoDetailVC
 
+#pragma mark - Setter & Getter
 - (VideoDetailViewModel *)viewModel {
     if (!_viewModel) {
         _viewModel = [[VideoDetailViewModel alloc] init];
@@ -28,21 +35,55 @@
 
 - (void)setModel:(ALDVideoDetailModel *)model {
     _model = model;
+    
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:model.url]]];
+    self.bottomView.model = model;
+    self.scrollView.contentSize = CGSizeMake(Main_Screen_Width, self.bottomView.height);
+
 }
 
+- (WKWebView *)webView {
+    if (!_webView) {
+        _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 64, Main_Screen_Width, 210 * kScreenWidthRatio)];
+    }
+    return _webView;
+}
+- (UIScrollView *)scrollView {
+    if (!_scrollView) {
+        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 64 + 210 * kScreenWidthRatio, Main_Screen_Width, Main_Screen_Height - 64 - 210 * kScreenWidthRatio)];
+    }
+    return _scrollView;
+}
+
+- (TeachingVideoDetailBottomView *)bottomView {
+    if (!_bottomView) {
+        _bottomView = [[NSBundle mainBundle] loadNibNamed:@"TeachingVideoDetailBottomView" owner:nil options:nil][0];
+        _bottomView.frame = CGRectMake(0, 0, self.scrollView.width, 0);
+    }
+    return _bottomView;
+}
+
+#pragma mark - 生命周期
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.navigationItem.title = @"视频详情";
-    
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    [self initUI];
     [self loadData];
+}
+
+- (void)initUI {
+    [self.view addSubview:self.webView];
+    
+    [self.view addSubview:self.scrollView];
+    [self.scrollView addSubview:self.bottomView];
 }
 
 - (void)loadData {
     @weakify(self);
     [self.viewModel loadDataWithID:self.ID success:^(id obj) {
         @strongify(self);
-        NSLog(@"视频详情： %@",obj);
         ALDVideoDetailModel *model = [ALDVideoDetailModel mj_objectWithKeyValues:obj];
         self.model = model;
     } failure:^(id obj) {
@@ -54,15 +95,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

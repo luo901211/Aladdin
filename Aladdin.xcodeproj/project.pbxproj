@@ -46,6 +46,8 @@
 		A42299AE1EACAE3100F62707 /* ExpertCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A42299AC1EACAE3100F62707 /* ExpertCell.xib */; };
 		A42299B11EACAE5300F62707 /* ALDExpertModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A42299B01EACAE5300F62707 /* ALDExpertModel.m */; };
 		A42299B41EACAEC100F62707 /* ExpertListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A42299B31EACAEC100F62707 /* ExpertListViewModel.m */; };
+		A42299B71EAD9DB000F62707 /* TeachingVideoDetailBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = A42299B61EAD9DB000F62707 /* TeachingVideoDetailBottomView.m */; };
+		A42299B91EAD9DBB00F62707 /* TeachingVideoDetailBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A42299B81EAD9DBB00F62707 /* TeachingVideoDetailBottomView.xib */; };
 		A43C93511E9E2342008B877D /* UIView+BlockGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = A43C93501E9E2342008B877D /* UIView+BlockGesture.m */; };
 		A43F9DCF1E9F2CBC00AA831E /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A43F9DCD1E9F2CBC00AA831E /* LoginVC.m */; };
 		A43F9DD01E9F2CBC00AA831E /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43F9DCE1E9F2CBC00AA831E /* LoginVC.xib */; };
@@ -232,6 +234,9 @@
 		A42299B01EACAE5300F62707 /* ALDExpertModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDExpertModel.m; sourceTree = "<group>"; };
 		A42299B21EACAEC100F62707 /* ExpertListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpertListViewModel.h; sourceTree = "<group>"; };
 		A42299B31EACAEC100F62707 /* ExpertListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpertListViewModel.m; sourceTree = "<group>"; };
+		A42299B51EAD9DB000F62707 /* TeachingVideoDetailBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeachingVideoDetailBottomView.h; sourceTree = "<group>"; };
+		A42299B61EAD9DB000F62707 /* TeachingVideoDetailBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeachingVideoDetailBottomView.m; sourceTree = "<group>"; };
+		A42299B81EAD9DBB00F62707 /* TeachingVideoDetailBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeachingVideoDetailBottomView.xib; sourceTree = "<group>"; };
 		A43C934F1E9E2342008B877D /* UIView+BlockGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BlockGesture.h"; sourceTree = "<group>"; };
 		A43C93501E9E2342008B877D /* UIView+BlockGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BlockGesture.m"; sourceTree = "<group>"; };
 		A43F9DCC1E9F2CBC00AA831E /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
@@ -930,6 +935,9 @@
 				A4C32EB11E9A6A5600D53E1A /* TeachingVideoCollectionViewCell.h */,
 				A4C32EB21E9A6A5600D53E1A /* TeachingVideoCollectionViewCell.m */,
 				A4C32EB31E9A6A5600D53E1A /* TeachingVideoCollectionViewCell.xib */,
+				A42299B51EAD9DB000F62707 /* TeachingVideoDetailBottomView.h */,
+				A42299B61EAD9DB000F62707 /* TeachingVideoDetailBottomView.m */,
+				A42299B81EAD9DBB00F62707 /* TeachingVideoDetailBottomView.xib */,
 				A4DF60221EA9FDDA0084963F /* PolicyCell.h */,
 				A4DF60231EA9FDDA0084963F /* PolicyCell.m */,
 				A4DF60241EA9FDDA0084963F /* PolicyCell.xib */,
@@ -1233,6 +1241,7 @@
 				A4C32EA41E9A5F8B00D53E1A /* DiscoverCell.xib in Resources */,
 				A4C32E731E9A343900D53E1A /* Login.xcassets in Resources */,
 				A4DF60041EA9D4120084963F /* TeachingVideoDetailVC.xib in Resources */,
+				A42299B91EAD9DBB00F62707 /* TeachingVideoDetailBottomView.xib in Resources */,
 				A499A98B1EA622A800B45425 /* NewsDetailBottomView.xib in Resources */,
 				A408916B1EA3AF420071D22D /* ServerCell.xib in Resources */,
 				A4D682E31E976CEB00FBA51C /* Assets.xcassets in Resources */,
@@ -1377,6 +1386,7 @@
 				A4C32E9F1E9A5F7100D53E1A /* DiscoverListViewController.m in Sources */,
 				A45378881EA7620300020C5D /* CollectCell.m in Sources */,
 				A4C32EA71E9A614D00D53E1A /* DiscoverModel.m in Sources */,
+				A42299B71EAD9DB000F62707 /* TeachingVideoDetailBottomView.m in Sources */,
 				A4C32E301E98AE6900D53E1A /* WQHomeTabBarController.m in Sources */,
 				A4C7C4E11E9F1DF3003A36E0 /* WQPlaceholderTextView.m in Sources */,
 				A453789E1EA8512D00020C5D /* QuestionListViewModel.m in Sources */,
