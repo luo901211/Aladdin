@@ -11,9 +11,9 @@
 #import "QuestionListVC.h"
 
 @interface QuestionContainerVC ()<SGPageTitleViewDelegate, SGPageContentViewDelegare>
+
 @property (nonatomic, strong) SGPageTitleView *pageTitleView;
 @property (nonatomic, strong) SGPageContentView *pageContentView;
-
 
 @end
 
@@ -41,12 +41,18 @@
     NSArray *titles = @[@"精华问答", @"大家都在问", @"我的问答"];
     
     QuestionListVC *vc1 = [[QuestionListVC alloc] init];
-    QuestionListVC *vc2 = [[QuestionListVC alloc] init];
-    QuestionListVC *vc3 = [[QuestionListVC alloc] init];
-    NSArray *childVC = @[vc1, vc2, vc3];
+    vc1.type = QuestionTypeEssence;
     [self addChildViewController:vc1];
+
+    QuestionListVC *vc2 = [[QuestionListVC alloc] init];
+    vc2.type = QuestionTypeNotEssence;
     [self addChildViewController:vc2];
+
+    QuestionListVC *vc3 = [[QuestionListVC alloc] init];
+    vc3.type = QuestionTypeUser;
     [self addChildViewController:vc3];
+
+    NSArray *childVC = @[vc1, vc2, vc3];
     
     /// pageTitleView
     self.pageTitleView = [SGPageTitleView pageTitleViewWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 51) delegate:self titleNames:titles];

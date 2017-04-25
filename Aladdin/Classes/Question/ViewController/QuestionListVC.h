@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "QuestionListViewModel.h"
 
 @interface QuestionListVC : UITableViewController
-
+@property (nonatomic, assign) QuestionType type;
 @end

@@ -23,7 +23,6 @@
 		A408915D1EA39D770071D22D /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A408915B1EA39D770071D22D /* MessageCell.m */; };
 		A408915E1EA39D770071D22D /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A408915C1EA39D770071D22D /* MessageCell.xib */; };
 		A40891621EA3AF110071D22D /* ServerListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891601EA3AF110071D22D /* ServerListViewController.m */; };
-		A40891631EA3AF110071D22D /* ServerListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A40891611EA3AF110071D22D /* ServerListViewController.xib */; };
 		A40891661EA3AF280071D22D /* ALDServerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891651EA3AF280071D22D /* ALDServerModel.m */; };
 		A408916A1EA3AF420071D22D /* ServerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891681EA3AF420071D22D /* ServerCell.m */; };
 		A408916B1EA3AF420071D22D /* ServerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A40891691EA3AF420071D22D /* ServerCell.xib */; };
@@ -61,8 +60,6 @@
 		A45378891EA7620300020C5D /* CollectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A45378871EA7620300020C5D /* CollectCell.xib */; };
 		A453788C1EA7687800020C5D /* CollectListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A453788B1EA7687800020C5D /* CollectListViewModel.m */; };
 		A45378951EA768F000020C5D /* FeedbackViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A45378941EA768F000020C5D /* FeedbackViewModel.m */; };
-		A453789B1EA850A100020C5D /* QuestionListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A453789A1EA850A100020C5D /* QuestionListVC.m */; };
-		A453789E1EA8512D00020C5D /* QuestionListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A453789D1EA8512D00020C5D /* QuestionListViewModel.m */; };
 		A45378AA1EA9A10A00020C5D /* SGHelperTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A45378A11EA9A10A00020C5D /* SGHelperTool.m */; };
 		A45378AB1EA9A10A00020C5D /* SGPageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = A45378A31EA9A10A00020C5D /* SGPageContentView.m */; };
 		A45378AC1EA9A10A00020C5D /* SGPageTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A45378A51EA9A10A00020C5D /* SGPageTitleView.m */; };
@@ -108,6 +105,12 @@
 		A4C266E11EAEEFB2007A5674 /* ExpertDetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C266E01EAEEFB2007A5674 /* ExpertDetailHeaderView.m */; };
 		A4C266E31EAEEFBE007A5674 /* ExpertDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4C266E21EAEEFBE007A5674 /* ExpertDetailHeaderView.xib */; };
 		A4C266E61EAF47C6007A5674 /* UILabel+ChangeLineSpaceAndWordSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C266E51EAF47C6007A5674 /* UILabel+ChangeLineSpaceAndWordSpace.m */; };
+		A4C267391EAF58FC007A5674 /* ALDQuestionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C2672C1EAF58FC007A5674 /* ALDQuestionModel.m */; };
+		A4C2673A1EAF58FC007A5674 /* QuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C2672F1EAF58FC007A5674 /* QuestionCell.m */; };
+		A4C2673B1EAF58FC007A5674 /* QuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4C267301EAF58FC007A5674 /* QuestionCell.xib */; };
+		A4C2673C1EAF58FC007A5674 /* QuestionContainerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C267331EAF58FC007A5674 /* QuestionContainerVC.m */; };
+		A4C2673D1EAF58FC007A5674 /* QuestionListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C267351EAF58FC007A5674 /* QuestionListVC.m */; };
+		A4C2673E1EAF58FC007A5674 /* QuestionListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C267381EAF58FC007A5674 /* QuestionListViewModel.m */; };
 		A4C32AEB1E98A7B800D53E1A /* MPFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32ACE1E98A7B800D53E1A /* MPFileManager.m */; };
 		A4C32AEC1E98A7B800D53E1A /* GCDGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32AD21E98A7B800D53E1A /* GCDGroup.m */; };
 		A4C32AED1E98A7B800D53E1A /* GCDQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32AD41E98A7B800D53E1A /* GCDQueue.m */; };
@@ -210,7 +213,6 @@
 		A408915C1EA39D770071D22D /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		A408915F1EA3AF110071D22D /* ServerListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServerListViewController.h; path = Aladdin/Classes/Server/ViewController/ServerListViewController.h; sourceTree = SOURCE_ROOT; };
 		A40891601EA3AF110071D22D /* ServerListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServerListViewController.m; path = Aladdin/Classes/Server/ViewController/ServerListViewController.m; sourceTree = SOURCE_ROOT; };
-		A40891611EA3AF110071D22D /* ServerListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ServerListViewController.xib; path = Aladdin/Classes/Server/ViewController/ServerListViewController.xib; sourceTree = SOURCE_ROOT; };
 		A40891641EA3AF280071D22D /* ALDServerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDServerModel.h; sourceTree = "<group>"; };
 		A40891651EA3AF280071D22D /* ALDServerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDServerModel.m; sourceTree = "<group>"; };
 		A40891671EA3AF420071D22D /* ServerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerCell.h; sourceTree = "<group>"; };
@@ -368,6 +370,17 @@
 		A4C266E21EAEEFBE007A5674 /* ExpertDetailHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpertDetailHeaderView.xib; sourceTree = "<group>"; };
 		A4C266E41EAF47C6007A5674 /* UILabel+ChangeLineSpaceAndWordSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+ChangeLineSpaceAndWordSpace.h"; sourceTree = "<group>"; };
 		A4C266E51EAF47C6007A5674 /* UILabel+ChangeLineSpaceAndWordSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+ChangeLineSpaceAndWordSpace.m"; sourceTree = "<group>"; };
+		A4C2672B1EAF58FC007A5674 /* ALDQuestionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDQuestionModel.h; sourceTree = "<group>"; };
+		A4C2672C1EAF58FC007A5674 /* ALDQuestionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDQuestionModel.m; sourceTree = "<group>"; };
+		A4C2672E1EAF58FC007A5674 /* QuestionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionCell.h; sourceTree = "<group>"; };
+		A4C2672F1EAF58FC007A5674 /* QuestionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionCell.m; sourceTree = "<group>"; };
+		A4C267301EAF58FC007A5674 /* QuestionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionCell.xib; sourceTree = "<group>"; };
+		A4C267321EAF58FC007A5674 /* QuestionContainerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionContainerVC.h; sourceTree = "<group>"; };
+		A4C267331EAF58FC007A5674 /* QuestionContainerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionContainerVC.m; sourceTree = "<group>"; };
+		A4C267341EAF58FC007A5674 /* QuestionListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionListVC.h; sourceTree = "<group>"; };
+		A4C267351EAF58FC007A5674 /* QuestionListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionListVC.m; sourceTree = "<group>"; };
+		A4C267371EAF58FC007A5674 /* QuestionListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionListViewModel.h; sourceTree = "<group>"; };
+		A4C267381EAF58FC007A5674 /* QuestionListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionListViewModel.m; sourceTree = "<group>"; };
 		A4C32ACD1E98A7B800D53E1A /* MPFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPFileManager.h; sourceTree = "<group>"; };
 		A4C32ACE1E98A7B800D53E1A /* MPFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPFileManager.m; sourceTree = "<group>"; };
 		A4C32AD01E98A7B800D53E1A /* GCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCD.h; sourceTree = "<group>"; };
@@ -722,6 +735,56 @@
 				A4A029481E9B2F9D0008F281 /* MJExtensionConfig.m */,
 			);
 			path = ModelHelper;
+			sourceTree = "<group>";
+		};
+		A4C267291EAF58FC007A5674 /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				A4C2672A1EAF58FC007A5674 /* Model */,
+				A4C2672D1EAF58FC007A5674 /* View */,
+				A4C267311EAF58FC007A5674 /* ViewController */,
+				A4C267361EAF58FC007A5674 /* ViewModel */,
+			);
+			path = Question;
+			sourceTree = "<group>";
+		};
+		A4C2672A1EAF58FC007A5674 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A4C2672B1EAF58FC007A5674 /* ALDQuestionModel.h */,
+				A4C2672C1EAF58FC007A5674 /* ALDQuestionModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A4C2672D1EAF58FC007A5674 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A4C2672E1EAF58FC007A5674 /* QuestionCell.h */,
+				A4C2672F1EAF58FC007A5674 /* QuestionCell.m */,
+				A4C267301EAF58FC007A5674 /* QuestionCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A4C267311EAF58FC007A5674 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A4C267321EAF58FC007A5674 /* QuestionContainerVC.h */,
+				A4C267331EAF58FC007A5674 /* QuestionContainerVC.m */,
+				A4C267341EAF58FC007A5674 /* QuestionListVC.h */,
+				A4C267351EAF58FC007A5674 /* QuestionListVC.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A4C267361EAF58FC007A5674 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A4C267371EAF58FC007A5674 /* QuestionListViewModel.h */,
+				A4C267381EAF58FC007A5674 /* QuestionListViewModel.m */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		A4C32ACC1E98A7B800D53E1A /* FileManager */ = {
@@ -1115,7 +1178,6 @@
 			children = (
 				A408915F1EA3AF110071D22D /* ServerListViewController.h */,
 				A40891601EA3AF110071D22D /* ServerListViewController.m */,
-				A40891611EA3AF110071D22D /* ServerListViewController.xib */,
 				A408916C1EA3B04F0071D22D /* ServerDetailViewController.h */,
 				A408916D1EA3B04F0071D22D /* ServerDetailViewController.m */,
 				A408916E1EA3B04F0071D22D /* ServerDetailViewController.xib */,
@@ -1207,6 +1269,7 @@
 		A4D682ED1E97786800FBA51C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A4C267291EAF58FC007A5674 /* Question */,
 				A499A9661EA622A800B45425 /* Home */,
 				A43F9DC71E9F2C9B00AA831E /* Account */,
 				A4C32E2D1E98AE6900D53E1A /* TabBar */,
@@ -1306,7 +1369,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A40891631EA3AF110071D22D /* ServerListViewController.xib in Resources */,
 				A4D682E61E976CEB00FBA51C /* LaunchScreen.storyboard in Resources */,
 				A43F9DD01E9F2CBC00AA831E /* LoginVC.xib in Resources */,
 				A40891701EA3B04F0071D22D /* ServerDetailViewController.xib in Resources */,
@@ -1328,6 +1390,7 @@
 				A408917A1EA462360071D22D /* User.xcassets in Resources */,
 				A422999A1EACA5BE00F62707 /* FinanceCell.xib in Resources */,
 				A42299AE1EACAE3100F62707 /* ExpertCell.xib in Resources */,
+				A4C2673B1EAF58FC007A5674 /* QuestionCell.xib in Resources */,
 				A4C32EB51E9A6A5600D53E1A /* TeachingVideoCollectionViewCell.xib in Resources */,
 				A4D682E11E976CEB00FBA51C /* Main.storyboard in Resources */,
 				A43F9DD51E9F2CD400AA831E /* RegisterVC.xib in Resources */,
@@ -1420,16 +1483,17 @@
 				A4C32AF01E98A7B800D53E1A /* introductoryPagesHelper.m in Sources */,
 				A4C266DE1EAEE665007A5674 /* ALDExpertDetailModel.m in Sources */,
 				A4C32E361E98AEB500D53E1A /* JRSwizzle.m in Sources */,
+				A4C2673D1EAF58FC007A5674 /* QuestionListVC.m in Sources */,
 				A408917D1EA479EC0071D22D /* UserCenterVC.m in Sources */,
 				A40891391EA367C30071D22D /* User+Helper.m in Sources */,
 				A4C32E371E98AEB500D53E1A /* SYSafeCategory.m in Sources */,
 				A4DF600F1EA9FA810084963F /* PolicyListVC.m in Sources */,
-				A453789B1EA850A100020C5D /* QuestionListVC.m in Sources */,
 				A4C32E701E9A1BF400D53E1A /* SGSegmentedControlStatic.m in Sources */,
 				A4C32E961E9A540E00D53E1A /* UINavigationBar+Awesome.m in Sources */,
 				A42299A31EACA63900F62707 /* FinanceDetailViewModel.m in Sources */,
 				A4AE170D1E9E1383007965EE /* UIView+CustomBorder.m in Sources */,
 				A4DF60211EA9FC9C0084963F /* ALDPolicyDetailModel.m in Sources */,
+				A4C2673C1EAF58FC007A5674 /* QuestionContainerVC.m in Sources */,
 				A45378AB1EA9A10A00020C5D /* SGPageContentView.m in Sources */,
 				A4C32E6B1E9A1BF400D53E1A /* SGImageButton_Horizontal.m in Sources */,
 				A4C32AF31E98A7B800D53E1A /* MPLocationManager.m in Sources */,
@@ -1445,10 +1509,12 @@
 				A42299951EACA5A000F62707 /* ALDFinanceDetailModel.m in Sources */,
 				A4C32AEF1E98A7B800D53E1A /* GCDTimer.m in Sources */,
 				A422999D1EACA61200F62707 /* FinanceListViewModel.m in Sources */,
+				A4C267391EAF58FC007A5674 /* ALDQuestionModel.m in Sources */,
 				A4DF60121EA9FAC00084963F /* PolicyContainerVC.m in Sources */,
 				A4DF60031EA9D4120084963F /* TeachingVideoDetailVC.m in Sources */,
 				A453788C1EA7687800020C5D /* CollectListViewModel.m in Sources */,
 				A4C266BD1EAEE4E0007A5674 /* ExpertAnswerCell.m in Sources */,
+				A4C2673E1EAF58FC007A5674 /* QuestionListViewModel.m in Sources */,
 				A4A029491E9B2F9D0008F281 /* MJExtensionConfig.m in Sources */,
 				A4C32EB41E9A6A5600D53E1A /* TeachingVideoCollectionViewCell.m in Sources */,
 				A499A98A1EA622A800B45425 /* NewsDetailBottomView.m in Sources */,
@@ -1473,12 +1539,12 @@
 				A42299B71EAD9DB000F62707 /* TeachingVideoDetailBottomView.m in Sources */,
 				A4C32E301E98AE6900D53E1A /* WQHomeTabBarController.m in Sources */,
 				A4C7C4E11E9F1DF3003A36E0 /* WQPlaceholderTextView.m in Sources */,
-				A453789E1EA8512D00020C5D /* QuestionListViewModel.m in Sources */,
 				A4C266E61EAF47C6007A5674 /* UILabel+ChangeLineSpaceAndWordSpace.m in Sources */,
 				A4DF600A1EA9D43F0084963F /* ALDVideoDetailModel.m in Sources */,
 				A4D682D81E976CEB00FBA51C /* main.m in Sources */,
 				A4DF60251EA9FDDA0084963F /* PolicyCell.m in Sources */,
 				A42299A91EACAC9000F62707 /* ExpertListVC.m in Sources */,
+				A4C2673A1EAF58FC007A5674 /* QuestionCell.m in Sources */,
 				A43F9DEA1E9FB1B300AA831E /* RegisterViewModel.m in Sources */,
 				A4BF61481EACA50E003F876F /* ALDFinanceModel.m in Sources */,
 				A40891461EA397A30071D22D /* MessageTypeViewModel.m in Sources */,

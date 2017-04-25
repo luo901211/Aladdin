@@ -9,7 +9,7 @@
 #import "WQHomeTabBarController.h"
 #import "ALDBaseNavigationController.h"
 #import "NewsMainViewController.h"
-//#import "AnswerMainViewController.h"
+#import "QuestionContainerVC.h"
 #import "DiscoverListViewController.h"
 #import "ServerListViewController.h"
 
@@ -49,7 +49,7 @@
     ALDBaseNavigationController *firstNavigationController = [[ALDBaseNavigationController alloc]
                                                    initWithRootViewController:firstViewController];
     
-    UIViewController *secondViewController = [[UIViewController alloc] init];
+    QuestionContainerVC *secondViewController = [[QuestionContainerVC alloc] init];
     ALDBaseNavigationController *secondNavigationController = [[ALDBaseNavigationController alloc]
                                                     initWithRootViewController:secondViewController];
     

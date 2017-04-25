@@ -7,21 +7,42 @@
 //
 
 #import "QuestionListVC.h"
+#import "ALDQuestionModel.h"
+#import "QuestionCell.h"
 
 @interface QuestionListVC ()
+
+@property (nonatomic, strong) QuestionListViewModel *viewModel;
 
 @end
 
 @implementation QuestionListVC
 
+- (QuestionListViewModel *)viewModel {
+    if (!_viewModel) {
+        _viewModel = [[QuestionListViewModel alloc] init];
+    }
+    return _viewModel;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.tableView.tableFooterView = [UIView new];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.tableView registerNib:[UINib nibWithNibName:@"QuestionCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"QuestionCell"];
+    
+    __weak QuestionListVC *weakSelf = self;
+    self.tableView.mj_header = [WQChiBaoZiHeader headerWithRefreshingBlock:^{
+        [weakSelf loadDataWithType:WQFetchDataTypeRefresh];
+    }];
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        [weakSelf loadDataWithType:WQFetchDataTypeLoadMore];
+    }];
+    self.tableView.mj_footer.automaticallyHidden = YES;
+    
+    [self.tableView.mj_header beginRefreshing];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,70 +50,70 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - /************************* 刷新数据 ***************************/
+
+- (void)loadDataWithType:(WQFetchDataType)type
+{
+    @weakify(self);
+    
+    NSInteger pageIndex = 1;
+    if (type == WQFetchDataTypeLoadMore) {
+        pageIndex = (NSInteger)self.viewModel.list.count / API_PAGE_SIZE + 1;
+    }
+    
+    
+    
+    [self.viewModel loadDataListWithPageIndex:pageIndex type:self.type success:^(BOOL noMoreData) {
+        @strongify(self)
+        
+        if (noMoreData) {
+            [self.tableView.mj_footer endRefreshingWithNoMoreData];
+        }
+        
+        if (type == WQFetchDataTypeRefresh) {
+            
+            [self.tableView.mj_header endRefreshing];
+            
+        }else if(type == WQFetchDataTypeLoadMore && !noMoreData){
+            
+            [self.tableView.mj_footer endRefreshing];
+            
+        }
+        [self.tableView reloadData];
+    } failure:^(NSError *error) {
+        if (type == WQFetchDataTypeRefresh) {
+            [self.tableView.mj_header endRefreshing];
+        }else if(type == WQFetchDataTypeLoadMore){
+            [self.tableView.mj_footer endRefreshing];
+        }
+        NSLog(@"%@",error.userInfo);
+    }];
+    
+    
+}
+
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    ALDQuestionModel *model = self.viewModel.list[indexPath.row];
+    return [QuestionCell heightForRow:model];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.viewModel.list.count;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    QuestionCell *cell = [tableView dequeueReusableCellWithIdentifier:@"QuestionCell"];
+    ALDQuestionModel *model = self.viewModel.list[indexPath.row];
+    cell.model = model;
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+#pragma mark - Table view delegate
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    ServerDetailViewController *vc = [[ServerDetailViewController alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end
