@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="81" id="XW0-Zr-Hxp" customClass="ExpertNewsCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="81"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XW0-Zr-Hxp" id="F2h-Zh-8Lb">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="80.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017年小微企业最新政策2017年小微企业最新政策2017年微企业最新政策解读2017年微企业最新政策解2017年小微企业最新政策解2017年小微业最新政策解读" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXH-Ll-PrM">
+                        <rect key="frame" x="15" y="19" width="345" height="19.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="N6A-fo-PWg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发布：2017.10.10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfS-GN-JS5">
+                        <rect key="frame" x="265" y="48" width="95" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="阅读: 126" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJB-0d-npy">
+                        <rect key="frame" x="15" y="48" width="52" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="JfS-GN-JS5" secondAttribute="bottom" constant="18" id="1gQ-7c-EoZ"/>
+                    <constraint firstItem="oXH-Ll-PrM" firstAttribute="top" secondItem="F2h-Zh-8Lb" secondAttribute="top" constant="19" id="Irf-ND-w7P"/>
+                    <constraint firstAttribute="bottom" secondItem="CJB-0d-npy" secondAttribute="bottom" constant="18" id="MPL-D4-zZP"/>
+                    <constraint firstAttribute="trailing" secondItem="JfS-GN-JS5" secondAttribute="trailing" constant="15" id="ReE-Ay-1G8"/>
+                    <constraint firstAttribute="trailing" secondItem="oXH-Ll-PrM" secondAttribute="trailing" constant="15" id="Stb-u9-IHH"/>
+                    <constraint firstItem="CJB-0d-npy" firstAttribute="leading" secondItem="F2h-Zh-8Lb" secondAttribute="leading" constant="15" id="eZQ-5e-qb6"/>
+                    <constraint firstItem="oXH-Ll-PrM" firstAttribute="leading" secondItem="F2h-Zh-8Lb" secondAttribute="leading" constant="15" id="zR2-d1-WHR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="timeLabel" destination="JfS-GN-JS5" id="X88-B8-z38"/>
+                <outlet property="titleLabel" destination="oXH-Ll-PrM" id="fjo-9z-X8N"/>
+                <outlet property="viewCountLabel" destination="CJB-0d-npy" id="Ex2-A6-Tgk"/>
+            </connections>
+            <point key="canvasLocation" x="48.5" y="15"/>
+        </tableViewCell>
+    </objects>
+</document>

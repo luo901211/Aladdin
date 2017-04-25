@@ -92,6 +92,21 @@
 		A4BF61421EACA469003F876F /* FinanceChapterListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BF61411EACA469003F876F /* FinanceChapterListVC.m */; };
 		A4BF61451EACA484003F876F /* FinanceDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BF61441EACA484003F876F /* FinanceDetailVC.m */; };
 		A4BF61481EACA50E003F876F /* ALDFinanceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BF61471EACA50E003F876F /* ALDFinanceModel.m */; };
+		A4C266BA1EAEE4D0007A5674 /* ExpertNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C266B91EAEE4D0007A5674 /* ExpertNewsCell.m */; };
+		A4C266BD1EAEE4E0007A5674 /* ExpertAnswerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C266BC1EAEE4E0007A5674 /* ExpertAnswerCell.m */; };
+		A4C266BF1EAEE4F0007A5674 /* ExpertNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4C266BE1EAEE4F0007A5674 /* ExpertNewsCell.xib */; };
+		A4C266C11EAEE501007A5674 /* ExpertAnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4C266C01EAEE501007A5674 /* ExpertAnswerCell.xib */; };
+		A4C266C41EAEE52E007A5674 /* ALDExpertNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C266C31EAEE52E007A5674 /* ALDExpertNewsModel.m */; };
+		A4C266C71EAEE53F007A5674 /* ALDExpertAnswerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C266C61EAEE53F007A5674 /* ALDExpertAnswerModel.m */; };
+		A4C266CA1EAEE555007A5674 /* ExpertDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C266C91EAEE555007A5674 /* ExpertDetailViewModel.m */; };
+		A4C266CD1EAEE57D007A5674 /* ExpertNewsListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C266CC1EAEE57D007A5674 /* ExpertNewsListViewModel.m */; };
+		A4C266D01EAEE58E007A5674 /* ExpertAnswerListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C266CF1EAEE58E007A5674 /* ExpertAnswerListViewModel.m */; };
+		A4C266D41EAEE5A9007A5674 /* ExpertDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C266D21EAEE5A9007A5674 /* ExpertDetailVC.m */; };
+		A4C266D81EAEE5BD007A5674 /* ExpertNewsListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C266D71EAEE5BD007A5674 /* ExpertNewsListVC.m */; };
+		A4C266DB1EAEE5D1007A5674 /* ExpertAnswerListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C266DA1EAEE5D1007A5674 /* ExpertAnswerListVC.m */; };
+		A4C266DE1EAEE665007A5674 /* ALDExpertDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C266DD1EAEE665007A5674 /* ALDExpertDetailModel.m */; };
+		A4C266E11EAEEFB2007A5674 /* ExpertDetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C266E01EAEEFB2007A5674 /* ExpertDetailHeaderView.m */; };
+		A4C266E31EAEEFBE007A5674 /* ExpertDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4C266E21EAEEFBE007A5674 /* ExpertDetailHeaderView.xib */; };
 		A4C32AEB1E98A7B800D53E1A /* MPFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32ACE1E98A7B800D53E1A /* MPFileManager.m */; };
 		A4C32AEC1E98A7B800D53E1A /* GCDGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32AD21E98A7B800D53E1A /* GCDGroup.m */; };
 		A4C32AED1E98A7B800D53E1A /* GCDQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32AD41E98A7B800D53E1A /* GCDQueue.m */; };
@@ -323,6 +338,33 @@
 		A4BF61441EACA484003F876F /* FinanceDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinanceDetailVC.m; sourceTree = "<group>"; };
 		A4BF61461EACA50E003F876F /* ALDFinanceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDFinanceModel.h; sourceTree = "<group>"; };
 		A4BF61471EACA50E003F876F /* ALDFinanceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDFinanceModel.m; sourceTree = "<group>"; };
+		A4C266B81EAEE4D0007A5674 /* ExpertNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpertNewsCell.h; sourceTree = "<group>"; };
+		A4C266B91EAEE4D0007A5674 /* ExpertNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpertNewsCell.m; sourceTree = "<group>"; };
+		A4C266BB1EAEE4E0007A5674 /* ExpertAnswerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpertAnswerCell.h; sourceTree = "<group>"; };
+		A4C266BC1EAEE4E0007A5674 /* ExpertAnswerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpertAnswerCell.m; sourceTree = "<group>"; };
+		A4C266BE1EAEE4F0007A5674 /* ExpertNewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpertNewsCell.xib; sourceTree = "<group>"; };
+		A4C266C01EAEE501007A5674 /* ExpertAnswerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpertAnswerCell.xib; sourceTree = "<group>"; };
+		A4C266C21EAEE52E007A5674 /* ALDExpertNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDExpertNewsModel.h; sourceTree = "<group>"; };
+		A4C266C31EAEE52E007A5674 /* ALDExpertNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDExpertNewsModel.m; sourceTree = "<group>"; };
+		A4C266C51EAEE53F007A5674 /* ALDExpertAnswerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDExpertAnswerModel.h; sourceTree = "<group>"; };
+		A4C266C61EAEE53F007A5674 /* ALDExpertAnswerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDExpertAnswerModel.m; sourceTree = "<group>"; };
+		A4C266C81EAEE555007A5674 /* ExpertDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpertDetailViewModel.h; sourceTree = "<group>"; };
+		A4C266C91EAEE555007A5674 /* ExpertDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpertDetailViewModel.m; sourceTree = "<group>"; };
+		A4C266CB1EAEE57D007A5674 /* ExpertNewsListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpertNewsListViewModel.h; sourceTree = "<group>"; };
+		A4C266CC1EAEE57D007A5674 /* ExpertNewsListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpertNewsListViewModel.m; sourceTree = "<group>"; };
+		A4C266CE1EAEE58E007A5674 /* ExpertAnswerListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpertAnswerListViewModel.h; sourceTree = "<group>"; };
+		A4C266CF1EAEE58E007A5674 /* ExpertAnswerListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpertAnswerListViewModel.m; sourceTree = "<group>"; };
+		A4C266D11EAEE5A9007A5674 /* ExpertDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpertDetailVC.h; sourceTree = "<group>"; };
+		A4C266D21EAEE5A9007A5674 /* ExpertDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpertDetailVC.m; sourceTree = "<group>"; };
+		A4C266D61EAEE5BD007A5674 /* ExpertNewsListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpertNewsListVC.h; sourceTree = "<group>"; };
+		A4C266D71EAEE5BD007A5674 /* ExpertNewsListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpertNewsListVC.m; sourceTree = "<group>"; };
+		A4C266D91EAEE5D1007A5674 /* ExpertAnswerListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpertAnswerListVC.h; sourceTree = "<group>"; };
+		A4C266DA1EAEE5D1007A5674 /* ExpertAnswerListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpertAnswerListVC.m; sourceTree = "<group>"; };
+		A4C266DC1EAEE665007A5674 /* ALDExpertDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDExpertDetailModel.h; sourceTree = "<group>"; };
+		A4C266DD1EAEE665007A5674 /* ALDExpertDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDExpertDetailModel.m; sourceTree = "<group>"; };
+		A4C266DF1EAEEFB2007A5674 /* ExpertDetailHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpertDetailHeaderView.h; sourceTree = "<group>"; };
+		A4C266E01EAEEFB2007A5674 /* ExpertDetailHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpertDetailHeaderView.m; sourceTree = "<group>"; };
+		A4C266E21EAEEFBE007A5674 /* ExpertDetailHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpertDetailHeaderView.xib; sourceTree = "<group>"; };
 		A4C32ACD1E98A7B800D53E1A /* MPFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPFileManager.h; sourceTree = "<group>"; };
 		A4C32ACE1E98A7B800D53E1A /* MPFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPFileManager.m; sourceTree = "<group>"; };
 		A4C32AD01E98A7B800D53E1A /* GCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCD.h; sourceTree = "<group>"; };
@@ -922,6 +964,12 @@
 				A42299941EACA5A000F62707 /* ALDFinanceDetailModel.m */,
 				A42299AF1EACAE5300F62707 /* ALDExpertModel.h */,
 				A42299B01EACAE5300F62707 /* ALDExpertModel.m */,
+				A4C266DC1EAEE665007A5674 /* ALDExpertDetailModel.h */,
+				A4C266DD1EAEE665007A5674 /* ALDExpertDetailModel.m */,
+				A4C266C21EAEE52E007A5674 /* ALDExpertNewsModel.h */,
+				A4C266C31EAEE52E007A5674 /* ALDExpertNewsModel.m */,
+				A4C266C51EAEE53F007A5674 /* ALDExpertAnswerModel.h */,
+				A4C266C61EAEE53F007A5674 /* ALDExpertAnswerModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -947,6 +995,15 @@
 				A42299AA1EACAE3100F62707 /* ExpertCell.h */,
 				A42299AB1EACAE3100F62707 /* ExpertCell.m */,
 				A42299AC1EACAE3100F62707 /* ExpertCell.xib */,
+				A4C266DF1EAEEFB2007A5674 /* ExpertDetailHeaderView.h */,
+				A4C266E01EAEEFB2007A5674 /* ExpertDetailHeaderView.m */,
+				A4C266E21EAEEFBE007A5674 /* ExpertDetailHeaderView.xib */,
+				A4C266B81EAEE4D0007A5674 /* ExpertNewsCell.h */,
+				A4C266B91EAEE4D0007A5674 /* ExpertNewsCell.m */,
+				A4C266BE1EAEE4F0007A5674 /* ExpertNewsCell.xib */,
+				A4C266BB1EAEE4E0007A5674 /* ExpertAnswerCell.h */,
+				A4C266BC1EAEE4E0007A5674 /* ExpertAnswerCell.m */,
+				A4C266C01EAEE501007A5674 /* ExpertAnswerCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -979,6 +1036,12 @@
 				A42299A51EACAC7A00F62707 /* ExpertContainerVC.m */,
 				A42299A71EACAC9000F62707 /* ExpertListVC.h */,
 				A42299A81EACAC9000F62707 /* ExpertListVC.m */,
+				A4C266D11EAEE5A9007A5674 /* ExpertDetailVC.h */,
+				A4C266D21EAEE5A9007A5674 /* ExpertDetailVC.m */,
+				A4C266D61EAEE5BD007A5674 /* ExpertNewsListVC.h */,
+				A4C266D71EAEE5BD007A5674 /* ExpertNewsListVC.m */,
+				A4C266D91EAEE5D1007A5674 /* ExpertAnswerListVC.h */,
+				A4C266DA1EAEE5D1007A5674 /* ExpertAnswerListVC.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1002,6 +1065,12 @@
 				A42299A21EACA63900F62707 /* FinanceDetailViewModel.m */,
 				A42299B21EACAEC100F62707 /* ExpertListViewModel.h */,
 				A42299B31EACAEC100F62707 /* ExpertListViewModel.m */,
+				A4C266C81EAEE555007A5674 /* ExpertDetailViewModel.h */,
+				A4C266C91EAEE555007A5674 /* ExpertDetailViewModel.m */,
+				A4C266CB1EAEE57D007A5674 /* ExpertNewsListViewModel.h */,
+				A4C266CC1EAEE57D007A5674 /* ExpertNewsListViewModel.m */,
+				A4C266CE1EAEE58E007A5674 /* ExpertAnswerListViewModel.h */,
+				A4C266CF1EAEE58E007A5674 /* ExpertAnswerListViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1237,6 +1306,7 @@
 				A43F9DD01E9F2CBC00AA831E /* LoginVC.xib in Resources */,
 				A40891701EA3B04F0071D22D /* ServerDetailViewController.xib in Resources */,
 				A408915E1EA39D770071D22D /* MessageCell.xib in Resources */,
+				A4C266E31EAEEFBE007A5674 /* ExpertDetailHeaderView.xib in Resources */,
 				A4C7C4DB1E9F194A003A36E0 /* WQInputView.xib in Resources */,
 				A4C32EA41E9A5F8B00D53E1A /* DiscoverCell.xib in Resources */,
 				A4C32E731E9A343900D53E1A /* Login.xcassets in Resources */,
@@ -1244,10 +1314,12 @@
 				A42299B91EAD9DBB00F62707 /* TeachingVideoDetailBottomView.xib in Resources */,
 				A499A98B1EA622A800B45425 /* NewsDetailBottomView.xib in Resources */,
 				A408916B1EA3AF420071D22D /* ServerCell.xib in Resources */,
+				A4C266C11EAEE501007A5674 /* ExpertAnswerCell.xib in Resources */,
 				A4D682E31E976CEB00FBA51C /* Assets.xcassets in Resources */,
 				A499A9891EA622A800B45425 /* NewsCell.xib in Resources */,
 				A45378891EA7620300020C5D /* CollectCell.xib in Resources */,
 				A40891591EA39D650071D22D /* MessageTypeCell.xib in Resources */,
+				A4C266BF1EAEE4F0007A5674 /* ExpertNewsCell.xib in Resources */,
 				A408917A1EA462360071D22D /* User.xcassets in Resources */,
 				A422999A1EACA5BE00F62707 /* FinanceCell.xib in Resources */,
 				A42299AE1EACAE3100F62707 /* ExpertCell.xib in Resources */,
@@ -1314,12 +1386,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A42299A61EACAC7A00F62707 /* ExpertContainerVC.m in Sources */,
+				A4C266CD1EAEE57D007A5674 /* ExpertNewsListViewModel.m in Sources */,
 				A40891661EA3AF280071D22D /* ALDServerModel.m in Sources */,
 				A4C32EBA1E9A7FB000D53E1A /* XAspect-AppearanceConfigAppDelegate.m in Sources */,
 				A42299A01EACA62800F62707 /* FinanceChapterListViewModel.m in Sources */,
 				A4DF60071EA9D42F0084963F /* VideoDetailViewModel.m in Sources */,
 				A40891581EA39D650071D22D /* MessageTypeCell.m in Sources */,
 				A4C32AF51E98A7B800D53E1A /* dateTimeHelper.m in Sources */,
+				A4C266D81EAEE5BD007A5674 /* ExpertNewsListVC.m in Sources */,
+				A4C266C71EAEE53F007A5674 /* ALDExpertAnswerModel.m in Sources */,
 				A408914D1EA399560071D22D /* MessageListVC.m in Sources */,
 				A4C32AEE1E98A7B800D53E1A /* GCDSemaphore.m in Sources */,
 				A42299AD1EACAE3100F62707 /* ExpertCell.m in Sources */,
@@ -1329,6 +1404,7 @@
 				A4D682DE1E976CEB00FBA51C /* ViewController.m in Sources */,
 				A4C32E281E98AD0F00D53E1A /* UIView+Empty.m in Sources */,
 				A499A9881EA622A800B45425 /* NewsCell.m in Sources */,
+				A4C266C41EAEE52E007A5674 /* ALDExpertNewsModel.m in Sources */,
 				A499A95C1EA60E8900B45425 /* MemberInfoVC.m in Sources */,
 				A4C7C4DE1E9F19E0003A36E0 /* WQPopWindow.m in Sources */,
 				A43F9DE71E9FAB1600AA831E /* LoginViewModel.m in Sources */,
@@ -1337,6 +1413,7 @@
 				A40891541EA399AD0071D22D /* ALDMessageModel.m in Sources */,
 				A4C7C4D91E9F194A003A36E0 /* WQChiBaoZiHeader.m in Sources */,
 				A4C32AF01E98A7B800D53E1A /* introductoryPagesHelper.m in Sources */,
+				A4C266DE1EAEE665007A5674 /* ALDExpertDetailModel.m in Sources */,
 				A4C32E361E98AEB500D53E1A /* JRSwizzle.m in Sources */,
 				A408917D1EA479EC0071D22D /* UserCenterVC.m in Sources */,
 				A40891391EA367C30071D22D /* User+Helper.m in Sources */,
@@ -1366,6 +1443,7 @@
 				A4DF60121EA9FAC00084963F /* PolicyContainerVC.m in Sources */,
 				A4DF60031EA9D4120084963F /* TeachingVideoDetailVC.m in Sources */,
 				A453788C1EA7687800020C5D /* CollectListViewModel.m in Sources */,
+				A4C266BD1EAEE4E0007A5674 /* ExpertAnswerCell.m in Sources */,
 				A4A029491E9B2F9D0008F281 /* MJExtensionConfig.m in Sources */,
 				A4C32EB41E9A6A5600D53E1A /* TeachingVideoCollectionViewCell.m in Sources */,
 				A499A98A1EA622A800B45425 /* NewsDetailBottomView.m in Sources */,
@@ -1379,6 +1457,7 @@
 				A40891731EA3B0F70071D22D /* ServerListViewModel.m in Sources */,
 				A4DF5FFC1EA9B68B0084963F /* ALDVideoModel.m in Sources */,
 				A4C32E241E98AD0F00D53E1A /* MBProgressHUD+MP.m in Sources */,
+				A4C266D01EAEE58E007A5674 /* ExpertAnswerListViewModel.m in Sources */,
 				A408912F1EA3297A0071D22D /* NSString+Verify.m in Sources */,
 				A499A9861EA622A800B45425 /* ALDNewsModel.m in Sources */,
 				A4C32E991E9A562D00D53E1A /* ALDBaseNavigationController.m in Sources */,
@@ -1423,8 +1502,11 @@
 				A499A98F1EA622A800B45425 /* NewsDetailViewModel.m in Sources */,
 				A45378AA1EA9A10A00020C5D /* SGHelperTool.m in Sources */,
 				A499A9871EA622A800B45425 /* ALDNewsTypeModel.m in Sources */,
+				A4C266D41EAEE5A9007A5674 /* ExpertDetailVC.m in Sources */,
+				A4C266E11EAEEFB2007A5674 /* ExpertDetailHeaderView.m in Sources */,
 				A4C32E291E98AD0F00D53E1A /* UIView+Extension.m in Sources */,
 				A4C32EAD1E9A65E000D53E1A /* TeachingVideoCollectionVC.m in Sources */,
+				A4C266BA1EAEE4D0007A5674 /* ExpertNewsCell.m in Sources */,
 				A408912C1EA323C70071D22D /* MBProgressHUD+Network.m in Sources */,
 				A42299991EACA5BE00F62707 /* FinanceCell.m in Sources */,
 				A408916F1EA3B04F0071D22D /* ServerDetailViewController.m in Sources */,
@@ -1437,8 +1519,10 @@
 				A40891361EA35F050071D22D /* User.m in Sources */,
 				A40891491EA398800071D22D /* ALDMessageTypeModel.m in Sources */,
 				A45378AC1EA9A10A00020C5D /* SGPageTitleView.m in Sources */,
+				A4C266DB1EAEE5D1007A5674 /* ExpertAnswerListVC.m in Sources */,
 				A4C7C4DA1E9F194A003A36E0 /* WQInputView.m in Sources */,
 				A408915D1EA39D770071D22D /* MessageCell.m in Sources */,
+				A4C266CA1EAEE555007A5674 /* ExpertDetailViewModel.m in Sources */,
 				A40891511EA3996F0071D22D /* MessageListViewModel.m in Sources */,
 				A4BF613F1EACA435003F876F /* FinanceListVC.m in Sources */,
 				A4C32E271E98AD0F00D53E1A /* UITextField+Extension.m in Sources */,

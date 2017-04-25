@@ -7,12 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ALDVideoDetailModel.h"
 
 @interface VideoDetailViewModel : NSObject
-
-
-@property (nonatomic, strong) ALDVideoDetailModel *model;
 
 - (void)loadDataWithID:(NSInteger)ID
                success:(VoidBlock)success

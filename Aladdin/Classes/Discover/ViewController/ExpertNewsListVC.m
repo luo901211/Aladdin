@@ -1,28 +1,27 @@
 //
-//  ExpertListVC.m
+//  ExpertNewsListVC.m
 //  Aladdin
 //
-//  Created by luo on 2017/4/23.
+//  Created by luo on 2017/4/25.
 //  Copyright © 2017年 wenqi. All rights reserved.
 //
 
-#import "ExpertListVC.h"
-#import "ExpertListViewModel.h"
-#import "ALDExpertModel.h"
-#import "ExpertCell.h"
-#import "ExpertDetailVC.h"
+#import "ExpertNewsListVC.h"
+#import "ExpertNewsListViewModel.h"
+#import "ExpertNewsCell.h"
+#import "ALDExpertNewsModel.h"
 
-@interface ExpertListVC ()
+@interface ExpertNewsListVC ()
 
-@property (nonatomic, strong) ExpertListViewModel *viewModel;
+@property (nonatomic, strong) ExpertNewsListViewModel *viewModel;
 
 @end
 
-@implementation ExpertListVC
+@implementation ExpertNewsListVC
 
-- (ExpertListViewModel *)viewModel {
+- (ExpertNewsListViewModel *)viewModel {
     if (!_viewModel) {
-        _viewModel = [[ExpertListViewModel alloc] init];
+        _viewModel = [[ExpertNewsListViewModel alloc] init];
     }
     return _viewModel;
 }
@@ -32,9 +31,9 @@
     
     self.tableView.tableFooterView = [UIView new];
     
-    [self.tableView registerNib:[UINib nibWithNibName:@"ExpertCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"ExpertCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"ExpertNewsCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"ExpertNewsCell"];
     
-    __weak ExpertListVC *weakSelf = self;
+    __weak ExpertNewsListVC *weakSelf = self;
     self.tableView.mj_header = [WQChiBaoZiHeader headerWithRefreshingBlock:^{
         [weakSelf loadDataWithType:WQFetchDataTypeRefresh];
     }];
@@ -65,7 +64,7 @@
         pageIndex = (NSInteger)self.viewModel.list.count / API_PAGE_SIZE + 1;
     }
     
-    [self.viewModel loadDataListWithLevel:self.level pageIndex:pageIndex success:^(BOOL noMoreData) {
+    [self.viewModel loadDataListWithID:self.ID pageIndex:pageIndex success:^(BOOL noMoreData) {
         @strongify(self)
         
         if (noMoreData) {
@@ -97,8 +96,8 @@
 #pragma mark - Table view data source
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ALDExpertModel *model = self.viewModel.list[indexPath.row];
-    return [ExpertCell heightForRow:model];
+    ALDExpertNewsModel *model = self.viewModel.list[indexPath.row];
+    return [ExpertNewsCell heightForRow:model];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -106,8 +105,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ExpertCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ExpertCell"];
-    ALDExpertModel *model = self.viewModel.list[indexPath.row];
+    ExpertNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ExpertNewsCell"];
+    ALDExpertNewsModel *model = self.viewModel.list[indexPath.row];
     cell.model = model;
     return cell;
 }
@@ -115,9 +114,9 @@
 #pragma mark - Table view delegate
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    ExpertDetailVC *vc = [[ExpertDetailVC alloc] init];
-    ALDExpertModel *model = self.viewModel.list[indexPath.row];
-    vc.ID = model.ID;
-    [self.navigationController pushViewController:vc animated:YES];
+//    PolicyDetailVC *vc = [[PolicyDetailVC alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
 }
+
+
 @end
