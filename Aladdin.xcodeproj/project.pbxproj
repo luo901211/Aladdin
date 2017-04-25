@@ -107,6 +107,7 @@
 		A4C266DE1EAEE665007A5674 /* ALDExpertDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C266DD1EAEE665007A5674 /* ALDExpertDetailModel.m */; };
 		A4C266E11EAEEFB2007A5674 /* ExpertDetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C266E01EAEEFB2007A5674 /* ExpertDetailHeaderView.m */; };
 		A4C266E31EAEEFBE007A5674 /* ExpertDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4C266E21EAEEFBE007A5674 /* ExpertDetailHeaderView.xib */; };
+		A4C266E61EAF47C6007A5674 /* UILabel+ChangeLineSpaceAndWordSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C266E51EAF47C6007A5674 /* UILabel+ChangeLineSpaceAndWordSpace.m */; };
 		A4C32AEB1E98A7B800D53E1A /* MPFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32ACE1E98A7B800D53E1A /* MPFileManager.m */; };
 		A4C32AEC1E98A7B800D53E1A /* GCDGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32AD21E98A7B800D53E1A /* GCDGroup.m */; };
 		A4C32AED1E98A7B800D53E1A /* GCDQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32AD41E98A7B800D53E1A /* GCDQueue.m */; };
@@ -365,6 +366,8 @@
 		A4C266DF1EAEEFB2007A5674 /* ExpertDetailHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpertDetailHeaderView.h; sourceTree = "<group>"; };
 		A4C266E01EAEEFB2007A5674 /* ExpertDetailHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpertDetailHeaderView.m; sourceTree = "<group>"; };
 		A4C266E21EAEEFBE007A5674 /* ExpertDetailHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpertDetailHeaderView.xib; sourceTree = "<group>"; };
+		A4C266E41EAF47C6007A5674 /* UILabel+ChangeLineSpaceAndWordSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+ChangeLineSpaceAndWordSpace.h"; sourceTree = "<group>"; };
+		A4C266E51EAF47C6007A5674 /* UILabel+ChangeLineSpaceAndWordSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+ChangeLineSpaceAndWordSpace.m"; sourceTree = "<group>"; };
 		A4C32ACD1E98A7B800D53E1A /* MPFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPFileManager.h; sourceTree = "<group>"; };
 		A4C32ACE1E98A7B800D53E1A /* MPFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPFileManager.m; sourceTree = "<group>"; };
 		A4C32AD01E98A7B800D53E1A /* GCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCD.h; sourceTree = "<group>"; };
@@ -816,6 +819,8 @@
 			children = (
 				A43C934F1E9E2342008B877D /* UIView+BlockGesture.h */,
 				A43C93501E9E2342008B877D /* UIView+BlockGesture.m */,
+				A4C266E41EAF47C6007A5674 /* UILabel+ChangeLineSpaceAndWordSpace.h */,
+				A4C266E51EAF47C6007A5674 /* UILabel+ChangeLineSpaceAndWordSpace.m */,
 				A4C32E181E98AD0F00D53E1A /* MBProgressHUD+MP.h */,
 				A4C32E191E98AD0F00D53E1A /* MBProgressHUD+MP.m */,
 				A4C32E1A1E98AD0F00D53E1A /* NSString+Additions.h */,
@@ -1469,6 +1474,7 @@
 				A4C32E301E98AE6900D53E1A /* WQHomeTabBarController.m in Sources */,
 				A4C7C4E11E9F1DF3003A36E0 /* WQPlaceholderTextView.m in Sources */,
 				A453789E1EA8512D00020C5D /* QuestionListViewModel.m in Sources */,
+				A4C266E61EAF47C6007A5674 /* UILabel+ChangeLineSpaceAndWordSpace.m in Sources */,
 				A4DF600A1EA9D43F0084963F /* ALDVideoDetailModel.m in Sources */,
 				A4D682D81E976CEB00FBA51C /* main.m in Sources */,
 				A4DF60251EA9FDDA0084963F /* PolicyCell.m in Sources */,

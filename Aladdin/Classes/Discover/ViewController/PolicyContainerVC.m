@@ -72,14 +72,8 @@
         [self addChildViewController:vc];
     }
     
-    /// pageContentView
-    CGFloat contentViewHeight = self.view.frame.size.height - 108;
-    self.pageContentView = [[SGPageContentView alloc] initWithFrame:CGRectMake(0, 108, self.view.frame.size.width, contentViewHeight) parentVC:self childVCs:childVC];
-    _pageContentView.delegatePageContentView = self;
-    [self.view addSubview:_pageContentView];
-    
     /// pageTitleView
-    self.pageTitleView = [SGPageTitleView pageTitleViewWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 44) delegate:self titleNames:titleArr];
+    self.pageTitleView = [SGPageTitleView pageTitleViewWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 51) delegate:self titleNames:titleArr];
     [self.view addSubview:_pageTitleView];
     _pageTitleView.selectedIndex = 0;
     _pageTitleView.titleColorStateNormal = COLOR_WORD_GRAY_2;
@@ -87,6 +81,19 @@
     _pageTitleView.indicatorColor = GLOBAL_TINT_COLOR;
     _pageTitleView.indicatorStyle = SGIndicatorTypeEqual;
     
+    [self.view addSubview:({
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, self.pageTitleView.bottom, Main_Screen_Width, 10)];
+        view.backgroundColor = HEXCOLOR(0xf6f6f6);
+        view;
+    })];
+    
+    /// pageContentView
+    CGFloat contentViewHeight = self.view.frame.size.height - 64 - 51 - 10;
+    self.pageContentView = [[SGPageContentView alloc] initWithFrame:CGRectMake(0, 64 + 51 + 10, self.view.frame.size.width, contentViewHeight) parentVC:self childVCs:childVC];
+    _pageContentView.delegatePageContentView = self;
+    [self.view addSubview:_pageContentView];
+    
+
 }
 
 #pragma mark - SGPageContentViewDelegare

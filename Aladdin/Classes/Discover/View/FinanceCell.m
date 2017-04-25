@@ -7,6 +7,7 @@
 //
 
 #import "FinanceCell.h"
+#import "UILabel+ChangeLineSpaceAndWordSpace.h"
 
 @interface FinanceCell()
 @property (weak, nonatomic) IBOutlet UIImageView *imageV;
@@ -39,6 +40,7 @@
     [self.imageV sd_setImageWithURL:[NSURL URLWithString:model.pic_url]];
     self.titleLabel.text = model.title;
     self.descLabel.text = model.desc;
+    [UILabel changeLineSpaceForLabel:self.descLabel WithSpace:3];
 }
 
 @end
