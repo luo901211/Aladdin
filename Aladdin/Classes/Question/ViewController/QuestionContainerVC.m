@@ -9,21 +9,41 @@
 #import "QuestionContainerVC.h"
 #import "SGPageView.h"
 #import "QuestionListVC.h"
+#import "QuestionContainerBottomView.h"
 
 @interface QuestionContainerVC ()<SGPageTitleViewDelegate, SGPageContentViewDelegare>
 
 @property (nonatomic, strong) SGPageTitleView *pageTitleView;
 @property (nonatomic, strong) SGPageContentView *pageContentView;
-
+@property (nonatomic, strong) QuestionContainerBottomView *bottomView;
 @end
 
 @implementation QuestionContainerVC
+
+- (QuestionContainerBottomView *)bottomView {
+    if (!_bottomView) {
+        _bottomView = [[NSBundle mainBundle] loadNibNamed:@"QuestionContainerBottomView" owner:nil options:nil][0];
+        _bottomView.frame = CGRectMake(0, self.view.height - 50 - 49, Main_Screen_Width, 50);
+        
+        @weakify(self);
+        _bottomView.freeAskBlock = ^(id obj){
+            @strongify(self);
+            UIViewController *vc = [[UIViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        };
+        _bottomView.expertAskBlock = ^(id obj){
+            @strongify(self);
+            UIViewController *vc = [[UIViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        };
+    }
+    return _bottomView;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-    
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.navigationItem.title = @"问答";
     
@@ -70,10 +90,12 @@
     })];
     
     /// pageContentView
-    CGFloat contentViewHeight = self.view.frame.size.height - 64 - 51 -10;
+    CGFloat contentViewHeight = self.view.frame.size.height - 64 - 51 - 10 - 50 -49;
     self.pageContentView = [[SGPageContentView alloc] initWithFrame:CGRectMake(0, 64 + 51 + 10, self.view.frame.size.width, contentViewHeight) parentVC:self childVCs:childVC];
     _pageContentView.delegatePageContentView = self;
     [self.view addSubview:_pageContentView];
+    
+    [self.view addSubview:self.bottomView];
     
 }
 

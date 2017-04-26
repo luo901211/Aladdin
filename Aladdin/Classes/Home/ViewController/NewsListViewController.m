@@ -72,7 +72,7 @@
     SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, Main_Screen_Width, 150 * kScreenWidthRatio) delegate:nil placeholderImage:nil];
     cycleScrollView.imageURLStringsGroup = images;
     cycleScrollView.bannerImageViewContentMode = UIViewContentModeScaleAspectFill;
-    cycleScrollView.autoScrollTimeInterval = images.count > 1;
+    cycleScrollView.autoScroll = images.count > 1;
     cycleScrollView.clickItemOperationBlock = ^(NSInteger currentIndex) {
         NewsDetailViewController *vc = [[NewsDetailViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];

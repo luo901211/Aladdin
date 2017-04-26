@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="QuestionContainerBottomView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfc-nt-wNH">
+                    <rect key="frame" x="15" y="7" width="165" height="36"/>
+                    <color key="backgroundColor" red="0.0" green="0.80392156862745101" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="免费提问">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onPressedFreeAskButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="wdR-W5-QWo"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQV-Op-gSC">
+                    <rect key="frame" x="195" y="7" width="165" height="36"/>
+                    <color key="backgroundColor" red="0.0" green="0.80392156862745101" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="大咖提问">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onPressedExpertAskButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="85k-l1-Iva"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="dfc-nt-wNH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="7" id="6lx-Tp-JZu"/>
+                <constraint firstItem="RQV-Op-gSC" firstAttribute="width" secondItem="dfc-nt-wNH" secondAttribute="width" id="KUC-0p-RLe"/>
+                <constraint firstAttribute="trailing" secondItem="RQV-Op-gSC" secondAttribute="trailing" constant="15" id="PeW-Bf-DvF"/>
+                <constraint firstItem="RQV-Op-gSC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="7" id="QBV-g3-moY"/>
+                <constraint firstItem="dfc-nt-wNH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="XS6-JQ-PQN"/>
+                <constraint firstAttribute="bottom" secondItem="RQV-Op-gSC" secondAttribute="bottom" constant="7" id="gDJ-bN-6sB"/>
+                <constraint firstAttribute="bottom" secondItem="dfc-nt-wNH" secondAttribute="bottom" constant="7" id="nq2-DP-TqI"/>
+                <constraint firstItem="RQV-Op-gSC" firstAttribute="leading" secondItem="dfc-nt-wNH" secondAttribute="trailing" constant="15" id="pMe-4A-zyr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="expertAskBtn" destination="RQV-Op-gSC" id="Bge-kT-N6x"/>
+                <outlet property="freeAskBtn" destination="dfc-nt-wNH" id="ogT-De-kiZ"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="54"/>
+        </view>
+    </objects>
+</document>

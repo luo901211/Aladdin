@@ -64,6 +64,8 @@
 		A45378AB1EA9A10A00020C5D /* SGPageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = A45378A31EA9A10A00020C5D /* SGPageContentView.m */; };
 		A45378AC1EA9A10A00020C5D /* SGPageTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A45378A51EA9A10A00020C5D /* SGPageTitleView.m */; };
 		A45378AD1EA9A10A00020C5D /* UIView+SGFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = A45378A91EA9A10A00020C5D /* UIView+SGFrame.m */; };
+		A48334611EB0C4AA00FB5801 /* QuestionContainerBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = A48334601EB0C4AA00FB5801 /* QuestionContainerBottomView.m */; };
+		A48334631EB0C4BD00FB5801 /* QuestionContainerBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A48334621EB0C4BD00FB5801 /* QuestionContainerBottomView.xib */; };
 		A499A95C1EA60E8900B45425 /* MemberInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A499A95B1EA60E8900B45425 /* MemberInfoVC.m */; };
 		A499A95F1EA60EB700B45425 /* CollectListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A499A95E1EA60EB700B45425 /* CollectListVC.m */; };
 		A499A9651EA616F300B45425 /* FeedbackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A499A9641EA616F300B45425 /* FeedbackVC.m */; };
@@ -292,6 +294,9 @@
 		A45378A71EA9A10A00020C5D /* SGPageViewHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPageViewHelper.h; sourceTree = "<group>"; };
 		A45378A81EA9A10A00020C5D /* UIView+SGFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SGFrame.h"; sourceTree = "<group>"; };
 		A45378A91EA9A10A00020C5D /* UIView+SGFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SGFrame.m"; sourceTree = "<group>"; };
+		A483345F1EB0C4AA00FB5801 /* QuestionContainerBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionContainerBottomView.h; sourceTree = "<group>"; };
+		A48334601EB0C4AA00FB5801 /* QuestionContainerBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionContainerBottomView.m; sourceTree = "<group>"; };
+		A48334621EB0C4BD00FB5801 /* QuestionContainerBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionContainerBottomView.xib; sourceTree = "<group>"; };
 		A499A95A1EA60E8900B45425 /* MemberInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberInfoVC.h; sourceTree = "<group>"; };
 		A499A95B1EA60E8900B45425 /* MemberInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberInfoVC.m; sourceTree = "<group>"; };
 		A499A95D1EA60EB700B45425 /* CollectListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectListVC.h; sourceTree = "<group>"; };
@@ -763,6 +768,9 @@
 				A4C2672E1EAF58FC007A5674 /* QuestionCell.h */,
 				A4C2672F1EAF58FC007A5674 /* QuestionCell.m */,
 				A4C267301EAF58FC007A5674 /* QuestionCell.xib */,
+				A483345F1EB0C4AA00FB5801 /* QuestionContainerBottomView.h */,
+				A48334601EB0C4AA00FB5801 /* QuestionContainerBottomView.m */,
+				A48334621EB0C4BD00FB5801 /* QuestionContainerBottomView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1391,6 +1399,7 @@
 				A422999A1EACA5BE00F62707 /* FinanceCell.xib in Resources */,
 				A42299AE1EACAE3100F62707 /* ExpertCell.xib in Resources */,
 				A4C2673B1EAF58FC007A5674 /* QuestionCell.xib in Resources */,
+				A48334631EB0C4BD00FB5801 /* QuestionContainerBottomView.xib in Resources */,
 				A4C32EB51E9A6A5600D53E1A /* TeachingVideoCollectionViewCell.xib in Resources */,
 				A4D682E11E976CEB00FBA51C /* Main.storyboard in Resources */,
 				A43F9DD51E9F2CD400AA831E /* RegisterVC.xib in Resources */,
@@ -1563,6 +1572,7 @@
 				A42299921EACA59200F62707 /* ALDFinanceChapterModel.m in Sources */,
 				A499A95F1EA60EB700B45425 /* CollectListVC.m in Sources */,
 				A4C32E391E98B0A700D53E1A /* XAspect-UmengShareAppDelegate.m in Sources */,
+				A48334611EB0C4AA00FB5801 /* QuestionContainerBottomView.m in Sources */,
 				A40891421EA397540071D22D /* MessageTypeListVC.m in Sources */,
 				A499A98C1EA622A800B45425 /* NewsDetailViewController.m in Sources */,
 				A4C32E6D1E9A1BF400D53E1A /* SGNavigationItemTitleView.m in Sources */,

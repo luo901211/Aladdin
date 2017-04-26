@@ -95,17 +95,23 @@
 #pragma mark - Table view data source
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ALDQuestionModel *model = self.viewModel.list[indexPath.row];
+//    ALDQuestionModel *model = self.viewModel.list[indexPath.row];
+    ALDQuestionModel *model = self.viewModel.list[0];
     return [QuestionCell heightForRow:model];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.viewModel.list.count;
+    if (self.viewModel.list.count) {
+        return 100;
+    }
+    return 0;
+//    return self.viewModel.list.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     QuestionCell *cell = [tableView dequeueReusableCellWithIdentifier:@"QuestionCell"];
-    ALDQuestionModel *model = self.viewModel.list[indexPath.row];
+//    ALDQuestionModel *model = self.viewModel.list[indexPath.row];
+    ALDQuestionModel *model = self.viewModel.list[0];
     cell.model = model;
     return cell;
 }
