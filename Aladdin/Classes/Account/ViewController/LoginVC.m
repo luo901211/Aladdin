@@ -236,7 +236,7 @@
 }
 
 - (void)didPressedOnFindPwdButton:(UIButton *)button {
-    FindPasswordVC *vc = [[FindPasswordVC alloc] initWithNibName:@"FindPasswordVC" bundle:[NSBundle mainBundle]];
+    FindPasswordVC *vc = [[FindPasswordVC alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

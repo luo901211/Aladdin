@@ -23,7 +23,6 @@
 - (QuestionContainerBottomView *)bottomView {
     if (!_bottomView) {
         _bottomView = [[NSBundle mainBundle] loadNibNamed:@"QuestionContainerBottomView" owner:nil options:nil][0];
-        _bottomView.frame = CGRectMake(0, self.view.height - 50 - 49, Main_Screen_Width, 50);
         
         @weakify(self);
         _bottomView.freeAskBlock = ^(id obj){
@@ -95,6 +94,7 @@
     _pageContentView.delegatePageContentView = self;
     [self.view addSubview:_pageContentView];
     
+    self.bottomView.frame = CGRectMake(0, self.pageContentView.bottom, Main_Screen_Width, 50);
     [self.view addSubview:self.bottomView];
     
 }

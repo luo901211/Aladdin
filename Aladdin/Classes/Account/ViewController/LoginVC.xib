@@ -28,7 +28,7 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_banner" translatesAutoresizingMaskIntoConstraints="NO" id="04s-gc-7ia">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="238"/>
                         </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XuU-JT-qtW">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XuU-JT-qtW">
                             <rect key="frame" x="0.0" y="194" width="180" height="44"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="B5H-nJ-CA9"/>
@@ -39,7 +39,7 @@
                                 <action selector="didPressedOnLoginTypeButton:" destination="-1" eventType="touchUpInside" id="QQ0-FI-kR2"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KM-yO-q6m">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KM-yO-q6m">
                             <rect key="frame" x="195" y="194" width="180" height="44"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="H9o-rO-O4q"/>
