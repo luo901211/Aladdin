@@ -10,4 +10,6 @@
 
 @interface TeachingVideoCollectionVC : UICollectionViewController
 
+@property (nonatomic, assign) NSInteger ID;
+
 @end

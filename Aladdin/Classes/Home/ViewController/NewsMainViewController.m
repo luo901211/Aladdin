@@ -38,8 +38,7 @@
     
     self.navigationItem.title = @"阿拉灯";
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:(UIBarButtonSystemItemSearch) target:self action:nil];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"user_mine_item"] style:(UIBarButtonItemStylePlain) target:self action:@selector(showUserFeatureView)];
-
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"item_user_center"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:(UIBarButtonItemStylePlain) target:self action:@selector(showUserFeatureView)];
     [self loadNewsType];
     
 }

@@ -39,7 +39,7 @@
                            @{ @"title": @"个人中心", @"image": @"user_mine_item" },
                            @{ @"title": @"我的收藏", @"image": @"user_collect_item" },
                            @{ @"title": @"我的问答", @"image": @"user_question_item" },
-                           @{ @"title": @"消息", @"image": @"user_system_msg_item" },
+                           @{ @"title": @"系统消息", @"image": @"user_system_msg_item" },
                            @{ @"title": @"意见反馈", @"image": @"user_feedback_item" }
                            ];
         _userFeatureView = [[UserFeatureView alloc] initWithItems:array];
@@ -54,7 +54,7 @@
     
     self.navigationItem.title = @"阿拉丁平台服务";
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"user_mine_item"] style:(UIBarButtonItemStylePlain) target:self action:@selector(showUserFeatureView)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"item_user_center"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:(UIBarButtonItemStylePlain) target:self action:@selector(showUserFeatureView)];
     
     self.tableView.tableFooterView = [UIView new];
     

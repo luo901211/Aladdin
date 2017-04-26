@@ -58,25 +58,18 @@
 
 - (void)initUI {
     
-    NSMutableArray *titleArr = [NSMutableArray arrayWithCapacity:self.arrayList.count];
+    NSMutableArray *titleArr = [NSMutableArray array];
+    NSMutableArray *childVC = [NSMutableArray array];
+
     for (int i = 0; i < self.arrayList.count; i++) {
         NSDictionary *dic = self.arrayList[i];
         [titleArr addObject:dic[@"title"]];
-    }
-    
-    NSMutableArray *childVC = [NSMutableArray array];
-    
-    for (int i = 0; i < titleArr.count; i++) {
+        
         TeachingVideoCollectionVC *vc = [[TeachingVideoCollectionVC alloc] init];
+        vc.ID = [dic[@"id"] integerValue];
         [childVC addObject:vc];
         [self addChildViewController:vc];
     }
-    
-    /// pageContentView
-    CGFloat contentViewHeight = self.view.frame.size.height - 116;
-    self.pageContentView = [[SGPageContentView alloc] initWithFrame:CGRectMake(0, 116, self.view.frame.size.width, contentViewHeight) parentVC:self childVCs:childVC];
-    _pageContentView.delegatePageContentView = self;
-    [self.view addSubview:_pageContentView];
     
     /// pageTitleView
     self.pageTitleView = [SGPageTitleView pageTitleViewWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 52) delegate:self titleNames:titleArr];
@@ -86,6 +79,18 @@
     _pageTitleView.titleColorStateSelected = GLOBAL_TINT_COLOR;
     _pageTitleView.indicatorColor = GLOBAL_TINT_COLOR;
     _pageTitleView.indicatorStyle = SGIndicatorTypeEqual;
+    
+    [self.view addSubview:({
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, self.pageTitleView.bottom, Main_Screen_Width, 10)];
+        view.backgroundColor = HEXCOLOR(0xf6f6f6);
+        view;
+    })];
+    
+    /// pageContentView
+    CGFloat contentViewHeight = self.view.frame.size.height - 64 - 52 -10;
+    self.pageContentView = [[SGPageContentView alloc] initWithFrame:CGRectMake(0, 64 + 52 + 10, self.view.frame.size.width, contentViewHeight) parentVC:self childVCs:childVC];
+    _pageContentView.delegatePageContentView = self;
+    [self.view addSubview:_pageContentView];
 
 }
 

@@ -18,9 +18,9 @@
     return _list;
 }
 
-- (void)loadDataListWithPageIndex:(NSInteger)pageIndex success:(void (^)(BOOL noMoreData))success failure:(void (^)(NSError *error))failure {
-    
+- (void)loadDataListWithID:(NSInteger)ID pageIndex:(NSInteger)pageIndex success:(void (^)(BOOL noMoreData))success failure:(void (^)(NSError *error))failure {
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:@{ @"page_num": @(pageIndex)}];
+    [params setObject:@(ID) forKey:@"type"];
     [AFNManagerRequest getWithPath:API_DISCOVER_VIDEO_LIST params:params success:^(NSURLResponse *response, id responseObject) {
         NSArray *arrayM = [ALDVideoModel mj_objectArrayWithKeyValuesArray:responseObject];
         if (pageIndex == 1) {

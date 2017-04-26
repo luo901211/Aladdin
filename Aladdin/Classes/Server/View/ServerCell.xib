@@ -19,8 +19,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="93.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="daA-fn-qYj">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="daA-fn-qYj">
                         <rect key="frame" x="14" y="15" width="64" height="64"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="daA-fn-qYj" secondAttribute="height" multiplier="1:1" id="VX9-x0-5Lg"/>
                             <constraint firstAttribute="width" constant="64" id="lNB-t8-WiI"/>
@@ -35,8 +36,11 @@
                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="个人之间置换房产" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syY-pn-9Mw">
-                        <rect key="frame" x="86" y="44" width="222" height="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="个人之间置换房产个人之间置换房产个人之间置换房产个人之间置换房产个人之间置换房产个人之间置换房产个人之间置换房产" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syY-pn-9Mw">
+                        <rect key="frame" x="86" y="44" width="222" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="36" id="Txv-N9-0ex"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -53,6 +57,11 @@
                     <constraint firstItem="y7n-Zk-laQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="pUP-DT-1nw"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="descLabel" destination="syY-pn-9Mw" id="JOb-DL-ZOP"/>
+                <outlet property="imageV" destination="daA-fn-qYj" id="lye-J2-XqD"/>
+                <outlet property="titleLabel" destination="y7n-Zk-laQ" id="zKY-Cc-usk"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>
