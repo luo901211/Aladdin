@@ -20,6 +20,8 @@
 
 - (void)loadDataListWithPageIndex:(NSInteger)pageIndex type:(QuestionType)type success:(void (^)(BOOL noMoreData))success failure:(void (^)(NSError *error))failure {
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:@{ @"page_num": @(pageIndex)}];
+    
+    NSString *path = API_QUESTION_LIST;
     switch (type) {
         case QuestionTypeEssence:
         {
@@ -34,16 +36,15 @@
         case QuestionTypeUser:
         {
             [params setObject:[User sharedInstance].token forKey:@"token"];
+            path = API_QUESTION_LIST_USER;
         }
             break;
             
         default:
             break;
     }
-    
-    NSLog(@"params: %@", params);
-    
-    [AFNManagerRequest getWithPath:API_SERVER_LIST params:params success:^(NSURLResponse *response, id responseObject) {
+        
+    [AFNManagerRequest getWithPath:path params:params success:^(NSURLResponse *response, id responseObject) {
         NSArray *arrayM = [ALDQuestionModel mj_objectArrayWithKeyValuesArray:responseObject];
         if (pageIndex == 1) {
             [self.list removeAllObjects];

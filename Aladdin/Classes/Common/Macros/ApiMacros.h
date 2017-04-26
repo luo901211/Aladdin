@@ -45,7 +45,62 @@
  */
 #define NEWS_COMMENT_SUBMIT @"/news/comment"
 
+/************************************************************************************************/
+/**********问答***********/
+/*
+ * 问答列表
+ * is_essence：必传，精华：1、大家都在问：0
+ * page_num：非必填，第几页，默认1
+ * page_size：非必填，每页条数，默认20
+ */
+#define API_QUESTION_LIST @"/question/index"
 
+/*
+ * 问答-我的提问
+ * token：必传，用户标识
+ * page_num：非必填，第几页，默认1
+ * page_size：非必填，每页条数，默认20
+ */
+#define API_QUESTION_LIST_USER @"/question/mylist"
+
+/*
+ * 问答-我的回答
+ * token：必传，用户标识
+ * page_num：非必填，第几页，默认1
+ * page_size：非必填，每页条数，默认20
+ */
+#define API_QUESTION_ANSWER_LIST_USER @"/user/answer"
+
+/*
+ * 问答-问答详情
+ * id：必传，问题id
+ */
+#define API_QUESTION_DETAIL @"/question/detail"
+
+/*
+ * 问答-设置标准回答
+ * id：必传，问题id
+ * token：必传，用户标识
+ */
+#define API_QUESTION_STANDARD @"/question/standard"
+
+/*
+ * 问答-回答问题
+ * id：必传，问题id
+ * content：必传 回答内容
+ * token：必传，用户标识
+ */
+#define API_QUESTION_ANSWER @"/question/answer"
+
+/*
+ * 问答-提问接口
+ * title：必传，问题标题
+ * content：必传 问题内容
+ * to_user_id：选填 专家id ，向谁提问
+ * pic[]：选填，图片name=pic[]，最多3个
+ * token：必传，用户标识
+ */
+#define API_QUESTION_ASK @"/question/ask"
 
 /************************************************************************************************/
 /**********发现***********/
