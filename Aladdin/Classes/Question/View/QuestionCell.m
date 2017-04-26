@@ -7,7 +7,9 @@
 //
 
 #import "QuestionCell.h"
+#import "UILabel+ChangeLineSpaceAndWordSpace.h"
 
+#define kLineSpacing 4
 @interface QuestionCell ()
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *essenceLabel;
@@ -22,12 +24,24 @@
 @implementation QuestionCell
 
 + (CGFloat)heightForRow:(ALDQuestionModel *)model {
-    return 90;
+    
+    NSString *str = model.title;
+    NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:str];
+    NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
+    style.lineSpacing = kLineSpacing;
+    UIFont *font = [UIFont systemFontOfSize:16];
+    [attributeString addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, str.length)];
+    [attributeString addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, str.length)];
+    NSStringDrawingOptions options = NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading;
+    CGRect rect = [attributeString boundingRectWithSize:CGSizeMake(Main_Screen_Width - 30, CGFLOAT_MAX) options:options context:nil];
+    
+    return rect.size.height + 55;
 }
 - (void)setModel:(ALDQuestionModel *)model {
     _model = model;
     
     self.titleLabel.text = model.title;
+    [UILabel changeLineSpaceForLabel:self.titleLabel WithSpace:kLineSpacing];
     self.essenceLabel.hidden = [model.is_essence isEqualToString:@"1"] ? NO : YES;
     self.spaceOfNameLabelToContentView.constant = [model.is_essence isEqualToString:@"1"] ? 36 : 15;
     self.nameLabel.text = model.real_name;
