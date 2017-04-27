@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *addressTextField;
 @property (weak, nonatomic) IBOutlet UITextField *companyTextField;
 @property (weak, nonatomic) IBOutlet UITextField *positionTextField;
+@property (weak, nonatomic) IBOutlet UIButton *avatarButton;
 
 @end
 
@@ -46,6 +47,18 @@
         self.companyTextField.text = self.viewModel.userInfo[@"company"];
         self.positionTextField.text = self.viewModel.userInfo[@"position"];
     }];
+    
+    
+    NSDictionary *params = @{
+                             @"real_name": self.accountTextField.text};
+    
+    //    token：必传，用户标识
+    //    real_name：必传
+    //    address：必传
+    //    company：必传
+    //    position：必传
+    //    pic ： 必传，name=pic, 使用file方式上传图像
+    
 }
 
 - (void)didReceiveMemoryWarning {

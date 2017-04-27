@@ -288,6 +288,7 @@
                     <connections>
                         <outlet property="accountTextField" destination="0OZ-Sv-yi4" id="dNA-QL-wzp"/>
                         <outlet property="addressTextField" destination="NQ1-OX-Prs" id="DEj-0T-oZJ"/>
+                        <outlet property="avatarButton" destination="0wI-5F-I0m" id="zfm-xS-1nE"/>
                         <outlet property="companyTextField" destination="0rS-h9-KL9" id="VlE-U8-La6"/>
                         <outlet property="nameTextField" destination="c9b-Fh-qxW" id="hTJ-9m-SLJ"/>
                         <outlet property="positionTextField" destination="Tfk-nx-DHd" id="9fk-A7-IAU"/>
