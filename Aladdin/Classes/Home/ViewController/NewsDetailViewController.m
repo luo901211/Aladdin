@@ -40,6 +40,8 @@
                 NSLog(@"取消评论");
             } sendHandler:^(id obj) {
                 NSLog(@"发送评论");
+                
+                
                 [popInputView hide];
             }];
         };
@@ -55,12 +57,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
     self.navigationItem.title = @"文章详情";
     
     [self initUI];
     
+    [self loadCommentCount];
+    
+}
+
+- (void)loadCommentCount {
+    @weakify(self)
+    [AFNManagerRequest getWithPath:NEWS_COMMENT_COUNT params:@{@"id": @(self.ID)} success:^(NSURLResponse *response, id responseObject) {
+        @strongify(self)
+        NSString *commentCount = responseObject;
+        if (![commentCount isKindOfClass:[NSString class]]) {
+            commentCount = @"";
+        }
+        self.bottomView.commentCount = commentCount;
+    } failure:^(NSError *error) {
+    }];
 }
 
 - (void)initUI {
@@ -77,44 +93,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-//- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
-//    NSLog(@"%s",__FUNCTION__);
-//}
-//- (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler {
-//    NSLog(@"%s",__FUNCTION__);
-//}
-//- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(null_unspecified WKNavigation *)navigation {
-//    NSLog(@"%s",__FUNCTION__);
-//}
-//- (void)webView:(WKWebView *)webView didReceiveServerRedirectForProvisionalNavigation:(null_unspecified WKNavigation *)navigation {
-//    NSLog(@"%s",__FUNCTION__);
-//}
-//- (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(null_unspecified WKNavigation *)navigation withError:(NSError *)error {
-//    NSLog(@"%s",__FUNCTION__);
-//}
-//- (void)webView:(WKWebView *)webView didCommitNavigation:(null_unspecified WKNavigation *)navigation {
-//    NSLog(@"%s",__FUNCTION__);
-//}
-//- (void)webView:(WKWebView *)webView didFinishNavigation:(null_unspecified WKNavigation *)navigation {
-//    NSLog(@"%s",__FUNCTION__);
-//}
-//- (void)webView:(WKWebView *)webView didFailNavigation:(null_unspecified WKNavigation *)navigation withError:(NSError *)error {
-//    NSLog(@"%s",__FUNCTION__);
-//}
-//- (void)webView:(WKWebView *)webView didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition disposition, NSURLCredential * _Nullable credential))completionHandler {
-//    NSLog(@"%s",__FUNCTION__);
-//}
-
 
 @end

@@ -147,6 +147,8 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NewsDetailViewController *vc = [[NewsDetailViewController alloc] init];
+    ALDNewsModel *model = self.viewModel.list[indexPath.row];
+    vc.ID = model.ID;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

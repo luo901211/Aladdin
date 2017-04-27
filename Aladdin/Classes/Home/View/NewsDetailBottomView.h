@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @interface NewsDetailBottomView : UIView
+
+@property (nonatomic, copy) NSString *commentCount;
 
 @property (nonatomic, copy) void (^commentBlock)();
 @property (nonatomic, copy) void (^shareBlock)();

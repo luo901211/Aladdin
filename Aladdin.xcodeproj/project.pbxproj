@@ -710,12 +710,12 @@
 		A499A9751EA622A800B45425 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				A499A9761EA622A800B45425 /* NewsDetailViewController.h */,
-				A499A9771EA622A800B45425 /* NewsDetailViewController.m */,
-				A499A9781EA622A800B45425 /* NewsListViewController.h */,
-				A499A9791EA622A800B45425 /* NewsListViewController.m */,
 				A499A97A1EA622A800B45425 /* NewsMainViewController.h */,
 				A499A97B1EA622A800B45425 /* NewsMainViewController.m */,
+				A499A9781EA622A800B45425 /* NewsListViewController.h */,
+				A499A9791EA622A800B45425 /* NewsListViewController.m */,
+				A499A9761EA622A800B45425 /* NewsDetailViewController.h */,
+				A499A9771EA622A800B45425 /* NewsDetailViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";

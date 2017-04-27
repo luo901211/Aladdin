@@ -7,6 +7,7 @@
 //
 
 #import "NewsCell.h"
+#import "UILabel+ChangeLineSpaceAndWordSpace.h"
 
 @interface NewsCell ()
 
@@ -22,6 +23,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.imgIcon.backgroundColor = HEXCOLOR(0xf2f2f2);
 }
 
 - (void)setModel:(ALDNewsModel *)model
@@ -29,6 +31,7 @@
     _model = model;
     [self.imgIcon sd_setImageWithURL:[NSURL URLWithString:model.pic_url] placeholderImage:nil];
     self.lblTitle.text = model.title;
+    [UILabel changeLineSpaceForLabel:self.lblTitle WithSpace:4];
     self.lblSource.text = model.source;
     self.lblTime.text = model.add_date;
 }
