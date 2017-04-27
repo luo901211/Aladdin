@@ -92,29 +92,32 @@
         }else if(type == WQFetchDataTypeLoadMore){
             [self.tableView.mj_footer endRefreshing];
         }
-        NSLog(@"%@",error.userInfo);
+        [MBProgressHUD showAutoMessage:error.localizedDescription];
     }];
-    
-    
 }
 
 #pragma mark - Table view data source
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    ALDCollectModel *model = self.viewModel.collectList[indexPath.row];
-//    return [CollectCell heightForRow:model];
-    return 120;
+    ALDCollectModel *model = self.viewModel.list[indexPath.row];
+    return [CollectCell heightForRow:model];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    return self.viewModel.collectList.count;
-    return 2;
+    return self.viewModel.list.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CollectCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CollectCell"];
-//    ALDCollectModel *model = self.viewModel.collectList[indexPath.row];
-//    cell.model = model;
+    ALDCollectModel *model = self.viewModel.list[indexPath.row];
+    cell.model = model;
+    @weakify(self)
+    cell.tapCollectBlock = ^(id obj){
+        @strongify(self)
+        [self.viewModel.list removeObjectAtIndex:indexPath.row];
+        [self.tableView deleteRow:indexPath.row inSection:indexPath.section withRowAnimation:UITableViewRowAnimationAutomatic];
+    };
+
     return cell;
 }
 

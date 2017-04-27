@@ -8,7 +8,6 @@
 
 #import "UserFeatureView.h"
 #import "UserCenterVC.h"
-#import "MemberInfoVC.h"
 #import "CollectListVC.h"
 #import "MessageTypeListVC.h"
 #import "FeedbackVC.h"
@@ -105,7 +104,7 @@ static CGFloat buttonWidth = 164;
             break;
         case 4:
         {
-            vc = [[FeedbackVC alloc] init];
+            vc = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"FeedbackVC"];
         }
             break;
         default:

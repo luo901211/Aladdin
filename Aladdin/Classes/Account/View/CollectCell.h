@@ -13,6 +13,8 @@
 
 @property (nonatomic, strong) ALDCollectModel *model;
 
+@property (nonatomic, copy) VoidBlock tapCollectBlock;
+
 + (CGFloat)heightForRow:(ALDCollectModel *)model;
 
 @end

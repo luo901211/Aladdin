@@ -8,6 +8,7 @@
 
 #import "RegisterVC.h"
 #import "RegisterViewModel.h"
+#import "User+Helper.h"
 
 #define kTop (238.0 * kScreenWidthRatio)
 #define kLeft (Main_Screen_Width - kItemWidth) / 2
@@ -145,7 +146,13 @@
     NSString *code = self.codeTextField.text;
     NSString *password = self.pwdTextField.text;
     
+    @weakify(self);
     [self.viewModel registerWithPhone:phone password:password code:code success:^(id obj) {
+        @strongify(self);
+        [User sharedInstance].token = obj[@"token"];
+        [[User sharedInstance] save];
+        [[User sharedInstance] getUserinfo];
+        [self dismissViewControllerAnimated:YES completion:nil];
     } failure:^(id obj) {
         [MBProgressHUD showAutoMessage:obj];
     }];

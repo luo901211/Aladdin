@@ -46,14 +46,20 @@
                         <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMw-t3-toe">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMw-t3-toe">
                         <rect key="frame" x="238" y="90" width="70" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="GE9-PU-5xT"/>
                             <constraint firstAttribute="width" constant="70" id="zat-P6-Qln"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <state key="normal" title="取消收藏"/>
+                        <inset key="imageEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title="取消收藏" image="collect_n_item">
+                            <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="onPressedCollectBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="AIl-dH-OoH"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -69,7 +75,16 @@
                     <constraint firstItem="3Eo-7o-c3B" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ulx-nb-dOw"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="collectButton" destination="WMw-t3-toe" id="10N-J7-wW2"/>
+                <outlet property="timeLabel" destination="WzU-dT-AGO" id="soY-Sn-Bsh"/>
+                <outlet property="titleLabel" destination="3Eo-7o-c3B" id="bhU-cD-x3n"/>
+                <outlet property="typeLabel" destination="JL1-zN-ogx" id="jU8-LA-YYV"/>
+            </connections>
             <point key="canvasLocation" x="34" y="83"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="collect_n_item" width="16" height="15"/>
+    </resources>
 </document>

@@ -128,18 +128,6 @@
         }
     }];
     [dataTask resume];
-    
-    
-    
-//    [AFNManagerRequest postWithPath:url params:params hudType:NetworkRequestGraceTimeTypeNormal success:^(NSURLResponse *response, id responseObject) {        
-//        if (success) {
-//            success(responseObject);
-//        }
-//    } failure:^(NSError *error) {
-//        if (failure) {
-//            failure(error.localizedDescription);
-//        }
-//    }];
 }
 
 

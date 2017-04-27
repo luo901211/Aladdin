@@ -60,7 +60,7 @@
         [self.tableView reloadData];
     } failure:^(NSError *error) {
         [self.tableView.mj_header endRefreshing];
-        NSLog(@"error: %@",error);
+        [MBProgressHUD showAutoMessage:error.localizedDescription];
     }];
     
 }
@@ -68,20 +68,18 @@
 #pragma mark - Table view data source
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    ALDMessageModel *model = self.viewModel.messageList[indexPath.row];
-//    return [MessageCell heightForRow:model];
-    return 76;
+    ALDMessageModel *model = self.viewModel.list[indexPath.row];
+    return [MessageCell heightForRow:model];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    return self.viewModel.messageList.count;
-    return 12;
+    return self.viewModel.list.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MessageCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MessageCell"];
-//    ALDMessageModel *model = self.viewModel.messageList[indexPath.row];
-//    cell.model = model;
+    ALDMessageModel *model = self.viewModel.list[indexPath.row];
+    cell.model = model;
     return cell;
 }
 
@@ -89,9 +87,6 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-
 }
-
-
 
 @end

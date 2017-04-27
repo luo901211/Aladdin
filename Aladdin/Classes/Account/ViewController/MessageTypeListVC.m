@@ -64,8 +64,8 @@
         
     } failure:^(id obj) {
         [self.tableView.mj_header endRefreshing];
-        NSLog(@"error: %@",obj);
-        
+        [MBProgressHUD showAutoMessage:obj];
+
     }];
 }
 

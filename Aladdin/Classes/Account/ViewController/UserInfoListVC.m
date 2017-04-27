@@ -18,7 +18,6 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = HEXCOLOR(0xf6f6f6);
-//    self.tableView.tableFooterView = [UIView new];
 }
 
 - (void)didReceiveMemoryWarning {
