@@ -7,9 +7,12 @@
 //
 
 #import "User.h"
+#import "LoginVC.h"
 
 @interface User (Helper)
 
 - (void)getUserinfo;
+
++ (void)presentLoginViewController;
 
 @end

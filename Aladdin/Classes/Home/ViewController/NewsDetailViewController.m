@@ -10,6 +10,8 @@
 #import <WebKit/WebKit.h>
 #import "NewsDetailBottomView.h"
 #import "WQInputView.h"
+#import "NewsDetailViewModel.h"
+#import "User+Helper.h"
 
 @interface NewsDetailViewController ()<WKNavigationDelegate, WKUIDelegate>
 
@@ -17,9 +19,18 @@
 
 @property (nonatomic, strong) NewsDetailBottomView *bottomView;
 
+@property (nonatomic, strong) NewsDetailViewModel *viewModel;
+
 @end
 
 @implementation NewsDetailViewController
+
+- (NewsDetailViewModel *)viewModel {
+    if (!_viewModel) {
+        _viewModel = [[NewsDetailViewModel alloc] init];
+    }
+    return _viewModel;
+}
 
 - (WKWebView *)webView {
     if (!_webView) {
@@ -33,15 +44,30 @@
     if (!_bottomView) {
         _bottomView = [[NSBundle mainBundle] loadNibNamed:@"NewsDetailBottomView" owner:nil options:nil][0];
         _bottomView.frame = CGRectMake(0, self.view.height - 49, self.view.width, 49);
+        
+        @weakify(self)
         _bottomView.commentBlock = ^(){
-            NSLog(@"评论");
+            
+            // 未登录
+            if (![[User sharedInstance] isLogin]) {
+                [User presentLoginViewController];
+                return ;
+            }
+            
+            // 已登录
             __block WQInputView *popInputView = [[NSBundle mainBundle] loadNibNamed:@"WQInputView" owner:nil options:nil][0];
             [popInputView showWithTitle:@"写评论" cancelHandler:^(id obj) {
-                NSLog(@"取消评论");
+                /// 取消评论
             } sendHandler:^(id obj) {
-                NSLog(@"发送评论");
-                
-                
+                @strongify(self)
+                NSInteger ID = self.ID;
+                [self.viewModel submitComment:obj newsID:ID complete:^(NSString *msg) {
+                    if (msg) {
+                        [MBProgressHUD showAutoMessage:msg];
+                    }else{
+                        [MBProgressHUD showAutoMessage:@"评论成功"];
+                    }
+                }];
                 [popInputView hide];
             }];
         };

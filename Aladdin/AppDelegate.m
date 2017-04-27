@@ -84,8 +84,6 @@
 //登录页面
 - (void)presentLoginViewController {
     LoginVC *logInVc = [[LoginVC alloc] initWithNibName:@"LoginVC" bundle:[NSBundle mainBundle]];
-//    MessageTypeListVC *logInVc = [[MessageTypeListVC alloc] initWithNibName:@"MessageTypeListVC" bundle:[NSBundle mainBundle]];
-
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:logInVc];
     [self.window.rootViewController presentViewController:nav animated:YES completion:nil];
 }
@@ -98,5 +96,6 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 }
+
 
 @end

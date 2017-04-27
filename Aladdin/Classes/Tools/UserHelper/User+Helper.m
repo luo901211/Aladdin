@@ -31,4 +31,10 @@
     }];
 }
 
++ (void)presentLoginViewController {
+    LoginVC *logInVc = [[LoginVC alloc] initWithNibName:@"LoginVC" bundle:[NSBundle mainBundle]];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:logInVc];
+    [[UIApplication sharedApplication].delegate.window.rootViewController presentViewController:nav animated:YES completion:nil];
+}
+
 @end

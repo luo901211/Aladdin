@@ -10,6 +10,6 @@
 
 @interface NewsDetailViewModel : NSObject
 
-- (void)submitComment;
+- (void)submitComment:(NSString *)comment newsID:(NSInteger)ID complete:(void (^)(NSString *msg))complete;
 
 @end
