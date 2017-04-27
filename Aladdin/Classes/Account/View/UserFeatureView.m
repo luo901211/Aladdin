@@ -13,6 +13,7 @@
 #import "MessageTypeListVC.h"
 #import "FeedbackVC.h"
 #import "WQPopWindow.h"
+#import "QuestionListVC.h"
 
 @interface UserFeatureView ()
 
@@ -31,10 +32,15 @@ static CGFloat buttonWidth = 164;
 */
 
 - (instancetype)initWithItems:(NSArray *)items {
-    self = [super initWithFrame:CGRectMake(0, 0, buttonWidth, 320)];
+    self = [super initWithFrame:CGRectMake(0, 0, buttonWidth, 44 * items.count + 44 + 14)];
     if (self) {
         self.items = items;
-        self.backgroundColor = [UIColor whiteColor];
+        UIImageView *bgImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, buttonWidth, 44 * items.count + 44 + 14)];
+        UIImage *bgImage = [[UIImage imageNamed:@"user_feature_bg"] stretchableImageWithLeftCapWidth:50 topCapHeight:50];
+
+        bgImageView.image = bgImage;
+        [self addSubview:bgImageView];
+        
         for (int i = 0; i < items.count; i++) {
             NSDictionary *item = items[i];
             NSString *title = item[@"title"];
@@ -43,8 +49,9 @@ static CGFloat buttonWidth = 164;
             UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
             [button setTitle:title forState:UIControlStateNormal];
             [button setImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
+            [button setImage:[UIImage imageNamed:image] forState:UIControlStateHighlighted];
             [button setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 35)];
-            [button setFrame:CGRectMake(0, i * (44), buttonWidth, 44)];
+            [button setFrame:CGRectMake(0, 14 + i * (44), buttonWidth, 44)];
             [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
             button.titleLabel.font = [UIFont systemFontOfSize:15];
             [button addSubview:({
@@ -57,14 +64,19 @@ static CGFloat buttonWidth = 164;
             self.layer.cornerRadius = 6;
             [self addSubview:button];
         }
+        
+        // log out
+        UIButton *logoutBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [logoutBtn setTitle:@"退出登录" forState:UIControlStateNormal];
+        [logoutBtn setTitleColor:HEXCOLOR(0xffa02f) forState:UIControlStateNormal];
+        [logoutBtn setFrame:CGRectMake(0, 14 + items.count * (44), buttonWidth, 44)];
+        [logoutBtn addTarget:self action:@selector(logout) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:logoutBtn];
     }
     return self;
 }
 
 - (void)didPressedOnButton:(UIButton *)button {
-//    if (self.tapBlock) {
-//        self.tapBlock((button.tag-100));
-//    }
     
     NSInteger index = button.tag - 100;
     UIViewController *vc;
@@ -81,7 +93,9 @@ static CGFloat buttonWidth = 164;
             break;
         case 2:
         {
-            vc = [[CollectListVC alloc] init];
+            vc = [[QuestionListVC alloc] init];
+            [(QuestionListVC *)vc setType:QuestionTypeUser];
+            vc.title = @"我的问答";
         }
             break;
         case 3:
@@ -104,6 +118,8 @@ static CGFloat buttonWidth = 164;
     [navigationController pushViewController:vc animated:YES];
 }
 
-
+- (void)logout {
+    
+}
 
 @end

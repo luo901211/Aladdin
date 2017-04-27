@@ -10,8 +10,6 @@
 
 @interface UserFeatureView : UIView
 
-@property (nonatomic, copy) void(^tapBlock)(NSInteger index);
-
 - (instancetype)initWithItems:(NSArray *)items;
 
 @end

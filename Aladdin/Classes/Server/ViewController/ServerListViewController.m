@@ -43,7 +43,7 @@
                            @{ @"title": @"意见反馈", @"image": @"user_feedback_item" }
                            ];
         _userFeatureView = [[UserFeatureView alloc] initWithItems:array];
-        _userFeatureView.top = 64+20;
+        _userFeatureView.top = 64 + 5;
         _userFeatureView.right = Main_Screen_Width - 20;
     }
     return _userFeatureView;
