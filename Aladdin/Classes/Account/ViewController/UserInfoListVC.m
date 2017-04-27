@@ -7,17 +7,45 @@
 //
 
 #import "UserInfoListVC.h"
+#import "UserInfoListViewModel.h"
 
 @interface UserInfoListVC ()
+
+@property (nonatomic, strong) UserInfoListViewModel *viewModel;
+@property (weak, nonatomic) IBOutlet UITextField *accountTextField;
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *addressTextField;
+@property (weak, nonatomic) IBOutlet UITextField *companyTextField;
+@property (weak, nonatomic) IBOutlet UITextField *positionTextField;
 
 @end
 
 @implementation UserInfoListVC
 
+- (UserInfoListViewModel *)viewModel {
+    if (!_viewModel) {
+        _viewModel = [[UserInfoListViewModel alloc] init];
+    }
+    return _viewModel;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.view.backgroundColor = HEXCOLOR(0xf6f6f6);
+    self.accountTextField.enabled = NO;
+    
+    @weakify(self)
+    [self.viewModel loadDataWithComplete:^(NSString *msg) {
+        @strongify(self)
+        NSLog(@"userInfo: %@",self.viewModel.userInfo);
+        NSLog(@"msg: %@",msg);
+        self.accountTextField.text = self.viewModel.userInfo[@"mobile"];
+        self.nameTextField.text = self.viewModel.userInfo[@"real_name"];
+        self.addressTextField.text = self.viewModel.userInfo[@"address"];
+        self.companyTextField.text = self.viewModel.userInfo[@"company"];
+        self.positionTextField.text = self.viewModel.userInfo[@"position"];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -59,7 +59,6 @@
 		A45378881EA7620300020C5D /* CollectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A45378861EA7620300020C5D /* CollectCell.m */; };
 		A45378891EA7620300020C5D /* CollectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A45378871EA7620300020C5D /* CollectCell.xib */; };
 		A453788C1EA7687800020C5D /* CollectListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A453788B1EA7687800020C5D /* CollectListViewModel.m */; };
-		A45378951EA768F000020C5D /* FeedbackViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A45378941EA768F000020C5D /* FeedbackViewModel.m */; };
 		A45378AA1EA9A10A00020C5D /* SGHelperTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A45378A11EA9A10A00020C5D /* SGHelperTool.m */; };
 		A45378AB1EA9A10A00020C5D /* SGPageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = A45378A31EA9A10A00020C5D /* SGPageContentView.m */; };
 		A45378AC1EA9A10A00020C5D /* SGPageTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A45378A51EA9A10A00020C5D /* SGPageTitleView.m */; };
@@ -112,6 +111,9 @@
 		A4C2673C1EAF58FC007A5674 /* QuestionContainerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C267331EAF58FC007A5674 /* QuestionContainerVC.m */; };
 		A4C2673D1EAF58FC007A5674 /* QuestionListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C267351EAF58FC007A5674 /* QuestionListVC.m */; };
 		A4C2673E1EAF58FC007A5674 /* QuestionListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C267381EAF58FC007A5674 /* QuestionListViewModel.m */; };
+		A4C305B41EB1F64D00308E18 /* UserInfoListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C305B31EB1F64D00308E18 /* UserInfoListViewModel.m */; };
+		A4C305B71EB1F66000308E18 /* ChangePasswordViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C305B61EB1F66000308E18 /* ChangePasswordViewModel.m */; };
+		A4C305BA1EB1F66E00308E18 /* FindPasswordViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C305B91EB1F66E00308E18 /* FindPasswordViewModel.m */; };
 		A4C32AEB1E98A7B800D53E1A /* MPFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32ACE1E98A7B800D53E1A /* MPFileManager.m */; };
 		A4C32AEC1E98A7B800D53E1A /* GCDGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32AD21E98A7B800D53E1A /* GCDGroup.m */; };
 		A4C32AED1E98A7B800D53E1A /* GCDQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32AD41E98A7B800D53E1A /* GCDQueue.m */; };
@@ -277,10 +279,6 @@
 		A45378871EA7620300020C5D /* CollectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectCell.xib; sourceTree = "<group>"; };
 		A453788A1EA7687800020C5D /* CollectListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectListViewModel.h; sourceTree = "<group>"; };
 		A453788B1EA7687800020C5D /* CollectListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectListViewModel.m; sourceTree = "<group>"; };
-		A45378931EA768F000020C5D /* FeedbackViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackViewModel.h; sourceTree = "<group>"; };
-		A45378941EA768F000020C5D /* FeedbackViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewModel.m; sourceTree = "<group>"; };
-		A453789C1EA8512D00020C5D /* QuestionListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionListViewModel.h; sourceTree = "<group>"; };
-		A453789D1EA8512D00020C5D /* QuestionListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionListViewModel.m; sourceTree = "<group>"; };
 		A45378A01EA9A10A00020C5D /* SGHelperTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHelperTool.h; sourceTree = "<group>"; };
 		A45378A11EA9A10A00020C5D /* SGHelperTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHelperTool.m; sourceTree = "<group>"; };
 		A45378A21EA9A10A00020C5D /* SGPageContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPageContentView.h; sourceTree = "<group>"; };
@@ -381,6 +379,12 @@
 		A4C267351EAF58FC007A5674 /* QuestionListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionListVC.m; sourceTree = "<group>"; };
 		A4C267371EAF58FC007A5674 /* QuestionListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionListViewModel.h; sourceTree = "<group>"; };
 		A4C267381EAF58FC007A5674 /* QuestionListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionListViewModel.m; sourceTree = "<group>"; };
+		A4C305B21EB1F64D00308E18 /* UserInfoListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoListViewModel.h; sourceTree = "<group>"; };
+		A4C305B31EB1F64D00308E18 /* UserInfoListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoListViewModel.m; sourceTree = "<group>"; };
+		A4C305B51EB1F66000308E18 /* ChangePasswordViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordViewModel.h; sourceTree = "<group>"; };
+		A4C305B61EB1F66000308E18 /* ChangePasswordViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewModel.m; sourceTree = "<group>"; };
+		A4C305B81EB1F66E00308E18 /* FindPasswordViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindPasswordViewModel.h; sourceTree = "<group>"; };
+		A4C305B91EB1F66E00308E18 /* FindPasswordViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPasswordViewModel.m; sourceTree = "<group>"; };
 		A4C32ACD1E98A7B800D53E1A /* MPFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPFileManager.h; sourceTree = "<group>"; };
 		A4C32ACE1E98A7B800D53E1A /* MPFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPFileManager.m; sourceTree = "<group>"; };
 		A4C32AD01E98A7B800D53E1A /* GCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCD.h; sourceTree = "<group>"; };
@@ -630,16 +634,18 @@
 				A43F9DE61E9FAB1600AA831E /* LoginViewModel.m */,
 				A43F9DE81E9FB1B300AA831E /* RegisterViewModel.h */,
 				A43F9DE91E9FB1B300AA831E /* RegisterViewModel.m */,
+				A4C305B21EB1F64D00308E18 /* UserInfoListViewModel.h */,
+				A4C305B31EB1F64D00308E18 /* UserInfoListViewModel.m */,
+				A4C305B51EB1F66000308E18 /* ChangePasswordViewModel.h */,
+				A4C305B61EB1F66000308E18 /* ChangePasswordViewModel.m */,
+				A4C305B81EB1F66E00308E18 /* FindPasswordViewModel.h */,
+				A4C305B91EB1F66E00308E18 /* FindPasswordViewModel.m */,
 				A453788A1EA7687800020C5D /* CollectListViewModel.h */,
 				A453788B1EA7687800020C5D /* CollectListViewModel.m */,
 				A40891441EA397A30071D22D /* MessageTypeViewModel.h */,
 				A40891451EA397A30071D22D /* MessageTypeViewModel.m */,
 				A408914F1EA3996F0071D22D /* MessageListViewModel.h */,
 				A40891501EA3996F0071D22D /* MessageListViewModel.m */,
-				A45378931EA768F000020C5D /* FeedbackViewModel.h */,
-				A45378941EA768F000020C5D /* FeedbackViewModel.m */,
-				A453789C1EA8512D00020C5D /* QuestionListViewModel.h */,
-				A453789D1EA8512D00020C5D /* QuestionListViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1476,7 +1482,7 @@
 				A4C7C4DE1E9F19E0003A36E0 /* WQPopWindow.m in Sources */,
 				A43F9DE71E9FAB1600AA831E /* LoginViewModel.m in Sources */,
 				A40891621EA3AF110071D22D /* ServerListViewController.m in Sources */,
-				A45378951EA768F000020C5D /* FeedbackViewModel.m in Sources */,
+				A4C305B41EB1F64D00308E18 /* UserInfoListViewModel.m in Sources */,
 				A40891541EA399AD0071D22D /* ALDMessageModel.m in Sources */,
 				A4C7C4D91E9F194A003A36E0 /* WQChiBaoZiHeader.m in Sources */,
 				A4C32AF01E98A7B800D53E1A /* introductoryPagesHelper.m in Sources */,
@@ -1529,6 +1535,7 @@
 				A4C266D01EAEE58E007A5674 /* ExpertAnswerListViewModel.m in Sources */,
 				A408912F1EA3297A0071D22D /* NSString+Verify.m in Sources */,
 				A499A9861EA622A800B45425 /* ALDNewsModel.m in Sources */,
+				A4C305BA1EB1F66E00308E18 /* FindPasswordViewModel.m in Sources */,
 				A4C32E991E9A562D00D53E1A /* ALDBaseNavigationController.m in Sources */,
 				A4C32E171E98AB3300D53E1A /* Reachability.m in Sources */,
 				A4C32E9F1E9A5F7100D53E1A /* DiscoverListViewController.m in Sources */,
@@ -1553,6 +1560,7 @@
 				A40891761EA4610B0071D22D /* UserFeatureView.m in Sources */,
 				A4DF60181EA9FAF10084963F /* PolicyListViewModel.m in Sources */,
 				A4DF601E1EA9FC8D0084963F /* ALDPolicyModel.m in Sources */,
+				A4C305B71EB1F66000308E18 /* ChangePasswordViewModel.m in Sources */,
 				A499A98D1EA622A800B45425 /* NewsListViewController.m in Sources */,
 				A45378AD1EA9A10A00020C5D /* UIView+SGFrame.m in Sources */,
 				A4C32E6C1E9A1BF400D53E1A /* SGImageButton_Vertical.m in Sources */,

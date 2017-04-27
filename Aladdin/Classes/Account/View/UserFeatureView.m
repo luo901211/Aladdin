@@ -118,7 +118,10 @@ static CGFloat buttonWidth = 164;
 }
 
 - (void)logout {
-    
+    [[WQPopWindow sharedWindow] hide];
+    [[User sharedInstance] logout];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"已退出登录" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+    [alertView show];
 }
 
 @end
