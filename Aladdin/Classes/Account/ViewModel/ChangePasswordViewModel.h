@@ -10,4 +10,7 @@
 
 @interface ChangePasswordViewModel : NSObject
 
+- (void)changePasswordWithPassword:(NSString *)password newPassword:(NSString *)newPassword rePassword:(NSString *)rePassword complete:(void (^)(NSString *msg))complete;
+
+
 @end

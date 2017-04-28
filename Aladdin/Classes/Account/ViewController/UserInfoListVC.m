@@ -35,30 +35,46 @@
     
     self.view.backgroundColor = HEXCOLOR(0xf6f6f6);
     self.accountTextField.enabled = NO;
-    
+    [self loadData];
+}
+
+- (void)loadData {
     @weakify(self)
     [self.viewModel loadDataWithComplete:^(NSString *msg) {
         @strongify(self)
-        NSLog(@"userInfo: %@",self.viewModel.userInfo);
-        NSLog(@"msg: %@",msg);
-        self.accountTextField.text = self.viewModel.userInfo[@"mobile"];
-        self.nameTextField.text = self.viewModel.userInfo[@"real_name"];
-        self.addressTextField.text = self.viewModel.userInfo[@"address"];
-        self.companyTextField.text = self.viewModel.userInfo[@"company"];
-        self.positionTextField.text = self.viewModel.userInfo[@"position"];
+        if (msg) {
+            [MBProgressHUD showAutoMessage:msg];
+        }else{
+            self.accountTextField.text = self.viewModel.userInfo[@"mobile"];
+            self.nameTextField.text = self.viewModel.userInfo[@"real_name"];
+            self.addressTextField.text = self.viewModel.userInfo[@"address"];
+            self.companyTextField.text = self.viewModel.userInfo[@"company"];
+            self.positionTextField.text = self.viewModel.userInfo[@"position"];
+        }
     }];
-    
-    
-    NSDictionary *params = @{
-                             @"real_name": self.accountTextField.text};
-    
+}
+
+- (IBAction)save:(UIButton *)sender {
     //    token：必传，用户标识
     //    real_name：必传
     //    address：必传
     //    company：必传
     //    position：必传
     //    pic ： 必传，name=pic, 使用file方式上传图像
-    
+    NSDictionary *params = @{
+                             @"real_name": self.nameTextField.text,
+                             @"address": self.addressTextField.text,
+                             @"company": self.companyTextField.text,
+                             @"position": self.positionTextField.text,
+                             @"pic": @""
+                             };
+    [self.viewModel saveDataWithParams:params complete:^(NSString *msg) {
+        if (msg) {
+            [MBProgressHUD showAutoMessage:msg];
+        }else{
+            [MBProgressHUD showAutoMessage:@"保存成功"];
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

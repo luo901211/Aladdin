@@ -33,13 +33,13 @@
     
     NSMutableDictionary *mParams = [NSMutableDictionary dictionaryWithDictionary:params];
     [mParams setObject:[User sharedInstance].token forKey:@"token"];
-    [mParams setObject:@"" forKey:@"pic"];
 
     [AFNManagerRequest postWithPath:API_USER_SAVEINFO params:mParams hudType:(NetworkRequestGraceTimeTypeNormal) success:^(NSURLResponse *response, id responseObject) {
         complete(nil);
     } failure:^(NSError *error) {
         complete(error.localizedDescription);
     }];
+
 }
 @end
 

@@ -48,6 +48,9 @@
                                     <state key="normal" title="保存">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
+                                    <connections>
+                                        <action selector="save:" destination="P8a-ZI-L5r" eventType="touchUpInside" id="yH7-ZM-e4s"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -319,6 +322,9 @@
                                     <state key="normal" title="确定">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
+                                    <connections>
+                                        <action selector="changePassword:" destination="cCR-qA-Jxi" eventType="touchUpInside" id="ALQ-AR-LYo"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
@@ -355,7 +361,7 @@
                                                     </constraints>
                                                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -395,7 +401,7 @@
                                                     </constraints>
                                                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -431,7 +437,7 @@
                                                     </constraints>
                                                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -450,6 +456,11 @@
                             <outlet property="dataSource" destination="cCR-qA-Jxi" id="NwX-Ko-Cuw"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="nPasswordTextField" destination="Zr4-W3-qfm" id="fh0-Ct-Oxp"/>
+                        <outlet property="passwordTextField" destination="GSb-am-e7M" id="tHc-sp-p4v"/>
+                        <outlet property="rePasswordTextField" destination="mSZ-Vr-VjJ" id="6cJ-bS-gv1"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hbA-Zs-7Kx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
