@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UITextField *nPasswordTextField;
 @property (weak, nonatomic) IBOutlet UITextField *rePasswordTextField;
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
 
 @end
 
@@ -31,6 +32,7 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = HEXCOLOR(0xf6f6f6);
+    self.saveButton.layer.cornerRadius = self.saveButton.height/2;
     
 }
 - (IBAction)changePassword:(UIButton *)sender {

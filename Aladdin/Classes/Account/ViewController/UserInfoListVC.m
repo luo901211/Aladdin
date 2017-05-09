@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *companyTextField;
 @property (weak, nonatomic) IBOutlet UITextField *positionTextField;
 @property (weak, nonatomic) IBOutlet UIButton *avatarButton;
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
 
 @end
 
@@ -35,6 +36,7 @@
     
     self.view.backgroundColor = HEXCOLOR(0xf6f6f6);
     self.accountTextField.enabled = NO;
+    self.saveButton.layer.cornerRadius = self.saveButton.height/2;
     [self loadData];
 }
 

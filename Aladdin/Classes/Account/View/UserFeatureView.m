@@ -13,6 +13,7 @@
 #import "FeedbackVC.h"
 #import "WQPopWindow.h"
 #import "QuestionListVC.h"
+#import "User+Helper.h"
 
 @interface UserFeatureView ()
 
@@ -66,10 +67,12 @@ static CGFloat buttonWidth = 164;
         
         // log out
         UIButton *logoutBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [logoutBtn setTitle:@"退出登录" forState:UIControlStateNormal];
+        [logoutBtn setTitle:@"退出登录" forState:UIControlStateSelected];
+        [logoutBtn setTitle:@"登录" forState:UIControlStateNormal];
         [logoutBtn setTitleColor:HEXCOLOR(0xffa02f) forState:UIControlStateNormal];
         [logoutBtn setFrame:CGRectMake(0, 14 + items.count * (44), buttonWidth, 44)];
-        [logoutBtn addTarget:self action:@selector(logout) forControlEvents:UIControlEventTouchUpInside];
+        [logoutBtn addTarget:self action:@selector(logoutOrLogin) forControlEvents:UIControlEventTouchUpInside];
+        [logoutBtn setSelected:[User sharedInstance].isLogin];
         [self addSubview:logoutBtn];
     }
     return self;
@@ -117,11 +120,16 @@ static CGFloat buttonWidth = 164;
     [navigationController pushViewController:vc animated:YES];
 }
 
-- (void)logout {
+- (void)logoutOrLogin {
     [[WQPopWindow sharedWindow] hide];
-    [[User sharedInstance] logout];
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"已退出登录" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
-    [alertView show];
+    
+    if ([User sharedInstance].isLogin) {
+        [[User sharedInstance] logout];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"已退出登录" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alertView show];
+    }else{
+        [User presentLoginViewController];
+    }
 }
 
 @end

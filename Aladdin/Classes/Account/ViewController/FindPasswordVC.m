@@ -29,7 +29,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.view.backgroundColor = HEXCOLOR(0xf6f6f6);
+//    self.view.backgroundColor = HEXCOLOR(0xf6f6f6);
+    self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"重置密码";
     [self initUI];
 }

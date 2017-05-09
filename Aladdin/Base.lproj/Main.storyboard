@@ -80,7 +80,7 @@
                                                     <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入账号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0OZ-Sv-yi4">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0OZ-Sv-yi4">
                                                     <rect key="frame" x="115" y="0.0" width="245" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="CcW-jH-Pb1"/>
@@ -295,6 +295,7 @@
                         <outlet property="companyTextField" destination="0rS-h9-KL9" id="VlE-U8-La6"/>
                         <outlet property="nameTextField" destination="c9b-Fh-qxW" id="hTJ-9m-SLJ"/>
                         <outlet property="positionTextField" destination="Tfk-nx-DHd" id="9fk-A7-IAU"/>
+                        <outlet property="saveButton" destination="9OK-DS-c8Y" id="BUc-Vo-oOH"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NZ6-EX-OlN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -460,6 +461,7 @@
                         <outlet property="nPasswordTextField" destination="Zr4-W3-qfm" id="fh0-Ct-Oxp"/>
                         <outlet property="passwordTextField" destination="GSb-am-e7M" id="tHc-sp-p4v"/>
                         <outlet property="rePasswordTextField" destination="mSZ-Vr-VjJ" id="6cJ-bS-gv1"/>
+                        <outlet property="saveButton" destination="l5i-ph-QWd" id="0pb-zt-L8A"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hbA-Zs-7Kx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -628,12 +630,58 @@
             </objects>
             <point key="canvasLocation" x="2509.5999999999999" y="-114.69265367316342"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="2DX-ag-moN">
+            <objects>
+                <viewController id="Nao-ME-hWF" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DLI-WX-rQd"/>
+                        <viewControllerLayoutGuide type="bottom" id="ySu-bT-QI1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dwq-my-F27">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytT-x6-B9W">
+                                <rect key="frame" x="315" y="0.0" width="60" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="4eN-jx-zvv"/>
+                                    <constraint firstAttribute="height" constant="44" id="QTf-Ml-deP"/>
+                                </constraints>
+                                <state key="normal" title="搜索">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yMQ-in-MWm">
+                                <rect key="frame" x="59" y="0.0" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="left_img_search" translatesAutoresizingMaskIntoConstraints="NO" id="O3w-E8-D6Y">
+                                <rect key="frame" x="90" y="72" width="28" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ytT-x6-B9W" firstAttribute="top" secondItem="Dwq-my-F27" secondAttribute="top" id="PWl-ge-BUO"/>
+                            <constraint firstAttribute="trailing" secondItem="ytT-x6-B9W" secondAttribute="trailing" id="g5E-2s-0s7"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mvV-tg-h0H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3609" y="27"/>
+        </scene>
     </scenes>
     <resources>
         <image name="feedback_business" width="345" height="47"/>
         <image name="feedback_contribute" width="345" height="47"/>
         <image name="feedback_join" width="345" height="47"/>
         <image name="feedback_suggest" width="345" height="47"/>
+        <image name="left_img_search" width="14" height="14"/>
         <image name="upload_image_item" width="59" height="55"/>
     </resources>
 </document>

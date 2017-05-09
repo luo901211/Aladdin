@@ -11,6 +11,7 @@
 #import "NewsListViewController.h"
 #import "NewsMainViewModel.h"
 #import "ALDNewsTypeModel.h"
+#import "NewsSearchViewController.h"
 
 @interface NewsMainViewController ()<SGSegmentedControlDefaultDelegate, UIScrollViewDelegate>
 
@@ -37,13 +38,15 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     self.navigationItem.title = @"阿拉灯";
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:(UIBarButtonSystemItemSearch) target:self action:nil];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:(UIBarButtonSystemItemSearch) target:self action:@selector(showSearchVC)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"item_user_center"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:(UIBarButtonItemStylePlain) target:self action:@selector(showUserFeatureView)];
     [self loadNewsType];
     
 }
 
 - (void)showSearchVC {
+    NewsSearchViewController *searchVC = [[NewsSearchViewController alloc]init];
+    [self.navigationController pushViewController:searchVC animated:YES];
 }
 - (void)showUserFeatureView {
 }

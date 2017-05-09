@@ -56,6 +56,7 @@
 		A43F9DE31E9F6DDF00AA831E /* ChangePasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A43F9DE11E9F6DDF00AA831E /* ChangePasswordVC.m */; };
 		A43F9DE71E9FAB1600AA831E /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A43F9DE61E9FAB1600AA831E /* LoginViewModel.m */; };
 		A43F9DEA1E9FB1B300AA831E /* RegisterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A43F9DE91E9FB1B300AA831E /* RegisterViewModel.m */; };
+		A44B7A1E1EC1D82E00907407 /* NewsSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A44B7A1D1EC1D82E00907407 /* NewsSearchViewController.m */; };
 		A45378881EA7620300020C5D /* CollectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A45378861EA7620300020C5D /* CollectCell.m */; };
 		A45378891EA7620300020C5D /* CollectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A45378871EA7620300020C5D /* CollectCell.xib */; };
 		A453788C1EA7687800020C5D /* CollectListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A453788B1EA7687800020C5D /* CollectListViewModel.m */; };
@@ -274,6 +275,8 @@
 		A43F9DE61E9FAB1600AA831E /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
 		A43F9DE81E9FB1B300AA831E /* RegisterViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewModel.h; sourceTree = "<group>"; };
 		A43F9DE91E9FB1B300AA831E /* RegisterViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewModel.m; sourceTree = "<group>"; };
+		A44B7A1C1EC1D82E00907407 /* NewsSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsSearchViewController.h; sourceTree = "<group>"; };
+		A44B7A1D1EC1D82E00907407 /* NewsSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsSearchViewController.m; sourceTree = "<group>"; };
 		A45378851EA7620300020C5D /* CollectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectCell.h; sourceTree = "<group>"; };
 		A45378861EA7620300020C5D /* CollectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectCell.m; sourceTree = "<group>"; };
 		A45378871EA7620300020C5D /* CollectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectCell.xib; sourceTree = "<group>"; };
@@ -713,6 +716,8 @@
 				A499A9791EA622A800B45425 /* NewsListViewController.m */,
 				A499A9761EA622A800B45425 /* NewsDetailViewController.h */,
 				A499A9771EA622A800B45425 /* NewsDetailViewController.m */,
+				A44B7A1C1EC1D82E00907407 /* NewsSearchViewController.h */,
+				A44B7A1D1EC1D82E00907407 /* NewsSearchViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1528,6 +1533,7 @@
 				A43C93511E9E2342008B877D /* UIView+BlockGesture.m in Sources */,
 				A43F9DDE1E9F6DCE00AA831E /* FindPasswordVC.m in Sources */,
 				A4C32AF21E98A7B800D53E1A /* CLLocation+MPLocation.m in Sources */,
+				A44B7A1E1EC1D82E00907407 /* NewsSearchViewController.m in Sources */,
 				A43F9DD41E9F2CD400AA831E /* RegisterVC.m in Sources */,
 				A40891731EA3B0F70071D22D /* ServerListViewModel.m in Sources */,
 				A4DF5FFC1EA9B68B0084963F /* ALDVideoModel.m in Sources */,

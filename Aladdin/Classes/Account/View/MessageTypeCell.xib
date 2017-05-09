@@ -44,6 +44,14 @@
                         <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="maE-7f-Ffz">
+                        <rect key="frame" x="68" y="14" width="8" height="8"/>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.56078431370000004" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="8" id="Ejk-sf-DDS"/>
+                            <constraint firstAttribute="width" secondItem="maE-7f-Ffz" secondAttribute="height" multiplier="1:1" id="Ls8-A7-6dO"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="VBc-iC-3He" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="1ly-vc-Fq2"/>
@@ -51,14 +59,17 @@
                     <constraint firstAttribute="trailing" secondItem="bkG-we-gKL" secondAttribute="trailing" constant="20" id="E0p-xj-iFs"/>
                     <constraint firstItem="9aB-H0-e5w" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="FlD-C9-gs4"/>
                     <constraint firstItem="bkG-we-gKL" firstAttribute="leading" secondItem="9aB-H0-e5w" secondAttribute="trailing" constant="20" id="Hxd-g8-d3W"/>
+                    <constraint firstItem="maE-7f-Ffz" firstAttribute="leading" secondItem="9aB-H0-e5w" secondAttribute="trailing" constant="-4" id="Isj-8S-Mdg"/>
                     <constraint firstItem="bkG-we-gKL" firstAttribute="top" secondItem="VBc-iC-3He" secondAttribute="bottom" constant="10" id="ZKy-zW-ZHX"/>
                     <constraint firstAttribute="trailing" secondItem="VBc-iC-3He" secondAttribute="trailing" constant="20" id="gmu-ns-hVC"/>
+                    <constraint firstItem="maE-7f-Ffz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="hvI-RE-a1G"/>
                     <constraint firstItem="9aB-H0-e5w" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="uOV-3P-Q49"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="imageV" destination="9aB-H0-e5w" id="fl1-tX-Whc"/>
                 <outlet property="msgLabel" destination="bkG-we-gKL" id="orj-GA-rx9"/>
+                <outlet property="pointView" destination="maE-7f-Ffz" id="fmP-xi-syI"/>
                 <outlet property="typeLabel" destination="VBc-iC-3He" id="mdL-gI-6u8"/>
             </connections>
             <point key="canvasLocation" x="34" y="72"/>
