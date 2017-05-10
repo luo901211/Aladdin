@@ -55,6 +55,8 @@
 		A43F9DE31E9F6DDF00AA831E /* ChangePasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A43F9DE11E9F6DDF00AA831E /* ChangePasswordVC.m */; };
 		A43F9DE71E9FAB1600AA831E /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A43F9DE61E9FAB1600AA831E /* LoginViewModel.m */; };
 		A43F9DEA1E9FB1B300AA831E /* RegisterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A43F9DE91E9FB1B300AA831E /* RegisterViewModel.m */; };
+		A44B7A331EC3169100907407 /* FinanceChapterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A44B7A311EC3169100907407 /* FinanceChapterCell.m */; };
+		A44B7A341EC3169100907407 /* FinanceChapterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A44B7A321EC3169100907407 /* FinanceChapterCell.xib */; };
 		A45378881EA7620300020C5D /* CollectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A45378861EA7620300020C5D /* CollectCell.m */; };
 		A45378891EA7620300020C5D /* CollectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A45378871EA7620300020C5D /* CollectCell.xib */; };
 		A453788C1EA7687800020C5D /* CollectListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A453788B1EA7687800020C5D /* CollectListViewModel.m */; };
@@ -272,6 +274,9 @@
 		A43F9DE61E9FAB1600AA831E /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
 		A43F9DE81E9FB1B300AA831E /* RegisterViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewModel.h; sourceTree = "<group>"; };
 		A43F9DE91E9FB1B300AA831E /* RegisterViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewModel.m; sourceTree = "<group>"; };
+		A44B7A301EC3169100907407 /* FinanceChapterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinanceChapterCell.h; sourceTree = "<group>"; };
+		A44B7A311EC3169100907407 /* FinanceChapterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinanceChapterCell.m; sourceTree = "<group>"; };
+		A44B7A321EC3169100907407 /* FinanceChapterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FinanceChapterCell.xib; sourceTree = "<group>"; };
 		A45378851EA7620300020C5D /* CollectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectCell.h; sourceTree = "<group>"; };
 		A45378861EA7620300020C5D /* CollectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectCell.m; sourceTree = "<group>"; };
 		A45378871EA7620300020C5D /* CollectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectCell.xib; sourceTree = "<group>"; };
@@ -1063,6 +1068,9 @@
 				A42299961EACA5BE00F62707 /* FinanceCell.h */,
 				A42299971EACA5BE00F62707 /* FinanceCell.m */,
 				A42299981EACA5BE00F62707 /* FinanceCell.xib */,
+				A44B7A301EC3169100907407 /* FinanceChapterCell.h */,
+				A44B7A311EC3169100907407 /* FinanceChapterCell.m */,
+				A44B7A321EC3169100907407 /* FinanceChapterCell.xib */,
 				A42299AA1EACAE3100F62707 /* ExpertCell.h */,
 				A42299AB1EACAE3100F62707 /* ExpertCell.m */,
 				A42299AC1EACAE3100F62707 /* ExpertCell.xib */,
@@ -1380,6 +1388,7 @@
 				A4C32E731E9A343900D53E1A /* Login.xcassets in Resources */,
 				A4DF60041EA9D4120084963F /* TeachingVideoDetailVC.xib in Resources */,
 				A42299B91EAD9DBB00F62707 /* TeachingVideoDetailBottomView.xib in Resources */,
+				A44B7A341EC3169100907407 /* FinanceChapterCell.xib in Resources */,
 				A499A98B1EA622A800B45425 /* NewsDetailBottomView.xib in Resources */,
 				A408916B1EA3AF420071D22D /* ServerCell.xib in Resources */,
 				A4C266C11EAEE501007A5674 /* ExpertAnswerCell.xib in Resources */,
@@ -1493,6 +1502,7 @@
 				A4C32E961E9A540E00D53E1A /* UINavigationBar+Awesome.m in Sources */,
 				A42299A31EACA63900F62707 /* FinanceDetailViewModel.m in Sources */,
 				A4AE170D1E9E1383007965EE /* UIView+CustomBorder.m in Sources */,
+				A44B7A331EC3169100907407 /* FinanceChapterCell.m in Sources */,
 				A4DF60211EA9FC9C0084963F /* ALDPolicyDetailModel.m in Sources */,
 				A4C2673C1EAF58FC007A5674 /* QuestionContainerVC.m in Sources */,
 				A45378AB1EA9A10A00020C5D /* SGPageContentView.m in Sources */,

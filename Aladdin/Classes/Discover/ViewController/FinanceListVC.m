@@ -117,6 +117,9 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     FinanceChapterListVC *vc = [[FinanceChapterListVC alloc] init];
+    ALDFinanceModel *model = self.viewModel.list[indexPath.row];
+    vc.ID = model.ID;
+    vc.title = model.title;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

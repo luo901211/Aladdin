@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FinanceChapterListVC : UITableViewController
+@interface FinanceChapterListVC : UIViewController
+
+@property (nonatomic, assign) NSInteger ID;
 
 @end

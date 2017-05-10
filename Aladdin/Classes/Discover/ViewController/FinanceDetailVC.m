@@ -10,15 +10,30 @@
 
 @interface FinanceDetailVC ()
 
+@property (strong, nonatomic) UIWebView *webView;
+
 @end
 
 @implementation FinanceDetailVC
 
+- (UIWebView *)webView {
+    if (!_webView) {
+        _webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+    }
+    return _webView;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationItem.title = @"财务秘籍详情";
-
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.webView];
+    [self loadData];
+}
+- (void)loadData {
+    NSString *urlString = [NSString stringWithFormat:@"%@%@?id=%ld&token=%@",SERVER_HOST, API_DISCOVER_FINANCE_DETAIL, (long)self.ID, [User sharedInstance].token];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
 }
 
 - (void)didReceiveMemoryWarning {

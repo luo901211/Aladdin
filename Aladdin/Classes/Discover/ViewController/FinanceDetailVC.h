@@ -10,4 +10,6 @@
 
 @interface FinanceDetailVC : UIViewController
 
+@property (nonatomic, assign) NSInteger ID;
+
 @end

@@ -10,4 +10,9 @@
 
 @interface FinanceChapterListViewModel : NSObject
 
+@property (nonatomic, strong) NSMutableArray *list;
+
+- (void)loadDataWithID:(NSInteger)ID
+               success:(VoidBlock)success
+               failure:(VoidBlock)failure;
 @end

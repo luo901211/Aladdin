@@ -7,7 +7,7 @@
 //
 
 #import "MJExtensionConfig.h"
-
+#import "ALDFinanceChapterModel.h"
 @implementation MJExtensionConfig
 /**
  *  这个方法会在MJExtensionConfig加载进内存时调用一次
@@ -22,7 +22,13 @@
         return @{ @"ID" : @"id" };
     }];
     
-
+    // Tell MJExtension what type model will be contained in statuses and ads.
+    [ALDFinanceChapterModel mj_setupObjectClassInArray:^NSDictionary *{
+        return @{
+                 @"child" : @"ALDFinanceChapterModel"
+                 };
+    }];
+    
     // 相当于在MJDog.m中实现了+(NSDictionary *)mj_replacedKeyFromPropertyName121:方法
     
 //#pragma mark MJStatusResult类中的statuses数组中存放的是MJStatus模型

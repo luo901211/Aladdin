@@ -7,93 +7,112 @@
 //
 
 #import "FinanceChapterListVC.h"
+#import <RATreeView.h>
+#import "FinanceChapterCell.h"
+#import "ALDFinanceChapterModel.h"
+#import "FinanceChapterListViewModel.h"
+#import "FinanceDetailVC.h"
 
-@interface FinanceChapterListVC ()
+@interface FinanceChapterListVC ()<RATreeViewDelegate, RATreeViewDataSource>
 
+@property (strong, nonatomic) FinanceChapterListViewModel *viewModel;
+@property (strong, nonatomic) RATreeView *treeView;
 @end
 
 @implementation FinanceChapterListVC
 
+- (FinanceChapterListViewModel *)viewModel {
+    if (!_viewModel) {
+        _viewModel = [[FinanceChapterListViewModel alloc] init];
+    }
+    return _viewModel;
+}
+
+- (RATreeView *)treeView {
+    if (!_treeView) {
+        _treeView = [[RATreeView alloc] initWithFrame:self.view.bounds];
+        _treeView.delegate = self;
+        _treeView.dataSource = self;
+        _treeView.treeFooterView = [UIView new];
+        _treeView.separatorStyle = RATreeViewCellSeparatorStyleSingleLine;
+        _treeView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+
+        [_treeView registerNib:[UINib nibWithNibName:NSStringFromClass([FinanceChapterCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([FinanceChapterCell class])];
+
+    }
+    return _treeView;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    [self.view addSubview:self.treeView];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.navigationItem.title = @"财务章节";
+    [self loadData];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)loadData {
+    [self.viewModel loadDataWithID:self.ID success:^(id obj) {
+        [self.treeView reloadData];
+    } failure:^(id obj) {
+        [MBProgressHUD showAutoMessage:obj];
+    }];
 }
 
-#pragma mark - Table view data source
+#pragma mark TreeView Delegate methods
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+- (CGFloat)treeView:(RATreeView *)treeView heightForRowForItem:(id)item
+{
+    return 52;
 }
+- (void)treeView:(RATreeView *)treeView didSelectRowForItem:(id)item {
+    NSInteger level = [self.treeView levelForCellForItem:item];
+    if (level == 2) {
+        
+        if ([User sharedInstance].isLogin) {
+            ALDFinanceChapterModel *model = item;
+            FinanceDetailVC *vc = [[FinanceDetailVC alloc] init];
+            vc.ID = model.ID;
+            vc.title = model.title;
+            [self.navigationController pushViewController:vc animated:YES];
+        }else{
+            // 请先登录
+            [User presentLoginViewController];
+        }
+    }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
 }
+#pragma mark TreeView Data Source
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+- (UITableViewCell *)treeView:(RATreeView *)treeView cellForItem:(id)item
+{
+    ALDFinanceChapterModel *model = item;
+    NSInteger level = [self.treeView levelForCellForItem:item];
+    FinanceChapterCell *cell = [self.treeView dequeueReusableCellWithIdentifier:NSStringFromClass([FinanceChapterCell class])];
+    cell.model = model;
+    cell.level = level;
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (NSInteger)treeView:(RATreeView *)treeView numberOfChildrenOfItem:(id)item
+{
+    if (item == nil) {
+        return [self.viewModel.list count];
+    }
+    
+    ALDFinanceChapterModel *data = item;
+    return [data.child count];
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (id)treeView:(RATreeView *)treeView child:(NSInteger)index ofItem:(id)item
+{
+    ALDFinanceChapterModel *data = item;
+    if (item == nil) {
+        return [self.viewModel.list objectAtIndex:index];
+    }
+    
+    return data.child[index];
 }
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
