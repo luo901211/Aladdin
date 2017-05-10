@@ -10,4 +10,6 @@
 
 @interface ServerDetailViewController : UIViewController
 
+@property (nonatomic, assign) NSInteger ID;
+
 @end

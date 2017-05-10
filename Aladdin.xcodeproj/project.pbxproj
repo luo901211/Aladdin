@@ -27,7 +27,6 @@
 		A408916A1EA3AF420071D22D /* ServerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891681EA3AF420071D22D /* ServerCell.m */; };
 		A408916B1EA3AF420071D22D /* ServerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A40891691EA3AF420071D22D /* ServerCell.xib */; };
 		A408916F1EA3B04F0071D22D /* ServerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A408916D1EA3B04F0071D22D /* ServerDetailViewController.m */; };
-		A40891701EA3B04F0071D22D /* ServerDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A408916E1EA3B04F0071D22D /* ServerDetailViewController.xib */; };
 		A40891731EA3B0F70071D22D /* ServerListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891721EA3B0F70071D22D /* ServerListViewModel.m */; };
 		A40891761EA4610B0071D22D /* UserFeatureView.m in Sources */ = {isa = PBXBuildFile; fileRef = A40891751EA4610B0071D22D /* UserFeatureView.m */; };
 		A408917A1EA462360071D22D /* User.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A40891791EA462360071D22D /* User.xcassets */; };
@@ -223,7 +222,6 @@
 		A40891691EA3AF420071D22D /* ServerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServerCell.xib; sourceTree = "<group>"; };
 		A408916C1EA3B04F0071D22D /* ServerDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerDetailViewController.h; sourceTree = "<group>"; };
 		A408916D1EA3B04F0071D22D /* ServerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerDetailViewController.m; sourceTree = "<group>"; };
-		A408916E1EA3B04F0071D22D /* ServerDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServerDetailViewController.xib; sourceTree = "<group>"; };
 		A40891711EA3B0F70071D22D /* ServerListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerListViewModel.h; sourceTree = "<group>"; };
 		A40891721EA3B0F70071D22D /* ServerListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerListViewModel.m; sourceTree = "<group>"; };
 		A40891741EA4610B0071D22D /* UserFeatureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserFeatureView.h; sourceTree = "<group>"; };
@@ -1185,7 +1183,6 @@
 				A40891601EA3AF110071D22D /* ServerListViewController.m */,
 				A408916C1EA3B04F0071D22D /* ServerDetailViewController.h */,
 				A408916D1EA3B04F0071D22D /* ServerDetailViewController.m */,
-				A408916E1EA3B04F0071D22D /* ServerDetailViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1376,7 +1373,6 @@
 			files = (
 				A4D682E61E976CEB00FBA51C /* LaunchScreen.storyboard in Resources */,
 				A43F9DD01E9F2CBC00AA831E /* LoginVC.xib in Resources */,
-				A40891701EA3B04F0071D22D /* ServerDetailViewController.xib in Resources */,
 				A408915E1EA39D770071D22D /* MessageCell.xib in Resources */,
 				A4C266E31EAEEFBE007A5674 /* ExpertDetailHeaderView.xib in Resources */,
 				A4C7C4DB1E9F194A003A36E0 /* WQInputView.xib in Resources */,

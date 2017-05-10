@@ -145,6 +145,8 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     ServerDetailViewController *vc = [[ServerDetailViewController alloc] init];
+    ALDServerModel *model = self.viewModel.list[indexPath.row];
+    vc.ID = model.ID;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
