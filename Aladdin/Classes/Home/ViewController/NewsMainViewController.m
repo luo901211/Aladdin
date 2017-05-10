@@ -11,7 +11,6 @@
 #import "NewsListViewController.h"
 #import "NewsMainViewModel.h"
 #import "ALDNewsTypeModel.h"
-#import "NewsSearchViewController.h"
 
 @interface NewsMainViewController ()<SGSegmentedControlDefaultDelegate, UIScrollViewDelegate>
 
@@ -45,8 +44,7 @@
 }
 
 - (void)showSearchVC {
-    NewsSearchViewController *searchVC = [[NewsSearchViewController alloc]init];
-    [self.navigationController pushViewController:searchVC animated:YES];
+
 }
 - (void)showUserFeatureView {
 }

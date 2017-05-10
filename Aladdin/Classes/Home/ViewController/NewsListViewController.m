@@ -75,6 +75,8 @@
     cycleScrollView.autoScroll = images.count > 1;
     cycleScrollView.clickItemOperationBlock = ^(NSInteger currentIndex) {
         NewsDetailViewController *vc = [[NewsDetailViewController alloc] init];
+        ALDNewsModel *model = self.viewModel.bannerList[currentIndex];
+        vc.ID = model.ID;
         [self.navigationController pushViewController:vc animated:YES];
     };
     self.tableView.tableHeaderView = cycleScrollView;

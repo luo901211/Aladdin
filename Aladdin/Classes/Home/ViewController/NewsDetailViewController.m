@@ -87,11 +87,19 @@
     self.navigationItem.title = @"文章详情";
     
     [self initUI];
-    
+    [self loadWebview];
     [self loadCommentCount];
     
 }
+- (void)initUI {
+    [self.view addSubview:self.webView];
+    [self.view addSubview:self.bottomView];
+}
 
+- (void)loadWebview {
+    NSString *urlString = [NSString stringWithFormat:@"%@%@?id=%ld",SERVER_HOST, NEWS_DETAIL, (long)self.ID];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
+}
 - (void)loadCommentCount {
     @weakify(self)
     [AFNManagerRequest getWithPath:NEWS_COMMENT_COUNT params:@{@"id": @(self.ID)} success:^(NSURLResponse *response, id responseObject) {
@@ -103,16 +111,6 @@
         self.bottomView.commentCount = commentCount;
     } failure:^(NSError *error) {
     }];
-}
-
-- (void)initUI {
-    
-    NSURL *url = [NSURL URLWithString:@"http://www.taobao.com"];
-    [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
-    [self.view addSubview:self.webView];
-    
-    [self.view addSubview:self.bottomView];
-    
 }
 
 - (void)didReceiveMemoryWarning {
