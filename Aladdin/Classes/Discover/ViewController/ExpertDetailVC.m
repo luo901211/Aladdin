@@ -114,8 +114,21 @@
         lineV;
     })];
     
+    
+    NSArray *titles;
+    NSArray *childVC;
+    if (self.level == 2) {
+        // 专家观点 + 专家解答
+        titles = @[@"专家观点", @"专家解答"];
+        childVC = @[self.newsListVC, self.answerListVC];
+    }else if (self.level == 1) {
+        // 大咖解答
+        titles = @[@"大咖解答"];
+        childVC = @[self.answerListVC];
+    }
+    
     /// pageTitleView
-    self.pageTitleView = [SGPageTitleView pageTitleViewWithFrame:CGRectMake(0, self.headerView.bottom + 10, self.view.frame.size.width, 51) delegate:self titleNames:@[@"专家观点", @"专家解答"]];
+    self.pageTitleView = [SGPageTitleView pageTitleViewWithFrame:CGRectMake(0, self.headerView.bottom + 10, self.view.frame.size.width, 51) delegate:self titleNames:titles];
     [self.view addSubview:_pageTitleView];
     _pageTitleView.selectedIndex = 0;
     _pageTitleView.titleColorStateNormal = COLOR_WORD_GRAY_2;
@@ -129,9 +142,28 @@
         lineV;
     }) atIndex:0];
     
+    if (self.level == 1) {
+        
+        // 大咖解答 隐藏 titleView
+        self.pageTitleView.hidden = YES;
+        
+        UILabel *l = [[UILabel alloc] initWithFrame:self.pageTitleView.frame];
+        l.text = @"    大咖解答";
+        l.font = [UIFont systemFontOfSize:16];
+        l.textColor = GLOBAL_TINT_COLOR;
+        [self.view addSubview:l];
+        
+        [l insertSubview:({
+            UIView *lineV = [[UIView alloc] initWithFrame:CGRectMake(0, 50, Main_Screen_Width, 1)];
+            lineV.backgroundColor = HEXCOLOR(0xf6f6f6);
+            lineV;
+        }) atIndex:0];
+    }
+
+    
     /// pageContentView
     CGFloat contentViewHeight = self.view.frame.size.height - self.pageTitleView.bottom - 50;
-    self.pageContentView = [[SGPageContentView alloc] initWithFrame:CGRectMake(0, self.pageTitleView.bottom, self.view.frame.size.width, contentViewHeight) parentVC:self childVCs:@[self.newsListVC, self.answerListVC]];
+    self.pageContentView = [[SGPageContentView alloc] initWithFrame:CGRectMake(0, self.pageTitleView.bottom, self.view.frame.size.width, contentViewHeight) parentVC:self childVCs:childVC];
     _pageContentView.delegatePageContentView = self;
     [self.view addSubview:_pageContentView];
 

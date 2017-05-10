@@ -117,6 +117,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     ExpertDetailVC *vc = [[ExpertDetailVC alloc] init];
     ALDExpertModel *model = self.viewModel.list[indexPath.row];
+    vc.level = self.level;
     vc.ID = model.ID;
     [self.navigationController pushViewController:vc animated:YES];
 }

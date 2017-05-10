@@ -10,6 +10,10 @@
 
 @interface ExpertDetailVC : UIViewController
 
+//[_arrayList addObject:@{@"title": @"知名专家", @"level": @(2)}];
+//[_arrayList addObject:@{@"title": @"优秀回答者", @"level": @(1)}];
+@property (nonatomic, assign) NSInteger level;
+
 @property (assign, nonatomic) NSInteger ID;
 
 @end
