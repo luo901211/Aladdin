@@ -7,18 +7,37 @@
 //
 
 #import "PolicyDetailVC.h"
+#import "ApiMacros.h"
 
 @interface PolicyDetailVC ()
+
+@property (strong, nonatomic) UIWebView *webView;
 
 @end
 
 @implementation PolicyDetailVC
+
+- (UIWebView *)webView {
+    if (!_webView) {
+        _webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+    }
+    return _webView;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"政策法规详情";
     self.view.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.webView];
+    [self loadData];
+    
+}
+
+- (void)loadData {
+    NSString *urlString = [NSString stringWithFormat:@"%@%@?id=%ld",SERVER_HOST, API_DISCOVER_POLICY_DETAIL, (long)self.ID];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
 }
 
 - (void)didReceiveMemoryWarning {

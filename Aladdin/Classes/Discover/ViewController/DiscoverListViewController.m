@@ -11,7 +11,7 @@
 #import "DiscoverModel.h"
 #import "TeachingVideoContainerVC.h"
 #import "FinanceListVC.h"
-#import "PolicyContainerVC.h"
+#import "PolicyListVC.h"
 #import "ExpertContainerVC.h"
 @interface DiscoverListViewController ()
 
@@ -93,7 +93,7 @@
             break;
         case 3:
         {
-            PolicyContainerVC *vc = [[PolicyContainerVC alloc] init];
+            PolicyListVC *vc = [[PolicyListVC alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;

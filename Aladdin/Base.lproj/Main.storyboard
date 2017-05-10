@@ -630,10 +630,10 @@
             </objects>
             <point key="canvasLocation" x="2509.5999999999999" y="-114.69265367316342"/>
         </scene>
-        <!--View Controller-->
+        <!--News Search View Controller-->
         <scene sceneID="2DX-ag-moN">
             <objects>
-                <viewController id="Nao-ME-hWF" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewsSearchViewController" id="Nao-ME-hWF" customClass="NewsSearchViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DLI-WX-rQd"/>
                         <viewControllerLayoutGuide type="bottom" id="ySu-bT-QI1"/>
@@ -643,37 +643,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytT-x6-B9W">
-                                <rect key="frame" x="315" y="0.0" width="60" height="44"/>
+                                <rect key="frame" x="315" y="84" width="60" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="4eN-jx-zvv"/>
-                                    <constraint firstAttribute="height" constant="44" id="QTf-Ml-deP"/>
+                                    <constraint firstAttribute="height" constant="30" id="QTf-Ml-deP"/>
                                 </constraints>
                                 <state key="normal" title="搜索">
                                     <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yMQ-in-MWm">
-                                <rect key="frame" x="59" y="0.0" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yMQ-in-MWm">
+                                <rect key="frame" x="30" y="84" width="275" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4PN-s5-JK7"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="left_img_search" translatesAutoresizingMaskIntoConstraints="NO" id="O3w-E8-D6Y">
-                                <rect key="frame" x="90" y="72" width="28" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ytT-x6-B9W" firstAttribute="top" secondItem="Dwq-my-F27" secondAttribute="top" id="PWl-ge-BUO"/>
+                            <constraint firstItem="yMQ-in-MWm" firstAttribute="leading" secondItem="Dwq-my-F27" secondAttribute="leading" constant="30" id="I6e-X1-muf"/>
+                            <constraint firstItem="yMQ-in-MWm" firstAttribute="top" secondItem="Dwq-my-F27" secondAttribute="top" constant="84" id="Iad-zS-90y"/>
                             <constraint firstAttribute="trailing" secondItem="ytT-x6-B9W" secondAttribute="trailing" id="g5E-2s-0s7"/>
+                            <constraint firstItem="ytT-x6-B9W" firstAttribute="leading" secondItem="yMQ-in-MWm" secondAttribute="trailing" constant="10" id="nRD-ek-oX2"/>
+                            <constraint firstItem="ytT-x6-B9W" firstAttribute="centerY" secondItem="yMQ-in-MWm" secondAttribute="centerY" id="wp8-oW-KJR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="yMQ-in-MWm" id="WTa-ca-kaY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mvV-tg-h0H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3609" y="27"/>
+            <point key="canvasLocation" x="4145" y="66"/>
         </scene>
     </scenes>
     <resources>
@@ -681,7 +685,6 @@
         <image name="feedback_contribute" width="345" height="47"/>
         <image name="feedback_join" width="345" height="47"/>
         <image name="feedback_suggest" width="345" height="47"/>
-        <image name="left_img_search" width="14" height="14"/>
         <image name="upload_image_item" width="59" height="55"/>
     </resources>
 </document>

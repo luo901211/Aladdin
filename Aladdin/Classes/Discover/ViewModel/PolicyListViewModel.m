@@ -21,7 +21,9 @@
     
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:@{ @"page_num": @(pageIndex)}];
     [params setObject:@(API_PAGE_SIZE) forKey:@"page_size"];
-    [params setObject:@(ID) forKey:@"id"];
+    if (ID) {
+        [params setObject:@(ID) forKey:@"id"];
+    }
     [AFNManagerRequest getWithPath:API_DISCOVER_POLICY_LIST params:params success:^(NSURLResponse *response, id responseObject) {
         NSArray *arrayM = [ALDPolicyModel mj_objectArrayWithKeyValuesArray:responseObject];
         if (pageIndex == 1) {

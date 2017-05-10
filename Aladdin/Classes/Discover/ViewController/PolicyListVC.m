@@ -116,6 +116,8 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     PolicyDetailVC *vc = [[PolicyDetailVC alloc] init];
+    ALDPolicyModel *model = self.viewModel.list[indexPath.row];
+    vc.ID = model.ID;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
