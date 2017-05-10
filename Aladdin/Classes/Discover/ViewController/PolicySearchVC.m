@@ -1,18 +1,18 @@
 //
-//  FinanceSearchVC.m
+//  PolicySearchVC.m
 //  Aladdin
 //
 //  Created by luo on 2017/5/10.
 //  Copyright © 2017年 wenqi. All rights reserved.
 //
 
-#import "FinanceSearchVC.h"
+#import "PolicySearchVC.h"
 
-@interface FinanceSearchVC ()
+@interface PolicySearchVC ()
 
 @end
 
-@implementation FinanceSearchVC
+@implementation PolicySearchVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];

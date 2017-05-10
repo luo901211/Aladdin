@@ -57,8 +57,8 @@
 		A43F9DEA1E9FB1B300AA831E /* RegisterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A43F9DE91E9FB1B300AA831E /* RegisterViewModel.m */; };
 		A44B7A331EC3169100907407 /* FinanceChapterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A44B7A311EC3169100907407 /* FinanceChapterCell.m */; };
 		A44B7A341EC3169100907407 /* FinanceChapterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A44B7A321EC3169100907407 /* FinanceChapterCell.xib */; };
-		A44B7A371EC34AE300907407 /* FinanceSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A44B7A361EC34AE300907407 /* FinanceSearchVC.m */; };
-		A44B7A3A1EC34B0000907407 /* FinanceSearchResultVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A44B7A391EC34B0000907407 /* FinanceSearchResultVC.m */; };
+		A44B7A371EC34AE300907407 /* PolicySearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A44B7A361EC34AE300907407 /* PolicySearchVC.m */; };
+		A44B7A3A1EC34B0000907407 /* PolicySearchResultVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A44B7A391EC34B0000907407 /* PolicySearchResultVC.m */; };
 		A45378881EA7620300020C5D /* CollectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A45378861EA7620300020C5D /* CollectCell.m */; };
 		A45378891EA7620300020C5D /* CollectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A45378871EA7620300020C5D /* CollectCell.xib */; };
 		A453788C1EA7687800020C5D /* CollectListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A453788B1EA7687800020C5D /* CollectListViewModel.m */; };
@@ -279,10 +279,10 @@
 		A44B7A301EC3169100907407 /* FinanceChapterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinanceChapterCell.h; sourceTree = "<group>"; };
 		A44B7A311EC3169100907407 /* FinanceChapterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinanceChapterCell.m; sourceTree = "<group>"; };
 		A44B7A321EC3169100907407 /* FinanceChapterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FinanceChapterCell.xib; sourceTree = "<group>"; };
-		A44B7A351EC34AE300907407 /* FinanceSearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinanceSearchVC.h; sourceTree = "<group>"; };
-		A44B7A361EC34AE300907407 /* FinanceSearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinanceSearchVC.m; sourceTree = "<group>"; };
-		A44B7A381EC34B0000907407 /* FinanceSearchResultVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinanceSearchResultVC.h; sourceTree = "<group>"; };
-		A44B7A391EC34B0000907407 /* FinanceSearchResultVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinanceSearchResultVC.m; sourceTree = "<group>"; };
+		A44B7A351EC34AE300907407 /* PolicySearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolicySearchVC.h; sourceTree = "<group>"; };
+		A44B7A361EC34AE300907407 /* PolicySearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolicySearchVC.m; sourceTree = "<group>"; };
+		A44B7A381EC34B0000907407 /* PolicySearchResultVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolicySearchResultVC.h; sourceTree = "<group>"; };
+		A44B7A391EC34B0000907407 /* PolicySearchResultVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolicySearchResultVC.m; sourceTree = "<group>"; };
 		A45378851EA7620300020C5D /* CollectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectCell.h; sourceTree = "<group>"; };
 		A45378861EA7620300020C5D /* CollectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectCell.m; sourceTree = "<group>"; };
 		A45378871EA7620300020C5D /* CollectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectCell.xib; sourceTree = "<group>"; };
@@ -1111,16 +1111,16 @@
 				A4DF600E1EA9FA810084963F /* PolicyListVC.m */,
 				A4DF60131EA9FAD80084963F /* PolicyDetailVC.h */,
 				A4DF60141EA9FAD80084963F /* PolicyDetailVC.m */,
+				A44B7A351EC34AE300907407 /* PolicySearchVC.h */,
+				A44B7A361EC34AE300907407 /* PolicySearchVC.m */,
+				A44B7A381EC34B0000907407 /* PolicySearchResultVC.h */,
+				A44B7A391EC34B0000907407 /* PolicySearchResultVC.m */,
 				A4BF613D1EACA434003F876F /* FinanceListVC.h */,
 				A4BF613E1EACA435003F876F /* FinanceListVC.m */,
 				A4BF61401EACA469003F876F /* FinanceChapterListVC.h */,
 				A4BF61411EACA469003F876F /* FinanceChapterListVC.m */,
 				A4BF61431EACA484003F876F /* FinanceDetailVC.h */,
 				A4BF61441EACA484003F876F /* FinanceDetailVC.m */,
-				A44B7A351EC34AE300907407 /* FinanceSearchVC.h */,
-				A44B7A361EC34AE300907407 /* FinanceSearchVC.m */,
-				A44B7A381EC34B0000907407 /* FinanceSearchResultVC.h */,
-				A44B7A391EC34B0000907407 /* FinanceSearchResultVC.m */,
 				A42299A41EACAC7A00F62707 /* ExpertContainerVC.h */,
 				A42299A51EACAC7A00F62707 /* ExpertContainerVC.m */,
 				A42299A71EACAC9000F62707 /* ExpertListVC.h */,
@@ -1519,7 +1519,7 @@
 				A4C32E6B1E9A1BF400D53E1A /* SGImageButton_Horizontal.m in Sources */,
 				A4C32AF31E98A7B800D53E1A /* MPLocationManager.m in Sources */,
 				A4D682DB1E976CEB00FBA51C /* AppDelegate.m in Sources */,
-				A44B7A371EC34AE300907407 /* FinanceSearchVC.m in Sources */,
+				A44B7A371EC34AE300907407 /* PolicySearchVC.m in Sources */,
 				A4C32EA31E9A5F8B00D53E1A /* DiscoverCell.m in Sources */,
 				A4C32E9C1E9A564200D53E1A /* ALDBaseViewController.m in Sources */,
 				A4BF61421EACA469003F876F /* FinanceChapterListVC.m in Sources */,
@@ -1581,7 +1581,7 @@
 				A499A98D1EA622A800B45425 /* NewsListViewController.m in Sources */,
 				A45378AD1EA9A10A00020C5D /* UIView+SGFrame.m in Sources */,
 				A4C32E6C1E9A1BF400D53E1A /* SGImageButton_Vertical.m in Sources */,
-				A44B7A3A1EC34B0000907407 /* FinanceSearchResultVC.m in Sources */,
+				A44B7A3A1EC34B0000907407 /* PolicySearchResultVC.m in Sources */,
 				A43F9DE31E9F6DDF00AA831E /* ChangePasswordVC.m in Sources */,
 				A4C32AF11E98A7B800D53E1A /* introductoryPagesView.m in Sources */,
 				A408916A1EA3AF420071D22D /* ServerCell.m in Sources */,

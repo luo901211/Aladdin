@@ -1,5 +1,5 @@
 //
-//  FinanceSearchResultVC.h
+//  PolicySearchResultVC.h
 //  Aladdin
 //
 //  Created by luo on 2017/5/10.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FinanceSearchResultVC : UITableViewController
+@interface PolicySearchResultVC : UITableViewController
 
 @end
