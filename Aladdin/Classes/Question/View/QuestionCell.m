@@ -55,6 +55,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
     
     self.essenceLabel.layer.cornerRadius = 3;
     self.essenceLabel.layer.masksToBounds = YES;

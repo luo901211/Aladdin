@@ -25,6 +25,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.imageV.layer.cornerRadius = self.imageV.height/2;
     self.imageV.contentMode = UIViewContentModeScaleAspectFill;
     self.imageV.layer.masksToBounds = YES;

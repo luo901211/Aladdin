@@ -23,6 +23,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.imgIcon.backgroundColor = HEXCOLOR(0xf2f2f2);
 }
 

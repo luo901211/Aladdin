@@ -61,8 +61,6 @@
         pageIndex = (NSInteger)self.viewModel.list.count / API_PAGE_SIZE + 1;
     }
     
-    
-    
     [self.viewModel loadDataListWithPageIndex:pageIndex type:self.type success:^(BOOL noMoreData) {
         @strongify(self)
         
@@ -95,23 +93,17 @@
 #pragma mark - Table view data source
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    ALDQuestionModel *model = self.viewModel.list[indexPath.row];
-    ALDQuestionModel *model = self.viewModel.list[0];
+    ALDQuestionModel *model = self.viewModel.list[indexPath.row];
     return [QuestionCell heightForRow:model];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (self.viewModel.list.count) {
-        return 100;
-    }
-    return 0;
-//    return self.viewModel.list.count;
+    return self.viewModel.list.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     QuestionCell *cell = [tableView dequeueReusableCellWithIdentifier:@"QuestionCell"];
-//    ALDQuestionModel *model = self.viewModel.list[indexPath.row];
-    ALDQuestionModel *model = self.viewModel.list[0];
+    ALDQuestionModel *model = self.viewModel.list[indexPath.row];
     cell.model = model;
     return cell;
 }
