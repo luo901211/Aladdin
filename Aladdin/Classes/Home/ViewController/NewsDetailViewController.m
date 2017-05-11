@@ -110,6 +110,7 @@
         }
         self.bottomView.commentCount = commentCount;
     } failure:^(NSError *error) {
+        [MBProgressHUD showAutoMessage:error.localizedDescription];
     }];
 }
 

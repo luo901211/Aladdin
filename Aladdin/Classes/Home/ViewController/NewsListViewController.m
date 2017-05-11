@@ -53,7 +53,7 @@
     [self.viewModel loadBannerListWithCompleted:^(NSError *error) {
         @strongify(self);
         if (error) {
-            NSLog(@"error: %@",error);
+            [MBProgressHUD showAutoMessage:error.localizedDescription];
             return;
         }
         

@@ -58,7 +58,7 @@
         if (!error) {
             [self initUI];
         }else{
-            NSLog(@"%@",error.userInfo);
+            [MBProgressHUD showAutoMessage:error.localizedDescription];
         }
     }];
 }
