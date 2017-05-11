@@ -59,6 +59,16 @@
 		A44B7A341EC3169100907407 /* FinanceChapterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A44B7A321EC3169100907407 /* FinanceChapterCell.xib */; };
 		A44B7A371EC34AE300907407 /* PolicySearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A44B7A361EC34AE300907407 /* PolicySearchVC.m */; };
 		A44B7A3A1EC34B0000907407 /* PolicySearchResultVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A44B7A391EC34B0000907407 /* PolicySearchResultVC.m */; };
+		A44B7A3E1EC448AE00907407 /* QuestionReportVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A44B7A3C1EC448AE00907407 /* QuestionReportVC.m */; };
+		A44B7A3F1EC448AE00907407 /* QuestionReportVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A44B7A3D1EC448AE00907407 /* QuestionReportVC.xib */; };
+		A44B7A421EC44D3100907407 /* QuestionDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A44B7A411EC44D3100907407 /* QuestionDetailVC.m */; };
+		A44B7A451EC45A1C00907407 /* QuestionBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A44B7A441EC45A1C00907407 /* QuestionBannerView.m */; };
+		A44B7A471EC45A3300907407 /* QuestionBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A44B7A461EC45A3300907407 /* QuestionBannerView.xib */; };
+		A44B7A4A1EC45AA200907407 /* QuestionDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A44B7A491EC45AA200907407 /* QuestionDetailViewModel.m */; };
+		A44B7A4D1EC462C900907407 /* ALDQuestionDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A44B7A4C1EC462C900907407 /* ALDQuestionDetailModel.m */; };
+		A44B7A561EC46CD900907407 /* AnswerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A44B7A541EC46CD900907407 /* AnswerCell.m */; };
+		A44B7A571EC46CD900907407 /* AnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A44B7A551EC46CD900907407 /* AnswerCell.xib */; };
+		A44B7A5A1EC4727900907407 /* ALDAnswerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A44B7A591EC4727900907407 /* ALDAnswerModel.m */; };
 		A45378881EA7620300020C5D /* CollectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A45378861EA7620300020C5D /* CollectCell.m */; };
 		A45378891EA7620300020C5D /* CollectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A45378871EA7620300020C5D /* CollectCell.xib */; };
 		A453788C1EA7687800020C5D /* CollectListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A453788B1EA7687800020C5D /* CollectListViewModel.m */; };
@@ -282,6 +292,23 @@
 		A44B7A361EC34AE300907407 /* PolicySearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolicySearchVC.m; sourceTree = "<group>"; };
 		A44B7A381EC34B0000907407 /* PolicySearchResultVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolicySearchResultVC.h; sourceTree = "<group>"; };
 		A44B7A391EC34B0000907407 /* PolicySearchResultVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolicySearchResultVC.m; sourceTree = "<group>"; };
+		A44B7A3B1EC448AE00907407 /* QuestionReportVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionReportVC.h; sourceTree = "<group>"; };
+		A44B7A3C1EC448AE00907407 /* QuestionReportVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionReportVC.m; sourceTree = "<group>"; };
+		A44B7A3D1EC448AE00907407 /* QuestionReportVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionReportVC.xib; sourceTree = "<group>"; };
+		A44B7A401EC44D3100907407 /* QuestionDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionDetailVC.h; sourceTree = "<group>"; };
+		A44B7A411EC44D3100907407 /* QuestionDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionDetailVC.m; sourceTree = "<group>"; };
+		A44B7A431EC45A1C00907407 /* QuestionBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionBannerView.h; sourceTree = "<group>"; };
+		A44B7A441EC45A1C00907407 /* QuestionBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionBannerView.m; sourceTree = "<group>"; };
+		A44B7A461EC45A3300907407 /* QuestionBannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionBannerView.xib; sourceTree = "<group>"; };
+		A44B7A481EC45AA200907407 /* QuestionDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionDetailViewModel.h; sourceTree = "<group>"; };
+		A44B7A491EC45AA200907407 /* QuestionDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionDetailViewModel.m; sourceTree = "<group>"; };
+		A44B7A4B1EC462C900907407 /* ALDQuestionDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDQuestionDetailModel.h; sourceTree = "<group>"; };
+		A44B7A4C1EC462C900907407 /* ALDQuestionDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDQuestionDetailModel.m; sourceTree = "<group>"; };
+		A44B7A531EC46CD900907407 /* AnswerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerCell.h; sourceTree = "<group>"; };
+		A44B7A541EC46CD900907407 /* AnswerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerCell.m; sourceTree = "<group>"; };
+		A44B7A551EC46CD900907407 /* AnswerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnswerCell.xib; sourceTree = "<group>"; };
+		A44B7A581EC4727900907407 /* ALDAnswerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDAnswerModel.h; sourceTree = "<group>"; };
+		A44B7A591EC4727900907407 /* ALDAnswerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDAnswerModel.m; sourceTree = "<group>"; };
 		A45378851EA7620300020C5D /* CollectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectCell.h; sourceTree = "<group>"; };
 		A45378861EA7620300020C5D /* CollectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectCell.m; sourceTree = "<group>"; };
 		A45378871EA7620300020C5D /* CollectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectCell.xib; sourceTree = "<group>"; };
@@ -762,6 +789,10 @@
 			children = (
 				A4C2672B1EAF58FC007A5674 /* ALDQuestionModel.h */,
 				A4C2672C1EAF58FC007A5674 /* ALDQuestionModel.m */,
+				A44B7A4B1EC462C900907407 /* ALDQuestionDetailModel.h */,
+				A44B7A4C1EC462C900907407 /* ALDQuestionDetailModel.m */,
+				A44B7A581EC4727900907407 /* ALDAnswerModel.h */,
+				A44B7A591EC4727900907407 /* ALDAnswerModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -775,6 +806,12 @@
 				A483345F1EB0C4AA00FB5801 /* QuestionContainerBottomView.h */,
 				A48334601EB0C4AA00FB5801 /* QuestionContainerBottomView.m */,
 				A48334621EB0C4BD00FB5801 /* QuestionContainerBottomView.xib */,
+				A44B7A431EC45A1C00907407 /* QuestionBannerView.h */,
+				A44B7A441EC45A1C00907407 /* QuestionBannerView.m */,
+				A44B7A461EC45A3300907407 /* QuestionBannerView.xib */,
+				A44B7A531EC46CD900907407 /* AnswerCell.h */,
+				A44B7A541EC46CD900907407 /* AnswerCell.m */,
+				A44B7A551EC46CD900907407 /* AnswerCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -786,6 +823,11 @@
 				A4C267331EAF58FC007A5674 /* QuestionContainerVC.m */,
 				A4C267341EAF58FC007A5674 /* QuestionListVC.h */,
 				A4C267351EAF58FC007A5674 /* QuestionListVC.m */,
+				A44B7A401EC44D3100907407 /* QuestionDetailVC.h */,
+				A44B7A411EC44D3100907407 /* QuestionDetailVC.m */,
+				A44B7A3B1EC448AE00907407 /* QuestionReportVC.h */,
+				A44B7A3C1EC448AE00907407 /* QuestionReportVC.m */,
+				A44B7A3D1EC448AE00907407 /* QuestionReportVC.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -795,6 +837,8 @@
 			children = (
 				A4C267371EAF58FC007A5674 /* QuestionListViewModel.h */,
 				A4C267381EAF58FC007A5674 /* QuestionListViewModel.m */,
+				A44B7A481EC45AA200907407 /* QuestionDetailViewModel.h */,
+				A44B7A491EC45AA200907407 /* QuestionDetailViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1389,14 +1433,17 @@
 				A4D682E61E976CEB00FBA51C /* LaunchScreen.storyboard in Resources */,
 				A43F9DD01E9F2CBC00AA831E /* LoginVC.xib in Resources */,
 				A408915E1EA39D770071D22D /* MessageCell.xib in Resources */,
+				A44B7A571EC46CD900907407 /* AnswerCell.xib in Resources */,
 				A4C266E31EAEEFBE007A5674 /* ExpertDetailHeaderView.xib in Resources */,
 				A4C7C4DB1E9F194A003A36E0 /* WQInputView.xib in Resources */,
 				A4C32EA41E9A5F8B00D53E1A /* DiscoverCell.xib in Resources */,
 				A4C32E731E9A343900D53E1A /* Login.xcassets in Resources */,
 				A42299B91EAD9DBB00F62707 /* TeachingVideoDetailBottomView.xib in Resources */,
 				A44B7A341EC3169100907407 /* FinanceChapterCell.xib in Resources */,
+				A44B7A3F1EC448AE00907407 /* QuestionReportVC.xib in Resources */,
 				A499A98B1EA622A800B45425 /* NewsDetailBottomView.xib in Resources */,
 				A408916B1EA3AF420071D22D /* ServerCell.xib in Resources */,
+				A44B7A471EC45A3300907407 /* QuestionBannerView.xib in Resources */,
 				A4C266C11EAEE501007A5674 /* ExpertAnswerCell.xib in Resources */,
 				A4D682E31E976CEB00FBA51C /* Assets.xcassets in Resources */,
 				A499A9891EA622A800B45425 /* NewsCell.xib in Resources */,
@@ -1498,6 +1545,7 @@
 				A4C7C4D91E9F194A003A36E0 /* WQChiBaoZiHeader.m in Sources */,
 				A4C32AF01E98A7B800D53E1A /* introductoryPagesHelper.m in Sources */,
 				A4C266DE1EAEE665007A5674 /* ALDExpertDetailModel.m in Sources */,
+				A44B7A451EC45A1C00907407 /* QuestionBannerView.m in Sources */,
 				A4C32E361E98AEB500D53E1A /* JRSwizzle.m in Sources */,
 				A4C2673D1EAF58FC007A5674 /* QuestionListVC.m in Sources */,
 				A408917D1EA479EC0071D22D /* UserCenterVC.m in Sources */,
@@ -1549,15 +1597,18 @@
 				A408912F1EA3297A0071D22D /* NSString+Verify.m in Sources */,
 				A499A9861EA622A800B45425 /* ALDNewsModel.m in Sources */,
 				A4C305BA1EB1F66E00308E18 /* FindPasswordViewModel.m in Sources */,
+				A44B7A4A1EC45AA200907407 /* QuestionDetailViewModel.m in Sources */,
 				A4C32E991E9A562D00D53E1A /* ALDBaseNavigationController.m in Sources */,
 				A4C32E171E98AB3300D53E1A /* Reachability.m in Sources */,
 				A4C32E9F1E9A5F7100D53E1A /* DiscoverListViewController.m in Sources */,
+				A44B7A3E1EC448AE00907407 /* QuestionReportVC.m in Sources */,
 				A45378881EA7620300020C5D /* CollectCell.m in Sources */,
 				A4C32EA71E9A614D00D53E1A /* DiscoverModel.m in Sources */,
 				A48334711EB1D75C00FB5801 /* FeedbackVC.m in Sources */,
 				A42299B71EAD9DB000F62707 /* TeachingVideoDetailBottomView.m in Sources */,
 				A4C32E301E98AE6900D53E1A /* WQHomeTabBarController.m in Sources */,
 				A4C7C4E11E9F1DF3003A36E0 /* WQPlaceholderTextView.m in Sources */,
+				A44B7A5A1EC4727900907407 /* ALDAnswerModel.m in Sources */,
 				A4C266E61EAF47C6007A5674 /* UILabel+ChangeLineSpaceAndWordSpace.m in Sources */,
 				A4DF600A1EA9D43F0084963F /* ALDVideoDetailModel.m in Sources */,
 				A4D682D81E976CEB00FBA51C /* main.m in Sources */,
@@ -1580,6 +1631,7 @@
 				A44B7A3A1EC34B0000907407 /* PolicySearchResultVC.m in Sources */,
 				A43F9DE31E9F6DDF00AA831E /* ChangePasswordVC.m in Sources */,
 				A4C32AF11E98A7B800D53E1A /* introductoryPagesView.m in Sources */,
+				A44B7A561EC46CD900907407 /* AnswerCell.m in Sources */,
 				A408916A1EA3AF420071D22D /* ServerCell.m in Sources */,
 				A42299921EACA59200F62707 /* ALDFinanceChapterModel.m in Sources */,
 				A499A95F1EA60EB700B45425 /* CollectListVC.m in Sources */,
@@ -1595,6 +1647,7 @@
 				A4A0294C1E9B341C0008F281 /* AFNManagerRequest.m in Sources */,
 				A499A98F1EA622A800B45425 /* NewsDetailViewModel.m in Sources */,
 				A45378AA1EA9A10A00020C5D /* SGHelperTool.m in Sources */,
+				A44B7A4D1EC462C900907407 /* ALDQuestionDetailModel.m in Sources */,
 				A499A9871EA622A800B45425 /* ALDNewsTypeModel.m in Sources */,
 				A4C266D41EAEE5A9007A5674 /* ExpertDetailVC.m in Sources */,
 				A4C266E11EAEEFB2007A5674 /* ExpertDetailHeaderView.m in Sources */,
@@ -1610,6 +1663,7 @@
 				A4C32E6E1E9A1BF400D53E1A /* SGSegmentedControlBottomView.m in Sources */,
 				A4C32E251E98AD0F00D53E1A /* NSString+Additions.m in Sources */,
 				A42299B41EACAEC100F62707 /* ExpertListViewModel.m in Sources */,
+				A44B7A421EC44D3100907407 /* QuestionDetailVC.m in Sources */,
 				A40891361EA35F050071D22D /* User.m in Sources */,
 				A40891491EA398800071D22D /* ALDMessageTypeModel.m in Sources */,
 				A45378AC1EA9A10A00020C5D /* SGPageTitleView.m in Sources */,

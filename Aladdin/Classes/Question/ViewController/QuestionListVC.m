@@ -9,6 +9,7 @@
 #import "QuestionListVC.h"
 #import "ALDQuestionModel.h"
 #import "QuestionCell.h"
+#import "QuestionDetailVC.h"
 
 @interface QuestionListVC ()
 
@@ -111,7 +112,9 @@
 #pragma mark - Table view delegate
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    ServerDetailViewController *vc = [[ServerDetailViewController alloc] init];
-//    [self.navigationController pushViewController:vc animated:YES];
+    QuestionDetailVC *vc = [[QuestionDetailVC alloc] init];
+    ALDQuestionModel *model = self.viewModel.list[indexPath.row];
+    vc.ID = model.ID;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 @end

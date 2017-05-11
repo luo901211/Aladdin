@@ -8,6 +8,9 @@
 
 #import "MJExtensionConfig.h"
 #import "ALDFinanceChapterModel.h"
+#import "ALDQuestionDetailModel.h"
+#import "ALDAnswerModel.h"
+
 @implementation MJExtensionConfig
 /**
  *  这个方法会在MJExtensionConfig加载进内存时调用一次
@@ -29,31 +32,10 @@
                  };
     }];
     
-    // 相当于在MJDog.m中实现了+(NSDictionary *)mj_replacedKeyFromPropertyName121:方法
-    
-//#pragma mark MJStatusResult类中的statuses数组中存放的是MJStatus模型
-//#pragma mark MJStatusResult类中的ads数组中存放的是MJAd模型
-//    [MJStatusResult mj_setupObjectClassInArray:^NSDictionary *{
-//        return @{
-//                 @"statuses" : @"MJStatus", // @"statuses" : [MJStatus class],
-//                 @"ads" : @"MJAd" // @"ads" : [MJAd class]
-//                 };
-//    }];
-//    // 相当于在MJStatusResult.m中实现了+(NSDictionary *)mj_objectClassInArray方法
-//    
-//#pragma mark MJStudent中的desc属性对应着字典中的desciption
-//#pragma mark ....
-//    [MJStudent mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
-//        return @{
-//                 @"desc" : @"desciption",
-//                 @"oldName" : @"name.oldName",
-//                 @"nowName" : @"name.newName",
-//                 @"otherName" : @[@"otherName", @"name.newName", @"name.oldName"],
-//                 @"nameChangedTime" : @"name.info[1].nameChangedTime",
-//                 @"bag" : @"other.bag"
-//                 };
-//    }];
-//    // 相当于在MJStudent.m中实现了+(NSDictionary *)mj_replacedKeyFromPropertyName方法
-//    
+    [ALDQuestionDetailModel mj_setupObjectClassInArray:^NSDictionary *{
+        return @{
+                 @"answer_list" : @"ALDAnswerModel"
+                 };
+    }];
 }
 @end

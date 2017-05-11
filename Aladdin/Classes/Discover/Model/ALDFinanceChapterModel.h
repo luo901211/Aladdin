@@ -48,7 +48,6 @@
 @property (nonatomic, copy) NSString *has_content;
 @property (nonatomic, strong) NSArray <ALDFinanceChapterModel *>*child;
 
-
 @end
 
 
