@@ -94,6 +94,7 @@
         case 3:
         {
             PolicyListVC *vc = [[PolicyListVC alloc] init];
+            vc.title = @"政策法规";
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;

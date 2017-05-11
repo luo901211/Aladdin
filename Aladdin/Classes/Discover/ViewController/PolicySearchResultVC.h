@@ -10,4 +10,6 @@
 
 @interface PolicySearchResultVC : UITableViewController
 
+@property (nonatomic, copy) NSString *keyword;
+
 @end

@@ -11,6 +11,7 @@
 #import "NewsListViewController.h"
 #import "NewsMainViewModel.h"
 #import "ALDNewsTypeModel.h"
+#import "PolicySearchVC.h"
 
 @interface NewsMainViewController ()<SGSegmentedControlDefaultDelegate, UIScrollViewDelegate>
 
@@ -44,7 +45,8 @@
 }
 
 - (void)showSearchVC {
-
+    PolicySearchVC *searchVC = [[PolicySearchVC alloc] init];
+    [self.navigationController pushViewController:searchVC animated:YES];
 }
 - (void)showUserFeatureView {
 }

@@ -29,7 +29,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"政策法规";
     self.tableView.tableFooterView = [UIView new];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"PolicyCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"PolicyCell"];
