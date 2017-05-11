@@ -84,7 +84,7 @@
         
     } failure:^(NSError *error) {
         
-        NSLog(@"%@",error);
+        [MBProgressHUD showAutoMessage:error.localizedDescription];
         
     }];
     

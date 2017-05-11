@@ -114,8 +114,13 @@
     @weakify(self)
     cell.tapCollectBlock = ^(id obj){
         @strongify(self)
-        [self.viewModel.list removeObjectAtIndex:indexPath.row];
-        [self.tableView deleteRow:indexPath.row inSection:indexPath.section withRowAnimation:UITableViewRowAnimationAutomatic];
+        [self.viewModel cancelCollectDataWithID:model.ID success:^(id obj) {
+            [self.viewModel.list removeObjectAtIndex:indexPath.row];
+            [self.tableView deleteRow:indexPath.row inSection:indexPath.section withRowAnimation:UITableViewRowAnimationAutomatic];
+        } failure:^(id obj) {
+            [MBProgressHUD showAutoMessage:obj];
+        }];
+
     };
 
     return cell;

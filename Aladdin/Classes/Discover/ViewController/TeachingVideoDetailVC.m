@@ -63,16 +63,7 @@
         _bottomView.collectTapBlock = ^(id obj) {
             @strongify(self);
 
-            if (self.model.is_collect) {
-                [self.viewModel cancelCollectDataWithID:self.ID success:^(id obj) {
-                    [MBProgressHUD showAutoMessage:@"取消收藏成功"];
-                    ALDVideoDetailModel *model = self.model;
-                    model.is_collect = 0;
-                    self.model = model;
-                } failure:^(id obj) {
-                    [MBProgressHUD showAutoMessage:obj];
-                }];
-            }else{
+            if (!self.model.is_collect) {
                 [self.viewModel collectDataWithID:self.ID success:^(id obj) {
                     [MBProgressHUD showAutoMessage:@"收藏成功"];
                     ALDVideoDetailModel *model = self.model;
@@ -81,6 +72,18 @@
                 } failure:^(id obj) {
                     [MBProgressHUD showAutoMessage:obj];
                 }];
+
+            }else{
+                /*
+                 [self.viewModel cancelCollectDataWithID:self.ID success:^(id obj) {
+                 [MBProgressHUD showAutoMessage:@"取消收藏成功"];
+                 ALDVideoDetailModel *model = self.model;
+                 model.is_collect = 0;
+                 self.model = model;
+                 } failure:^(id obj) {
+                 [MBProgressHUD showAutoMessage:obj];
+                 }];
+                 */
             }
         };
     }

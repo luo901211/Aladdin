@@ -14,4 +14,7 @@
 
 - (void)loadDataListWithPageIndex:(NSInteger)pageIndex success:(void (^)(BOOL noMoreData))success failure:(void (^)(NSError *error))failure;
 
+- (void)cancelCollectDataWithID:(NSInteger)ID
+                        success:(VoidBlock)success
+                        failure:(VoidBlock)failure;
 @end

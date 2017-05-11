@@ -102,7 +102,7 @@ static NSString * const reuseIdentifier = @"TeachingVideoCollectionViewCell";
         }else if(type == WQFetchDataTypeLoadMore){
             [self.collectionView.mj_footer endRefreshing];
         }
-        NSLog(@"%@",error.userInfo);
+        [MBProgressHUD showAutoMessage:error.localizedDescription];
     }];
 }
 

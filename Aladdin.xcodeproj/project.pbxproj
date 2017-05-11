@@ -174,7 +174,6 @@
 		A4DF5FFC1EA9B68B0084963F /* ALDVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DF5FFB1EA9B68B0084963F /* ALDVideoModel.m */; };
 		A4DF5FFF1EA9B6A90084963F /* VideoListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DF5FFE1EA9B6A90084963F /* VideoListViewModel.m */; };
 		A4DF60031EA9D4120084963F /* TeachingVideoDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DF60011EA9D4120084963F /* TeachingVideoDetailVC.m */; };
-		A4DF60041EA9D4120084963F /* TeachingVideoDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4DF60021EA9D4120084963F /* TeachingVideoDetailVC.xib */; };
 		A4DF60071EA9D42F0084963F /* VideoDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DF60061EA9D42F0084963F /* VideoDetailViewModel.m */; };
 		A4DF600A1EA9D43F0084963F /* ALDVideoDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DF60091EA9D43F0084963F /* ALDVideoDetailModel.m */; };
 		A4DF600F1EA9FA810084963F /* PolicyListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DF600E1EA9FA810084963F /* PolicyListVC.m */; };
@@ -509,7 +508,6 @@
 		A4DF5FFE1EA9B6A90084963F /* VideoListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoListViewModel.m; sourceTree = "<group>"; };
 		A4DF60001EA9D4120084963F /* TeachingVideoDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeachingVideoDetailVC.h; sourceTree = "<group>"; };
 		A4DF60011EA9D4120084963F /* TeachingVideoDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeachingVideoDetailVC.m; sourceTree = "<group>"; };
-		A4DF60021EA9D4120084963F /* TeachingVideoDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeachingVideoDetailVC.xib; sourceTree = "<group>"; };
 		A4DF60051EA9D42F0084963F /* VideoDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDetailViewModel.h; sourceTree = "<group>"; };
 		A4DF60061EA9D42F0084963F /* VideoDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDetailViewModel.m; sourceTree = "<group>"; };
 		A4DF60081EA9D43F0084963F /* ALDVideoDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDVideoDetailModel.h; sourceTree = "<group>"; };
@@ -1104,7 +1102,6 @@
 				A4C32EAC1E9A65E000D53E1A /* TeachingVideoCollectionVC.m */,
 				A4DF60001EA9D4120084963F /* TeachingVideoDetailVC.h */,
 				A4DF60011EA9D4120084963F /* TeachingVideoDetailVC.m */,
-				A4DF60021EA9D4120084963F /* TeachingVideoDetailVC.xib */,
 				A4DF60101EA9FAC00084963F /* PolicyContainerVC.h */,
 				A4DF60111EA9FAC00084963F /* PolicyContainerVC.m */,
 				A4DF600D1EA9FA810084963F /* PolicyListVC.h */,
@@ -1396,7 +1393,6 @@
 				A4C7C4DB1E9F194A003A36E0 /* WQInputView.xib in Resources */,
 				A4C32EA41E9A5F8B00D53E1A /* DiscoverCell.xib in Resources */,
 				A4C32E731E9A343900D53E1A /* Login.xcassets in Resources */,
-				A4DF60041EA9D4120084963F /* TeachingVideoDetailVC.xib in Resources */,
 				A42299B91EAD9DBB00F62707 /* TeachingVideoDetailBottomView.xib in Resources */,
 				A44B7A341EC3169100907407 /* FinanceChapterCell.xib in Resources */,
 				A499A98B1EA622A800B45425 /* NewsDetailBottomView.xib in Resources */,

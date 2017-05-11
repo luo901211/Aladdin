@@ -87,7 +87,7 @@
         }else if(type == WQFetchDataTypeLoadMore){
             [self.tableView.mj_footer endRefreshing];
         }
-        NSLog(@"%@",error.userInfo);
+        [MBProgressHUD showAutoMessage:error.localizedDescription];
     }];
     
     

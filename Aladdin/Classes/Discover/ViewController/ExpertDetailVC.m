@@ -179,7 +179,7 @@
         self.model = model;
         [self initUI];
     } failure:^(id obj) {
-        NSLog(@"error: %@",obj);
+        [MBProgressHUD showAutoMessage:obj];
     }];
 }
 
