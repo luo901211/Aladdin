@@ -25,6 +25,6 @@
 @property (copy, nonatomic) NSString *content;
 @property (copy, nonatomic) NSString *add_time;
 @property (copy, nonatomic) NSString *add_date;
-@property (copy, nonatomic) NSString *is_standard;
+@property (assign, nonatomic) BOOL is_standard;
 
 @end

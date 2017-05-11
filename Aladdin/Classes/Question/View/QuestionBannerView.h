@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ALDQuestionDetailModel.h"
 
 @interface QuestionBannerView : UIView
+
+@property (strong, nonatomic) ALDQuestionDetailModel *model;
 
 @end

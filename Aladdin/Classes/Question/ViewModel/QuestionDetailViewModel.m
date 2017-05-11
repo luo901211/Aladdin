@@ -11,9 +11,10 @@
 @implementation QuestionDetailViewModel
 
 -(void)loadDataWithID:(NSInteger)ID success:(VoidBlock)success failure:(VoidBlock)failure {
+    
     NSDictionary *params = @{ @"id": @(ID) };
     
-    [AFNManagerRequest getWithPath:API_QUESTION_DETAIL params:params success:^(NSURLResponse *response, id responseObject) {
+    [AFNManagerRequest getWithPath:API_QUESTION_DETAIL params:params hudType:NetworkRequestGraceTimeTypeNormal success:^(NSURLResponse *response, id responseObject) {
         if (success) {
             success(responseObject);
         }

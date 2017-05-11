@@ -10,12 +10,14 @@
 #import "ALDQuestionDetailModel.h"
 #import "QuestionDetailViewModel.h"
 #import "AnswerCell.h"
+#import "QuestionBannerView.h"
 
 @interface QuestionDetailVC ()
 
 @property (nonatomic, strong) QuestionDetailViewModel *viewModel;
 
 @property (nonatomic, strong) ALDQuestionDetailModel *model;
+@property (nonatomic, strong) QuestionBannerView *bannerView;
 
 @end
 
@@ -28,8 +30,17 @@
     return _viewModel;
 }
 
+- (QuestionBannerView *)bannerView {
+    if (!_bannerView) {
+        _bannerView = [[NSBundle mainBundle] loadNibNamed:@"QuestionBannerView" owner:nil options:nil][0];
+    }
+    return _bannerView;
+}
+
 - (void)setModel:(ALDQuestionDetailModel *)model {
     _model = model;
+    self.bannerView.model = model;
+    self.tableView.tableHeaderView = self.bannerView;
     [self.tableView reloadData];
 }
 
@@ -37,6 +48,7 @@
     [super viewDidLoad];
     self.navigationItem.title = @"问答详情";
     self.tableView.tableFooterView = [UIView new];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView registerNib:[UINib nibWithNibName:@"AnswerCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"AnswerCell"];
     [self loadData];
 }
@@ -56,6 +68,10 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.model.answer_list.count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 90;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
