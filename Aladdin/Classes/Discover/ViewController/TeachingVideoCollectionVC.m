@@ -120,7 +120,7 @@ static NSString * const reuseIdentifier = @"TeachingVideoCollectionViewCell";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
     if (![[User sharedInstance] isLogin]) {
-        NSLog(@"请先登录");
+        [User presentLoginViewController];
         return;
     }
     

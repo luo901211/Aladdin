@@ -312,6 +312,13 @@
 #define API_USER_COLLECT_ADD  @"/user/collect"
 
 /*
+ * 用户-取消收藏
+ * token：必传，用户标识
+ * id：必传，收藏内容id
+ */
+#define API_USER_COLLECT_CANCEL  @"/user/cancelCollect"
+
+/*
  * 用户-收藏列表
  * token：必传，用户标识
  */

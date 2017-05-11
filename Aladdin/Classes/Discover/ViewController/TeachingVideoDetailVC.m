@@ -59,6 +59,30 @@
     if (!_bottomView) {
         _bottomView = [[NSBundle mainBundle] loadNibNamed:@"TeachingVideoDetailBottomView" owner:nil options:nil][0];
         _bottomView.frame = CGRectMake(0, 0, self.scrollView.width, 0);
+        @weakify(self);
+        _bottomView.collectTapBlock = ^(id obj) {
+            @strongify(self);
+
+            if (self.model.is_collect) {
+                [self.viewModel cancelCollectDataWithID:self.ID success:^(id obj) {
+                    [MBProgressHUD showAutoMessage:@"取消收藏成功"];
+                    ALDVideoDetailModel *model = self.model;
+                    model.is_collect = 0;
+                    self.model = model;
+                } failure:^(id obj) {
+                    [MBProgressHUD showAutoMessage:obj];
+                }];
+            }else{
+                [self.viewModel collectDataWithID:self.ID success:^(id obj) {
+                    [MBProgressHUD showAutoMessage:@"收藏成功"];
+                    ALDVideoDetailModel *model = self.model;
+                    model.is_collect = 1;
+                    self.model = model;
+                } failure:^(id obj) {
+                    [MBProgressHUD showAutoMessage:obj];
+                }];
+            }
+        };
     }
     return _bottomView;
 }

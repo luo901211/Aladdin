@@ -28,7 +28,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title = @"评论";
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.tableView.tableFooterView = [UIView new];

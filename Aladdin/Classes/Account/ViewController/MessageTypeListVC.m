@@ -94,6 +94,7 @@
     MessageListVC *vc = [[MessageListVC alloc] init];
     ALDMessageTypeModel *model = self.viewModel.messageTypeList[indexPath.row];
     vc.type = model.type;
+    vc.title = model.type_name;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
