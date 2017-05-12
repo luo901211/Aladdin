@@ -11,6 +11,9 @@
 #import "QuestionDetailViewModel.h"
 #import "AnswerCell.h"
 #import "QuestionBannerView.h"
+#import "ExpertListVC.h"
+#import "AnswerViewController.h"
+#import "ALDBaseNavigationController.h"
 
 @interface QuestionDetailVC ()
 
@@ -40,6 +43,34 @@
 - (void)setModel:(ALDQuestionDetailModel *)model {
     _model = model;
     self.bannerView.model = model;
+    
+    @weakify(self);
+    self.bannerView.tapCollectBlock = ^(id obj) {
+        @strongify(self);
+        
+        [self.viewModel collectDataWithID:self.ID success:^(id obj) {
+            [MBProgressHUD showAutoMessage:@"收藏成功"];
+        } failure:^(id obj) {
+            [MBProgressHUD showAutoMessage:obj];
+        }];
+    };
+    self.bannerView.tapInviteBlock = ^(id obj) {
+        @strongify(self);
+        ExpertListVC *vc = [[ExpertListVC alloc] init];
+        vc.level = 2;//知名专家
+        vc.inviteReplyBlock = ^(NSNumber *ID) {
+            [MBProgressHUD showAutoMessage:[NSString stringWithFormat:@"邀请专家id： %@",ID]];
+        };
+        ALDBaseNavigationController *nav = [[ALDBaseNavigationController alloc] initWithRootViewController:vc];
+        [self.navigationController presentViewController:nav animated:YES completion:nil];
+    };
+    self.bannerView.tapReplyBlock = ^(id obj) {
+        @strongify(self);
+        AnswerViewController *vc = [[AnswerViewController alloc] init];
+        ALDBaseNavigationController *nav = [[ALDBaseNavigationController alloc] initWithRootViewController:vc];
+        [self.navigationController presentViewController:nav animated:YES completion:nil];
+    };
+    
     self.tableView.tableHeaderView = self.bannerView;
     [self.tableView reloadData];
 }

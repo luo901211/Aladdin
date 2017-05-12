@@ -12,5 +12,8 @@
 @interface QuestionBannerView : UIView
 
 @property (strong, nonatomic) ALDQuestionDetailModel *model;
+@property (copy, nonatomic) VoidBlock tapCollectBlock;
+@property (copy, nonatomic) VoidBlock tapInviteBlock;
+@property (copy, nonatomic) VoidBlock tapReplyBlock;
 
 @end

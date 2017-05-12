@@ -115,8 +115,16 @@
 #pragma mark - Table view delegate
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    ExpertDetailVC *vc = [[ExpertDetailVC alloc] init];
     ALDExpertModel *model = self.viewModel.list[indexPath.row];
+
+    if (self.inviteReplyBlock) {
+        // 邀请回答
+        self.inviteReplyBlock(@(model.ID));
+        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+        return;
+    }
+    
+    ExpertDetailVC *vc = [[ExpertDetailVC alloc] init];
     vc.level = self.level;
     vc.ID = model.ID;
     [self.navigationController pushViewController:vc animated:YES];

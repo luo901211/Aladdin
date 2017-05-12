@@ -33,7 +33,7 @@
     self.descLabel.text = model.content;
     self.scanLabel.text = model.view_num;
     self.replyLabel.text = model.answer_count;
-    
+
     [UILabel changeLineSpaceForLabel:self.titleLabel WithSpace:kLineSpacing];
     [UILabel changeLineSpaceForLabel:self.descLabel WithSpace:kLineSpacing];
 
@@ -55,10 +55,19 @@
 
 
 - (IBAction)didPressedOnCollectButton:(UIButton *)sender {
+    if (self.tapCollectBlock) {
+        self.tapCollectBlock(sender);
+    }
 }
 - (IBAction)didPressedOnInviteButton:(UIButton *)sender {
+    if (self.tapInviteBlock) {
+        self.tapInviteBlock(sender);
+    }
 }
 - (IBAction)didPressedOnReplyButton:(UIButton *)sender {
+    if (self.tapReplyBlock) {
+        self.tapReplyBlock(sender);
+    }
 }
 
 @end

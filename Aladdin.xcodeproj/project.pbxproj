@@ -79,6 +79,8 @@
 		A48334611EB0C4AA00FB5801 /* QuestionContainerBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = A48334601EB0C4AA00FB5801 /* QuestionContainerBottomView.m */; };
 		A48334631EB0C4BD00FB5801 /* QuestionContainerBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A48334621EB0C4BD00FB5801 /* QuestionContainerBottomView.xib */; };
 		A48334711EB1D75C00FB5801 /* FeedbackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A483346F1EB1D75C00FB5801 /* FeedbackVC.m */; };
+		A48DBE051EC5673600F78620 /* AnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A48DBE031EC5673600F78620 /* AnswerViewController.m */; };
+		A48DBE061EC5673600F78620 /* AnswerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A48DBE041EC5673600F78620 /* AnswerViewController.xib */; };
 		A499A95F1EA60EB700B45425 /* CollectListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A499A95E1EA60EB700B45425 /* CollectListVC.m */; };
 		A499A9851EA622A800B45425 /* ALDNewsBannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A499A9691EA622A800B45425 /* ALDNewsBannerModel.m */; };
 		A499A9861EA622A800B45425 /* ALDNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A499A96B1EA622A800B45425 /* ALDNewsModel.m */; };
@@ -329,6 +331,9 @@
 		A48334621EB0C4BD00FB5801 /* QuestionContainerBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionContainerBottomView.xib; sourceTree = "<group>"; };
 		A483346E1EB1D75C00FB5801 /* FeedbackVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackVC.h; sourceTree = "<group>"; };
 		A483346F1EB1D75C00FB5801 /* FeedbackVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackVC.m; sourceTree = "<group>"; };
+		A48DBE021EC5673600F78620 /* AnswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerViewController.h; sourceTree = "<group>"; };
+		A48DBE031EC5673600F78620 /* AnswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerViewController.m; sourceTree = "<group>"; };
+		A48DBE041EC5673600F78620 /* AnswerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnswerViewController.xib; sourceTree = "<group>"; };
 		A499A95D1EA60EB700B45425 /* CollectListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectListVC.h; sourceTree = "<group>"; };
 		A499A95E1EA60EB700B45425 /* CollectListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectListVC.m; sourceTree = "<group>"; };
 		A499A9681EA622A800B45425 /* ALDNewsBannerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDNewsBannerModel.h; sourceTree = "<group>"; };
@@ -828,6 +833,9 @@
 				A44B7A3B1EC448AE00907407 /* QuestionReportVC.h */,
 				A44B7A3C1EC448AE00907407 /* QuestionReportVC.m */,
 				A44B7A3D1EC448AE00907407 /* QuestionReportVC.xib */,
+				A48DBE021EC5673600F78620 /* AnswerViewController.h */,
+				A48DBE031EC5673600F78620 /* AnswerViewController.m */,
+				A48DBE041EC5673600F78620 /* AnswerViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1432,6 +1440,7 @@
 			files = (
 				A4D682E61E976CEB00FBA51C /* LaunchScreen.storyboard in Resources */,
 				A43F9DD01E9F2CBC00AA831E /* LoginVC.xib in Resources */,
+				A48DBE061EC5673600F78620 /* AnswerViewController.xib in Resources */,
 				A408915E1EA39D770071D22D /* MessageCell.xib in Resources */,
 				A44B7A571EC46CD900907407 /* AnswerCell.xib in Resources */,
 				A4C266E31EAEEFBE007A5674 /* ExpertDetailHeaderView.xib in Resources */,
@@ -1569,6 +1578,7 @@
 				A4BF61421EACA469003F876F /* FinanceChapterListVC.m in Sources */,
 				A4C32AEB1E98A7B800D53E1A /* MPFileManager.m in Sources */,
 				A499A9911EA622A800B45425 /* NewsMainViewModel.m in Sources */,
+				A48DBE051EC5673600F78620 /* AnswerViewController.m in Sources */,
 				A43F9DCF1E9F2CBC00AA831E /* LoginVC.m in Sources */,
 				A4C32E261E98AD0F00D53E1A /* UIImage+OuterCircle.m in Sources */,
 				A42299951EACA5A000F62707 /* ALDFinanceDetailModel.m in Sources */,
