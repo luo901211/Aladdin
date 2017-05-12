@@ -58,6 +58,7 @@
         @strongify(self);
         ExpertListVC *vc = [[ExpertListVC alloc] init];
         vc.level = 2;//知名专家
+        vc.title = @"邀请回答";
         vc.inviteReplyBlock = ^(NSNumber *ID) {
             [MBProgressHUD showAutoMessage:[NSString stringWithFormat:@"邀请专家id： %@",ID]];
         };
@@ -66,7 +67,7 @@
     };
     self.bannerView.tapReplyBlock = ^(id obj) {
         @strongify(self);
-        AnswerViewController *vc = [[AnswerViewController alloc] init];
+        AnswerViewController *vc = [[AnswerViewController alloc]initWithNibName:@"AnswerViewController" bundle:nil];;
         ALDBaseNavigationController *nav = [[ALDBaseNavigationController alloc] initWithRootViewController:vc];
         [self.navigationController presentViewController:nav animated:YES completion:nil];
     };

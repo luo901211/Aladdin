@@ -30,6 +30,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    if (self.inviteReplyBlock) {
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:(UIBarButtonItemStylePlain) target:self action:@selector(dismiss)];
+    }
+    
     self.tableView.tableFooterView = [UIView new];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"ExpertCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"ExpertCell"];
@@ -47,6 +51,9 @@
     
 }
 
+- (void)dismiss {
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

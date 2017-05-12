@@ -9,10 +9,17 @@
 #import "AnswerViewController.h"
 
 @interface AnswerViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *submitButton;
 
 @end
 
 @implementation AnswerViewController
+
+- (void)loadView {
+    [super loadView];
+    
+    self.submitButton.layer.cornerRadius = 3;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
