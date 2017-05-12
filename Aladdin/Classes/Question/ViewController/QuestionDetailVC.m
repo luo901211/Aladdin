@@ -48,6 +48,7 @@
     [super viewDidLoad];
     self.navigationItem.title = @"问答详情";
     self.tableView.tableFooterView = [UIView new];
+    self.tableView.backgroundColor = HEXCOLOR(0xf6f6f6);
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView registerNib:[UINib nibWithNibName:@"AnswerCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"AnswerCell"];
     [self loadData];
