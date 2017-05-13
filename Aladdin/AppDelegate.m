@@ -37,7 +37,7 @@
     [self setupHomeViewController];
 
 //    if (![User sharedInstance].isLogin) {
-        [self presentLoginViewController];
+//        [self presentLoginViewController];
 //    }
     return YES;
 }

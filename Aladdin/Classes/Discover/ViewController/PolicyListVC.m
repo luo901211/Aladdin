@@ -117,6 +117,7 @@
     PolicyDetailVC *vc = [[PolicyDetailVC alloc] init];
     ALDPolicyModel *model = self.viewModel.list[indexPath.row];
     vc.ID = model.ID;
+    vc.title = @"政策法规详情";
     [self.navigationController pushViewController:vc animated:YES];
 }
 

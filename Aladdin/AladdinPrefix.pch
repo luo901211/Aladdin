@@ -35,6 +35,7 @@
 #import "MPUmengHelper.h"
 #import "AFNManagerRequest.h"
 #import "WQChiBaoZiHeader.h"
+#import "WQRefreshNormalHeader.h"
 
 #import "User.h"
 #import "User+Helper.h"
