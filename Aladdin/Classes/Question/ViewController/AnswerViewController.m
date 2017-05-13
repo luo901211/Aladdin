@@ -7,9 +7,11 @@
 //
 
 #import "AnswerViewController.h"
+#import "WQPlaceholderTextView.h"
 
-@interface AnswerViewController ()
+@interface AnswerViewController ()<UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *submitButton;
+@property (weak, nonatomic) IBOutlet WQPlaceholderTextView *textView;
 
 @end
 
@@ -26,8 +28,17 @@
     // Do any additional setup after loading the view from its nib.
     self.navigationItem.title = @"回复";
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:(UIBarButtonItemStylePlain) target:self action:@selector(dismiss)];
+    [self.textView updatePlaceholderText:@"请输入..."];
+    self.textView.delegate = self;
 }
 
+- (void)textViewDidChange:(UITextView *)textView {
+    if (textView.text.length) {
+        [self.textView updatePlaceholderText:@""];
+    }else{
+        [self.textView updatePlaceholderText:@"请输入..."];
+    }
+}
 - (void)dismiss {
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
@@ -36,15 +47,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

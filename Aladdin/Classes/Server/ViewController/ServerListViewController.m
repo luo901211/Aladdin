@@ -35,14 +35,7 @@
 
 - (UserFeatureView *)userFeatureView {
     if (!_userFeatureView) {
-        NSArray *array = @[
-                           @{ @"title": @"个人中心", @"image": @"user_mine_item" },
-                           @{ @"title": @"我的收藏", @"image": @"user_collect_item" },
-                           @{ @"title": @"我的问答", @"image": @"user_question_item" },
-                           @{ @"title": @"系统消息", @"image": @"user_system_msg_item" },
-                           @{ @"title": @"意见反馈", @"image": @"user_feedback_item" }
-                           ];
-        _userFeatureView = [[UserFeatureView alloc] initWithItems:array];
+        _userFeatureView = [[UserFeatureView alloc] init];
         _userFeatureView.top = 64 + 5;
         _userFeatureView.right = Main_Screen_Width - 20;
     }

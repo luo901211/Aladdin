@@ -10,6 +10,4 @@
 
 @interface UserFeatureView : UIView
 
-- (instancetype)initWithItems:(NSArray *)items;
-
 @end

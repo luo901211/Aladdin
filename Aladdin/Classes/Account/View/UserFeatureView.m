@@ -32,7 +32,15 @@ static CGFloat buttonWidth = 164;
 }
 */
 
-- (instancetype)initWithItems:(NSArray *)items {
+- (instancetype)init {
+    NSArray *items = @[
+                      @{ @"title": @"个人中心", @"image": @"user_mine_item" },
+                      @{ @"title": @"我的收藏", @"image": @"user_collect_item" },
+                      @{ @"title": @"我的问答", @"image": @"user_question_item" },
+                      @{ @"title": @"系统消息", @"image": @"user_system_msg_item" },
+                      @{ @"title": @"意见反馈", @"image": @"user_feedback_item" }
+                      ];
+    
     self = [super initWithFrame:CGRectMake(0, 0, buttonWidth, 44 * items.count + 44 + 14)];
     if (self) {
         self.items = items;

@@ -12,11 +12,14 @@
 #import "NewsMainViewModel.h"
 #import "ALDNewsTypeModel.h"
 #import "PolicySearchVC.h"
+#import "UserFeatureView.h"
+#import "WQPopWindow.h"
 
 @interface NewsMainViewController ()<SGSegmentedControlDefaultDelegate, UIScrollViewDelegate>
 
 @property (nonatomic, strong) SGSegmentedControlDefault *topSView;
 @property (nonatomic, strong) SGSegmentedControlBottomView *bottomSView;
+@property (nonatomic, strong) UserFeatureView *userFeatureView;
 
 @property (nonatomic, strong) NewsMainViewModel *viewModel;
 
@@ -29,6 +32,14 @@
         _viewModel = [[NewsMainViewModel alloc] init];
     }
     return _viewModel;
+}
+- (UserFeatureView *)userFeatureView {
+    if (!_userFeatureView) {
+        _userFeatureView = [[UserFeatureView alloc] init];
+        _userFeatureView.top = 64 + 5;
+        _userFeatureView.right = Main_Screen_Width - 20;
+    }
+    return _userFeatureView;
 }
 
 - (void)viewDidLoad {
@@ -49,6 +60,8 @@
     [self.navigationController pushViewController:searchVC animated:YES];
 }
 - (void)showUserFeatureView {
+    [[WQPopWindow sharedWindow] addSubview:self.userFeatureView];
+    [[WQPopWindow sharedWindow] show];
 }
 
 - (void)loadNewsType {
