@@ -13,4 +13,6 @@
 
 @property (nonatomic, strong) ALDAnswerModel *model;
 
++ (CGFloat)heightForRow:(ALDAnswerModel *)model;
+
 @end

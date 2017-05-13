@@ -46,6 +46,10 @@
     
     @weakify(self);
     self.bannerView.tapCollectBlock = ^(id obj) {
+        if (![User sharedInstance].isLogin) {
+            return [User presentLoginViewController];
+        }
+        
         @strongify(self);
         
         [self.viewModel collectDataWithID:self.ID success:^(id obj) {
@@ -55,6 +59,11 @@
         }];
     };
     self.bannerView.tapInviteBlock = ^(id obj) {
+        
+        if (![User sharedInstance].isLogin) {
+            return [User presentLoginViewController];
+        }
+        
         @strongify(self);
         ExpertListVC *vc = [[ExpertListVC alloc] init];
         vc.level = 2;//知名专家
@@ -66,6 +75,10 @@
         [self.navigationController presentViewController:nav animated:YES completion:nil];
     };
     self.bannerView.tapReplyBlock = ^(id obj) {
+        if (![User sharedInstance].isLogin) {
+            return [User presentLoginViewController];
+        }
+        
         @strongify(self);
         AnswerViewController *vc = [[AnswerViewController alloc]initWithNibName:@"AnswerViewController" bundle:nil];;
         ALDBaseNavigationController *nav = [[ALDBaseNavigationController alloc] initWithRootViewController:vc];
@@ -104,7 +117,8 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 90;
+    ALDAnswerModel *model = self.model.answer_list[indexPath.row];
+    return [AnswerCell heightForRow:model];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
