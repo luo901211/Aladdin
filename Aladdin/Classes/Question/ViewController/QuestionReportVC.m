@@ -9,6 +9,7 @@
 #import "QuestionReportVC.h"
 #import <UITextView+Placeholder/UITextView+Placeholder.h>
 #import "NSString+Additions.h"
+#import "QuestionReportViewModel.h"
 
 #define kQuestionMaxLength 50
 @interface QuestionReportVC ()<UITextViewDelegate>
@@ -22,9 +23,17 @@
 @property (weak, nonatomic) IBOutlet UIButton *submitButton;
 @property (weak, nonatomic) IBOutlet UILabel *lengthLabel;
 
+@property (strong, nonatomic) QuestionReportViewModel *viewModel;
 @end
 
 @implementation QuestionReportVC
+
+- (QuestionReportViewModel *)viewModel {
+    if (!_viewModel) {
+        _viewModel = [[QuestionReportViewModel alloc] init];
+    }
+    return _viewModel;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -52,14 +61,16 @@
     if ([self.textView.text chineseTextLength] > kQuestionMaxLength) {
         return [MBProgressHUD showAutoMessage:@"字数超过最长限制"];
     }
+    NSString *title = @"提问标题";
+    NSString *content = self.textView.text;
+    NSInteger expertID = self.expertModel.ID;
+    NSMutableArray *pics = @[].mutableCopy;
     
-    if (self.expertModel) {
-        NSLog(@"向 %ld 提问",(long)self.expertModel.ID);
-    }else{
-        NSLog(@"免费提问");
-    }
-    
-    
+    [self.viewModel submitQuestionWithTitle:title content:content expertID:expertID pics:pics success:^(id obj) {
+        [MBProgressHUD showAutoMessage:@"提问成功"];
+    } failure:^(id obj) {
+        [MBProgressHUD showAutoMessage:obj];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

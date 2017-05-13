@@ -14,6 +14,7 @@
 #import "ExpertNewsListVC.h"
 #import "ExpertAnswerListVC.h"
 #import "SGPageView.h"
+#import "QuestionReportVC.h"
 
 @interface ExpertDetailVC ()<SGPageTitleViewDelegate, SGPageContentViewDelegare>
 
@@ -76,6 +77,7 @@
         [button setBackgroundColor:GLOBAL_TINT_COLOR];
         [button setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
         [button setTitle:@"提问" forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(didPressedOnSubmitButton:) forControlEvents:UIControlEventTouchUpInside];
         button.titleLabel.font = [UIFont systemFontOfSize:14];
         button.layer.cornerRadius = 4;
         button.layer.masksToBounds = YES;
@@ -84,6 +86,20 @@
     return _footerView;
 }
 
+- (void)didPressedOnSubmitButton:(UIButton *)button {
+    if (!self.model) {
+        return;
+    }
+    QuestionReportVC *vc = [[QuestionReportVC alloc] initWithNibName:@"QuestionReportVC" bundle:[NSBundle mainBundle]];
+    ALDExpertModel *model = [[ALDExpertModel alloc] init];
+    model.ID = self.model.ID;
+    model.real_name = self.model.real_name;
+    model.pic_url = self.model.pic_url;
+    model.company = self.model.company;
+    model.position = self.model.position;
+    vc.expertModel = model;
+    [self.navigationController pushViewController:vc animated:YES];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.

@@ -78,6 +78,7 @@
 		A45378AD1EA9A10A00020C5D /* UIView+SGFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = A45378A91EA9A10A00020C5D /* UIView+SGFrame.m */; };
 		A46BDAAF1EC73EF000EC22ED /* WQRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = A46BDAAE1EC73EF000EC22ED /* WQRefreshNormalHeader.m */; };
 		A46BDAB21EC7792300EC22ED /* AnswerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A46BDAB11EC7792300EC22ED /* AnswerViewModel.m */; };
+		A46BDAB51EC77DC800EC22ED /* QuestionReportViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A46BDAB41EC77DC800EC22ED /* QuestionReportViewModel.m */; };
 		A48334611EB0C4AA00FB5801 /* QuestionContainerBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = A48334601EB0C4AA00FB5801 /* QuestionContainerBottomView.m */; };
 		A48334631EB0C4BD00FB5801 /* QuestionContainerBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A48334621EB0C4BD00FB5801 /* QuestionContainerBottomView.xib */; };
 		A48334711EB1D75C00FB5801 /* FeedbackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A483346F1EB1D75C00FB5801 /* FeedbackVC.m */; };
@@ -332,6 +333,8 @@
 		A46BDAAE1EC73EF000EC22ED /* WQRefreshNormalHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQRefreshNormalHeader.m; sourceTree = "<group>"; };
 		A46BDAB01EC7792300EC22ED /* AnswerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerViewModel.h; sourceTree = "<group>"; };
 		A46BDAB11EC7792300EC22ED /* AnswerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerViewModel.m; sourceTree = "<group>"; };
+		A46BDAB31EC77DC800EC22ED /* QuestionReportViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionReportViewModel.h; sourceTree = "<group>"; };
+		A46BDAB41EC77DC800EC22ED /* QuestionReportViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionReportViewModel.m; sourceTree = "<group>"; };
 		A483345F1EB0C4AA00FB5801 /* QuestionContainerBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionContainerBottomView.h; sourceTree = "<group>"; };
 		A48334601EB0C4AA00FB5801 /* QuestionContainerBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionContainerBottomView.m; sourceTree = "<group>"; };
 		A48334621EB0C4BD00FB5801 /* QuestionContainerBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionContainerBottomView.xib; sourceTree = "<group>"; };
@@ -855,6 +858,8 @@
 				A44B7A491EC45AA200907407 /* QuestionDetailViewModel.m */,
 				A46BDAB01EC7792300EC22ED /* AnswerViewModel.h */,
 				A46BDAB11EC7792300EC22ED /* AnswerViewModel.m */,
+				A46BDAB31EC77DC800EC22ED /* QuestionReportViewModel.h */,
+				A46BDAB41EC77DC800EC22ED /* QuestionReportViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1650,6 +1655,7 @@
 				A499A98D1EA622A800B45425 /* NewsListViewController.m in Sources */,
 				A45378AD1EA9A10A00020C5D /* UIView+SGFrame.m in Sources */,
 				A4C32E6C1E9A1BF400D53E1A /* SGImageButton_Vertical.m in Sources */,
+				A46BDAB51EC77DC800EC22ED /* QuestionReportViewModel.m in Sources */,
 				A44B7A3A1EC34B0000907407 /* PolicySearchResultVC.m in Sources */,
 				A43F9DE31E9F6DDF00AA831E /* ChangePasswordVC.m in Sources */,
 				A4C32AF11E98A7B800D53E1A /* introductoryPagesView.m in Sources */,
