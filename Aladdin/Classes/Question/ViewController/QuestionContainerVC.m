@@ -10,6 +10,10 @@
 #import "SGPageView.h"
 #import "QuestionListVC.h"
 #import "QuestionContainerBottomView.h"
+#import "QuestionReportVC.h"
+#import "ExpertListVC.h"
+#import "ALDBaseNavigationController.h"
+#import "ALDExpertModel.h"
 
 @interface QuestionContainerVC ()<SGPageTitleViewDelegate, SGPageContentViewDelegare>
 
@@ -26,14 +30,30 @@
         
         @weakify(self);
         _bottomView.freeAskBlock = ^(id obj){
+            if (![User sharedInstance].isLogin) {
+                return [User presentLoginViewController];
+            }
+
             @strongify(self);
-            UIViewController *vc = [[UIViewController alloc] init];
+            QuestionReportVC *vc = [[QuestionReportVC alloc] initWithNibName:@"QuestionReportVC" bundle:[NSBundle mainBundle]];
             [self.navigationController pushViewController:vc animated:YES];
         };
         _bottomView.expertAskBlock = ^(id obj){
+            if (![User sharedInstance].isLogin) {
+                return [User presentLoginViewController];
+            }
+            
             @strongify(self);
-            UIViewController *vc = [[UIViewController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
+            ExpertListVC *vc = [[ExpertListVC alloc] init];
+            vc.level = 2;//知名专家
+            vc.title = @"邀请回答";
+            vc.inviteReplyBlock = ^(ALDExpertModel *model) {
+                QuestionReportVC *vc = [[QuestionReportVC alloc] initWithNibName:@"QuestionReportVC" bundle:[NSBundle mainBundle]];
+                vc.expertModel = model;
+                [self.navigationController pushViewController:vc animated:YES];
+            };
+            ALDBaseNavigationController *nav = [[ALDBaseNavigationController alloc] initWithRootViewController:vc];
+            [self.navigationController presentViewController:nav animated:YES completion:nil];
         };
     }
     return _bottomView;

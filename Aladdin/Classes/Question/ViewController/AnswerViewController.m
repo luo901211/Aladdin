@@ -7,20 +7,27 @@
 //
 
 #import "AnswerViewController.h"
-#import "WQPlaceholderTextView.h"
+#import <UITextView+Placeholder/UITextView+Placeholder.h>
+#import "NSString+Additions.h"
+#import "AnswerViewModel.h"
 
+#define kQuestionMaxLength 50
 @interface AnswerViewController ()<UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *submitButton;
-@property (weak, nonatomic) IBOutlet WQPlaceholderTextView *textView;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet UILabel *lengthLabel;
+@property (strong, nonatomic) AnswerViewModel *viewModel;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end
 
 @implementation AnswerViewController
 
-- (void)loadView {
-    [super loadView];
-    
-    self.submitButton.layer.cornerRadius = 3;
+- (AnswerViewModel *)viewModel {
+    if (!_viewModel) {
+        _viewModel = [[AnswerViewModel alloc] init];
+    }
+    return _viewModel;
 }
 
 - (void)viewDidLoad {
@@ -28,17 +35,27 @@
     // Do any additional setup after loading the view from its nib.
     self.navigationItem.title = @"回复";
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:(UIBarButtonItemStylePlain) target:self action:@selector(dismiss)];
-    [self.textView updatePlaceholderText:@"请输入..."];
+
+    self.titleLabel.text = self.questionTitle;
+    
+    self.textView.placeholder = @"请输入回答内容";
+    self.textView.placeholderColor = HEXCOLOR(0xcdcdcd);
     self.textView.delegate = self;
+    self.lengthLabel.text = [NSString stringWithFormat:@"0/%d",kQuestionMaxLength];
+    self.submitButton.layer.cornerRadius = 4;
+}
+- (IBAction)didPressedOnSubmitButton:(UIButton *)sender {
+    if ([self.textView.text chineseTextLength] > kQuestionMaxLength) {
+        return [MBProgressHUD showAutoMessage:@"字数超过最长限制"];
+    }
+    
+    [self.viewModel submitAnswer:self.textView.text id:self.ID success:^(id obj) {
+        [MBProgressHUD showAutoMessage:@"提交成功"];
+    } failure:^(id obj) {
+        [MBProgressHUD showAutoMessage:obj];
+    }];
 }
 
-- (void)textViewDidChange:(UITextView *)textView {
-    if (textView.text.length) {
-        [self.textView updatePlaceholderText:@""];
-    }else{
-        [self.textView updatePlaceholderText:@"请输入..."];
-    }
-}
 - (void)dismiss {
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
@@ -46,6 +63,15 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+#pragma mark - UITextViewDelegate
+- (void)textViewDidChange:(UITextView *)textView {
+    self.lengthLabel.text = [NSString stringWithFormat:@"%ld/%d",(long)[textView.text chineseTextLength], kQuestionMaxLength];
+    if ([textView.text chineseTextLength] > kQuestionMaxLength) {
+        self.lengthLabel.textColor = HEXCOLOR(0xe64340);
+    }else{
+        self.lengthLabel.textColor = HEXCOLOR(0x999999);
+    }
 }
 
 @end

@@ -14,6 +14,7 @@
 #import "ExpertListVC.h"
 #import "AnswerViewController.h"
 #import "ALDBaseNavigationController.h"
+#import "ALDExpertModel.h"
 
 @interface QuestionDetailVC ()
 
@@ -68,8 +69,8 @@
         ExpertListVC *vc = [[ExpertListVC alloc] init];
         vc.level = 2;//知名专家
         vc.title = @"邀请回答";
-        vc.inviteReplyBlock = ^(NSNumber *ID) {
-            [MBProgressHUD showAutoMessage:[NSString stringWithFormat:@"邀请专家id： %@",ID]];
+        vc.inviteReplyBlock = ^(ALDExpertModel *model) {
+            [MBProgressHUD showAutoMessage:[NSString stringWithFormat:@"邀请专家id： %ld",(long)model.ID]];
         };
         ALDBaseNavigationController *nav = [[ALDBaseNavigationController alloc] initWithRootViewController:vc];
         [self.navigationController presentViewController:nav animated:YES completion:nil];
@@ -81,6 +82,8 @@
         
         @strongify(self);
         AnswerViewController *vc = [[AnswerViewController alloc]initWithNibName:@"AnswerViewController" bundle:nil];;
+        vc.ID = self.ID;
+        vc.questionTitle = self.model.title;
         ALDBaseNavigationController *nav = [[ALDBaseNavigationController alloc] initWithRootViewController:vc];
         [self.navigationController presentViewController:nav animated:YES completion:nil];
     };

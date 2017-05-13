@@ -10,4 +10,8 @@
 
 @interface AnswerViewController : UIViewController
 
+@property (nonatomic, assign) NSInteger ID;
+
+@property (nonatomic, copy) NSString *questionTitle;
+
 @end

@@ -18,6 +18,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfc-nt-wNH">
                     <rect key="frame" x="15" y="7" width="165" height="36"/>
                     <color key="backgroundColor" red="0.0" green="0.80392156862745101" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="Ixl-ld-kPU"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <state key="normal" title="免费提问">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -29,6 +32,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQV-Op-gSC">
                     <rect key="frame" x="195" y="7" width="165" height="36"/>
                     <color key="backgroundColor" red="0.0" green="0.80392156862745101" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="kAJ-Ec-7QX"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <state key="normal" title="大咖提问">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -45,8 +51,6 @@
                 <constraint firstAttribute="trailing" secondItem="RQV-Op-gSC" secondAttribute="trailing" constant="15" id="PeW-Bf-DvF"/>
                 <constraint firstItem="RQV-Op-gSC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="7" id="QBV-g3-moY"/>
                 <constraint firstItem="dfc-nt-wNH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="XS6-JQ-PQN"/>
-                <constraint firstAttribute="bottom" secondItem="RQV-Op-gSC" secondAttribute="bottom" constant="7" id="gDJ-bN-6sB"/>
-                <constraint firstAttribute="bottom" secondItem="dfc-nt-wNH" secondAttribute="bottom" constant="7" id="nq2-DP-TqI"/>
                 <constraint firstItem="RQV-Op-gSC" firstAttribute="leading" secondItem="dfc-nt-wNH" secondAttribute="trailing" constant="15" id="pMe-4A-zyr"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

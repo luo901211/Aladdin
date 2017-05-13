@@ -126,7 +126,7 @@
 
     if (self.inviteReplyBlock) {
         // 邀请回答
-        self.inviteReplyBlock(@(model.ID));
+        self.inviteReplyBlock(model);
         [self.navigationController dismissViewControllerAnimated:YES completion:nil];
         return;
     }

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ALDExpertModel.h"
 
 @interface QuestionReportVC : UIViewController
+
+@property (strong, nonatomic) ALDExpertModel *expertModel;
 
 @end

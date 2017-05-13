@@ -27,5 +27,6 @@ target 'Aladdin' do
   pod 'UMengSocial', '~> 4.3'  #友盟社会化分享及第三方登录
   pod 'SDCycleScrollView','~> 1.64'#轮播图
   pod 'RATreeView', '~> 2.1.2'
+  pod 'UITextView+Placeholder', '~> 1.2'
 
 end

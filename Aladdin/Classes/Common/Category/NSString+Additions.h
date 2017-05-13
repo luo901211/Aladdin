@@ -11,6 +11,9 @@
 
 @interface NSString (Additions)
 
+// 判断中英混合的的字符串长度
+- (NSInteger)chineseTextLength;
+
 //计算大小带间距
 - (CGSize)sizeWithConstrainedToWidth:(float)width fromFont:(UIFont *)font1 lineSpace:(float)lineSpace;
 - (CGSize)sizeWithConstrainedToSize:(CGSize)size fromFont:(UIFont *)font1 lineSpace:(float)lineSpace;

@@ -64,6 +64,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>UITextView+Placeholder.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>XAspect.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -82,22 +87,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>30F73834E98F6816EFF87084E2EFCC09</key>
+		<key>2A5BD14CE6E2799B38992A57D9B16CCA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>33AA75E37D52BE1347E9B07EA747FCF9</key>
+		<key>41D828F4047CB1FD668D76CD3196D3E0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4871662B46915378409E8B316F34F8FB</key>
+		<key>46301393753BB7BAC9C56180C9F9F3E2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5B597D472A5CE6DECEEB5DD627FC7352</key>
+		<key>4DB87D925D2BDBCF0C5B3D72259B9B4C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -107,12 +112,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>85D08A9906BA90039EB6DC5278BA3D6E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8A604723AC66AAD20506E4FB7D3CAC4B</key>
+		<key>7F2DBD5570A968EDDF7BEFA1B3F27174</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -127,6 +127,16 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>B4EF5D279A92F5CF187B9F917A73733E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CED7FD42639AA9645EF773B56848B3AF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>D058B89EB3B3DF45457A2DCD3971AFFE</key>
 		<dict>
 			<key>primary</key>
@@ -137,12 +147,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DD489682FCD008CF61C5FF744E604471</key>
+		<key>E98B676E00F5589FD3F534D49291AA48</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EF771C768F7FB85B121D157FB39BDA8E</key>
+		<key>EACC89236824722917988156C3BE0AE3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

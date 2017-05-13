@@ -10,6 +10,20 @@
 
 @implementation NSString (Additions)
 
+- (NSInteger)chineseTextLength {
+    int strlength = 0;
+    char* p = (char*)[self cStringUsingEncoding:NSUnicodeStringEncoding];
+    for (int i=0 ; i < [self lengthOfBytesUsingEncoding:NSUnicodeStringEncoding] ;i++) {
+        if (*p) {
+            p++;
+            strlength++;
+        } else {
+            p++;
+        }
+    }
+    return (strlength + 1) / 2;
+}
+
 - (CGSize)sizeWithConstrainedToWidth:(float)width fromFont:(UIFont *)font1 lineSpace:(float)lineSpace{
     return [self sizeWithConstrainedToSize:CGSizeMake(width, CGFLOAT_MAX) fromFont:font1 lineSpace:lineSpace];
 }
