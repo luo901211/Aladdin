@@ -36,6 +36,7 @@
 
 - (void)loadData {
     NSString *urlString = [NSString stringWithFormat:@"%@%@?id=%ld",SERVER_HOST, API_DISCOVER_POLICY_DETAIL, (long)self.ID];
+    urlString = [urlString stringByAppendingString:@"&show_download=false"];
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
 }
 

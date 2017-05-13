@@ -114,7 +114,7 @@
         ALDVideoDetailModel *model = [ALDVideoDetailModel mj_objectWithKeyValues:obj];
         self.model = model;
     } failure:^(id obj) {
-        NSLog(@"error: %@",obj);
+        [MBProgressHUD showAutoMessage:obj];
     }];
 }
 

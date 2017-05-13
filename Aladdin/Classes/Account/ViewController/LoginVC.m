@@ -203,6 +203,7 @@
         [User sharedInstance].token = obj[@"token"];
         [[User sharedInstance] save];
         [[User sharedInstance] getUserinfo];
+        [[NSNotificationCenter defaultCenter] postNotificationName:kNotification_Login object:nil];
         [self dismissViewControllerAnimated:YES completion:nil];
     };
     

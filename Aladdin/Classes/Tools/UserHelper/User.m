@@ -59,7 +59,7 @@
 - (void)logout {
     self.token = @"";
     [self save];
-    [[NSNotificationCenter defaultCenter] postNotificationName:UserDidLogOutNotification object:nil userInfo:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kNotification_Logout object:nil];
 }
 
 @end

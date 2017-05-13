@@ -98,6 +98,10 @@
 
 - (void)loadWebview {
     NSString *urlString = [NSString stringWithFormat:@"%@%@?id=%ld",SERVER_HOST, NEWS_DETAIL, (long)self.ID];
+    urlString = [urlString stringByAppendingString:@"&show_download=false"];
+    if ([User sharedInstance].isLogin) {
+        urlString = [urlString stringByAppendingString:[NSString stringWithFormat:@"&token=%@",[User sharedInstance].token]];
+    }
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
 }
 - (void)loadCommentCount {

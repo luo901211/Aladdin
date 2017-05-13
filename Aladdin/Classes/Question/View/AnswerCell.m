@@ -7,9 +7,7 @@
 //
 
 #import "AnswerCell.h"
-#import "NSString+Additions.h"
 #import "UILabel+ChangeLineSpaceAndWordSpace.h"
-
 #define kLabelMaxWidth Main_Screen_Width - 15 - 42 - 30 - 30
 
 @interface AnswerCell()

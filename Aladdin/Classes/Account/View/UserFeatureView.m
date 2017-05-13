@@ -18,6 +18,7 @@
 @interface UserFeatureView ()
 
 @property (strong, nonatomic) NSArray *items;
+@property (strong, nonatomic) UIButton *logoutBtn;
 
 @end
 static CGFloat buttonWidth = 164;
@@ -67,20 +68,30 @@ static CGFloat buttonWidth = 164;
         
         // log out
         UIButton *logoutBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [logoutBtn setTitle:@"退出登录" forState:UIControlStateSelected];
-        [logoutBtn setTitle:@"登录" forState:UIControlStateNormal];
         [logoutBtn setTitleColor:HEXCOLOR(0xffa02f) forState:UIControlStateNormal];
         [logoutBtn setFrame:CGRectMake(0, 14 + items.count * (44), buttonWidth, 44)];
         [logoutBtn addTarget:self action:@selector(logoutOrLogin) forControlEvents:UIControlEventTouchUpInside];
-        [logoutBtn setSelected:[User sharedInstance].isLogin];
-        [self addSubview:logoutBtn];
+        [logoutBtn setTitle:[User sharedInstance].isLogin ? @"退出登录": @"登录" forState:UIControlStateNormal];
+        self.logoutBtn = logoutBtn;
+        [self addSubview:self.logoutBtn];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginNotificationAction) name:kNotification_Login object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(logoutNotificationAction) name:kNotification_Logout object:nil];
+
     }
     return self;
 }
 
 - (void)didPressedOnButton:(UIButton *)button {
     
+    [[WQPopWindow sharedWindow] hide];
+    
     NSInteger index = button.tag - 100;
+    
+    if (![User sharedInstance].isLogin && index != 4) {
+        return [User presentLoginViewController];
+    }
+    
     UIViewController *vc;
     switch (index) {
         case 0:
@@ -114,7 +125,6 @@ static CGFloat buttonWidth = 164;
             break;
     }
 
-    [[WQPopWindow sharedWindow] hide];
     UITabBarController *tabBarController = (UITabBarController *)[UIApplication sharedApplication].delegate.window.rootViewController;
     UINavigationController *navigationController = tabBarController.viewControllers[tabBarController.selectedIndex];
     [navigationController pushViewController:vc animated:YES];
@@ -130,6 +140,17 @@ static CGFloat buttonWidth = 164;
     }else{
         [User presentLoginViewController];
     }
+}
+
+#pragma mark - 通知
+- (void)loginNotificationAction {
+    [self.logoutBtn setTitle:@"退出登录" forState:UIControlStateNormal];
+}
+- (void)logoutNotificationAction {
+    [self.logoutBtn setTitle:@"登录" forState:UIControlStateNormal];
+}
+-(void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

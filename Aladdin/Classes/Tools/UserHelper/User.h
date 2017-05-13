@@ -9,8 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #define UserInfoPath ([NSString stringWithFormat:@"%@/Documents/userinfo.xml", NSHomeDirectory()])
-#define UserDidLogInNotification @"UserDidLogInNotification"
-#define UserDidLogOutNotification @"UserDidLogOutNotification"
+
 
 @interface User : NSObject
 

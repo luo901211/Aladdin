@@ -8,6 +8,6 @@
 
 #ifndef NotificationContants_h
 #define NotificationContants_h
-
-
+static NSString *kNotification_Login = @"kNotification_Login";
+static NSString *kNotification_Logout = @"kNotification_Logout";
 #endif /* NotificationContants_h */

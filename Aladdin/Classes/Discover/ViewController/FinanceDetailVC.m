@@ -33,6 +33,7 @@
 }
 - (void)loadData {
     NSString *urlString = [NSString stringWithFormat:@"%@%@?id=%ld&token=%@",SERVER_HOST, API_DISCOVER_FINANCE_DETAIL, (long)self.ID, [User sharedInstance].token];
+    urlString = [urlString stringByAppendingString:@"&show_download=false"];
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
 }
 
