@@ -8,6 +8,7 @@
 
 #import "UserInfoListVC.h"
 #import "UserInfoListViewModel.h"
+#import <SDWebImage/UIButton+WebCache.h>
 
 @interface UserInfoListVC ()<UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -54,6 +55,10 @@
             self.addressTextField.text = self.viewModel.userInfo[@"address"];
             self.companyTextField.text = self.viewModel.userInfo[@"company"];
             self.positionTextField.text = self.viewModel.userInfo[@"position"];
+            NSString *pic_url = self.viewModel.userInfo[@"pic_url"];
+            if (pic_url && pic_url.length) {
+                [self.avatarButton sd_setImageWithURL:[NSURL URLWithString:pic_url] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"upload_image_item"] options:0 completed:nil];
+            }
         }
     }];
 }
