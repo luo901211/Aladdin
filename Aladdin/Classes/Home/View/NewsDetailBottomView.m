@@ -52,7 +52,7 @@
 
 - (void)setCommentCount:(NSString *)commentCount {
     _commentCount = commentCount;
-    self.commentCountLabel.text = commentCount;
+    self.commentCountLabel.text = (commentCount && commentCount.length) ? commentCount : @"0";
 }
 
 @end

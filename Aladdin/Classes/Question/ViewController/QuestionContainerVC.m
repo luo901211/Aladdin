@@ -78,7 +78,7 @@
 
 - (void)initUI {
     
-    NSArray *titles = @[@"精华问答", @"大家都在问", @"我的问答"];
+    NSArray *titles = @[@"精华问答", @"大家都在问", @"我的提问"];
     
     QuestionListVC *vc1 = [[QuestionListVC alloc] init];
     vc1.type = QuestionTypeEssence;
