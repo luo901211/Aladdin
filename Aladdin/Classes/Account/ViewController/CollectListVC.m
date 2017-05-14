@@ -11,7 +11,7 @@
 #import "CollectCell.h"
 #import "CollectListViewModel.h"
 
-@interface CollectListVC ()
+@interface CollectListVC ()<UIAlertViewDelegate>
 
 @property (nonatomic, strong) CollectListViewModel *viewModel;
 
@@ -111,16 +111,10 @@
     CollectCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CollectCell"];
     ALDCollectModel *model = self.viewModel.list[indexPath.row];
     cell.model = model;
-    @weakify(self)
     cell.tapCollectBlock = ^(id obj){
-        @strongify(self)
-        [self.viewModel cancelCollectDataWithID:model.ID success:^(id obj) {
-            [self.viewModel.list removeObjectAtIndex:indexPath.row];
-            [self.tableView deleteRow:indexPath.row inSection:indexPath.section withRowAnimation:UITableViewRowAnimationAutomatic];
-        } failure:^(id obj) {
-            [MBProgressHUD showAutoMessage:obj];
-        }];
-
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"确定取消收藏吗？" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+        alertView.tag = indexPath.row + 100;
+        [alertView show];
     };
 
     return cell;
@@ -130,5 +124,19 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
+}
+#pragma mark - UIAlertViewDelegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        NSInteger modelIndex = alertView.tag - 100;
+        ALDCollectModel *model = self.viewModel.list[modelIndex];
+
+        [self.viewModel cancelCollectDataWithID:model.ID success:^(id obj) {
+            [self.viewModel.list removeObjectAtIndex:modelIndex];
+            [self.tableView deleteRow:modelIndex inSection:0 withRowAnimation:UITableViewRowAnimationAutomatic];
+        } failure:^(id obj) {
+            [MBProgressHUD showAutoMessage:obj];
+        }];
+    }
 }
 @end
