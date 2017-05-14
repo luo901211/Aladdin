@@ -49,7 +49,7 @@
     
     NSDictionary *params = @{ @"question_id": @(questionID), @"user_id": @(userID), @"token": [User sharedInstance].token };
     
-    [AFNManagerRequest postWithPath:API_QUESTION_INVITE params:params hudType:NetworkRequestGraceTimeTypeNormal success:^(NSURLResponse *response, id responseObject) {
+    [AFNManagerRequest getWithPath:API_QUESTION_INVITE params:params hudType:NetworkRequestGraceTimeTypeNormal success:^(NSURLResponse *response, id responseObject) {
         if (success) {
             success(responseObject);
         }
