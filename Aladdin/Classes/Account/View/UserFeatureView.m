@@ -12,7 +12,7 @@
 #import "MessageTypeListVC.h"
 #import "FeedbackVC.h"
 #import "WQPopWindow.h"
-#import "QuestionListVC.h"
+#import "AnswerListVC.h"
 #import "User+Helper.h"
 
 @interface UserFeatureView ()
@@ -36,7 +36,7 @@ static CGFloat buttonWidth = 164;
     NSArray *items = @[
                       @{ @"title": @"个人中心", @"image": @"user_mine_item" },
                       @{ @"title": @"我的收藏", @"image": @"user_collect_item" },
-                      @{ @"title": @"我的问答", @"image": @"user_question_item" },
+                      @{ @"title": @"我的回答", @"image": @"user_question_item" },
                       @{ @"title": @"系统消息", @"image": @"user_system_msg_item" },
                       @{ @"title": @"意见反馈", @"image": @"user_feedback_item" }
                       ];
@@ -115,9 +115,8 @@ static CGFloat buttonWidth = 164;
             break;
         case 2:
         {
-            vc = [[QuestionListVC alloc] init];
-            [(QuestionListVC *)vc setType:QuestionTypeUser];
-            vc.title = @"我的问答";
+            vc = [[AnswerListVC alloc] init];
+            vc.title = @"我的回答";
         }
             break;
         case 3:

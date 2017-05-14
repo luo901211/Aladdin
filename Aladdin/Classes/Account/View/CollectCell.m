@@ -36,7 +36,7 @@
     _model = model;
     
     self.titleLabel.text = model.title;
-    self.typeLabel.text = [NSString stringWithFormat:@"所属模块: %@", model.type];
+    self.typeLabel.text = [NSString stringWithFormat:@"所属模块: %@", model.type_name];
     self.timeLabel.text = model.publish_time;
 }
 - (IBAction)onPressedCollectBtn:(UIButton *)sender {

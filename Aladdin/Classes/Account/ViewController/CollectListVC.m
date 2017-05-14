@@ -11,6 +11,13 @@
 #import "CollectCell.h"
 #import "CollectListViewModel.h"
 
+#import "NewsDetailViewController.h"
+#import "TeachingVideoDetailVC.h"
+#import "QuestionDetailVC.h"
+#import "FinanceDetailVC.h"
+#import "PolicyDetailVC.h"
+
+
 @interface CollectListVC ()<UIAlertViewDelegate>
 
 @property (nonatomic, strong) CollectListViewModel *viewModel;
@@ -123,7 +130,40 @@
 #pragma mark - Table view delegate
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    ALDCollectModel *model = self.viewModel.list[indexPath.row];
+//    news：资讯
+//    video：视频
+//    question：问答
+//    esoterica：秘籍
+//    policy：法规
+    
+//#import "NewsDetailViewController.h"
+//#import "TeachingVideoDetailVC.h"
+//#import "QuestionDetailVC.h"
+//#import "FinanceDetailVC.h"
+//#import "PolicyDetailVC.h"
 
+    if ([model.type isEqualToString:@"news"]) {
+        NewsDetailViewController *vc = [[NewsDetailViewController alloc] init];
+        vc.ID = model.type_id;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if ([model.type isEqualToString:@"video"]) {
+        TeachingVideoDetailVC *vc = [[TeachingVideoDetailVC alloc] init];
+        vc.ID = model.type_id;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if ([model.type isEqualToString:@"question"]) {
+        QuestionDetailVC *vc = [[QuestionDetailVC alloc] init];
+        vc.ID = model.type_id;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if ([model.type isEqualToString:@"esoterica"]) {
+        FinanceDetailVC *vc = [[FinanceDetailVC alloc] init];
+        vc.ID = model.type_id;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if ([model.type isEqualToString:@"policy"]) {
+        PolicyDetailVC *vc = [[PolicyDetailVC alloc] init];
+        vc.ID = model.type_id;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 #pragma mark - UIAlertViewDelegate
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
