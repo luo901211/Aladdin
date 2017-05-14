@@ -22,6 +22,8 @@
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UIButton *submitButton;
 @property (weak, nonatomic) IBOutlet UILabel *lengthLabel;
+@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *imagePickerButtons;
 
 @property (strong, nonatomic) QuestionReportViewModel *viewModel;
 @end
@@ -58,10 +60,15 @@
 }
 - (IBAction)didPressedOnSubmitButton:(UIButton *)sender {
     
-    if ([self.textView.text chineseTextLength] > kQuestionMaxLength) {
-        return [MBProgressHUD showAutoMessage:@"字数超过最长限制"];
+    if ([self.titleTextField.text chineseTextLength] > 40) {
+        return [MBProgressHUD showAutoMessage:@"标题字数超过最长限制"];
     }
-    NSString *title = @"提问标题";
+    
+    if ([self.textView.text chineseTextLength] > kQuestionMaxLength) {
+        return [MBProgressHUD showAutoMessage:@"问题描述字数超过最长限制"];
+    }
+    
+    NSString *title = self.titleTextField.text;
     NSString *content = self.textView.text;
     NSInteger expertID = self.expertModel.ID;
     NSMutableArray *pics = @[].mutableCopy;
@@ -77,6 +84,12 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (IBAction)didPressedOnImagePickerButton:(UIButton *)sender {
+    NSInteger index = [self.imagePickerButtons indexOfObject:sender];
+    NSLog(@"image button index: %d",index);
+}
+
 
 #pragma mark - UITextViewDelegate
 - (void)textViewDidChange:(UITextView *)textView {

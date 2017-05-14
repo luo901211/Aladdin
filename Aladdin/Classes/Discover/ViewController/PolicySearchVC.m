@@ -136,7 +136,8 @@
     
     PolicySearchResultVC *vc = [[PolicySearchResultVC alloc] init];
     vc.keyword = keyword;
-    vc.title = keyword;
+//    vc.title = keyword;
+    vc.title = @"搜索结果";
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -145,7 +146,8 @@
     NSDictionary *item = self.arrayList[index];
     PolicyListVC *vc = [[PolicyListVC alloc] init];
     vc.ID = [item[@"id"] integerValue];
-    vc.title = item[@"title"];
+//    vc.title = item[@"title"];
+    vc.title = @"搜索结果";
     [self.navigationController pushViewController:vc animated:YES];
 }
 
