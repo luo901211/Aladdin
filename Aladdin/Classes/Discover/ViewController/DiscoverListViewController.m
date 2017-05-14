@@ -82,6 +82,7 @@
         case 1:
         {
             ExpertContainerVC *vc = [[ExpertContainerVC alloc] init];
+            vc.title = @"大咖专栏";
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;

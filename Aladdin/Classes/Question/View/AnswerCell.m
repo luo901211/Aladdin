@@ -8,7 +8,7 @@
 
 #import "AnswerCell.h"
 #import "UILabel+ChangeLineSpaceAndWordSpace.h"
-#define kLabelMaxWidth Main_Screen_Width - 15 - 42 - 30 - 30
+#define kLabelMaxWidth Main_Screen_Width - 15 - 42 - 25 - 25
 
 @interface AnswerCell()
 @property (weak, nonatomic) IBOutlet UIImageView *imageV;
