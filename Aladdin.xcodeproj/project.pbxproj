@@ -715,6 +715,13 @@
 			path = SGPageView;
 			sourceTree = "<group>";
 		};
+		A46BDAD51EC8480200EC22ED /* UpdaterManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UpdaterManager;
+			sourceTree = "<group>";
+		};
 		A499A9661EA622A800B45425 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -1369,6 +1376,7 @@
 		A4D682F81E97786800FBA51C /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				A46BDAD51EC8480200EC22ED /* UpdaterManager */,
 				A40891331EA35EF30071D22D /* UserHelper */,
 				A4A029461E9B2F880008F281 /* ModelHelper */,
 				A4C32E3C1E98B2C200D53E1A /* NetWork */,

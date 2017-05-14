@@ -103,14 +103,14 @@
                                 <action selector="didPressedOnImagePickerButton:" destination="-1" eventType="touchUpInside" id="VyE-iw-YYK"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVb-Ft-Hbz">
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVb-Ft-Hbz">
                             <rect key="frame" x="90" y="51" width="60" height="60"/>
                             <state key="normal" title="Button" image="question_image_picker_button"/>
                             <connections>
                                 <action selector="didPressedOnImagePickerButton:" destination="-1" eventType="touchUpInside" id="w5h-IG-GNE"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrE-Jv-Y4k">
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrE-Jv-Y4k">
                             <rect key="frame" x="165" y="51" width="60" height="60"/>
                             <state key="normal" title="Button" image="question_image_picker_button"/>
                             <connections>
