@@ -11,7 +11,7 @@
 #import "QuestionDetailViewModel.h"
 #import "AnswerCell.h"
 #import "QuestionBannerView.h"
-#import "ExpertListVC.h"
+#import "ExpertContainerVC.h"
 #import "AnswerViewController.h"
 #import "ALDBaseNavigationController.h"
 #import "ALDExpertModel.h"
@@ -59,6 +59,8 @@
             [MBProgressHUD showAutoMessage:obj];
         }];
     };
+    
+    // 邀请回答
     self.bannerView.tapInviteBlock = ^(id obj) {
         
         if (![User sharedInstance].isLogin) {
@@ -66,15 +68,15 @@
         }
         
         @strongify(self);
-        ExpertListVC *vc = [[ExpertListVC alloc] init];
-        vc.level = 2;//知名专家
+        ExpertContainerVC *vc = [[ExpertContainerVC alloc] init];
         vc.title = @"邀请回答";
-        vc.inviteReplyBlock = ^(ALDExpertModel *model) {
+        vc.expertTapBlock = ^(ALDExpertModel *model) {
             [MBProgressHUD showAutoMessage:[NSString stringWithFormat:@"邀请专家id： %ld",(long)model.ID]];
         };
         ALDBaseNavigationController *nav = [[ALDBaseNavigationController alloc] initWithRootViewController:vc];
         [self.navigationController presentViewController:nav animated:YES completion:nil];
     };
+    // 添加回答
     self.bannerView.tapReplyBlock = ^(id obj) {
         if (![User sharedInstance].isLogin) {
             return [User presentLoginViewController];

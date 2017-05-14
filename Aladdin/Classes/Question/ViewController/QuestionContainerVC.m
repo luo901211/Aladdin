@@ -11,9 +11,9 @@
 #import "QuestionListVC.h"
 #import "QuestionContainerBottomView.h"
 #import "QuestionReportVC.h"
-#import "ExpertListVC.h"
 #import "ALDBaseNavigationController.h"
 #import "ALDExpertModel.h"
+#import "ExpertContainerVC.h"
 
 @interface QuestionContainerVC ()<SGPageTitleViewDelegate, SGPageContentViewDelegare>
 
@@ -44,14 +44,15 @@
             }
             
             @strongify(self);
-            ExpertListVC *vc = [[ExpertListVC alloc] init];
-            vc.level = 2;//知名专家
+            
+            ExpertContainerVC *vc = [[ExpertContainerVC alloc] init];
             vc.title = @"邀请回答";
-            vc.inviteReplyBlock = ^(ALDExpertModel *model) {
+            vc.expertTapBlock = ^(ALDExpertModel *model) {
                 QuestionReportVC *vc = [[QuestionReportVC alloc] initWithNibName:@"QuestionReportVC" bundle:[NSBundle mainBundle]];
                 vc.expertModel = model;
                 [self.navigationController pushViewController:vc animated:YES];
             };
+            
             ALDBaseNavigationController *nav = [[ALDBaseNavigationController alloc] initWithRootViewController:vc];
             [self.navigationController presentViewController:nav animated:YES completion:nil];
         };

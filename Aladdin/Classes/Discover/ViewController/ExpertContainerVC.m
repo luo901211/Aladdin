@@ -50,6 +50,9 @@
         
         // child vc
         ExpertListVC *vc = [[ExpertListVC alloc] init];
+        if (self.expertTapBlock) {
+            vc.inviteReplyBlock = self.expertTapBlock;
+        }
         vc.level = [dic[@"level"] integerValue];
         [childVC addObject:vc];
         [self addChildViewController:vc];

@@ -10,4 +10,6 @@
 
 @interface ExpertContainerVC : UIViewController
 
+@property (copy, nonatomic) VoidBlock expertTapBlock;
+
 @end
