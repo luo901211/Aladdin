@@ -9,7 +9,7 @@
 #import "UserInfoListVC.h"
 #import "UserInfoListViewModel.h"
 
-@interface UserInfoListVC ()
+@interface UserInfoListVC ()<UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic, strong) UserInfoListViewModel *viewModel;
 @property (weak, nonatomic) IBOutlet UITextField *accountTextField;
@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *positionTextField;
 @property (weak, nonatomic) IBOutlet UIButton *avatarButton;
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
+
+@property (strong, nonatomic) UIImage *selectImage;
 
 @end
 
@@ -84,6 +86,92 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)didPressedOnImagePickerButton:(UIButton *)sender {
+    
+    if (self.selectImage) {
+        // 提示删除操作
+        UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"提示" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"移除图片", nil];
+        actionSheet.tag = 1000;
+        actionSheet.delegate = self;
+        [actionSheet showInView:self.view];
+    }else{
+        // 提示选择图片操作
+        UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"选择图片" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"现在拍摄", @"相册选取", nil];
+        actionSheet.tag = 900;
+        actionSheet.delegate = self;
+        [actionSheet showInView:self.view];
+    }
+}
+
+- (void)setSelectImage:(UIImage *)selectImage {
+    _selectImage = selectImage;
+    [self.avatarButton setImage:selectImage ? : [UIImage imageNamed:@"upload_image_item"] forState:UIControlStateNormal];
+}
+
+#pragma mark - UIActionSheetDelegate
+- (void)actionSheet:(UIActionSheet *)actionSheet willDismissWithButtonIndex:(NSInteger)buttonIndex {
+    switch (actionSheet.tag) {
+        case 1000:
+        {
+            if (buttonIndex == 0) {
+                self.selectImage = nil;
+            }
+        }
+            break;
+            
+        case 900:
+        {
+            if (buttonIndex != 0 && buttonIndex != 1) {
+                return;
+            }
+            // 1.判断相册是否可以打开
+            if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera] && buttonIndex == 0) {
+                return [MBProgressHUD showAutoMessage:@"没有设置访问相机权限"];
+            }
+            
+            if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary] && buttonIndex == 1) {
+                return [MBProgressHUD showAutoMessage:@"没有设置访问相册权限"];
+            }
+            
+            // 2. 创建图片选择控制器
+            UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+            imagePickerController.delegate = self;
+            
+            if (buttonIndex == 0) {
+                imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+            }else if (buttonIndex == 1) {
+                imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+            }
+            [self presentViewController:imagePickerController animated:YES completion:nil];
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+#pragma mark - UINavigationControllerDelegate
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    [navigationController.navigationBar setBarTintColor:GLOBAL_TINT_COLOR];
+    NSDictionary * dict = [NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
+    navigationController.navigationBar.titleTextAttributes = dict;
+}
+
+#pragma mark - UIImagePickerController
+// 获取图片后的操作
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    // 销毁控制器
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+    // 设置图片
+    __block UIImage *image = nil;
+    image = [info[UIImagePickerControllerEditedImage] copy];
+    image = [info[UIImagePickerControllerOriginalImage] copy];
+    
+    NSParameterAssert(image);
+    self.selectImage = image;
+}
+
 #pragma mark - Table view data source
 //section头部间距
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -95,4 +183,5 @@
 {
     return 0.01f;
 }
+
 @end

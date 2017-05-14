@@ -264,20 +264,23 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wI-5F-I0m">
-                                                    <rect key="frame" x="115" y="-0.5" width="86" height="86"/>
+                                                    <rect key="frame" x="115" y="13" width="60" height="60"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="fu4-AG-jka"/>
                                                         <constraint firstAttribute="width" secondItem="0wI-5F-I0m" secondAttribute="height" multiplier="1:1" id="oGU-ZE-hHO"/>
                                                     </constraints>
                                                     <state key="normal" title="按钮" image="upload_image_item"/>
+                                                    <connections>
+                                                        <action selector="didPressedOnImagePickerButton:" destination="P8a-ZI-L5r" eventType="touchUpInside" id="661-qN-TgV"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="87d-55-sbB" firstAttribute="leading" secondItem="MFI-sP-k8p" secondAttribute="leading" constant="15" id="2yG-aN-1Be"/>
                                                 <constraint firstAttribute="bottom" secondItem="87d-55-sbB" secondAttribute="bottom" id="A4s-0A-kbL"/>
-                                                <constraint firstItem="0wI-5F-I0m" firstAttribute="top" secondItem="MFI-sP-k8p" secondAttribute="top" id="a7s-v2-VcP"/>
+                                                <constraint firstItem="0wI-5F-I0m" firstAttribute="centerY" secondItem="MFI-sP-k8p" secondAttribute="centerY" id="R7N-fy-xzg"/>
                                                 <constraint firstItem="0wI-5F-I0m" firstAttribute="leading" secondItem="87d-55-sbB" secondAttribute="trailing" id="dFy-Da-0tf"/>
                                                 <constraint firstItem="87d-55-sbB" firstAttribute="top" secondItem="MFI-sP-k8p" secondAttribute="top" id="gHW-r5-sTF"/>
-                                                <constraint firstAttribute="bottom" secondItem="0wI-5F-I0m" secondAttribute="bottom" id="uUw-Ua-p4f"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
