@@ -105,6 +105,14 @@
 #define API_QUESTION_ANSWER @"/question/answer"
 
 /*
+ * 问答-邀请回答
+ * question_id：必传，问题id
+ * user_id：必传,被邀请回答的人的用户id
+ * token：必传，用户标识
+ */
+#define API_QUESTION_INVITE @"/invite/index"
+
+/*
  * 问答-提问接口
  * title：必传，问题标题
  * content：必传 问题内容

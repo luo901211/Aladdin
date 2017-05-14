@@ -77,6 +77,7 @@
 		A45378AC1EA9A10A00020C5D /* SGPageTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A45378A51EA9A10A00020C5D /* SGPageTitleView.m */; };
 		A45378AD1EA9A10A00020C5D /* UIView+SGFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = A45378A91EA9A10A00020C5D /* UIView+SGFrame.m */; };
 		A46B820D1EC89061009B94DE /* AnswerListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A46B820C1EC89061009B94DE /* AnswerListVC.m */; };
+		A46B82101EC8972B009B94DE /* AnswerListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A46B820F1EC8972B009B94DE /* AnswerListViewModel.m */; };
 		A46BDAAF1EC73EF000EC22ED /* WQRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = A46BDAAE1EC73EF000EC22ED /* WQRefreshNormalHeader.m */; };
 		A46BDAB21EC7792300EC22ED /* AnswerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A46BDAB11EC7792300EC22ED /* AnswerViewModel.m */; };
 		A46BDAB51EC77DC800EC22ED /* QuestionReportViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A46BDAB41EC77DC800EC22ED /* QuestionReportViewModel.m */; };
@@ -332,6 +333,8 @@
 		A45378A91EA9A10A00020C5D /* UIView+SGFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SGFrame.m"; sourceTree = "<group>"; };
 		A46B820B1EC89061009B94DE /* AnswerListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerListVC.h; sourceTree = "<group>"; };
 		A46B820C1EC89061009B94DE /* AnswerListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerListVC.m; sourceTree = "<group>"; };
+		A46B820E1EC8972B009B94DE /* AnswerListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerListViewModel.h; sourceTree = "<group>"; };
+		A46B820F1EC8972B009B94DE /* AnswerListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerListViewModel.m; sourceTree = "<group>"; };
 		A46BDAAD1EC73EF000EC22ED /* WQRefreshNormalHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQRefreshNormalHeader.h; sourceTree = "<group>"; };
 		A46BDAAE1EC73EF000EC22ED /* WQRefreshNormalHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQRefreshNormalHeader.m; sourceTree = "<group>"; };
 		A46BDAB01EC7792300EC22ED /* AnswerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerViewModel.h; sourceTree = "<group>"; };
@@ -872,6 +875,8 @@
 				A46BDAB11EC7792300EC22ED /* AnswerViewModel.m */,
 				A46BDAB31EC77DC800EC22ED /* QuestionReportViewModel.h */,
 				A46BDAB41EC77DC800EC22ED /* QuestionReportViewModel.m */,
+				A46B820E1EC8972B009B94DE /* AnswerListViewModel.h */,
+				A46B820F1EC8972B009B94DE /* AnswerListViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1654,6 +1659,7 @@
 				A4D682D81E976CEB00FBA51C /* main.m in Sources */,
 				A4DF60251EA9FDDA0084963F /* PolicyCell.m in Sources */,
 				A42299A91EACAC9000F62707 /* ExpertListVC.m in Sources */,
+				A46B82101EC8972B009B94DE /* AnswerListViewModel.m in Sources */,
 				A4C2673A1EAF58FC007A5674 /* QuestionCell.m in Sources */,
 				A43F9DEA1E9FB1B300AA831E /* RegisterViewModel.m in Sources */,
 				A4BF61481EACA50E003F876F /* ALDFinanceModel.m in Sources */,

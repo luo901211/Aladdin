@@ -71,7 +71,12 @@
         ExpertContainerVC *vc = [[ExpertContainerVC alloc] init];
         vc.title = @"邀请回答";
         vc.expertTapBlock = ^(ALDExpertModel *model) {
-            [MBProgressHUD showAutoMessage:[NSString stringWithFormat:@"邀请专家id： %ld",(long)model.ID]];
+            
+            [self.viewModel inviteAnswerWithQuestionID:self.ID userID:model.ID success:^(id obj) {
+                [MBProgressHUD showAutoMessage:@"邀请成功"];
+            } failure:^(id obj) {
+                [MBProgressHUD showAutoMessage:obj];
+            }];            
         };
         ALDBaseNavigationController *nav = [[ALDBaseNavigationController alloc] initWithRootViewController:vc];
         [self.navigationController presentViewController:nav animated:YES completion:nil];

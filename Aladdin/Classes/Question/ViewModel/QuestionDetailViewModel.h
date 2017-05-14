@@ -18,6 +18,11 @@
                         success:(VoidBlock)success
                         failure:(VoidBlock)failure;
 
+- (void)inviteAnswerWithQuestionID:(NSInteger)questionID
+                            userID:(NSInteger)userID
+                           success:(VoidBlock)success
+                           failure:(VoidBlock)failure;
+
 - (void)collectDataWithID:(NSInteger)ID
                   success:(VoidBlock)success
                   failure:(VoidBlock)failure;
