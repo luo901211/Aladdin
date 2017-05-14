@@ -25,6 +25,21 @@
     }];
 }
 
+- (void)setStandardAnswerWithID:(NSInteger)ID
+                        success:(VoidBlock)success
+                        failure:(VoidBlock)failure {
+    NSDictionary *params = @{ @"id": @(ID), @"token": [User sharedInstance].token };
+    
+    [AFNManagerRequest postWithPath:API_QUESTION_STANDARD params:params hudType:NetworkRequestGraceTimeTypeNormal success:^(NSURLResponse *response, id responseObject) {
+        if (success) {
+            success(responseObject);
+        }
+    } failure:^(NSError *error) {
+        if (failure) {
+            failure(error.localizedDescription);
+        }
+    }];
+}
 //token：必传，用户标识
 //type：必传，收藏内容分类标识
 //id：必传，收藏内容id

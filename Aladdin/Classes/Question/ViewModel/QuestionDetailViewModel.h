@@ -14,6 +14,10 @@
                success:(VoidBlock)success
                failure:(VoidBlock)failure;
 
+- (void)setStandardAnswerWithID:(NSInteger)ID
+                        success:(VoidBlock)success
+                        failure:(VoidBlock)failure;
+
 - (void)collectDataWithID:(NSInteger)ID
                   success:(VoidBlock)success
                   failure:(VoidBlock)failure;

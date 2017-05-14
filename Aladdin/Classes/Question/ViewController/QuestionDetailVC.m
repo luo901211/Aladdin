@@ -142,7 +142,11 @@
     if (buttonIndex == 1) {
         NSInteger modelIndex = alertView.tag - 100;
         ALDAnswerModel *model = self.model.answer_list[modelIndex];
-        NSLog(@"设为最佳答案");
+        [self.viewModel setStandardAnswerWithID:model.ID success:^(id obj) {
+            [MBProgressHUD showAutoMessage:@"设置成功"];
+        } failure:^(id obj) {
+            [MBProgressHUD showAutoMessage:obj];
+        }];
     }
 }
 @end
