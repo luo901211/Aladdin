@@ -27,7 +27,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vk7-Ns-hX4">
-                        <rect key="frame" x="60" y="0.0" width="260" height="52"/>
+                        <rect key="frame" x="52" y="0.0" width="268" height="52"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -39,11 +39,12 @@
                     <constraint firstAttribute="trailing" secondItem="Vk7-Ns-hX4" secondAttribute="trailing" id="Edw-i1-Qoa"/>
                     <constraint firstItem="Vk7-Ns-hX4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="NP7-qP-976"/>
                     <constraint firstItem="B23-tb-Y2r" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="SKU-RR-6Ut"/>
-                    <constraint firstItem="Vk7-Ns-hX4" firstAttribute="leading" secondItem="B23-tb-Y2r" secondAttribute="trailing" constant="8" id="XEz-5L-enp"/>
+                    <constraint firstItem="Vk7-Ns-hX4" firstAttribute="leading" secondItem="B23-tb-Y2r" secondAttribute="trailing" id="XEz-5L-enp"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="imageV" destination="B23-tb-Y2r" id="KUI-ZS-yl1"/>
+                <outlet property="imageViewLeft" destination="SKU-RR-6Ut" id="Iyo-tz-0Hr"/>
                 <outlet property="leadingToImageV" destination="XEz-5L-enp" id="dnB-cG-bAE"/>
                 <outlet property="titleLabel" destination="Vk7-Ns-hX4" id="Hkb-nH-oaa"/>
             </connections>

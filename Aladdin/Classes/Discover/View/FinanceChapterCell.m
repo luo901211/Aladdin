@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageV;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *leadingToImageV;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageViewLeft;
 
 @end
 
@@ -30,7 +31,8 @@
 
 - (void)setLevel:(NSInteger)level {
     _level = level;
-    self.leadingToImageV.constant = level * 10;
+//    self.leadingToImageV.constant = level * 10;
+    self.imageViewLeft.constant = 25 * level;
     self.imageV.image = [UIImage imageNamed:[NSString stringWithFormat:@"chapter_%ld",(long)level + 1]];
     self.backgroundColor = level == 0 ? HEXCOLOR(0xf7f9fc) : [UIColor whiteColor];
     self.accessoryType = level == 2 ? UITableViewCellAccessoryDisclosureIndicator : UITableViewCellAccessoryNone;
