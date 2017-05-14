@@ -34,7 +34,7 @@
         _treeView.delegate = self;
         _treeView.dataSource = self;
         _treeView.treeFooterView = [UIView new];
-        _treeView.separatorStyle = RATreeViewCellSeparatorStyleSingleLine;
+        _treeView.separatorStyle = RATreeViewCellSeparatorStyleNone;
         _treeView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 
         [_treeView registerNib:[UINib nibWithNibName:NSStringFromClass([FinanceChapterCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([FinanceChapterCell class])];

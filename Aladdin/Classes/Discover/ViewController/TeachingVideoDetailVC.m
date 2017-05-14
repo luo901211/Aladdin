@@ -38,8 +38,10 @@
     
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:model.url]]];
     self.bottomView.model = model;
+    if (!self.bottomView.superview) {
+        [self.scrollView addSubview:self.bottomView];
+    }
     self.scrollView.contentSize = CGSizeMake(Main_Screen_Width, self.bottomView.height);
-
 }
 
 - (WKWebView *)webView {
@@ -102,9 +104,7 @@
 
 - (void)initUI {
     [self.view addSubview:self.webView];
-    
     [self.view addSubview:self.scrollView];
-    [self.scrollView addSubview:self.bottomView];
 }
 
 - (void)loadData {

@@ -30,7 +30,7 @@
 
 - (void)setModel:(ALDVideoDetailModel *)model {
     _model = model;
-    self.titleLabel.text = model.title;
+    self.titleLabel.text = @"奥斯卡忽视了空间的金卡和搭理的卡得慌爱的哈达哈肯定会啊看见的哈克达看得见哈的哈打打的"; //model.title;
     self.teacherLabel.text = model.teacher;
     self.viewCountLabel.text = model.view_num;
     self.collectButton.selected = model.is_collect;
