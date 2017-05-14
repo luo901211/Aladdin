@@ -22,7 +22,9 @@
     }];
 }
 
-- (void)saveDataWithParams:(NSDictionary *)params complete:(void (^)(NSString *msg))complete {
+- (void)saveDataWithParams:(NSDictionary *)params
+                     image:(UIImage *)image
+                  complete:(void (^)(NSString *msg))complete {
     
 //    token：必传，用户标识
 //    real_name：必传
@@ -34,12 +36,18 @@
     NSMutableDictionary *mParams = [NSMutableDictionary dictionaryWithDictionary:params];
     [mParams setObject:[User sharedInstance].token forKey:@"token"];
 
-    [AFNManagerRequest postWithPath:API_USER_SAVEINFO params:mParams hudType:(NetworkRequestGraceTimeTypeNormal) success:^(NSURLResponse *response, id responseObject) {
+//    [AFNManagerRequest postWithPath:API_USER_SAVEINFO params:mParams hudType:(NetworkRequestGraceTimeTypeNormal) success:^(NSURLResponse *response, id responseObject) {
+//        complete(nil);
+//    } failure:^(NSError *error) {
+//        complete(error.localizedDescription);
+//    }];
+
+    [AFNManagerRequest uploadImageWithPath:API_USER_SAVEINFO params:mParams thumbName:@"pic" image:image progress:nil success:^(NSURLResponse *response, id responseObject) {
         complete(nil);
     } failure:^(NSError *error) {
         complete(error.localizedDescription);
     }];
-
+    
 }
 @end
 

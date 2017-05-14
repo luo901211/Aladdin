@@ -223,7 +223,7 @@
 
     NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] multipartFormRequestWithMethod:@"POST" URLString:URLString parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
         
-        [formData appendPartWithFileData:data name:@"file" fileName:imagekey mimeType:@"image/png"];
+        [formData appendPartWithFileData:data name:@"pic" fileName:imagekey mimeType:@"image/png"];
         
     } error:nil];
     
@@ -241,7 +241,18 @@
                       if (failure && error) {
                           failure(error);
                       } else if (success) {
-                          success(response, responseObject);
+                          
+#pragma mark - 业务代码
+                          // 统一处理错误
+                          NSInteger code = [responseObject[@"code"] integerValue];
+                          if (code == 1) {
+                              success(response, responseObject[@"res"]);
+                          }else{
+                              
+                              NSDictionary *userInfo = [NSDictionary dictionaryWithObjectsAndKeys:responseObject[@"msg"], NSLocalizedDescriptionKey,nil];
+                              NSError *error = [[NSError alloc] initWithDomain:response.URL.host code:code userInfo:userInfo];
+                              failure(error);
+                          }
                       }
                   }];
     

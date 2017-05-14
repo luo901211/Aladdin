@@ -13,6 +13,6 @@
 @property (nonatomic, strong) NSDictionary *userInfo;
 
 - (void)loadDataWithComplete:(void (^)(NSString *msg))complete;
-- (void)saveDataWithParams:(NSDictionary *)params complete:(void (^)(NSString *msg))complete;
+- (void)saveDataWithParams:(NSDictionary *)params image:(UIImage *)image complete:(void (^)(NSString *msg))complete;
 
 @end

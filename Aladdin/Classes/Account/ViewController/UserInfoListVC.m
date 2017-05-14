@@ -74,10 +74,10 @@
                              @"real_name": self.nameTextField.text,
                              @"address": self.addressTextField.text,
                              @"company": self.companyTextField.text,
-                             @"position": self.positionTextField.text,
-                             @"pic": @""
+                             @"position": self.positionTextField.text
                              };
-    [self.viewModel saveDataWithParams:params complete:^(NSString *msg) {
+
+    [self.viewModel saveDataWithParams:params image:self.selectImage complete:^(NSString *msg) {
         if (msg) {
             [MBProgressHUD showAutoMessage:msg];
         }else{
