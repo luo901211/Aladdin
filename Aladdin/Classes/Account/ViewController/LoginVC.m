@@ -36,6 +36,7 @@
 @property (strong, nonatomic) UIView *loginContainerView;
 
 @property (strong, nonatomic) LoginViewModel *viewModel;
+@property (strong, nonatomic) UIImage *selectedButtonImage;
 
 @end
 
@@ -65,6 +66,9 @@
     [self.view addSubview:self.codeTextField];
     [self.view addSubview:self.loginContainerView];
     
+    [self.passwordLoginBtn setBackgroundImage:self.selectedButtonImage forState:UIControlStateSelected];
+    [self.codeLoginBtn setBackgroundImage:self.selectedButtonImage forState:UIControlStateSelected];
+
     self.passwordLoginBtn.selected = YES;
     self.loginTypePassword = YES;
     self.codeTextField.hidden = YES;
@@ -76,6 +80,37 @@
         _viewModel = [[LoginViewModel alloc] init];
     }
     return _viewModel;
+}
+
+- (UIImage *)selectedButtonImage {
+    if (!_selectedButtonImage) {
+        CGFloat width = Main_Screen_Width / 2;
+        CGGlyph height = 44;
+        
+        CGFloat triangleWidth = 12;
+        CGFloat triangleHeight = 8;
+        UIColor *tintColor = [UIColor whiteColor];
+        
+        UIGraphicsBeginImageContextWithOptions(CGSizeMake(width, height), NO, [UIScreen mainScreen].scale);
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        CGContextBeginPath(UIGraphicsGetCurrentContext());
+        {
+            CGPoint sPoints[3];//坐标点
+            sPoints[0] =CGPointMake(width/2 - triangleWidth/2, height);//坐标1
+            sPoints[1] =CGPointMake((width/2) , height - triangleHeight);//坐标2
+            sPoints[2] =CGPointMake(width/2 + triangleWidth/2, height);//坐标3
+            CGContextAddLines(context, sPoints,3);//添加线
+            CGContextClosePath(context);//封起来
+            CGContextSetStrokeColorWithColor(context, tintColor.CGColor);
+            CGContextSetFillColorWithColor(context, tintColor.CGColor);
+            CGContextDrawPath(context,kCGPathFillStroke);//根据坐标绘制路径
+
+        }
+        _selectedButtonImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+    }
+    return _selectedButtonImage;
 }
 
 - (UITextField *)phoneTextField {
@@ -245,6 +280,5 @@
     RegisterVC *vc = [[RegisterVC alloc] initWithNibName:@"RegisterVC" bundle:[NSBundle mainBundle]];
     [self.navigationController pushViewController:vc animated:YES];
 }
-
 
 @end

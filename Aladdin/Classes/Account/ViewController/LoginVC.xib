@@ -29,7 +29,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="238"/>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XuU-JT-qtW">
-                            <rect key="frame" x="0.0" y="194" width="180" height="44"/>
+                            <rect key="frame" x="0.0" y="194" width="187.5" height="44"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="B5H-nJ-CA9"/>
                             </constraints>
@@ -40,12 +40,12 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KM-yO-q6m">
-                            <rect key="frame" x="195" y="194" width="180" height="44"/>
+                            <rect key="frame" x="187.5" y="194" width="187.5" height="44"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="H9o-rO-O4q"/>
                             </constraints>
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <state key="normal" title="验证码登录"/>
+                            <state key="normal" title="手机验证码登录"/>
                             <connections>
                                 <action selector="didPressedOnLoginTypeButton:" destination="-1" eventType="touchUpInside" id="fJX-Jv-U0x"/>
                             </connections>
@@ -53,7 +53,7 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="5KM-yO-q6m" firstAttribute="leading" secondItem="XuU-JT-qtW" secondAttribute="trailing" constant="15" id="1kz-k7-b3T"/>
+                        <constraint firstItem="5KM-yO-q6m" firstAttribute="leading" secondItem="XuU-JT-qtW" secondAttribute="trailing" id="1kz-k7-b3T"/>
                         <constraint firstAttribute="trailing" secondItem="5KM-yO-q6m" secondAttribute="trailing" id="4I0-zU-29E"/>
                         <constraint firstItem="04s-gc-7ia" firstAttribute="leading" secondItem="B4s-16-rFX" secondAttribute="leading" id="5qA-DT-MlP"/>
                         <constraint firstAttribute="bottom" secondItem="04s-gc-7ia" secondAttribute="bottom" id="6tF-ZI-U3O"/>
