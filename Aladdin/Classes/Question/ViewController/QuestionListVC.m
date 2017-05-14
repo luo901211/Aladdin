@@ -44,6 +44,11 @@
     
     [self.tableView.mj_header beginRefreshing];
     
+    // 注册通知
+    if (self.type == QuestionTypeUser) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginNotificationAction) name:kNotification_Login object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(logoutNotificationAction) name:kNotification_Logout object:nil];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -117,4 +122,19 @@
     vc.ID = model.ID;
     [self.navigationController pushViewController:vc animated:YES];
 }
+
+#pragma mark - 通知
+- (void)loginNotificationAction {
+    [self.tableView.mj_header beginRefreshing];
+}
+- (void)logoutNotificationAction {
+    [self.viewModel.list removeAllObjects];
+    [self.tableView reloadData];
+}
+-(void)dealloc {
+    if (self.type == QuestionTypeUser) {
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
+    }
+}
+
 @end

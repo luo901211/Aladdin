@@ -83,6 +83,7 @@ static CGFloat buttonWidth = 164;
         self.logoutBtn = logoutBtn;
         [self addSubview:self.logoutBtn];
         
+        // 注册通知
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginNotificationAction) name:kNotification_Login object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(logoutNotificationAction) name:kNotification_Logout object:nil];
 
