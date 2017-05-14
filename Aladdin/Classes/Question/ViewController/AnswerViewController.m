@@ -11,7 +11,7 @@
 #import "NSString+Additions.h"
 #import "AnswerViewModel.h"
 
-#define kQuestionMaxLength 50
+#define kQuestionMaxLength 1000
 @interface AnswerViewController ()<UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *submitButton;
 @property (weak, nonatomic) IBOutlet UITextView *textView;

@@ -11,7 +11,7 @@
 #import "NSString+Additions.h"
 #import "QuestionReportViewModel.h"
 
-#define kQuestionMaxLength 50
+#define kQuestionMaxLength 500
 @interface QuestionReportVC ()<UITextViewDelegate, UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIView *bannerView;
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageV;
