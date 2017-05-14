@@ -23,7 +23,7 @@
     [params setObject:@(type) forKey:@"type"];
     [params setObject:[User sharedInstance].token forKey:@"token"];
     
-    [AFNManagerRequest getWithPath:API_USER_COLLECT_LIST params:params success:^(NSURLResponse *response, id responseObject) {
+    [AFNManagerRequest postWithPath:API_USER_MSGLIST params:params success:^(NSURLResponse *response, id responseObject) {
         NSArray *arrayM = [ALDMessageModel mj_objectArrayWithKeyValuesArray:responseObject];
         if (pageIndex == 1) {
             [self.list removeAllObjects];
