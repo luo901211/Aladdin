@@ -53,6 +53,7 @@
 - (UIScrollView *)scrollView {
     if (!_scrollView) {
         _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 64 + 210 * kScreenWidthRatio, Main_Screen_Width, Main_Screen_Height - 64 - 210 * kScreenWidthRatio)];
+        _scrollView.backgroundColor = [UIColor whiteColor];
     }
     return _scrollView;
 }
