@@ -166,8 +166,11 @@
     NSString *code = self.codeTextField.text;
     NSString *password = self.pwdTextField.text;
     
+    @weakify(self);
     [self.viewModel findPasswordWithPhone:phone password:password code:code success:^(id obj) {
+        @strongify(self);
         [MBProgressHUD showAutoMessage:@"已重置密码"];
+        [self.navigationController popViewControllerAnimated:YES];
     } failure:^(id obj) {
         [MBProgressHUD showAutoMessage:obj];
     }];

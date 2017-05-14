@@ -10,6 +10,7 @@
 #import "UILabel+ChangeLineSpaceAndWordSpace.h"
 #define kLabelMaxWidth Main_Screen_Width - 15 - 42 - 25 - 25
 
+
 @interface AnswerCell()
 @property (weak, nonatomic) IBOutlet UIImageView *imageV;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
@@ -39,6 +40,19 @@
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.imageV.layer.cornerRadius = self.imageV.height / 2;
     self.imageV.layer.masksToBounds = YES;
+    
+    self.contentView.userInteractionEnabled = YES;
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)];
+    longPress.delegate = self;
+    [self.contentView addGestureRecognizer:longPress];
+}
+
+-(void)longPress:(UILongPressGestureRecognizer *)sender {
+    if (sender.state == UIGestureRecognizerStateBegan) {
+        if (self.longPressedBlock) {
+            self.longPressedBlock(self.model);
+        }
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

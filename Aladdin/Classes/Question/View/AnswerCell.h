@@ -12,6 +12,7 @@
 @interface AnswerCell : UITableViewCell
 
 @property (nonatomic, strong) ALDAnswerModel *model;
+@property (nonatomic, copy) VoidBlock longPressedBlock;
 
 + (CGFloat)heightForRow:(ALDAnswerModel *)model;
 

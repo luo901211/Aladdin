@@ -16,7 +16,7 @@
 #import "ALDBaseNavigationController.h"
 #import "ALDExpertModel.h"
 
-@interface QuestionDetailVC ()
+@interface QuestionDetailVC ()<UIAlertViewDelegate>
 
 @property (nonatomic, strong) QuestionDetailViewModel *viewModel;
 
@@ -130,7 +130,19 @@
     AnswerCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AnswerCell"];
     ALDAnswerModel *model = self.model.answer_list[indexPath.row];
     cell.model = model;
+    cell.longPressedBlock = ^(id obj){
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"设置最佳回答" message:@"是否将该回答设为最佳回答" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+        alertView.tag = indexPath.row + 100;
+        [alertView show];
+    };
     return cell;
 }
-
+#pragma mark - UIAlertViewDelegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        NSInteger modelIndex = alertView.tag - 100;
+        ALDAnswerModel *model = self.model.answer_list[modelIndex];
+        NSLog(@"设为最佳答案");
+    }
+}
 @end
