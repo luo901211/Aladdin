@@ -36,7 +36,7 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"FinanceCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"FinanceCell"];
     
     __weak FinanceListVC *weakSelf = self;
-    self.tableView.mj_header = [WQChiBaoZiHeader headerWithRefreshingBlock:^{
+    self.tableView.mj_header = [WQRefreshNormalHeader headerWithRefreshingBlock:^{
         [weakSelf loadDataWithType:WQFetchDataTypeRefresh];
     }];
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{

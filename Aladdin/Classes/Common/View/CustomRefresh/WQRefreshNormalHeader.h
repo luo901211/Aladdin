@@ -10,6 +10,4 @@
 
 @interface WQRefreshNormalHeader : MJRefreshNormalHeader
 
-+ (instancetype)headerWithRefreshingTarget:(id)target refreshingAction:(SEL)action;
-
 @end

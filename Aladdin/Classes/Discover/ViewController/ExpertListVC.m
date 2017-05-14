@@ -39,7 +39,7 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"ExpertCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"ExpertCell"];
     
     __weak ExpertListVC *weakSelf = self;
-    self.tableView.mj_header = [WQChiBaoZiHeader headerWithRefreshingBlock:^{
+    self.tableView.mj_header = [WQRefreshNormalHeader headerWithRefreshingBlock:^{
         [weakSelf loadDataWithType:WQFetchDataTypeRefresh];
     }];
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{

@@ -52,7 +52,7 @@ static NSString * const reuseIdentifier = @"TeachingVideoCollectionViewCell";
     self.collectionView.backgroundColor = [UIColor whiteColor];
     
     __weak TeachingVideoCollectionVC *weakSelf = self;
-    self.collectionView.mj_header = [WQChiBaoZiHeader headerWithRefreshingBlock:^{
+    self.collectionView.mj_header = [WQRefreshNormalHeader headerWithRefreshingBlock:^{
         [weakSelf loadDataWithType:WQFetchDataTypeRefresh];
     }];
     self.collectionView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{

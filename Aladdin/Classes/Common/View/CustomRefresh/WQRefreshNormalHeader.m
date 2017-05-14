@@ -10,18 +10,14 @@
 
 @implementation WQRefreshNormalHeader
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
-+ (instancetype)headerWithRefreshingTarget:(id)target refreshingAction:(SEL)action
+#pragma mark - 重写方法
+#pragma mark 基本设置
+- (void)prepare
 {
-    WQRefreshNormalHeader *cmp = [[self alloc] init];
-    [cmp setRefreshingTarget:target refreshingAction:action];
-    cmp.lastUpdatedTimeLabel.hidden = YES;
-    return cmp;
+    [super prepare];
+    // 隐藏时间
+    self.lastUpdatedTimeLabel.hidden = YES;
+    // 隐藏状态
+    self.stateLabel.hidden = YES;
 }
 @end

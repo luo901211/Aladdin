@@ -37,7 +37,7 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"MessageTypeCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"MessageTypeCell"];
     
     __weak MessageTypeListVC *weakSelf = self;
-    self.tableView.mj_header = [WQChiBaoZiHeader headerWithRefreshingBlock:^{
+    self.tableView.mj_header = [WQRefreshNormalHeader headerWithRefreshingBlock:^{
         [weakSelf loadDataWithType:WQFetchDataTypeRefresh];
     }];
     

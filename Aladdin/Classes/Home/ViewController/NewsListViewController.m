@@ -9,7 +9,6 @@
 #import "NewsListViewController.h"
 #import "ALDNewsBannerModel.h"
 #import "NewsCell.h"
-#import "WQChiBaoZiHeader.h"
 #import "SDCycleScrollView.h"
 #import "NewsDetailViewController.h"
 
@@ -35,7 +34,7 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"NewsCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"NewsCell"];
     
     __weak NewsListViewController *weakSelf = self;
-    self.tableView.mj_header = [WQChiBaoZiHeader headerWithRefreshingBlock:^{
+    self.tableView.mj_header = [WQRefreshNormalHeader headerWithRefreshingBlock:^{
         [weakSelf loadDataWithType:WQFetchDataTypeRefresh];
     }];
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
