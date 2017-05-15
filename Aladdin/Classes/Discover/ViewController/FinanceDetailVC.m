@@ -7,18 +7,21 @@
 //
 
 #import "FinanceDetailVC.h"
+#import <WebKit/WebKit.h>
 
-@interface FinanceDetailVC ()
+@interface FinanceDetailVC ()<WKNavigationDelegate, WKUIDelegate>
 
-@property (strong, nonatomic) UIWebView *webView;
+@property (strong, nonatomic) WKWebView *webView;
 
 @end
 
 @implementation FinanceDetailVC
 
-- (UIWebView *)webView {
+- (WKWebView *)webView {
     if (!_webView) {
-        _webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+        _webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
+        _webView.UIDelegate = self;
+        _webView.navigationDelegate = self;
     }
     return _webView;
 }
@@ -51,5 +54,12 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+#pragma mark - WKUIDelegate
+- (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler{
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:message delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+    [alert show];
+    completionHandler();
+    
+}
 @end

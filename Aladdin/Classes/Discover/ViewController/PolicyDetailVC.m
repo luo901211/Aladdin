@@ -8,18 +8,21 @@
 
 #import "PolicyDetailVC.h"
 #import "ApiMacros.h"
+#import <WebKit/WebKit.h>
 
-@interface PolicyDetailVC ()
+@interface PolicyDetailVC () <WKNavigationDelegate, WKUIDelegate>
 
-@property (strong, nonatomic) UIWebView *webView;
+@property (strong, nonatomic) WKWebView *webView;
 
 @end
 
 @implementation PolicyDetailVC
 
-- (UIWebView *)webView {
+- (WKWebView *)webView {
     if (!_webView) {
-        _webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+        _webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
+        _webView.UIDelegate = self;
+        _webView.navigationDelegate = self;
     }
     return _webView;
 }
@@ -45,14 +48,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - WKUIDelegate
+- (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler{
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:message delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+    [alert show];
+    completionHandler();    
 }
-*/
-
 @end

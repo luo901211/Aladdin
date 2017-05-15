@@ -7,17 +7,20 @@
 //
 
 #import "ServerDetailViewController.h"
+#import <WebKit/WebKit.h>
 
-@interface ServerDetailViewController ()
-@property (strong, nonatomic) UIWebView *webView;
+@interface ServerDetailViewController ()<WKNavigationDelegate, WKUIDelegate>
+@property (strong, nonatomic) WKWebView *webView;
 
 @end
 
 @implementation ServerDetailViewController
 
-- (UIWebView *)webView {
+- (WKWebView *)webView {
     if (!_webView) {
-        _webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+        _webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
+        _webView.UIDelegate = self;
+        _webView.navigationDelegate = self;
     }
     return _webView;
 }
@@ -42,6 +45,14 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+#pragma mark - WKUIDelegate
+- (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler{
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:message delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+    [alert show];
+    completionHandler();
+    
 }
 
 @end
