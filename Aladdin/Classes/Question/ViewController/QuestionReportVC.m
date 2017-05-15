@@ -80,11 +80,14 @@
     NSString *title = self.titleTextField.text;
     NSString *content = self.textView.text;
     NSInteger expertID = self.expertModel.ID;
-    NSMutableArray *pics = @[].mutableCopy;
+    NSMutableArray *pics = self.imageDataArray;
     
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [self.viewModel submitQuestionWithTitle:title content:content expertID:expertID pics:pics success:^(id obj) {
+        [MBProgressHUD hideHUDForView:self.view];
         [MBProgressHUD showAutoMessage:@"提问成功"];
     } failure:^(id obj) {
+        [MBProgressHUD hideHUDForView:self.view];
         [MBProgressHUD showAutoMessage:obj];
     }];
 }

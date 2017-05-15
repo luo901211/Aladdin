@@ -270,17 +270,17 @@
  *  @param progress 上传进度
  */
 
-+ (NSURLSessionUploadTask *)uploadImageWithPath:(NSString *)path
-                                         params:(NSDictionary *)params
-                                         images:(NSArray *)images
-                                       progress:(HttpUploadProgressBlock)progress
-                                        success:(HttpSuccessBlock)success
-                                        failure:(HttpFailureBlock)failure {
++ (NSURLSessionUploadTask *)uploadImagesWithPath:(NSString *)path
+                                          params:(NSDictionary *)params
+                                          images:(NSArray *)images
+                                        progress:(HttpUploadProgressBlock)progress
+                                         success:(HttpSuccessBlock)success
+                                         failure:(HttpFailureBlock)failure {
+
     NSString *URLString = [BASE_URL stringByAppendingPathComponent:path];
     
-    
     NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] multipartFormRequestWithMethod:@"POST" URLString:URLString parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-        for (int i=0; images.count; i++) {
+        for (int i=0; i < images.count; i++) {
             NSString *fileName = [NSString stringWithFormat:@"pic-%d.jpg", i];
             NSData *data = UIImagePNGRepresentation(images[i]);
             [formData appendPartWithFileData:data name:@"pic" fileName:fileName mimeType:@"image/jpeg"];

@@ -24,20 +24,34 @@
     if (expertID) {
         [params setObject:@(expertID) forKey:@"to_user_id"];
     }
-    if (pics.count) {
-        [params setObject:pics forKey:@"pics"];
-    }
+
     //图片 pics
-    
-    [AFNManagerRequest postWithPath:API_QUESTION_ASK params:params hudType:NetworkRequestGraceTimeTypeNormal success:^(NSURLResponse *response, id responseObject) {
-        if (success) {
-            success(responseObject);
-        }
-    } failure:^(NSError *error) {
-        if (failure) {
-            failure(error.localizedDescription);
-        }
-    }];
+    if (pics && pics.count) {
+        [AFNManagerRequest uploadImagesWithPath:API_QUESTION_ASK params:params images:pics progress:^(CGFloat progress) {
+            
+        } success:^(NSURLResponse *response, id responseObject) {
+            if (success) {
+                success(responseObject);
+            }
+        } failure:^(NSError *error) {
+            if (failure) {
+                failure(error.localizedDescription);
+            }
+        }];
+        
+    }else{
+        [AFNManagerRequest postWithPath:API_QUESTION_ASK params:params hudType:NetworkRequestGraceTimeTypeNormal success:^(NSURLResponse *response, id responseObject) {
+            if (success) {
+                success(responseObject);
+            }
+        } failure:^(NSError *error) {
+            if (failure) {
+                failure(error.localizedDescription);
+            }
+        }];
+    }
+
+
 
 }
 @end

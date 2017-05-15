@@ -109,11 +109,11 @@ typedef void (^HttpUploadProgressBlock)(CGFloat progress);
  *  @param progress 上传进度
  */
 
-+ (NSURLSessionUploadTask *)uploadImageWithPath:(NSString *)path
-                                         params:(NSDictionary *)params
-                                         images:(NSArray *)images
-                                       progress:(HttpUploadProgressBlock)progress
-                                        success:(HttpSuccessBlock)success
-                                        failure:(HttpFailureBlock)failure;
++ (NSURLSessionUploadTask *)uploadImagesWithPath:(NSString *)path
+                                          params:(NSDictionary *)params
+                                          images:(NSArray *)images
+                                        progress:(HttpUploadProgressBlock)progress
+                                         success:(HttpSuccessBlock)success
+                                         failure:(HttpFailureBlock)failure;
 
 @end
