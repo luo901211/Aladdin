@@ -35,14 +35,7 @@
     
     NSMutableDictionary *mParams = [NSMutableDictionary dictionaryWithDictionary:params];
     [mParams setObject:[User sharedInstance].token forKey:@"token"];
-
-//    [AFNManagerRequest postWithPath:API_USER_SAVEINFO params:mParams hudType:(NetworkRequestGraceTimeTypeNormal) success:^(NSURLResponse *response, id responseObject) {
-//        complete(nil);
-//    } failure:^(NSError *error) {
-//        complete(error.localizedDescription);
-//    }];
-
-    [AFNManagerRequest uploadImageWithPath:API_USER_SAVEINFO params:mParams thumbName:@"pic" image:image progress:nil success:^(NSURLResponse *response, id responseObject) {
+    [AFNManagerRequest uploadImageWithPath:API_USER_SAVEINFO params:mParams image:image progress:nil success:^(NSURLResponse *response, id responseObject) {
         complete(nil);
     } failure:^(NSError *error) {
         complete(error.localizedDescription);

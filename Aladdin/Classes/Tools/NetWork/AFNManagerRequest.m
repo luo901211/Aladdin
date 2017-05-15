@@ -203,7 +203,6 @@
  *
  *  @param path     url地址
  *  @param image    UIImage对象
- *  @param imagekey    imagekey
  *  @param params  上传参数
  *  @param success  上传成功
  *  @param failure  上传失败
@@ -212,7 +211,6 @@
 
 + (NSURLSessionUploadTask *)uploadImageWithPath:(NSString *)path
                                          params:(NSDictionary *)params
-                                      thumbName:(NSString *)imagekey
                                           image:(UIImage *)image
                                        progress:(HttpUploadProgressBlock)progress
                                         success:(HttpSuccessBlock)success
@@ -223,7 +221,7 @@
 
     NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] multipartFormRequestWithMethod:@"POST" URLString:URLString parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
         
-        [formData appendPartWithFileData:data name:@"pic" fileName:imagekey mimeType:@"image/png"];
+        [formData appendPartWithFileData:data name:@"pic" fileName:@"pic.jpg" mimeType:@"image/jpeg"];
         
     } error:nil];
     
@@ -261,4 +259,65 @@
     return uploadTask;
 }
 
+/**
+ *  上传图片
+ *
+ *  @param path     url地址
+ *  @param images    UIImage对象数组
+ *  @param params  上传参数
+ *  @param success  上传成功
+ *  @param failure  上传失败
+ *  @param progress 上传进度
+ */
+
++ (NSURLSessionUploadTask *)uploadImageWithPath:(NSString *)path
+                                         params:(NSDictionary *)params
+                                         images:(NSArray *)images
+                                       progress:(HttpUploadProgressBlock)progress
+                                        success:(HttpSuccessBlock)success
+                                        failure:(HttpFailureBlock)failure {
+    NSString *URLString = [BASE_URL stringByAppendingPathComponent:path];
+    
+    
+    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] multipartFormRequestWithMethod:@"POST" URLString:URLString parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        for (int i=0; images.count; i++) {
+            NSString *fileName = [NSString stringWithFormat:@"pic-%d.jpg", i];
+            NSData *data = UIImagePNGRepresentation(images[i]);
+            [formData appendPartWithFileData:data name:@"pic" fileName:fileName mimeType:@"image/jpeg"];
+        }
+    } error:nil];
+    
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    
+    NSURLSessionUploadTask *uploadTask;
+    uploadTask = [manager
+                  uploadTaskWithStreamedRequest:request
+                  progress:^(NSProgress * _Nonnull uploadProgress) {
+                      if (progress) {
+                          // 进度
+                          progress(uploadProgress.fractionCompleted);
+                      }                  }
+                  completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+                      if (failure && error) {
+                          failure(error);
+                      } else if (success) {
+                          
+#pragma mark - 业务代码
+                          // 统一处理错误
+                          NSInteger code = [responseObject[@"code"] integerValue];
+                          if (code == 1) {
+                              success(response, responseObject[@"res"]);
+                          }else{
+                              
+                              NSDictionary *userInfo = [NSDictionary dictionaryWithObjectsAndKeys:responseObject[@"msg"], NSLocalizedDescriptionKey,nil];
+                              NSError *error = [[NSError alloc] initWithDomain:response.URL.host code:code userInfo:userInfo];
+                              failure(error);
+                          }
+                      }
+                  }];
+    
+    [uploadTask resume];
+    
+    return uploadTask;
+}
 @end

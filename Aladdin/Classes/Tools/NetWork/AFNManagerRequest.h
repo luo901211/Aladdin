@@ -85,7 +85,6 @@ typedef void (^HttpUploadProgressBlock)(CGFloat progress);
  *
  *  @param path     url地址
  *  @param image    UIImage对象
- *  @param imagekey    imagekey
  *  @param params  上传参数
  *  @param success  上传成功
  *  @param failure  上传失败
@@ -94,11 +93,27 @@ typedef void (^HttpUploadProgressBlock)(CGFloat progress);
 
 + (NSURLSessionUploadTask *)uploadImageWithPath:(NSString *)path
                                          params:(NSDictionary *)params
-                                      thumbName:(NSString *)imagekey
                                           image:(UIImage *)image
                                        progress:(HttpUploadProgressBlock)progress
                                         success:(HttpSuccessBlock)success
                                         failure:(HttpFailureBlock)failure;
 
+/**
+ *  上传多张图片
+ *
+ *  @param path     url地址
+ *  @param images   UIImage对象数组
+ *  @param params  上传参数
+ *  @param success  上传成功
+ *  @param failure  上传失败
+ *  @param progress 上传进度
+ */
+
++ (NSURLSessionUploadTask *)uploadImageWithPath:(NSString *)path
+                                         params:(NSDictionary *)params
+                                         images:(NSArray *)images
+                                       progress:(HttpUploadProgressBlock)progress
+                                        success:(HttpSuccessBlock)success
+                                        failure:(HttpFailureBlock)failure;
 
 @end
