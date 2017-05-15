@@ -77,12 +77,10 @@
                              @"position": self.positionTextField.text
                              };
 
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [self.viewModel saveDataWithParams:params image:self.selectImage complete:^(NSString *msg) {
-        if (msg) {
-            [MBProgressHUD showAutoMessage:msg];
-        }else{
-            [MBProgressHUD showAutoMessage:@"保存成功"];
-        }
+        [MBProgressHUD hideHUDForView:self.view];
+        [MBProgressHUD showSuccess:msg ? : @"保存成功" ToView:self.navigationController.view];
     }];
 }
 
