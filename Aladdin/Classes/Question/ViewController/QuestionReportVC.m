@@ -10,6 +10,7 @@
 #import <UITextView+Placeholder/UITextView+Placeholder.h>
 #import "NSString+Additions.h"
 #import "QuestionReportViewModel.h"
+#import "UIViewController+WQAdd.h"
 
 #define kQuestionMaxLength 500
 @interface QuestionReportVC ()<UITextViewDelegate, UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
@@ -51,6 +52,10 @@
     // Do any additional setup after loading the view from its nib.
     self.navigationItem.title = @"提问";
     
+    if ([self isModelPresent]) {
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:(UIBarButtonItemStylePlain) target:self action:@selector(dismiss)];
+    }
+    
     if (self.expertModel) {
         self.avatarImageV.layer.cornerRadius = self.avatarImageV.height/2;
         [self.avatarImageV sd_setImageWithURL:[NSURL URLWithString:self.expertModel.pic_url]];
@@ -82,14 +87,46 @@
     NSInteger expertID = self.expertModel.ID;
     NSMutableArray *pics = self.imageDataArray;
     
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    [self.viewModel submitQuestionWithTitle:title content:content expertID:expertID pics:pics success:^(id obj) {
-        [MBProgressHUD hideHUDForView:self.view];
-        [MBProgressHUD showAutoMessage:@"提问成功"];
-    } failure:^(id obj) {
-        [MBProgressHUD hideHUDForView:self.view];
-        [MBProgressHUD showAutoMessage:obj];
-    }];
+    if (pics.count) {
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        hud.mode = MBProgressHUDModeDeterminateHorizontalBar;
+        hud.label.text = @"正在上传图片";
+        hud.detailsLabel.text = @"请稍后";
+        
+        [self.viewModel submitQuestionWithTitle:title content:content expertID:expertID pics:pics progress:^(NSNumber *obj) {
+            CGFloat progress = [obj floatValue];
+            hud.progress = progress;
+            NSLog(@"上传进度: %f",progress);
+        } success:^(id obj) {
+            [hud hideAnimated:YES];
+            [MBProgressHUD showAutoMessage:@"提问成功"];
+            [self dismissViewControllerAnimated:YES completion:nil];
+        } failure:^(id obj) {
+            [hud hideAnimated:YES];
+            [MBProgressHUD showAutoMessage:obj];
+        }];
+    }else{
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        [self.viewModel submitQuestionWithTitle:title content:content expertID:expertID success:^(id obj) {
+            [MBProgressHUD hideHUDForView:self.view];
+            [MBProgressHUD showAutoMessage:@"提问成功"];
+            if ([self isModelPresent]) {
+                [self dismissViewControllerAnimated:YES completion:nil];
+            }else{
+                [self.navigationController popViewControllerAnimated:YES];
+            }
+            
+        } failure:^(id obj) {
+            [MBProgressHUD hideHUDForView:self.view];
+            [MBProgressHUD showAutoMessage:obj];
+        }];
+
+    }
+    
+}
+
+- (void)dismiss {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

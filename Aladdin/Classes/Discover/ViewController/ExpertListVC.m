@@ -11,6 +11,8 @@
 #import "ALDExpertModel.h"
 #import "ExpertCell.h"
 #import "ExpertDetailVC.h"
+#import "UIViewController+WQAdd.h"
+#import "QuestionReportVC.h"
 
 @interface ExpertListVC ()
 
@@ -30,7 +32,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    if (self.inviteReplyBlock) {
+    if ([self isModelPresent]) {
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:(UIBarButtonItemStylePlain) target:self action:@selector(dismiss)];
     }
     
@@ -127,7 +129,17 @@
     if (self.inviteReplyBlock) {
         // 邀请回答
         self.inviteReplyBlock(model);
-        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+        [self dismissViewControllerAnimated:YES completion:nil];
+        return;
+    }
+    
+    if (self.reportQuestionBlock) {
+        self.reportQuestionBlock(model);
+        [self dismissViewControllerAnimated:YES completion:nil];
+//
+//        QuestionReportVC *vc = [[QuestionReportVC alloc] initWithNibName:@"QuestionReportVC" bundle:[NSBundle mainBundle]];
+//        vc.expertModel = model;
+//        [self.navigationController pushViewController:vc animated:YES];
         return;
     }
     

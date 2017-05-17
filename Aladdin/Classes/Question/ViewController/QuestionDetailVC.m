@@ -70,7 +70,7 @@
         @strongify(self);
         ExpertContainerVC *vc = [[ExpertContainerVC alloc] init];
         vc.title = @"邀请回答";
-        vc.expertTapBlock = ^(ALDExpertModel *model) {
+        vc.inviteReplyBlock = ^(ALDExpertModel *model) {
             
             [self.viewModel inviteAnswerWithQuestionID:self.ID userID:model.ID success:^(id obj) {
                 [MBProgressHUD showAutoMessage:@"邀请成功"];

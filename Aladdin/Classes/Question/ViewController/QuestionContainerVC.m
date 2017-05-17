@@ -36,7 +36,8 @@
 
             @strongify(self);
             QuestionReportVC *vc = [[QuestionReportVC alloc] initWithNibName:@"QuestionReportVC" bundle:[NSBundle mainBundle]];
-            [self.navigationController pushViewController:vc animated:YES];
+            ALDBaseNavigationController *nav = [[ALDBaseNavigationController alloc] initWithRootViewController:vc];
+            [self presentViewController:nav animated:YES completion:nil];
         };
         _bottomView.expertAskBlock = ^(id obj){
             if (![User sharedInstance].isLogin) {
@@ -46,15 +47,18 @@
             @strongify(self);
             
             ExpertContainerVC *vc = [[ExpertContainerVC alloc] init];
-            vc.title = @"邀请回答";
-            vc.expertTapBlock = ^(ALDExpertModel *model) {
-                QuestionReportVC *vc = [[QuestionReportVC alloc] initWithNibName:@"QuestionReportVC" bundle:[NSBundle mainBundle]];
-                vc.expertModel = model;
-                [self.navigationController pushViewController:vc animated:YES];
+            vc.title = @"提问大咖";
+            vc.reportQuestionBlock = ^(ALDExpertModel *model) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    QuestionReportVC *vc = [[QuestionReportVC alloc] initWithNibName:@"QuestionReportVC" bundle:[NSBundle mainBundle]];
+                    vc.expertModel = model;
+                    ALDBaseNavigationController *nav = [[ALDBaseNavigationController alloc] initWithRootViewController:vc];
+                    [self presentViewController:nav animated:YES completion:nil];
+                });
             };
             
             ALDBaseNavigationController *nav = [[ALDBaseNavigationController alloc] initWithRootViewController:vc];
-            [self.navigationController presentViewController:nav animated:YES completion:nil];
+            [self presentViewController:nav animated:YES completion:nil];
         };
     }
     return _bottomView;

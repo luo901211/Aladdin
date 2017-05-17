@@ -12,6 +12,7 @@
 
 @property (nonatomic, assign) NSInteger level;
 
-@property (nonatomic, copy) VoidBlock inviteReplyBlock;
+@property (copy, nonatomic) VoidBlock inviteReplyBlock;
+@property (copy, nonatomic) VoidBlock reportQuestionBlock;
 
 @end

@@ -46,6 +46,7 @@
 		A42299B41EACAEC100F62707 /* ExpertListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A42299B31EACAEC100F62707 /* ExpertListViewModel.m */; };
 		A42299B71EAD9DB000F62707 /* TeachingVideoDetailBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = A42299B61EAD9DB000F62707 /* TeachingVideoDetailBottomView.m */; };
 		A42299B91EAD9DBB00F62707 /* TeachingVideoDetailBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A42299B81EAD9DBB00F62707 /* TeachingVideoDetailBottomView.xib */; };
+		A4353B9B1ECC2F90003EB158 /* UIViewController+WQAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = A4353B9A1ECC2F90003EB158 /* UIViewController+WQAdd.m */; };
 		A43C93511E9E2342008B877D /* UIView+BlockGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = A43C93501E9E2342008B877D /* UIView+BlockGesture.m */; };
 		A43F9DCF1E9F2CBC00AA831E /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A43F9DCD1E9F2CBC00AA831E /* LoginVC.m */; };
 		A43F9DD01E9F2CBC00AA831E /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43F9DCE1E9F2CBC00AA831E /* LoginVC.xib */; };
@@ -276,6 +277,8 @@
 		A42299B51EAD9DB000F62707 /* TeachingVideoDetailBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeachingVideoDetailBottomView.h; sourceTree = "<group>"; };
 		A42299B61EAD9DB000F62707 /* TeachingVideoDetailBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeachingVideoDetailBottomView.m; sourceTree = "<group>"; };
 		A42299B81EAD9DBB00F62707 /* TeachingVideoDetailBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeachingVideoDetailBottomView.xib; sourceTree = "<group>"; };
+		A4353B991ECC2F90003EB158 /* UIViewController+WQAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WQAdd.h"; sourceTree = "<group>"; };
+		A4353B9A1ECC2F90003EB158 /* UIViewController+WQAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WQAdd.m"; sourceTree = "<group>"; };
 		A43C934F1E9E2342008B877D /* UIView+BlockGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BlockGesture.h"; sourceTree = "<group>"; };
 		A43C93501E9E2342008B877D /* UIView+BlockGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BlockGesture.m"; sourceTree = "<group>"; };
 		A43F9DCC1E9F2CBC00AA831E /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
@@ -974,6 +977,8 @@
 		A4C32AFA1E98AB3200D53E1A /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				A4353B991ECC2F90003EB158 /* UIViewController+WQAdd.h */,
+				A4353B9A1ECC2F90003EB158 /* UIViewController+WQAdd.m */,
 				A43C934F1E9E2342008B877D /* UIView+BlockGesture.h */,
 				A43C93501E9E2342008B877D /* UIView+BlockGesture.m */,
 				A4C266E41EAF47C6007A5674 /* UILabel+ChangeLineSpaceAndWordSpace.h */,
@@ -1691,6 +1696,7 @@
 				A42299B11EACAE5300F62707 /* ALDExpertModel.m in Sources */,
 				A499A9851EA622A800B45425 /* ALDNewsBannerModel.m in Sources */,
 				A499A9A61EA75EA000B45425 /* ALDCollectModel.m in Sources */,
+				A4353B9B1ECC2F90003EB158 /* UIViewController+WQAdd.m in Sources */,
 				A4C32AED1E98A7B800D53E1A /* GCDQueue.m in Sources */,
 				A4A0294C1E9B341C0008F281 /* AFNManagerRequest.m in Sources */,
 				A499A98F1EA622A800B45425 /* NewsDetailViewModel.m in Sources */,
@@ -1852,7 +1858,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.adpro.tuitui;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "54b28cad-1c95-47ae-bd9a-e9ae3161b21f";
+				PROVISIONING_PROFILE = "088b87df-4251-489c-b981-36aa4fd84dd6";
 				PROVISIONING_PROFILE_SPECIFIER = tuitui_dev;
 			};
 			name = Debug;

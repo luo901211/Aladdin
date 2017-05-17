@@ -15,6 +15,7 @@
 #import "ExpertAnswerListVC.h"
 #import "SGPageView.h"
 #import "QuestionReportVC.h"
+#import "ALDBaseNavigationController.h"
 
 @interface ExpertDetailVC ()<SGPageTitleViewDelegate, SGPageContentViewDelegare>
 
@@ -98,7 +99,9 @@
     model.company = self.model.company;
     model.position = self.model.position;
     vc.expertModel = model;
-    [self.navigationController pushViewController:vc animated:YES];
+    
+    ALDBaseNavigationController *nav = [[ALDBaseNavigationController alloc] initWithRootViewController:vc];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];

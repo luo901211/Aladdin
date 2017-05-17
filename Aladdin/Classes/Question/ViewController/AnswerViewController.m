@@ -10,6 +10,7 @@
 #import <UITextView+Placeholder/UITextView+Placeholder.h>
 #import "NSString+Additions.h"
 #import "AnswerViewModel.h"
+#import "UIViewController+WQAdd.h"
 
 #define kQuestionMaxLength 1000
 @interface AnswerViewController ()<UITextViewDelegate>
@@ -34,8 +35,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.navigationItem.title = @"回复";
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:(UIBarButtonItemStylePlain) target:self action:@selector(dismiss)];
-
+    if ([self isModelPresent]) {
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:(UIBarButtonItemStylePlain) target:self action:@selector(dismiss)];
+    }
+    
     self.titleLabel.text = self.questionTitle;
     
     self.textView.placeholder = @"请输入回答内容";

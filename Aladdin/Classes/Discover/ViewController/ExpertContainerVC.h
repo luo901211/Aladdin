@@ -10,6 +10,8 @@
 
 @interface ExpertContainerVC : UIViewController
 
-@property (copy, nonatomic) VoidBlock expertTapBlock;
+@property (copy, nonatomic) VoidBlock inviteReplyBlock;
+@property (copy, nonatomic) VoidBlock reportQuestionBlock;
+
 
 @end

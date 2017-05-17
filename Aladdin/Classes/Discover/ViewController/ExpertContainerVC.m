@@ -9,6 +9,7 @@
 #import "ExpertContainerVC.h"
 #import "SGPageView.h"
 #import "ExpertListVC.h"
+#import "UIViewController+WQAdd.h"
 
 @interface ExpertContainerVC ()<SGPageTitleViewDelegate, SGPageContentViewDelegare>
 @property (nonatomic, strong) SGPageTitleView *pageTitleView;
@@ -33,10 +34,10 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
-    if (self.expertTapBlock) {
+    if ([self isModelPresent]) {
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:(UIBarButtonItemStylePlain) target:self action:@selector(dismiss)];
     }
-    
+
     [self initUI];
 }
 
@@ -57,9 +58,8 @@
         
         // child vc
         ExpertListVC *vc = [[ExpertListVC alloc] init];
-        if (self.expertTapBlock) {
-            vc.inviteReplyBlock = self.expertTapBlock;
-        }
+        vc.inviteReplyBlock = self.inviteReplyBlock;
+        vc.reportQuestionBlock = self.reportQuestionBlock;
         vc.level = [dic[@"level"] integerValue];
         [childVC addObject:vc];
         [self addChildViewController:vc];
