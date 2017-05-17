@@ -24,7 +24,7 @@
         [params setObject:@(expertID) forKey:@"to_user_id"];
     }
 
-    [AFNManagerRequest postWithPath:API_QUESTION_ASK params:params hudType:NetworkRequestGraceTimeTypeNormal success:^(NSURLResponse *response, id responseObject) {
+    [AFNManagerRequest postWithPath:API_QUESTION_ASK params:params hudType:NetworkRequestGraceTimeTypeAlways success:^(NSURLResponse *response, id responseObject) {
         if (success) {
             success(responseObject);
         }

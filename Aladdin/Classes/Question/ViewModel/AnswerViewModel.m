@@ -16,7 +16,7 @@
              failure:(VoidBlock)failure {
     NSDictionary *params = @{ @"id": @(ID), @"token": [User sharedInstance].token, @"content": content };
     
-    [AFNManagerRequest postWithPath:API_QUESTION_ANSWER params:params hudType:NetworkRequestGraceTimeTypeNormal success:^(NSURLResponse *response, id responseObject) {
+    [AFNManagerRequest postWithPath:API_QUESTION_ANSWER params:params hudType:NetworkRequestGraceTimeTypeAlways success:^(NSURLResponse *response, id responseObject) {
         if (success) {
             success(responseObject);
         }

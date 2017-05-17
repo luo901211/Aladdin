@@ -16,7 +16,7 @@
     [params setObject:comment forKey:@"comment"];
     [params setObject:@(ID) forKey:@"id"];
     
-    [AFNManagerRequest postWithPath:NEWS_COMMENT_SUBMIT params:params hudType:(NetworkRequestGraceTimeTypeNormal) success:^(NSURLResponse *response, id responseObject) {
+    [AFNManagerRequest postWithPath:NEWS_COMMENT_SUBMIT params:params hudType:(NetworkRequestGraceTimeTypeAlways) success:^(NSURLResponse *response, id responseObject) {
         complete(nil);
     } failure:^(NSError *error) {
         complete(error.localizedDescription);
