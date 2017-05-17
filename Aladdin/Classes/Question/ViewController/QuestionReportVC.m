@@ -89,14 +89,14 @@
     
     if (pics.count) {
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        hud.mode = MBProgressHUDModeDeterminateHorizontalBar;
+        hud.mode = MBProgressHUDModeDeterminate;
         hud.label.text = @"正在上传图片";
         hud.detailsLabel.text = @"请稍后";
-        
         [self.viewModel submitQuestionWithTitle:title content:content expertID:expertID pics:pics progress:^(NSNumber *obj) {
-            CGFloat progress = [obj floatValue];
-            hud.progress = progress;
-            NSLog(@"上传进度: %f",progress);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                CGFloat progress = [obj floatValue];
+                hud.progress = progress;
+            });
         } success:^(id obj) {
             [hud hideAnimated:YES];
             [MBProgressHUD showAutoMessage:@"提问成功"];
