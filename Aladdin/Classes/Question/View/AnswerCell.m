@@ -64,7 +64,7 @@
 - (void)setModel:(ALDAnswerModel *)model {
     _model = model;
     self.nameLabel.text = model.real_name;
-    self.contentLabel.text = model.content;
+    self.contentLabel.text = [model.content stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     [self.imageV sd_setImageWithURL:[NSURL URLWithString:model.pic_url]];
     self.bestImageV.hidden = self.bestLabel.hidden = !model.is_standard;
     

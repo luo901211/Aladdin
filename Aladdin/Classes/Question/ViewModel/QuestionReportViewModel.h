@@ -13,7 +13,14 @@
 - (void)submitQuestionWithTitle:(NSString *)title
                         content:(NSString *)content
                        expertID:(NSInteger)expertID
+                        success:(VoidBlock)success
+                        failure:(VoidBlock)failure;
+
+- (void)submitQuestionWithTitle:(NSString *)title
+                        content:(NSString *)content
+                       expertID:(NSInteger)expertID
                            pics:(NSMutableArray *)pics
+                       progress:(VoidBlock)progressBlock
                         success:(VoidBlock)success
                         failure:(VoidBlock)failure;
 @end
