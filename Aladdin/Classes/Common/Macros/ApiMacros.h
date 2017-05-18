@@ -305,6 +305,13 @@
 #define API_USER_MSGLIST @"/user/msglist"
 
 /*
+ * 用户-消息详情
+ * token：必传，用户标识
+ * id：必传，(上个接口中的id值）
+ */
+#define API_USER_MSGDETAIL @"/user/msgdetail"
+
+/*
  * 用户-投诉建议列表
  * token：必传，用户标识
  * type：必传，分类标识（上个接口中的type值）

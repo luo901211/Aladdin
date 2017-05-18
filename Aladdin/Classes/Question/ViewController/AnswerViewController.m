@@ -53,7 +53,7 @@
     }
     
     @weakify(self);
-    [self.viewModel submitAnswer:[self.textView.text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] id:self.ID success:^(id obj) {
+    [self.viewModel submitAnswer:self.textView.text id:self.ID success:^(id obj) {
         @strongify(self);
         [MBProgressHUD showAutoMessage:@"提交成功"];
         [self dismissViewControllerAnimated:YES completion:nil];
