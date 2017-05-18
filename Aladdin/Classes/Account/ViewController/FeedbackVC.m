@@ -14,6 +14,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *businessLabel;
 @property (weak, nonatomic) IBOutlet UILabel *suggestLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *contributionEmailLabel;
+@property (weak, nonatomic) IBOutlet UILabel *joinEmailLabel;
+@property (weak, nonatomic) IBOutlet UILabel *businessEmailLabel;
+@property (weak, nonatomic) IBOutlet UILabel *suggestEmailLabel;
+
 @end
 
 @implementation FeedbackVC
@@ -31,10 +36,20 @@
     [AFNManagerRequest getWithPath:API_USER_OPINION params:nil success:^(NSURLResponse *response, id responseObject) {
         @strongify(self)
         
-        self.contributionLabel.attributedText = [self configText:responseObject[@"zxtg"]];
-        self.joinLabel.attributedText = [self configText:responseObject[@"rzpt"]];
-        self.businessLabel.attributedText = [self configText:responseObject[@"swhz"]];
-        self.suggestLabel.attributedText = [self configText:responseObject[@"tsjy"]];
+        NSDictionary *zxtg = responseObject[@"zxtg"];
+        NSDictionary *rzpt = responseObject[@"rzpt"];
+        NSDictionary *swhz = responseObject[@"swhz"];
+        NSDictionary *tsjy = responseObject[@"tsjy"];
+        
+        self.contributionLabel.text = [NSString stringWithFormat:@"联系人: %@ %@",zxtg[@"name"], zxtg[@"mobile"]];
+        self.joinLabel.text = [NSString stringWithFormat:@"联系人: %@ %@",rzpt[@"name"], rzpt[@"mobile"]];
+        self.businessLabel.text = [NSString stringWithFormat:@"联系人: %@ %@",swhz[@"name"], swhz[@"mobile"]];
+        self.suggestLabel.text = [NSString stringWithFormat:@"联系人: %@ %@",tsjy[@"name"], tsjy[@"mobile"]];
+        
+        self.contributionEmailLabel.text = [NSString stringWithFormat:@"邮  箱: %@", zxtg[@"email"]];
+        self.joinEmailLabel.text = [NSString stringWithFormat:@"邮  箱: %@", rzpt[@"email"]];
+        self.businessEmailLabel.text = [NSString stringWithFormat:@"邮  箱: %@", swhz[@"email"]];
+        self.suggestEmailLabel.text = [NSString stringWithFormat:@"邮  箱: %@", tsjy[@"email"]];
         
     } failure:^(NSError *error) {
         [MBProgressHUD showAutoMessage:error.localizedDescription];
