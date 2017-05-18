@@ -17,6 +17,7 @@
 //    "pic_url": "http://api.caishui.com/Uploads/Picture/2017-03-22/58d281a8d3584.png"
 //}
 
+@property (nonatomic, assign) NSInteger ID;
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *content;
 @property (nonatomic, copy) NSString *add_time;

@@ -668,6 +668,7 @@
         <!--News Search View Controller-->
         <scene sceneID="2DX-ag-moN">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mvV-tg-h0H" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="NewsSearchViewController" id="Nao-ME-hWF" customClass="NewsSearchViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DLI-WX-rQd"/>
@@ -710,7 +711,6 @@
                         <outlet property="textField" destination="yMQ-in-MWm" id="WTa-ca-kaY"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mvV-tg-h0H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4145" y="66"/>
         </scene>

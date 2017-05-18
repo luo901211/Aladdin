@@ -9,6 +9,7 @@
 #import "MessageListVC.h"
 #import "MessageListViewModel.h"
 #import "MessageCell.h"
+#import "MessageDetailVC.h"
 
 @interface MessageListVC ()
 
@@ -85,7 +86,10 @@
 #pragma mark - Table view delegate
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    MessageDetailVC *vc = [[MessageDetailVC alloc] init];
+    ALDMessageModel *model = self.viewModel.list[indexPath.row];
+    vc.ID = model.ID;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

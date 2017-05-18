@@ -203,6 +203,7 @@
 		A4DF60211EA9FC9C0084963F /* ALDPolicyDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DF60201EA9FC9C0084963F /* ALDPolicyDetailModel.m */; };
 		A4DF60251EA9FDDA0084963F /* PolicyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DF60231EA9FDDA0084963F /* PolicyCell.m */; };
 		A4DF60261EA9FDDA0084963F /* PolicyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4DF60241EA9FDDA0084963F /* PolicyCell.xib */; };
+		A4F979221ECDA2AA0099CCC0 /* MessageDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F979211ECDA2AA0099CCC0 /* MessageDetailVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -579,6 +580,8 @@
 		A4DF60221EA9FDDA0084963F /* PolicyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolicyCell.h; sourceTree = "<group>"; };
 		A4DF60231EA9FDDA0084963F /* PolicyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolicyCell.m; sourceTree = "<group>"; };
 		A4DF60241EA9FDDA0084963F /* PolicyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PolicyCell.xib; sourceTree = "<group>"; };
+		A4F979201ECDA2AA0099CCC0 /* MessageDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDetailVC.h; sourceTree = "<group>"; };
+		A4F979211ECDA2AA0099CCC0 /* MessageDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageDetailVC.m; sourceTree = "<group>"; };
 		B2F0BD5579963808346C1999 /* Pods-Aladdin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aladdin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aladdin/Pods-Aladdin.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -676,6 +679,8 @@
 				A40891401EA397540071D22D /* MessageTypeListVC.m */,
 				A408914A1EA399560071D22D /* MessageListVC.h */,
 				A408914B1EA399560071D22D /* MessageListVC.m */,
+				A4F979201ECDA2AA0099CCC0 /* MessageDetailVC.h */,
+				A4F979211ECDA2AA0099CCC0 /* MessageDetailVC.m */,
 				A499A95D1EA60EB700B45425 /* CollectListVC.h */,
 				A499A95E1EA60EB700B45425 /* CollectListVC.m */,
 				A483346E1EB1D75C00FB5801 /* FeedbackVC.h */,
@@ -1637,6 +1642,7 @@
 				A4C32EB81E9A6FB000D53E1A /* TeachingVideoContainerVC.m in Sources */,
 				A499A9901EA622A800B45425 /* NewsListViewModel.m in Sources */,
 				A43C93511E9E2342008B877D /* UIView+BlockGesture.m in Sources */,
+				A4F979221ECDA2AA0099CCC0 /* MessageDetailVC.m in Sources */,
 				A43F9DDE1E9F6DCE00AA831E /* FindPasswordVC.m in Sources */,
 				A4C32AF21E98A7B800D53E1A /* CLLocation+MPLocation.m in Sources */,
 				A43F9DD41E9F2CD400AA831E /* RegisterVC.m in Sources */,
