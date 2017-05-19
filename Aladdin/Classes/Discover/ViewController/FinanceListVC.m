@@ -116,11 +116,16 @@
 #pragma mark - Table view delegate
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    FinanceChapterListVC *vc = [[FinanceChapterListVC alloc] init];
-    ALDFinanceModel *model = self.viewModel.list[indexPath.row];
-    vc.ID = model.ID;
-    vc.title = model.title;
-    [self.navigationController pushViewController:vc animated:YES];
+    if ([User sharedInstance].isLogin) {
+        FinanceChapterListVC *vc = [[FinanceChapterListVC alloc] init];
+        ALDFinanceModel *model = self.viewModel.list[indexPath.row];
+        vc.ID = model.ID;
+        vc.title = model.title;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else{
+        // 请先登录
+        [User presentLoginViewController];
+    }
 }
 
 @end

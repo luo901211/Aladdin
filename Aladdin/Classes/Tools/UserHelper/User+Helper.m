@@ -31,6 +31,14 @@
     }];
 }
 
+- (void)checkToken {
+    NSDictionary *params = @{ @"token": self.token };
+    [AFNManagerRequest postWithPath:API_TOKEN_CHECK params:params success:^(NSURLResponse *response, id responseObject) {
+    } failure:^(NSError *error) {
+        [self logout];
+    }];
+}
+
 + (void)presentLoginViewController {
     LoginVC *logInVc = [[LoginVC alloc] initWithNibName:@"LoginVC" bundle:[NSBundle mainBundle]];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:logInVc];

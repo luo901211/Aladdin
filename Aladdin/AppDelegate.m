@@ -36,9 +36,9 @@
     
     [self setupHomeViewController];
 
-//    if (![User sharedInstance].isLogin) {
-//        [self presentLoginViewController];
-//    }
+    if ([User sharedInstance].isLogin) {
+        [[User sharedInstance] checkToken];
+    }
     return YES;
 }
 

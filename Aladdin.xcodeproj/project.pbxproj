@@ -135,6 +135,11 @@
 		A4C305B41EB1F64D00308E18 /* UserInfoListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C305B31EB1F64D00308E18 /* UserInfoListViewModel.m */; };
 		A4C305B71EB1F66000308E18 /* ChangePasswordViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C305B61EB1F66000308E18 /* ChangePasswordViewModel.m */; };
 		A4C305BA1EB1F66E00308E18 /* FindPasswordViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C305B91EB1F66E00308E18 /* FindPasswordViewModel.m */; };
+		A4C319EE1ECF3EDB0016228D /* NewsCommentListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C319ED1ECF3EDB0016228D /* NewsCommentListVC.m */; };
+		A4C319F11ECF3EFA0016228D /* NewsCommentListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C319F01ECF3EFA0016228D /* NewsCommentListViewModel.m */; };
+		A4C319F41ECF3F870016228D /* ALDNewsCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C319F31ECF3F870016228D /* ALDNewsCommentModel.m */; };
+		A4C319F81ECF42DA0016228D /* NewsCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C319F61ECF42DA0016228D /* NewsCommentCell.m */; };
+		A4C319F91ECF42DA0016228D /* NewsCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4C319F71ECF42DA0016228D /* NewsCommentCell.xib */; };
 		A4C32AEB1E98A7B800D53E1A /* MPFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32ACE1E98A7B800D53E1A /* MPFileManager.m */; };
 		A4C32AEC1E98A7B800D53E1A /* GCDGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32AD21E98A7B800D53E1A /* GCDGroup.m */; };
 		A4C32AED1E98A7B800D53E1A /* GCDQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C32AD41E98A7B800D53E1A /* GCDQueue.m */; };
@@ -444,6 +449,15 @@
 		A4C305B61EB1F66000308E18 /* ChangePasswordViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewModel.m; sourceTree = "<group>"; };
 		A4C305B81EB1F66E00308E18 /* FindPasswordViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindPasswordViewModel.h; sourceTree = "<group>"; };
 		A4C305B91EB1F66E00308E18 /* FindPasswordViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPasswordViewModel.m; sourceTree = "<group>"; };
+		A4C319EC1ECF3EDB0016228D /* NewsCommentListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCommentListVC.h; sourceTree = "<group>"; };
+		A4C319ED1ECF3EDB0016228D /* NewsCommentListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCommentListVC.m; sourceTree = "<group>"; };
+		A4C319EF1ECF3EFA0016228D /* NewsCommentListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCommentListViewModel.h; sourceTree = "<group>"; };
+		A4C319F01ECF3EFA0016228D /* NewsCommentListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCommentListViewModel.m; sourceTree = "<group>"; };
+		A4C319F21ECF3F870016228D /* ALDNewsCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDNewsCommentModel.h; sourceTree = "<group>"; };
+		A4C319F31ECF3F870016228D /* ALDNewsCommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDNewsCommentModel.m; sourceTree = "<group>"; };
+		A4C319F51ECF42DA0016228D /* NewsCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCommentCell.h; sourceTree = "<group>"; };
+		A4C319F61ECF42DA0016228D /* NewsCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCommentCell.m; sourceTree = "<group>"; };
+		A4C319F71ECF42DA0016228D /* NewsCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsCommentCell.xib; sourceTree = "<group>"; };
 		A4C32ACD1E98A7B800D53E1A /* MPFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPFileManager.h; sourceTree = "<group>"; };
 		A4C32ACE1E98A7B800D53E1A /* MPFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPFileManager.m; sourceTree = "<group>"; };
 		A4C32AD01E98A7B800D53E1A /* GCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCD.h; sourceTree = "<group>"; };
@@ -756,6 +770,8 @@
 				A499A96B1EA622A800B45425 /* ALDNewsModel.m */,
 				A499A96C1EA622A800B45425 /* ALDNewsTypeModel.h */,
 				A499A96D1EA622A800B45425 /* ALDNewsTypeModel.m */,
+				A4C319F21ECF3F870016228D /* ALDNewsCommentModel.h */,
+				A4C319F31ECF3F870016228D /* ALDNewsCommentModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -769,6 +785,9 @@
 				A499A9721EA622A800B45425 /* NewsDetailBottomView.h */,
 				A499A9731EA622A800B45425 /* NewsDetailBottomView.m */,
 				A499A9741EA622A800B45425 /* NewsDetailBottomView.xib */,
+				A4C319F51ECF42DA0016228D /* NewsCommentCell.h */,
+				A4C319F61ECF42DA0016228D /* NewsCommentCell.m */,
+				A4C319F71ECF42DA0016228D /* NewsCommentCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -782,6 +801,8 @@
 				A499A9791EA622A800B45425 /* NewsListViewController.m */,
 				A499A9761EA622A800B45425 /* NewsDetailViewController.h */,
 				A499A9771EA622A800B45425 /* NewsDetailViewController.m */,
+				A4C319EC1ECF3EDB0016228D /* NewsCommentListVC.h */,
+				A4C319ED1ECF3EDB0016228D /* NewsCommentListVC.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -795,6 +816,8 @@
 				A499A9801EA622A800B45425 /* NewsListViewModel.m */,
 				A499A9811EA622A800B45425 /* NewsMainViewModel.h */,
 				A499A9821EA622A800B45425 /* NewsMainViewModel.m */,
+				A4C319EF1ECF3EFA0016228D /* NewsCommentListViewModel.h */,
+				A4C319F01ECF3EFA0016228D /* NewsCommentListViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1494,6 +1517,7 @@
 				A44B7A341EC3169100907407 /* FinanceChapterCell.xib in Resources */,
 				A44B7A3F1EC448AE00907407 /* QuestionReportVC.xib in Resources */,
 				A499A98B1EA622A800B45425 /* NewsDetailBottomView.xib in Resources */,
+				A4C319F91ECF42DA0016228D /* NewsCommentCell.xib in Resources */,
 				A408916B1EA3AF420071D22D /* ServerCell.xib in Resources */,
 				A44B7A471EC45A3300907407 /* QuestionBannerView.xib in Resources */,
 				A4C266C11EAEE501007A5674 /* ExpertAnswerCell.xib in Resources */,
@@ -1588,6 +1612,7 @@
 				A4D682DE1E976CEB00FBA51C /* ViewController.m in Sources */,
 				A4C32E281E98AD0F00D53E1A /* UIView+Empty.m in Sources */,
 				A499A9881EA622A800B45425 /* NewsCell.m in Sources */,
+				A4C319F41ECF3F870016228D /* ALDNewsCommentModel.m in Sources */,
 				A4C266C41EAEE52E007A5674 /* ALDExpertNewsModel.m in Sources */,
 				A4C7C4DE1E9F19E0003A36E0 /* WQPopWindow.m in Sources */,
 				A43F9DE71E9FAB1600AA831E /* LoginViewModel.m in Sources */,
@@ -1618,6 +1643,7 @@
 				A4D682DB1E976CEB00FBA51C /* AppDelegate.m in Sources */,
 				A44B7A371EC34AE300907407 /* PolicySearchVC.m in Sources */,
 				A4C32EA31E9A5F8B00D53E1A /* DiscoverCell.m in Sources */,
+				A4C319F81ECF42DA0016228D /* NewsCommentCell.m in Sources */,
 				A4C32E9C1E9A564200D53E1A /* ALDBaseViewController.m in Sources */,
 				A4BF61421EACA469003F876F /* FinanceChapterListVC.m in Sources */,
 				A4C32AEB1E98A7B800D53E1A /* MPFileManager.m in Sources */,
@@ -1630,6 +1656,7 @@
 				A422999D1EACA61200F62707 /* FinanceListViewModel.m in Sources */,
 				A4C267391EAF58FC007A5674 /* ALDQuestionModel.m in Sources */,
 				A46BDAAF1EC73EF000EC22ED /* WQRefreshNormalHeader.m in Sources */,
+				A4C319F11ECF3EFA0016228D /* NewsCommentListViewModel.m in Sources */,
 				A4DF60121EA9FAC00084963F /* PolicyContainerVC.m in Sources */,
 				A4DF60031EA9D4120084963F /* TeachingVideoDetailVC.m in Sources */,
 				A453788C1EA7687800020C5D /* CollectListViewModel.m in Sources */,
@@ -1721,6 +1748,7 @@
 				A4BF61451EACA484003F876F /* FinanceDetailVC.m in Sources */,
 				A4DF601B1EA9FB030084963F /* PolicyDetailViewModel.m in Sources */,
 				A4C32E6E1E9A1BF400D53E1A /* SGSegmentedControlBottomView.m in Sources */,
+				A4C319EE1ECF3EDB0016228D /* NewsCommentListVC.m in Sources */,
 				A4C32E251E98AD0F00D53E1A /* NSString+Additions.m in Sources */,
 				A42299B41EACAEC100F62707 /* ExpertListViewModel.m in Sources */,
 				A44B7A421EC44D3100907407 /* QuestionDetailVC.m in Sources */,

@@ -32,6 +32,12 @@
 #define NEWS_LIST @"/news/index"
 
 /*
+ * 资讯评论列表
+ * id：必传，资讯id
+ */
+#define NEWS_COMMENT_LIST @"/news/commentList"
+
+/*
  * 资讯轮播图
  * type：非必填，分类id，默认全部类型
  */
@@ -255,6 +261,12 @@
  * code：必填，验证码
  */
 #define API_LOGIN_CODE @"/user/codeLogin"
+
+/*
+ * 用户-token 过期验证
+ * token：必填
+ */
+#define API_TOKEN_CHECK @"/user/isLogin"
 
 /*
  * 用户-修改密码

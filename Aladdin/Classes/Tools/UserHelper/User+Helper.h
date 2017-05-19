@@ -13,6 +13,8 @@
 
 - (void)getUserinfo;
 
+- (void)checkToken;
+
 + (void)presentLoginViewController;
 
 @end

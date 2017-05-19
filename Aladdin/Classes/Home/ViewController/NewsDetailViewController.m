@@ -12,6 +12,7 @@
 #import "WQInputView.h"
 #import "NewsDetailViewModel.h"
 #import "User+Helper.h"
+#import "NewsCommentListVC.h"
 
 @interface NewsDetailViewController ()<WKNavigationDelegate, WKUIDelegate>
 
@@ -76,7 +77,10 @@
             NSLog(@"分享");
         };
         _bottomView.commentListBlock = ^(){
-            NSLog(@"评论列表");
+            @strongify(self);
+            NewsCommentListVC *vc = [[NewsCommentListVC alloc] init];
+            vc.ID = self.ID;
+            [self.navigationController pushViewController:vc animated:YES];
         };
     }
     return _bottomView;
